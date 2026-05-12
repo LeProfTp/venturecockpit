@@ -1619,12 +1619,16 @@ const VENTURES = [
   },
   {
     team:'WorkFlowWerk', name:'WorkFlowWerk',
-    idea:'Spezialisierter B2B-Marktplatz für verifizierte Automation-Freelancer im DACH-Raum; Full-Service inkl. DSGVO-Verträge und Wartungsabo',
+    idea:'Plattform-Agentur-Hybrid für verifizierte KI-Automation-Freelancer im DACH-Raum; S/M/L-Pakete, DSGVO-Verträge, Wartungsabo, EXIST-Förderung als Runway',
     sessions:{
       2:{stars:4,
-        pos:['Analytisc stärkste B2B-Abgabe im Kurs','Porter-Analyse korrekt angewendet mit echten Wettbewerbern','Funnel-Denken: AutoAudit DACH als Lead-Generator erkannt'],
-        gaps:['Cold-Start-Problem (wer kommt zuerst: Freelancer oder Unternehmen?) vollständig ungelöst','Odoo-Sektion fast leer','Preisfeld und Einheit identisch (copy-paste Fehler)']},
-      4:{stars:null,note:'Keine S4-Einreichung dokumentiert.'}
+        pos:['Stärkste B2B-Analyse im Kurs – Porter korrekt angewendet','Funnel-Denken: AutoAudit DACH als Lead-Generator identifiziert','Konkrete Wettbewerber (Upwork, Toptal, Agenturen) mit echten Schwächen'],
+        gaps:['Cold-Start-Problem (Hühnerei: Freelancer vs. Unternehmen) vollständig ungelöst','Odoo-Sektion fast leer','Preis und Einheit identisch – copy-paste Fehler']},
+      4:{stars:4,
+        pos:['S/M/L-Preispakete (4.900/9.900/14.900 EUR) mit Margenangaben – Einheitenökonomik nachvollziehbar','Freelancer-Netzwerk konkret: Polen, 70 EUR/h, gevettet','QA mit synthetischen Testdaten – methodisch innovativ','EXIST-Förderung als Runway-Brücke – pragmatisch und realistisch','Anthropic/No-Code als existenzielle Bedrohung des Modells ehrlich erkannt'],
+        gaps:['Cold-Start-Problem weiterhin vollständig unbeantwortet – war bereits in S2 offen','Channels-Abschnitt: nur zwei Wörter (Direktakquise, Marketing)','Autonomie-Ethik: "Ich verstehe die Frage nicht" – kein Stress Test','Erster Deal erst ab Monat 6 ohne konkreten Akquise-Plan'],
+        closed:['Preislogik vollständig ausgearbeitet mit Kostenstruktur','Odoo im Prozess integriert','EXIST-Förderung als strukturierte Finanzierungsstrategie'],
+        open:['Cold-Start-Problem: Wer ist zuerst da – Freelancer oder Unternehmen? Muss vor Session 5 beantwortet sein']}
     }
   },
 ];
@@ -1647,24 +1651,32 @@ function stars(n,max=5){if(n===null)return '<span style="color:#1E2D3F;font-size
 function renderMentor(){
   const el=document.getElementById('mentor-content');
   if(!el)return;
-  if(!mentorAuthed){el.innerHTML=`<div class="mentor-gate">
-    <h2>🔐 Mentor-Ansicht</h2>
-    <p>Venture-Übersicht und Session-Fortschritt aller Teams.</p>
-    <input type="password" id="m-pw" placeholder="Passwort…" autocomplete="off">
-    <button style="width:100%;padding:9px;background:linear-gradient(135deg,#F59E0B,#c07010);color:#111;
-      border:none;border-radius:5px;font-family:'Syne',sans-serif;font-weight:700;font-size:13px;cursor:pointer;margin-top:4px"
-      id="m-login">Einloggen</button>
-    <div class="mentor-gate-err" id="m-err"></div>
-  </div>`;
-  document.getElementById('m-login').addEventListener('click',()=>{
-    if(document.getElementById('m-pw').value===MENTOR_PW){
-      mentorAuthed=true;try{sessionStorage.setItem('ecl-mentor-auth','1');}catch{}renderMentor();
-    }else{document.getElementById('m-err').textContent='Falsches Passwort.';}});
-  document.getElementById('m-pw').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('m-login').click();});
-  return;}
+  if(!mentorAuthed){
+    el.innerHTML=`<div class="mentor-gate">
+      <div style="font-size:32px;text-align:center;margin-bottom:12px">🔐</div>
+      <h2 style="text-align:center;margin-bottom:6px">Mentor-Zugang</h2>
+      <p style="text-align:center;margin-bottom:20px">Bitte Passwort eingeben, um die Venture-Übersicht zu sehen.</p>
+      <label style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#4A6280;font-family:'Syne',sans-serif;font-weight:700;display:block;margin-bottom:5px">Passwort</label>
+      <input type="password" id="m-pw" placeholder="Passwort eingeben…" autocomplete="off"
+        style="margin-bottom:10px;font-size:15px;letter-spacing:.1em">
+      <button id="m-login" style="width:100%;padding:11px;background:linear-gradient(135deg,#F59E0B,#c07010);color:#111;
+        border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;cursor:pointer;letter-spacing:.04em">
+        → Einloggen
+      </button>
+      <div class="mentor-gate-err" id="m-err" style="text-align:center;margin-top:8px"></div>
+    </div>`;
+    document.getElementById('m-login').addEventListener('click',()=>{
+      const pw=document.getElementById('m-pw').value;
+      if(pw===MENTOR_PW){mentorAuthed=true;try{sessionStorage.setItem('ecl-mentor-auth','1');}catch{}renderMentor();}
+      else{const e=document.getElementById('m-err');e.textContent='Falsches Passwort.';
+        document.getElementById('m-pw').style.borderColor='#F87171';}});
+    document.getElementById('m-pw').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('m-login').click();});
+    return;}
 
+  let cards='';
+  try{
   const sessionLabels={2:'Session 2',4:'Session 4'};
-  const cards=VENTURES.map(v=>{
+  cards=VENTURES.map(v=>{
     const sessionBlocks=Object.entries(v.sessions).map(([snum,sd])=>{
       if(sd.stars===null){
         return `<div class="v-session">
@@ -1698,6 +1710,7 @@ function renderMentor(){
       </div>
     </div>`;}).join('');
 
+  }catch(err){el.innerHTML='<div style="padding:40px;color:#F87171;font-family:Syne,sans-serif">Fehler beim Laden: '+err.message+'</div>';return;}
   el.innerHTML=`<div class="mentor-title-row">
     <div>
       <div class="mentor-page-title">Venture-Übersicht · ${VENTURES.length} Teams</div>
