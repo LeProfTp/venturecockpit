@@ -414,6 +414,17 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 <div id="toasts"></div>
 <input type="file" id="file-inp" accept=".json" style="display:none" multiple>
 
+<div id="mentor-app">
+  <div class="mentor-header">
+    <div class="mentor-logo">ECL · Entrepreneurship Challenge Lab</div>
+    <div class="mentor-badge">🔐 Mentor-Ansicht</div>
+    <div style="flex:1"></div>
+    <button onclick="exitMentorMode()" style="background:none;border:1px solid rgba(255,255,255,.12);color:#4A6280;padding:5px 12px;border-radius:5px;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em">← Zurück</button>
+  </div>
+  <div class="mentor-wrap" id="mentor-content"></div>
+</div>
+
+
 <script>
 'use strict';
 // ═══════════════════════════════════════════════════════════
@@ -1703,16 +1714,6 @@ function renderMentor(){
 }
 
 </script>
-
-<div id="mentor-app">
-  <div class="mentor-header">
-    <div class="mentor-logo">ECL · Entrepreneurship Challenge Lab</div>
-    <div class="mentor-badge">🔐 Mentor-Ansicht</div>
-    <div style="flex:1"></div>
-    <button onclick="exitMentorMode()" style="background:none;border:1px solid rgba(255,255,255,.12);color:#4A6280;padding:5px 12px;border-radius:5px;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em">← Zurück</button>
-  </div>
-  <div class="mentor-wrap" id="mentor-content"></div>
-</div>
 
 </body>
 </html>
