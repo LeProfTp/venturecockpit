@@ -1504,229 +1504,155 @@ function showSaved(){const el=document.getElementById('autosave-ind');if(!el)ret
 window.addEventListener('beforeunload',()=>{save();});
 
 // ════════════════════════════════════════════════════
-// MENTOR MODE
+// MENTOR MODE — clean rewrite
 // ════════════════════════════════════════════════════
 const MENTOR_PW = 'ecl2025';
 
 const VENTURES = [
-  {
-    team:'AshBuddy', name:'AshBuddy / ASHley',
-    idea:'Premium-Taschenaschenbecher aus Edelstahl für mobile Raucher auf Festivals; dualer B2C/B2B-Kanal (Endkunden & Veranstalter-Bulk)',
-    sessions:{
-      2:{stars:5,
-        pos:['Stärkste strategische Klarheit im Kurs','Convenience > Eco als Kaufmotiv präzise erkannt','B2B-Festivalkanal als Skalierungspfad identifiziert','Preislogik B2C/B2B klar unterschieden'],
-        gaps:['Preisvalidierung (18–26 EUR) weiterhin unbelegt','Drei Varianten = kaum echte Ideation-Breite','Kein Peer-Review eingereicht']},
-      4:{stars:5,
-        pos:['B2B/B2C-Duallogik in alle BMC-Felder konsequent integriert','Detailliertster Odoo-Prozess im Kurs (inkl. Deckungsbeitrag-Steuerung)','Ethik: Brandrisiko & Greenwashing produktspezifisch adressiert','Finanzlogik überzeugend: 1 B2B-Deal deckt Startkapital'],
-        gaps:['Preisvalidierung bleibt einzige offene Kernfrage'],
-        closed:['B2B-Strategie vollständig ausgearbeitet und ins Modell integriert','Convenience-Positionierung in alle Canvas-Felder übertragen','Finanzierung (Bootstrapping) klar begründet'],
-        open:['Zahlungsbereitschaft bei 18–26 EUR noch nicht durch Markttest belegt']}
-    }
-  },
-  {
-    team:'REMI', name:'REMI',
-    idea:'KI-gestützter Anhänger für Alzheimer-Patienten: erkennt Stimmen vertrauter Personen per Edge-AI und flüstert Namen diskret ins Ohr',
-    sessions:{
-      2:{stars:3,
-        pos:['Originellstes und gesellschaftlich bedeutsamsten Konzept im Kurs','Drei echte, verschiedene Produktideen ausgearbeitet'],
-        gaps:['EU MDR vollständig ignoriert – existenzielle Regulierungsfrage','Marktzahlen verdächtig präzise, Quellen fehlend','Kein Odoo-Abschnitt','Stimmerkennung unter realen Bedingungen technisch unbeantwortet']},
-      4:{stars:5,
-        pos:['EU MDR vollständig aufgearbeitet: Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen','Chip-Hersteller konkret benannt (Syntiant, Knowles, Nordic Semiconductor)','Post-Market Surveillance im BMC – zeigt regulatorische Reife','Stärkste Ethik-Analyse: Voice-Cloning-Schutz, Bias-Monitoring, Auslaufkriterien','Odoo Subscription-Modul explizit integriert'],
-        gaps:['MDR-Zertifizierung (18–36 Mo.) vs. Runway (15–20 Mo.): kritisches Timing-Risiko','CAC im B2B-Kanal nicht modelliert'],
-        closed:['MDR vollständig und detailliert adressiert','Marktzahlen mit Quelle (Deutsche Alzheimer Gesellschaft) belegt','Odoo Subscription-Management konkret beschrieben','Technologie mit echten Komponenten hinterlegt'],
-        open:['Stimmerkennung unter realen Alltagsbedingungen noch kein Nachweis','MDR-Timing-Risiko strukturell ungelöst']}
-    }
-  },
-  {
-    team:'Andrian', name:'ANDONIS',
-    idea:'Grooming-System mit Health Hub und Gamification (Streaks/Quests) für junge Männer 18–25; Low-Entry-Bundle, Retention über digitale Plattform',
-    sessions:{
-      2:{stars:2,
-        pos:['Transformationsansatz (nicht Produktverkauf) als Differenzierungskern erkannt','Selbstkritische Marktanalyse: "brutal umkämpft, Gewinner nehmen fast alles"'],
-        gaps:['Zwei von drei Produktideen fehlend','Kein Preis definiert','Kein Odoo-Abschnitt','KI-Beratung erwähnt aber technisch und kostenseitig nicht durchdacht']},
-      4:{stars:4,
-        pos:['Preis klar definiert (29,50 EUR Starter Bundle)','Beste Ethik-Analyse im Kurs: Dermatologen-Referral, Community-Guidelines, Daten-Transparenz','Odoo im Prozess explizit (Shop, Zahlungsabwicklung, Follow-Up-Automation)','Health Hub und Quiz-Logik konkret beschrieben'],
-        gaps:['Kostenstruktur im BMC ohne einzige Zahl','Runway 3–4 Monate äußerst knapp','Revenue-based Financing nicht korrekt definiert'],
-        closed:['Preis und Einheit definiert','KI/Quiz-Mechanismus konkretisiert','Odoo in Prozess eingebunden'],
-        open:['Kostenstruktur weiterhin ohne Zahlen','Runway zu knapp für realistische Entwicklungszeit']}
-    }
-  },
-  {
-    team:'WasteLess', name:'WasteLess',
-    idea:'Smarter Lebensmittelbehälter mit Sensor-Deckel: misst chemische Frischeprozesse und zeigt Genießbarkeit visuell an',
-    sessions:{
-      2:{stars:2,
-        pos:['Gesellschaftliche Relevanz klar (10,8 Mio. Tonnen Food Waste/Jahr DE)','Starke Pitch-Statistiken'],
-        gaps:['Sensor bei 14,90 EUR technisch nicht realisierbar','Kein Odoo-Abschnitt','Kein Peer-Review','Technologiemachbarkeit = einzige existenzielle Frage, nicht beantwortet']},
-      4:{stars:4,
-        pos:['Preis auf 39,90 EUR Set angehoben – Makbarkeitsrahmen realistischer','Methodisch vollständigste Abgabe im Kurs: alle Felder substanziell','Detailliertster Odoo-Ablauf (Bestellung bis Nachbestellung beim Lieferanten)','Selbstkritische Key-Resources-Analyse: Technologie als Engpassressource benannt'],
-        gaps:['Sensor-Machbarkeit bei Zielpreis weiterhin unbeantwortet – Make-or-Break-Frage','Revenue-Streams ohne Erwartungswerte pro Kanal'],
-        closed:['Preis realistisch angehoben','Odoo vollständig integriert','Alle Canvas-Felder substanziell ausgefüllt','Regulierung (CE, Lebensmittelkontakt) korrekt adressiert'],
-        open:['Sensor-Technologie bei <20 EUR Produktionskosten: technische Validierung ausständig']}
-    }
-  },
-  {
-    team:'DOOOZE', name:'DOOOZE',
-    idea:'Weiches Haarband als externe Ohrenlösung für besseren Schlaf durch Lärmreduktion ohne Ohrstöpsel-Druckgefühl',
-    sessions:{
-      2:{stars:4,
-        pos:['Professionellster Auftritt im Kurs: Branding, Struktur, Vollständigkeit','Einziges Team mit vollständiger Odoo-Sektion','Workarounds (Kissen aufs Ohr) präzise identifiziert'],
-        gaps:['Akustische Kernfrage unbeantwortet: Wie viel dB Reduktion leistet Stoff außen am Ohr?','Nur zwei von drei Ideen dokumentiert']},
-      4:{stars:3,
-        pos:['Bootstrapping als Finanzierung richtig und konsequent gewählt','Ethik: Risiko überhöhter Erwartungen (Noise Cancelling) direkt adressiert','Klare Kommunikationsstrategie: Reduktion ≠ Isolation'],
-        gaps:['Akustische Funktion weiterhin unbewiesen – bleibt Kernrisiko','Runway: 2,5 Monate bei 2.000 EUR Startkapital sehr knapp','Odoo-Integration nicht beschrieben'],
-        closed:['Risikokommunikation (falsche Erwartungen) als explizite Gegenmassnahme formuliert','Finanzierungsform (Bootstrapping) klar begründet'],
-        open:['dB-Nachweis steht aus – einfacher Vergleichstest würde Kernfrage klären','Runway zu knapp für validierten Marktstart']}
-    }
-  },
-  {
-    team:'StilMittel', name:'StilMittel',
-    idea:'Design-Aufwertung und Entstigmatisierung von Gehhilfen für Senioren: Produkte, Zubehör und Beratung',
-    sessions:{
-      2:{stars:2,
-        pos:['Gründlichste Wettbewerbsanalyse (international, konkrete Vergleichsprodukte)','Stigma als eigentliches Kernproblem erkannt – selten gemachte Einsicht','Zwei Personas (Senioren + Angehörige) methodisch sauber getrennt'],
-        gaps:['EU MDR vollständig ignoriert – Gehhilfen sind Medizinprodukte','Portfolio-Breite (Produkt + Zubehör + Workshop) für Frühphase nicht managebar','Kein Pitch, kein Peer-Review, kein Odoo']},
-      4:{stars:3,
-        pos:['MDR nun korrekt eingeordnet: "Gestaltung darf medizinische Funktion nicht beeinträchtigen"','Burn-Rate-Rechnung konkret und ehrlich (10.316 → 6.600 EUR)','Wachstumsannahme mit Prozentzahl (5% Conversion) transparent gemacht'],
-        gaps:['BMC-Felder teils Platzhalter: Customer Segments = "unsere Hauptzielgruppe"','Prozessdesign Schritt 2 = ein Satz','Ethik-Analyse mit Einzeilern statt Reflexion'],
-        closed:['MDR als Rahmenbedingung anerkannt und korrekt eingeordnet','Finanzstruktur mit konkreten Monatszahlen hinterlegt'],
-        open:['BMC-Konkretisierung (Aktivitäten, Ressourcen, Segmente) steht aus','Prozessabläufe nicht operativ beschreibbar','5%-Conversion-Annahme unvalidiert']}
-    }
-  },
-  {
-    team:'VEIL', name:'VEIL',
-    idea:'Fashion-first Perioden-Bikini mit unsichtbarem Schutz; Positionierung als Style-Brand, nicht als Medizinprodukt',
-    sessions:{
-      2:{stars:2,
-        pos:['Echter und wachsender Markt (FemCare × Swimwear)','Fashion-Brand-Instinkt als Differenzierungshebel erkannt'],
-        gaps:['Kundenbefund = ein Satz','Kein Preis, kein Odoo, kein Peer-Review','MDR-Relevanz nicht adressiert','Kritik: "Mood Board statt Venture"']},
-      4:{stars:3,
-        pos:['Preise definiert (Top 25 EUR, Bottom 35 EUR, Set 60 EUR) mit Produktionskosten','Produktionspartner konkret benannt','ModiBodi als technologisch überlegener Wettbewerber ehrlich anerkannt'],
-        gaps:['Massive Finanzinkonsistenz: 200.000 EUR vs. 20.000 EUR Startkapital im selben Dokument','MDR-Frage nicht systematisch beantwortet','Retourenquote (20–30% bei Swimwear) in Kostenstruktur fehlend'],
-        closed:['Preise und Margen konkret hinterlegt','Wettbewerber (ModiBodi) ehrlich analysiert','Odoo-Ablauf beschrieben'],
-        open:['Finanzwiderspruch muss vor Session 5 aufgelöst werden','Differenzierung von ModiBodi über Branding hinaus nicht belegt']}
-    }
-  },
-  {
-    team:'EasyWine', name:'EasyWine',
-    idea:'Online-Weinshop für Einsteiger: kuratierte Auswahl, einfache Sprache, kein Fachwissen nötig',
-    sessions:{
-      2:{stars:3,
-        pos:['Sauberste Dokumentationsqualität und Prozessstruktur im Kurs','Bestes Peer-Feedback (konkret, kritisch, begründet, umsetzbar)','Pain Points ("Angst, falschen Wein zu kaufen") gut beobachtet'],
-        gaps:['Vivino: 65 Mio. Nutzer, löst exakt dasselbe Problem – gratis','Kein einziger Wettbewerber mit Namen genannt','Geschäftsmodell-Frage (Händler vs. eigene Marke) offen']},
-      4:{stars:null,note:'Keine S4-Einreichung dokumentiert.'}
-    }
-  },
-  {
-    team:'WorkFlowWerk', name:'WorkFlowWerk',
-    idea:'Plattform-Agentur-Hybrid für verifizierte KI-Automation-Freelancer im DACH-Raum; S/M/L-Pakete, DSGVO-Verträge, Wartungsabo, EXIST-Förderung als Runway',
-    sessions:{
-      2:{stars:4,
-        pos:['Stärkste B2B-Analyse im Kurs – Porter korrekt angewendet','Funnel-Denken: AutoAudit DACH als Lead-Generator identifiziert','Konkrete Wettbewerber (Upwork, Toptal, Agenturen) mit echten Schwächen'],
-        gaps:['Cold-Start-Problem (Hühnerei: Freelancer vs. Unternehmen) vollständig ungelöst','Odoo-Sektion fast leer','Preis und Einheit identisch – copy-paste Fehler']},
-      4:{stars:4,
-        pos:['S/M/L-Preispakete (4.900/9.900/14.900 EUR) mit Margenangaben – Einheitenökonomik nachvollziehbar','Freelancer-Netzwerk konkret: Polen, 70 EUR/h, gevettet','QA mit synthetischen Testdaten – methodisch innovativ','EXIST-Förderung als Runway-Brücke – pragmatisch und realistisch','Anthropic/No-Code als existenzielle Bedrohung des Modells ehrlich erkannt'],
-        gaps:['Cold-Start-Problem weiterhin vollständig unbeantwortet – war bereits in S2 offen','Channels-Abschnitt: nur zwei Wörter (Direktakquise, Marketing)','Autonomie-Ethik: "Ich verstehe die Frage nicht" – kein Stress Test','Erster Deal erst ab Monat 6 ohne konkreten Akquise-Plan'],
-        closed:['Preislogik vollständig ausgearbeitet mit Kostenstruktur','Odoo im Prozess integriert','EXIST-Förderung als strukturierte Finanzierungsstrategie'],
-        open:['Cold-Start-Problem: Wer ist zuerst da – Freelancer oder Unternehmen? Muss vor Session 5 beantwortet sein']}
-    }
-  },
+  {name:'AshBuddy / ASHley', team:'AshBuddy',
+   idea:'Premium-Taschenaschenbecher aus Edelstahl für mobile Raucher; dualer B2C/B2B-Kanal (Endkunden & Veranstalter-Bulk)',
+   s2:{stars:5, pos:['Stärkste strategische Klarheit im Kurs','Convenience > Eco als Kaufmotiv erkannt','B2B-Festivalkanal als Skalierungspfad identifiziert','B2C/B2B-Preislogik klar unterschieden'], gaps:['Preisvalidierung (18–26 EUR) unbelegt','Drei Varianten = kaum echte Ideation-Breite']},
+   s4:{stars:5, pos:['B2B/B2C-Duallogik in alle BMC-Felder integriert','Detailliertster Odoo-Prozess (inkl. Deckungsbeitrag-Steuerung)','Ethik: Brandrisiko & Greenwashing produktspezifisch','Finanzlogik: 1 B2B-Deal deckt Startkapital'], gaps:['Preisvalidierung bleibt einzige offene Kernfrage'], closed:['B2B-Strategie vollständig ausgearbeitet','Finanzierung (Bootstrapping) klar begründet'], open:['Zahlungsbereitschaft 18–26 EUR: kein Markttest']}},
+  {name:'REMI', team:'REMI',
+   idea:'KI-Wearable für Alzheimer: erkennt Stimmen vertrauter Personen per Edge-AI und flüstert Namen diskret ins Ohr',
+   s2:{stars:3, pos:['Originellstes Konzept im Kurs','Gesellschaftliche Relevanz klar'], gaps:['EU MDR vollständig ignoriert','Marktzahlen ohne Quellenangaben','Kein Odoo-Abschnitt','Stimmerkennung technisch unbeantwortet']},
+   s4:{stars:5, pos:['EU MDR vollständig: Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen','Chip-Hersteller konkret benannt (Syntiant, Knowles)','Post-Market Surveillance im BMC','Stärkste Ethik-Analyse: Voice-Cloning-Schutz, Auslaufkriterien','Odoo Subscription-Modul explizit'], gaps:['MDR-Zertifizierung (18–36 Mo.) vs. Runway (15–20 Mo.): Timing-Risiko','CAC nicht modelliert'], closed:['MDR detailliert adressiert','Marktquellen belegt','Odoo integriert','Technologie mit echten Komponenten'], open:['Stimmerkennung unter realen Bedingungen: kein Nachweis']}},
+  {name:'ANDONIS', team:'Andrian',
+   idea:'Grooming-System mit Health Hub und Gamification für Männer 18–25; Low-Entry-Bundle, Retention über digitale Plattform',
+   s2:{stars:2, pos:['Transformationsansatz als Differenzierungskern erkannt','Selbstkritische Marktanalyse'], gaps:['Zwei von drei Produktideen fehlend','Kein Preis definiert','Kein Odoo-Abschnitt']},
+   s4:{stars:4, pos:['Preis definiert (29,50 EUR Starter Bundle)','Beste Ethik-Analyse: Dermatologen-Referral, Community-Guidelines','Odoo im Prozess explizit','Health Hub und Quiz-Logik konkret'], gaps:['Kostenstruktur ohne Zahlen','Runway 3–4 Monate sehr knapp'], closed:['Preis definiert','KI-Konzept konkretisiert','Odoo eingebunden'], open:['Kostenstruktur ohne Zahlen','Runway zu knapp']}},
+  {name:'WasteLess', team:'WasteLess',
+   idea:'Smarter Lebensmittelbehälter mit Sensor-Deckel: misst Frischeprozesse chemisch und zeigt Genießbarkeit visuell',
+   s2:{stars:2, pos:['Gesellschaftliche Relevanz (10,8 Mio. t Food Waste/Jahr DE)','Starke Pitch-Statistiken'], gaps:['Sensor bei 14,90 EUR nicht realisierbar','Kein Odoo','Technologiemachbarkeit offen']},
+   s4:{stars:4, pos:['Preis auf 39,90 EUR Set angehoben','Vollständigste Abgabe im Kurs','Detailliertster Odoo-Ablauf','Selbstkritisch: Technologie als Engpassressource benannt'], gaps:['Sensor-Machbarkeit bei Zielpreis offen – Make-or-Break'], closed:['Preis realistisch angehoben','Odoo vollständig','Canvas substanziell'], open:['Sensor <20 EUR Produktionskosten: Validierung fehlt']}},
+  {name:'DOOOZE', team:'DOOOZE',
+   idea:'Weiches Haarband als externe Ohrenlösung für besseren Schlaf durch Lärmreduktion ohne Ohrstöpsel',
+   s2:{stars:4, pos:['Professionellster Auftritt im Kurs','Vollständigste S2-Abgabe inkl. Odoo','Workarounds präzise identifiziert'], gaps:['Akustische Kernfrage offen: dB-Leistung von Stoff außen am Ohr?']},
+   s4:{stars:3, pos:['Bootstrapping richtig gewählt','Ethik: Risiko überhöhter Erwartungen direkt adressiert','Klare Kommunikationsstrategie: Reduktion ≠ Isolation'], gaps:['Akustische Funktion weiterhin unbewiesen','Runway 2,5 Mo. sehr knapp'], closed:['Risikokommunikation explizit formuliert','Finanzierung begründet'], open:['dB-Nachweis fehlt – einfacher Vergleichstest würde klären']}},
+  {name:'StilMittel', team:'StilMittel',
+   idea:'Design-Aufwertung und Entstigmatisierung von Gehhilfen für Senioren; Produkte, Zubehör und Beratung',
+   s2:{stars:2, pos:['Gründlichste Wettbewerbsanalyse im Kurs','Stigma als eigentliches Kernproblem erkannt','Zwei Personas sauber getrennt'], gaps:['EU MDR vollständig ignoriert','Portfolio-Breite nicht managebar','Kein Pitch, kein Odoo']},
+   s4:{stars:3, pos:['MDR korrekt eingeordnet','Burn-Rate konkret (10.316 → 6.600 EUR)','Wachstumsannahme mit Prozentzahl transparent'], gaps:['BMC-Felder teils Platzhalter','Prozessdesign Schritt 2 = ein Satz','Ethik mit Einzeilern'], closed:['MDR anerkannt','Finanzstruktur hinterlegt'], open:['BMC-Konkretisierung ausstehend','5%-Conversion-Annahme unvalidiert']}},
+  {name:'VEIL', team:'VEIL / Selin',
+   idea:'Fashion-first Perioden-Bikini mit unsichtbarem Schutz; Style-Brand, kein Medizinprodukt',
+   s2:{stars:2, pos:['Echter und wachsender Markt','Fashion-Brand-Instinkt als Differenzierungshebel'], gaps:['Kundenbefund = ein Satz','Kein Preis, kein Odoo','MDR offen']},
+   s4:{stars:3, pos:['Preise definiert (Top 25, Bottom 35, Set 60 EUR)','Produktionspartner konkret benannt','ModiBodi ehrlich als überlegen anerkannt'], gaps:['Finanzwiderspruch: 200K vs. 20K Startkapital im selben Dokument','MDR nicht beantwortet'], closed:['Preise hinterlegt','Odoo beschrieben'], open:['Finanzwiderspruch muss aufgelöst werden','Differenzierung zu ModiBodi offen']}},
+  {name:'EasyWine', team:'EasyWine',
+   idea:'Online-Weinshop für Einsteiger: kuratierte Auswahl, einfache Sprache, kein Fachwissen nötig',
+   s2:{stars:3, pos:['Sauberste Dokumentation im Kurs','Bestes Peer-Feedback','Pain Points gut beobachtet'], gaps:['Vivino: 65 Mio. Nutzer, löst exakt dasselbe gratis','Kein Wettbewerber mit Namen','Händler vs. eigene Marke ungeklärt']},
+   s4:null},
+  {name:'WorkFlowWerk', team:'WorkFlowWerk',
+   idea:'Plattform-Agentur-Hybrid für KI-Automation-Freelancer im DACH-Raum; S/M/L-Pakete, DSGVO, EXIST-Förderung',
+   s2:{stars:4, pos:['Stärkste B2B-Analyse im Kurs','Porter korrekt angewendet','AutoAudit DACH als Lead-Generator erkannt'], gaps:['Cold-Start-Problem ungelöst','Odoo fast leer','Preis/Einheit identisch (copy-paste)']},
+   s4:{stars:4, pos:['S/M/L-Preispakete mit Margenangaben – Einheitenökonomik klar','Freelancer-Netzwerk konkret (Polen, 70 EUR/h)','QA mit synthetischen Testdaten – innovativ','EXIST-Förderung als Runway-Brücke','Anthropic als existenzielle Bedrohung ehrlich erkannt'], gaps:['Cold-Start-Problem weiterhin vollständig offen','Channels: nur zwei Wörter','Autonomie-Ethik: "Ich verstehe die Frage nicht"'], closed:['Preislogik ausgearbeitet','EXIST als Finanzierungsstrategie','Odoo integriert'], open:['Cold-Start: Wer ist zuerst da – Freelancer oder Unternehmen?']}},
 ];
 
-let mentorAuthed=false;
-
 function initMentorMode(){
-  document.getElementById('app').style.display='none';
-  document.getElementById('mentor-app').style.display='block';
-  try{if(sessionStorage.getItem('ecl-mentor-auth')==='1')mentorAuthed=true;}catch{}
-  renderMentor();
+  const regularApp=document.getElementById('app');
+  if(regularApp) regularApp.style.display='none';
+  const mentorApp=document.getElementById('mentor-app');
+  if(!mentorApp){alert('Mentor-App div fehlt!');return;}
+  mentorApp.style.display='block';
+  let authed=false;
+  try{authed=sessionStorage.getItem('ecl-mentor-auth')==='1';}catch{}
+  _showMentor(mentorApp, authed);
+}
+
+function _showMentor(mentorApp, authed){
+  // Build full page directly inside mentor-app after the header
+  let existing=document.getElementById('m-content-area');
+  if(existing) existing.remove();
+  const area=document.createElement('div');
+  area.id='m-content-area';
+  area.style.cssText='max-width:1100px;margin:0 auto;padding:32px 24px 80px';
+  mentorApp.appendChild(area);
+
+  if(!authed){
+    area.innerHTML=`
+      <div style="max-width:340px;margin:80px auto;background:#091524;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
+        <div style="font-size:40px;margin-bottom:14px">🔐</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:8px">Mentor-Zugang</div>
+        <div style="font-size:13px;color:#4A6280;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
+        <input id="mpw" type="password" placeholder="Passwort…"
+          style="width:100%;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.15);border-radius:6px;
+          color:#fff;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
+        <button id="mbtn"
+          style="width:100%;padding:11px;background:linear-gradient(135deg,#F59E0B,#c07010);color:#111;
+          border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;cursor:pointer">
+          Einloggen →
+        </button>
+        <div id="merr" style="color:#F87171;font-size:12px;margin-top:10px;min-height:16px"></div>
+      </div>`;
+    document.getElementById('mbtn').onclick=function(){
+      if(document.getElementById('mpw').value===MENTOR_PW){
+        try{sessionStorage.setItem('ecl-mentor-auth','1');}catch{}
+        _showMentor(mentorApp,true);
+      }else{
+        document.getElementById('merr').textContent='Falsches Passwort.';
+        document.getElementById('mpw').style.borderColor='#F87171';
+      }
+    };
+    document.getElementById('mpw').onkeydown=function(e){if(e.key==='Enter')document.getElementById('mbtn').click();};
+    return;
+  }
+
+  // Render ventures
+  function starHtml(n){if(!n&&n!==0)return '<span style="color:#333">—</span>';
+    let s='';for(let i=0;i<5;i++)s+='<span style="color:'+(i<n?'#F59E0B':'#1E2D3F')+'">★</span>';return s;}
+
+  function sessionBlock(label, sd){
+    if(!sd) return `<div style="padding:10px;background:rgba(0,0,0,.2);border-radius:6px;font-size:11px;color:#4A6280;font-style:italic">Keine Einreichung für ${label}</div>`;
+    let html=`<div style="background:rgba(0,0,0,.18);border-radius:8px;padding:10px 12px;margin-bottom:8px">`;
+    html+=`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;color:#4A6280">${label}</span>
+      <span style="font-size:16px">${starHtml(sd.stars)}</span></div>`;
+    (sd.pos||[]).forEach(p=>{html+=`<div style="font-size:11.5px;color:#C8D9EE;padding:2px 0;display:flex;gap:7px"><span style="color:#34D399;flex-shrink:0">●</span>${p}</div>`;});
+    (sd.gaps||[]).forEach(g=>{html+=`<div style="font-size:11.5px;color:#C8D9EE;padding:2px 0;display:flex;gap:7px"><span style="color:#F87171;flex-shrink:0">●</span>${g}</div>`;});
+    if(sd.closed||sd.open){
+      html+=`<div style="margin-top:8px;padding:8px 10px;border-left:2px solid rgba(13,214,214,.35);background:rgba(13,214,214,.05)">
+        <div style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#0DD6D6;letter-spacing:.1em;margin-bottom:5px">↳ FEEDBACK-INTEGRATION</div>`;
+      (sd.closed||[]).forEach(c=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#34D399">✓</span>${c}</div>`;});
+      (sd.open||[]).forEach(o=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#F59E0B">△</span>${o}</div>`;});
+      html+=`</div>`;}
+    html+=`</div>`;
+    return html;
+  }
+
+  let html=`<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px">
+    <div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff">Venture-Übersicht · ${VENTURES.length} Teams</div>
+      <div style="font-size:12px;color:#4A6280;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
+    </div>
+    <div style="display:flex;gap:14px;font-size:11px;color:#4A6280;flex-wrap:wrap">
+      <span><span style="color:#34D399">●</span> Stärke</span>
+      <span><span style="color:#F87171">●</span> Lücke</span>
+      <span><span style="color:#34D399">✓</span> Geschlossen</span>
+      <span><span style="color:#F59E0B">△</span> Offen</span>
+    </div>
+  </div>`;
+
+  VENTURES.forEach(v=>{
+    html+=`<div style="background:#091524;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;margin-bottom:14px">
+      <div style="display:grid;grid-template-columns:220px 1fr">
+        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)">
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:3px">${v.name}</div>
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#0DD6D6;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:8px">${v.team}</div>
+          <div style="font-size:12px;color:#4A6280;line-height:1.55">${v.idea}</div>
+        </div>
+        <div style="padding:14px 18px">
+          ${sessionBlock('Session 2', v.s2)}
+          ${sessionBlock('Session 4', v.s4)}
+        </div>
+      </div>
+    </div>`;
+  });
+
+  area.innerHTML=html;
 }
 
 function exitMentorMode(){window.location.href=window.location.pathname;}
 window.exitMentorMode=exitMentorMode;
 
-function stars(n,max=5){if(n===null)return '<span style="color:#1E2D3F;font-size:12px">—</span>';
-  return Array.from({length:max},(_,i)=>`<span class="${i<n?'star-on':'star-off'}">★</span>`).join('');}
-
-function renderMentor(){
-  const el=document.getElementById('mentor-content');
-  if(!el)return;
-  if(!mentorAuthed){
-    el.innerHTML=`<div class="mentor-gate">
-      <div style="font-size:32px;text-align:center;margin-bottom:12px">🔐</div>
-      <h2 style="text-align:center;margin-bottom:6px">Mentor-Zugang</h2>
-      <p style="text-align:center;margin-bottom:20px">Bitte Passwort eingeben, um die Venture-Übersicht zu sehen.</p>
-      <label style="font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#4A6280;font-family:'Syne',sans-serif;font-weight:700;display:block;margin-bottom:5px">Passwort</label>
-      <input type="password" id="m-pw" placeholder="Passwort eingeben…" autocomplete="off"
-        style="margin-bottom:10px;font-size:15px;letter-spacing:.1em">
-      <button id="m-login" style="width:100%;padding:11px;background:linear-gradient(135deg,#F59E0B,#c07010);color:#111;
-        border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;cursor:pointer;letter-spacing:.04em">
-        → Einloggen
-      </button>
-      <div class="mentor-gate-err" id="m-err" style="text-align:center;margin-top:8px"></div>
-    </div>`;
-    document.getElementById('m-login').addEventListener('click',()=>{
-      const pw=document.getElementById('m-pw').value;
-      if(pw===MENTOR_PW){mentorAuthed=true;try{sessionStorage.setItem('ecl-mentor-auth','1');}catch{}renderMentor();}
-      else{const e=document.getElementById('m-err');e.textContent='Falsches Passwort.';
-        document.getElementById('m-pw').style.borderColor='#F87171';}});
-    document.getElementById('m-pw').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('m-login').click();});
-    return;}
-
-  let cards='';
-  try{
-  const sessionLabels={2:'Session 2',4:'Session 4'};
-  cards=VENTURES.map(v=>{
-    const sessionBlocks=Object.entries(v.sessions).map(([snum,sd])=>{
-      if(sd.stars===null){
-        return `<div class="v-session">
-          <div><div class="v-s-label">${sessionLabels[snum]||'S'+snum}</div>
-            <div class="v-stars">${stars(null)}</div></div>
-          <div style="grid-column:2/4;font-size:11.5px;color:#4A6280;font-style:italic;padding-top:2px">${sd.note}</div>
-        </div>`;}
-      const posHtml=(sd.pos||[]).map(p=>`<div class="v-bullet pos">${p}</div>`).join('');
-      const gapHtml=(sd.gaps||[]).map(g=>`<div class="v-bullet gap">${g}</div>`).join('');
-      const bridgeHtml=sd.closed||sd.open?`<div class="v-bridge">
-        <strong>↳ S${parseInt(snum)-2||2}→S${snum} Feedback-Integration</strong>
-        ${(sd.closed||[]).map(c=>`<div class="v-bridge-item closed">${c}</div>`).join('')}
-        ${(sd.open||[]).map(o=>`<div class="v-bridge-item open">${o}</div>`).join('')}
-      </div>`:'';
-      return `${bridgeHtml}<div class="v-session">
-        <div><div class="v-s-label">${sessionLabels[snum]||'S'+snum}</div>
-          <div class="v-stars">${stars(sd.stars)}</div></div>
-        <div class="v-bullets">${posHtml}</div>
-        <div class="v-bullets">${gapHtml}</div>
-      </div>`;}).join('');
-
-    return `<div class="v-card">
-      <div class="v-card-head">
-        <div class="v-name-col">
-          <div class="v-name">${v.name}</div>
-          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#0DD6D6;
-            font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">${v.team}</div>
-          <div class="v-idea">${v.idea}</div>
-        </div>
-        <div class="v-sessions-col">${sessionBlocks}</div>
-      </div>
-    </div>`;}).join('');
-
-  }catch(err){el.innerHTML='<div style="padding:40px;color:#F87171;font-family:Syne,sans-serif">Fehler beim Laden: '+err.message+'</div>';return;}
-  el.innerHTML=`<div class="mentor-title-row">
-    <div>
-      <div class="mentor-page-title">Venture-Übersicht · ${VENTURES.length} Teams</div>
-      <div class="mentor-sub">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
-    </div>
-    <div class="mentor-legend">
-      <span><span style="color:#34D399">●</span> Stärke</span>
-      <span><span style="color:#F87171">●</span> Kritische Lücke</span>
-      <span><span style="color:#0DD6D6">↳</span> Feedback geschlossen</span>
-      <span><span style="color:#F59E0B">△</span> Noch offen</span>
-    </div>
-  </div>
-  <div class="mentor-grid">${cards}</div>`;
-}
-
 </script>
-
 </body>
 </html>
