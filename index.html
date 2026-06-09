@@ -11,11 +11,11 @@
 ═══════════════════════════════════════════ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#13111C;--sb:#18162A;--card:#1E1B2A;--card-hi:#272335;
-  --border:rgba(200,180,255,0.09);--border-md:rgba(200,180,255,0.16);
-  --text:#EDE9F6;--dim:#8278A0;--muted:#252134;
-  --gold:#E8A030;--teal:#44B8B8;--green:#5ABF8C;--rose:#D97090;
-  --violet:#8B78CC;--orange:#D4784C;
+  --bg:#F4F1EB;--sb:#1A1830;--card:#FFFFFF;--card-hi:#F9F7F2;
+  --border:rgba(25,20,50,0.09);--border-md:rgba(25,20,50,0.15);
+  --text:#FFFFFF;--dim:#7068A0;--muted:#E6E0D4;
+  --gold:#C87C38;--teal:#2A7E7E;--green:#2E7A52;--rose:#B85070;
+  --violet:#6858B8;--orange:#BC5C36;
   --r:13px;--r-sm:9px;--r-xs:6px;
   --sb-w:224px;
 }
@@ -54,14 +54,14 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
   border-radius:2px;transition:width .5s}
 
 .sb-section{padding:10px 0}
-.sb-section-label{font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+.sb-section-label{color:#7068A0;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--dim);font-family:'Syne',sans-serif;font-weight:700;
   padding:4px 16px 6px}
 .sb-item{display:flex;align-items:center;gap:9px;padding:7px 16px;
   cursor:pointer;transition:all .15s;text-decoration:none;border-left:2px solid transparent;
   font-size:13px;color:var(--dim);font-family:'Syne',sans-serif;font-weight:600}
 .sb-item:hover{background:rgba(255,255,255,.035);color:var(--text);border-left-color:var(--muted)}
-.sb-item.active{background:rgba(232,160,48,.07);color:var(--gold);border-left-color:var(--gold)}
+.sb-item.active{background:rgba(200,124,56,.07);color:var(--gold);border-left-color:var(--gold)}
 .sb-item .sb-icon{font-size:14px;width:20px;text-align:center;flex-shrink:0}
 .sb-item .sb-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-left:auto}
 .sb-divider{height:1px;background:var(--border);margin:6px 16px}
@@ -100,9 +100,9 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .status-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;
   border-radius:20px;font-family:'Syne',sans-serif;font-weight:700;
   font-size:9.5px;letter-spacing:.06em;text-transform:uppercase}
-.status-locked{background:rgba(130,120,160,.12);color:var(--dim);border:1px solid rgba(130,120,160,.18)}
-.status-draft{background:rgba(130,120,160,.16);color:#7A98B8;border:1px solid rgba(130,120,160,.25)}
-.status-imported{background:rgba(232,160,48,.1);color:var(--gold);border:1px solid rgba(232,160,48,.22)}
+.status-locked{background:rgba(112,104,160,.12);color:var(--dim);border:1px solid rgba(112,104,160,.18)}
+.status-draft{background:rgba(112,104,160,.16);color:#7A98B8;border:1px solid rgba(112,104,160,.25)}
+.status-imported{background:rgba(200,124,56,.1);color:var(--gold);border:1px solid rgba(200,124,56,.22)}
 .status-revised{background:rgba(129,140,248,.1);color:var(--violet);border:1px solid rgba(129,140,248,.22)}
 .status-validated{background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.22)}
 .status-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
@@ -124,8 +124,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
   justify-content:center;font-size:10px;font-weight:700;position:relative;z-index:1;
   border:2px solid;transition:all .2s;cursor:default;flex-shrink:0}
 .tl-circle.tl-done{background:rgba(52,211,153,.12);border-color:var(--green);color:var(--green)}
-.tl-circle.tl-active{background:rgba(232,160,48,.12);border-color:var(--gold);color:var(--gold)}
-.tl-circle.tl-imported{background:rgba(68,184,184,.12);border-color:var(--teal);color:var(--teal)}
+.tl-circle.tl-active{background:rgba(200,124,56,.12);border-color:var(--gold);color:var(--gold)}
+.tl-circle.tl-imported{background:rgba(42,126,126,.12);border-color:var(--teal);color:var(--teal)}
 .tl-circle.tl-odoo{background:rgba(129,140,248,.12);border-color:var(--violet);color:var(--violet)}
 .tl-circle.tl-locked{background:rgba(26,43,64,.5);border-color:var(--muted);color:var(--muted)}
 .tl-label{font-size:8.5px;text-align:center;color:var(--dim);
@@ -200,7 +200,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .field-label{font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;
   font-family:'Syne',sans-serif;font-weight:700;color:var(--mc)}
 .field-hint{font-size:11px;color:var(--dim);font-style:italic}
-.field-input,.field-textarea{width:100%;background:rgba(0,0,0,.3);
+.field-input,.field-textarea{width:100%;background:rgba(25,20,50,.06);
   border:1px solid var(--border-md);border-radius:var(--r-xs);
   color:var(--text);font-family:'DM Sans',sans-serif;font-size:13.5px;
   padding:8px 11px;outline:none;transition:border-color .18s;resize:vertical}
@@ -220,7 +220,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .feedback-sublabel{font-size:9px;text-transform:uppercase;letter-spacing:.12em;
   color:var(--gold);font-family:'Syne',sans-serif;font-weight:700;margin-bottom:3px}
 .feedback-note{font-size:12px;color:var(--dim);font-style:italic;line-height:1.5;
-  background:rgba(0,0,0,.2);border-radius:var(--r-xs);padding:7px 10px}
+  background:rgba(25,20,50,.04);border-radius:var(--r-xs);padding:7px 10px}
 
 /* Status selector */
 .status-selector{display:flex;flex-direction:column;gap:6px}
@@ -236,7 +236,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 /* Import source badge */
 .import-source{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--dim);
   font-family:'DM Mono',monospace;padding:6px 10px;
-  background:rgba(68,184,184,.05);border:1px solid rgba(68,184,184,.12);
+  background:rgba(42,126,126,.05);border:1px solid rgba(42,126,126,.12);
   border-radius:var(--r-xs);flex-wrap:wrap}
 .import-source strong{color:var(--teal)}
 
@@ -275,7 +275,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .drop-zone{border:2px dashed var(--muted);border-radius:var(--r);
   padding:38px 20px;text-align:center;cursor:pointer;transition:all .22s;
   background:rgba(0,0,0,.15)}
-.drop-zone:hover,.drop-zone.drag{border-color:var(--gold);background:rgba(232,160,48,.04)}
+.drop-zone:hover,.drop-zone.drag{border-color:var(--gold);background:rgba(200,124,56,.04)}
 .drop-icon{font-size:36px;margin-bottom:10px}
 .drop-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:4px}
 .drop-sub{font-size:12.5px;color:var(--dim)}
@@ -320,7 +320,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 /* Toast */
 #toasts{position:fixed;bottom:20px;right:18px;z-index:999;
   display:flex;flex-direction:column;gap:7px;pointer-events:none}
-.toast{background:rgba(30,27,42,.95);backdrop-filter:blur(16px);
+.toast{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);
   border:1px solid var(--border-md);border-left-width:3px;
   padding:9px 14px;border-radius:var(--r-xs);font-size:12.5px;
   color:var(--text);max-width:280px;
@@ -351,37 +351,37 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 #autosave-ind.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── MENTOR MODE ─────────────────────────────────────── */
-#mentor-app{display:none;min-height:100vh;background:#13111C;color:#C8D9EE;font-family:'DM Sans',sans-serif}
-.mentor-header{background:rgba(19,17,28,.95);border-bottom:1px solid rgba(255,255,255,.07);
+#mentor-app{display:none;min-height:100vh;background:#F4F1EB;color:#3A3460;font-family:'DM Sans',sans-serif}
+.mentor-header{background:rgba(244,241,235,.95);border-bottom:1px solid rgba(255,255,255,.07);
   padding:14px 28px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100}
 .mentor-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;
-  letter-spacing:.16em;color:#44B8B8;text-transform:uppercase}
-.mentor-badge{background:rgba(232,160,48,.14);border:1px solid rgba(232,160,48,.3);
-  color:#E8A030;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
+  letter-spacing:.16em;color:#2A7E7E;text-transform:uppercase}
+.mentor-badge{background:rgba(200,124,56,.14);border:1px solid rgba(200,124,56,.3);
+  color:#C87C38;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
   padding:3px 9px;border-radius:20px;letter-spacing:.1em;text-transform:uppercase}
 .mentor-wrap{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
-.mentor-gate{max-width:360px;margin:100px auto;background:#1E1B2A;
+.mentor-gate{max-width:360px;margin:100px auto;background:#FFFFFF;
   border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:36px}
 .mentor-gate h2{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:6px}
-.mentor-gate p{font-size:13px;color:#8278A0;margin-bottom:22px}
-.mentor-gate input{width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);
-  border-radius:5px;color:#C8D9EE;font-size:14px;padding:10px 13px;outline:none;
+.mentor-gate p{font-size:13px;color:#7068A0;margin-bottom:22px}
+.mentor-gate input{width:100%;background:rgba(25,20,50,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:5px;color:#3A3460;font-size:14px;padding:10px 13px;outline:none;
   margin-bottom:10px;transition:border-color .18s}
-.mentor-gate input:focus{border-color:#E8A030}
+.mentor-gate input:focus{border-color:#C87C38}
 .mentor-gate-err{font-size:11.5px;color:#F87171;min-height:18px;margin-top:3px}
 .mentor-grid{display:flex;flex-direction:column;gap:16px}
-.v-card{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+.v-card{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
 .v-card-head{display:grid;grid-template-columns:220px 1fr;align-items:start;gap:0}
 .v-name-col{padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)}
 .v-name{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:4px}
-.v-idea{font-size:12px;color:#8278A0;line-height:1.55}
+.v-idea{font-size:12px;color:#7068A0;line-height:1.55}
 .v-sessions-col{padding:14px 20px;display:flex;flex-direction:column;gap:10px}
 .v-session{display:grid;grid-template-columns:60px 80px 1fr;gap:12px;align-items:start;
-  padding:10px 12px;background:rgba(0,0,0,.18);border-radius:8px;border:1px solid rgba(255,255,255,.05)}
+  padding:10px 12px;background:rgba(25,20,50,.04);border-radius:8px;border:1px solid rgba(255,255,255,.05)}
 .v-s-label{font-family:'Syne',sans-serif;font-weight:800;font-size:10px;
-  letter-spacing:.12em;text-transform:uppercase;color:#8278A0;margin-top:1px}
+  letter-spacing:.12em;text-transform:uppercase;color:#7068A0;margin-top:1px}
 .v-stars{display:flex;gap:2px;font-size:14px;margin-top:4px}
-.star-on{color:#E8A030}
+.star-on{color:#C87C38}
 .star-off{color:#1E2D3F}
 .v-bullets{display:flex;flex-direction:column;gap:4px}
 .v-bullet{font-size:11.5px;line-height:1.45;display:flex;gap:6px;align-items:baseline}
@@ -389,50 +389,50 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .v-bullet.pos::before{content:'●';color:#34D399}
 .v-bullet.gap::before{content:'●';color:#F87171}
 .v-bridge{margin:2px 0 2px 0;padding:7px 12px;
-  background:rgba(68,184,184,.05);border-left:2px solid rgba(68,184,184,.25);
-  border-radius:0 5px 5px 0;font-size:11px;color:#8278A0}
-.v-bridge strong{color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
+  background:rgba(42,126,126,.05);border-left:2px solid rgba(42,126,126,.25);
+  border-radius:0 5px 5px 0;font-size:11px;color:#7068A0}
+.v-bridge strong{color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
   text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px}
 .v-bridge-item{display:flex;gap:5px;align-items:baseline;font-size:11px}
 .v-bridge-item.closed::before{content:'✓';color:#34D399;font-size:10px;flex-shrink:0}
-.v-bridge-item.open::before{content:'△';color:#E8A030;font-size:10px;flex-shrink:0}
+.v-bridge-item.open::before{content:'△';color:#C87C38;font-size:10px;flex-shrink:0}
 .mentor-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
 .mentor-page-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff}
-.mentor-sub{font-size:12.5px;color:#8278A0;margin-top:2px}
-.mentor-legend{display:flex;gap:16px;font-size:10.5px;color:#8278A0;align-items:center;flex-wrap:wrap}
+.mentor-sub{font-size:12.5px;color:#7068A0;margin-top:2px}
+.mentor-legend{display:flex;gap:16px;font-size:10.5px;color:#7068A0;align-items:center;flex-wrap:wrap}
 .mentor-legend span{display:flex;align-items:center;gap:4px}
 
 /* ── ANALYSE VIEWS ──────────────────────────────────────────── */
-.view-title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:#E2E8F0;margin-bottom:6px}
-.view-sub{font-size:13px;color:#8278A0;margin-bottom:28px;line-height:1.5}
-.view-section{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 24px;margin-bottom:14px}
-.view-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8278A0;margin-bottom:16px}
+.view-title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:#FFFFFF;margin-bottom:6px}
+.view-sub{font-size:13px;color:#7068A0;margin-bottom:28px;line-height:1.5}
+.view-section{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 24px;margin-bottom:14px}
+.view-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#7068A0;margin-bottom:16px}
 
 /* Integration Map */
-.map-wrap{position:relative;width:100%;background:#151220;border-radius:10px;overflow:hidden}
+.map-wrap{position:relative;width:100%;background:#EAE6DE;border-radius:10px;overflow:hidden}
 .map-wrap svg{width:100%;display:block}
 .map-node{cursor:pointer;transition:all .2s}
 .map-node:hover circle{filter:brightness(1.3)}
-.map-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:#8278A0;margin-top:10px}
+.map-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:#7068A0;margin-top:10px}
 .map-legend-item{display:flex;align-items:center;gap:5px}
 .map-legend-dot{width:8px;height:8px;border-radius:50%}
 
 /* Consistency Check */
 .cc-pairs{display:flex;flex-direction:column;gap:14px}
-.cc-pair{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.cc-pair{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;transition:border-color .2s}
 .cc-pair.cc-ok{border-color:rgba(52,211,153,.3)}
-.cc-pair.cc-warn{border-color:rgba(232,160,48,.3)}
+.cc-pair.cc-warn{border-color:rgba(200,124,56,.3)}
 .cc-pair.cc-bad{border-color:rgba(248,113,113,.3)}
-.cc-pair-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(0,0,0,.2)}
-.cc-bridge{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#E2E8F0;flex:1}
-.cc-bridge-sub{font-size:11px;color:#8278A0;margin-top:2px}
+.cc-pair-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(25,20,50,.04)}
+.cc-bridge{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#FFFFFF;flex:1}
+.cc-bridge-sub{font-size:11px;color:#7068A0;margin-top:2px}
 .cc-status-btns{display:flex;gap:6px;flex-shrink:0}
-.cc-btn{padding:3px 10px;border-radius:20px;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,.1);color:#8278A0;background:none;transition:all .15s}
+.cc-btn{padding:3px 10px;border-radius:20px;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,.1);color:#7068A0;background:none;transition:all .15s}
 .cc-btn.ok{border-color:rgba(52,211,153,.5);color:#34D399;background:rgba(52,211,153,.1)}
-.cc-btn.warn{border-color:rgba(232,160,48,.5);color:#E8A030;background:rgba(232,160,48,.1)}
+.cc-btn.warn{border-color:rgba(200,124,56,.5);color:#C87C38;background:rgba(200,124,56,.1)}
 .cc-btn.bad{border-color:rgba(248,113,113,.5);color:#F87171;background:rgba(248,113,113,.1)}
 .cc-body{padding:14px 18px}
-.cc-question{font-size:12.5px;color:#8278A0;font-style:italic;margin-bottom:8px}
+.cc-question{font-size:12.5px;color:#7068A0;font-style:italic;margin-bottom:8px}
 .cc-summary{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
 .cc-summary-chip{padding:6px 14px;border-radius:20px;font-family:'Syne',sans-serif;font-weight:700;font-size:11px}
 
@@ -441,8 +441,8 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .reality-item{background:rgba(248,113,113,.04);border:1px solid rgba(248,113,113,.15);border-radius:10px;padding:16px 18px}
 .reality-label{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .reality-icon{font-size:22px}
-.reality-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#E2E8F0}
-.reality-hint{font-size:11.5px;color:#8278A0;font-style:italic;margin-bottom:8px}
+.reality-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#FFFFFF}
+.reality-hint{font-size:11.5px;color:#7068A0;font-style:italic;margin-bottom:8px}
 
 /* Maturity Radar */
 .maturity-wrap{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
@@ -451,103 +451,103 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .maturity-dims{flex:1;min-width:200px;display:flex;flex-direction:column;gap:10px}
 .maturity-dim{display:flex;flex-direction:column;gap:4px}
 .maturity-dim-head{display:flex;align-items:center;justify-content:space-between}
-.maturity-dim-label{font-size:12px;font-family:'Syne',sans-serif;font-weight:700;color:#E2E8F0}
+.maturity-dim-label{font-size:12px;font-family:'Syne',sans-serif;font-weight:700;color:#FFFFFF}
 .maturity-dim-score{font-size:11px;font-family:'Syne',sans-serif;font-weight:700}
 .maturity-bar-track{height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
 .maturity-bar-fill{height:100%;border-radius:3px;transition:width .5s}
-.maturity-score-total{font-family:'Syne',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#44B8B8;text-align:center;margin-top:8px}
-.maturity-score-label{font-size:11px;color:#8278A0;text-align:center;font-family:'Syne',sans-serif}
+.maturity-score-total{font-family:'Syne',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#2A7E7E;text-align:center;margin-top:8px}
+.maturity-score-label{font-size:11px;color:#7068A0;text-align:center;font-family:'Syne',sans-serif}
 
 /* Pitch Mode */
-.pitch-mode-wrap{background:#13111C;border-radius:12px;overflow:hidden;min-height:500px}
+.pitch-mode-wrap{background:#F4F1EB;border-radius:12px;overflow:hidden;min-height:500px}
 .pitch-slide{display:none;min-height:480px;padding:52px 56px;flex-direction:column;justify-content:center}
 .pitch-slide.active{display:flex}
-.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8278A0;margin-bottom:14px}
-.pitch-slide-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;color:#E2E8F0;margin-bottom:22px;line-height:1.15}
+.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7068A0;margin-bottom:14px}
+.pitch-slide-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;color:#FFFFFF;margin-bottom:22px;line-height:1.15}
 .pitch-slide-body{font-size:15px;color:#8DA5B8;line-height:1.75;flex:1;white-space:pre-wrap}
-.pitch-slide-empty{font-size:13px;color:#2A2440;font-style:italic}
-.pitch-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(0,0,0,.3);border-top:1px solid rgba(255,255,255,.05)}
-.pitch-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#8278A0;padding:7px 16px;border-radius:6px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;transition:all .18s}
-.pitch-nav-btn:hover:not(:disabled){background:rgba(255,255,255,.1);color:#E2E8F0}
+.pitch-slide-empty{font-size:13px;color:#DDD8CC;font-style:italic}
+.pitch-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(25,20,50,.06);border-top:1px solid rgba(255,255,255,.05)}
+.pitch-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#7068A0;padding:7px 16px;border-radius:6px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;transition:all .18s}
+.pitch-nav-btn:hover:not(:disabled){background:rgba(255,255,255,.1);color:#FFFFFF}
 .pitch-nav-btn:disabled{opacity:.3;cursor:default}
 .pitch-dots{display:flex;gap:6px;align-items:center}
 .pitch-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:all .18s}
-.pitch-dot.active{background:#44B8B8;width:18px;border-radius:3px}
+.pitch-dot.active{background:#2A7E7E;width:18px;border-radius:3px}
 
 /* Feedback Evolution */
 .evo-list{display:flex;flex-direction:column;gap:16px}
-.evo-card{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
-.evo-card-head{padding:12px 18px;background:rgba(0,0,0,.2);display:flex;align-items:center;gap:10px;cursor:pointer}
+.evo-card{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+.evo-card-head{padding:12px 18px;background:rgba(25,20,50,.04);display:flex;align-items:center;gap:10px;cursor:pointer}
 .evo-card-icon{font-size:18px}
-.evo-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#E2E8F0;flex:1}
+.evo-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#FFFFFF;flex:1}
 .evo-card-status{font-size:10px;padding:3px 8px;border-radius:20px;font-family:'Syne',sans-serif;font-weight:700}
 .evo-steps{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0}
 .evo-step{padding:14px 16px;border-right:1px solid rgba(255,255,255,.05)}
 .evo-step:last-child{border-right:none}
 .evo-step-label{font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px}
 .evo-step-text{font-size:12px;color:#8DA5B8;line-height:1.55;white-space:pre-wrap}
-.evo-step-empty{font-size:11px;color:#2A2440;font-style:italic}
+.evo-step-empty{font-size:11px;color:#DDD8CC;font-style:italic}
 
 /* Assumptions enhanced */
 .assump-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.assump-card{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;position:relative}
+.assump-card{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;position:relative}
 .assump-card.risk-high{border-color:rgba(248,113,113,.25)}
-.assump-card.risk-med{border-color:rgba(232,160,48,.2)}
+.assump-card.risk-med{border-color:rgba(200,124,56,.2)}
 .assump-card.risk-low{border-color:rgba(52,211,153,.15)}
-.assump-text{font-size:13px;color:#E2E8F0;margin-bottom:10px;line-height:1.5}
+.assump-text{font-size:13px;color:#FFFFFF;margin-bottom:10px;line-height:1.5}
 .assump-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
 .assump-chip{font-size:9.5px;font-family:'Syne',sans-serif;font-weight:700;padding:3px 8px;border-radius:20px}
-.assump-next{font-size:11px;color:#8278A0;font-style:italic;line-height:1.45}
-.add-assump-form{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px;margin-top:14px}
+.assump-next{font-size:11px;color:#7068A0;font-style:italic;line-height:1.45}
+.add-assump-form{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px;margin-top:14px}
 
 
 /* ── GUIDE VIEW ───────────────────────────────────────── */
 .gl-page{max-width:760px;margin:0 auto}
-.gl-header{margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid rgba(200,180,255,.08)}
+.gl-header{margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid rgba(25,20,50,.08)}
 .gl-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:9px;letter-spacing:.18em;
-  text-transform:uppercase;color:#44B8B8;margin-bottom:10px}
-h1{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#EDE9F6;line-height:1.2}
-.gl-sub{font-size:13px;color:#8278A0;margin-top:6px}
-.gl-leitmotiv{background:rgba(68,184,184,.07);border-left:3px solid #44B8B8;
+  text-transform:uppercase;color:#2A7E7E;margin-bottom:10px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#FFFFFF;line-height:1.2}
+.gl-sub{font-size:13px;color:#7068A0;margin-top:6px}
+.gl-leitmotiv{background:rgba(42,126,126,.07);border-left:3px solid #2A7E7E;
   padding:12px 16px;border-radius:0 8px 8px 0;margin:28px 0;
-  font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#44B8B8;font-style:italic}
+  font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#2A7E7E;font-style:italic}
 h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;
-  letter-spacing:.14em;color:#8278A0;margin:28px 0 12px}
+  letter-spacing:.14em;color:#7068A0;margin:28px 0 12px}
 .gl-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
-.gl-step{display:flex;gap:14px;align-items:flex-start;background:#1E1B2A;
-  border:1px solid rgba(200,180,255,.08);border-radius:10px;padding:14px 16px}
+.gl-step{display:flex;gap:14px;align-items:flex-start;background:#FFFFFF;
+  border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
 .gl-step-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;
-  color:#44B8B8;opacity:.4;line-height:1;flex-shrink:0;min-width:24px}
+  color:#2A7E7E;opacity:.4;line-height:1;flex-shrink:0;min-width:24px}
 .gl-step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13.5px;
-  color:#EDE9F6;margin-bottom:3px}
+  color:#FFFFFF;margin-bottom:3px}
 .gl-step-
-.gl-step-body code{background:rgba(68,184,184,.1);color:#44B8B8;padding:1px 6px;
+.gl-step-body code{background:rgba(42,126,126,.1);color:#2A7E7E;padding:1px 6px;
   border-radius:4px;font-size:11.5px;font-family:monospace}
 .gl-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
-.gl-tool{background:#1E1B2A;border:1px solid rgba(200,180,255,.08);border-radius:10px;padding:14px 16px}
+.gl-tool{background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
 .gl-tool-icon{font-size:18px;margin-bottom:6px}
-.gl-tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12.5px;color:#EDE9F6;margin-bottom:3px}
+.gl-tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12.5px;color:#FFFFFF;margin-bottom:3px}
 .gl-tool-desc{font-size:11.5px;color:#9890B4;line-height:1.5}
-.gl-tips{background:#1E1B2A;border:1px solid rgba(200,180,255,.08);border-radius:10px;
+.gl-tips{background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:10px;
   padding:16px 18px;margin-bottom:24px}
 .gl-tip{display:flex;gap:10px;align-items:baseline;padding:5px 0;
   border-bottom:1px solid rgba(200,180,255,.05)}
 .gl-tip:last-child{border-bottom:none}
-.gl-tip-q{font-size:12px;color:#EDE9F6;flex:1}
+.gl-tip-q{font-size:12px;color:#FFFFFF;flex:1}
 .gl-tip-a{font-size:12px;color:#9890B4;flex:1.2}
 .gl-sessions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:24px}
-.gl-sess{background:#1E1B2A;border:1px solid rgba(200,180,255,.08);border-radius:8px;
+.gl-sess{background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:8px;
   padding:9px 11px;text-align:center}
 .gl-sess-num{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;
-  color:#44B8B8;opacity:.35;line-height:1}
-.gl-sess-label{font-size:9.5px;color:#8278A0;margin-top:3px;line-height:1.35}
-.gl-sess.importable .gl-sess-num{opacity:.9;color:#E8A030}
+  color:#2A7E7E;opacity:.35;line-height:1}
+.gl-sess-label{font-size:9.5px;color:#7068A0;margin-top:3px;line-height:1.35}
+.gl-sess.importable .gl-sess-num{opacity:.9;color:#C87C38}
 .gl-sess.importable .gl-sess-label{color:#A098C0}
-.gl-badge{display:inline-block;background:rgba(232,160,48,.12);color:#E8A030;
-  border:1px solid rgba(232,160,48,.3);border-radius:20px;font-family:'Syne',sans-serif;
+.gl-badge{display:inline-block;background:rgba(200,124,56,.12);color:#C87C38;
+  border:1px solid rgba(200,124,56,.3);border-radius:20px;font-family:'Syne',sans-serif;
   font-weight:700;font-size:8.5px;letter-spacing:.08em;padding:2px 7px;margin-top:5px}
 .gl-footer{margin-top:36px;padding-top:16px;border-top:1px solid rgba(200,180,255,.07);
-  font-size:10.5px;color:#2E2840;text-align:center}
+  font-size:10.5px;color:#E0DACC;text-align:center}
 @media(max-width:560px){.gl-tools{grid-template-columns:1fr}.gl-sessions{grid-template-columns:repeat(2,1fr)}}
 
   .gl-step-num,.gl-sess-num{color:#110E18}.gl-step-title,.gl-tool-name{color:#110E18}
@@ -570,7 +570,7 @@ h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:u
     <div class="mentor-logo">ECL · Entrepreneurship Challenge Lab</div>
     <div class="mentor-badge">🔐 Mentor-Ansicht</div>
     <div style="flex:1"></div>
-    <button onclick="exitMentorMode()" style="background:none;border:1px solid rgba(255,255,255,.12);color:#8278A0;padding:5px 12px;border-radius:5px;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em">← Zurück</button>
+    <button onclick="exitMentorMode()" style="background:none;border:1px solid rgba(255,255,255,.12);color:#7068A0;padding:5px 12px;border-radius:5px;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em">← Zurück</button>
   </div>
   <div class="mentor-wrap" id="mentor-content"></div>
 </div>
@@ -582,7 +582,7 @@ h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:u
 //  DATA: MODULES
 // ═══════════════════════════════════════════════════════════
 const MODULES = [
-  {id:'produkt',title:'Produkt',icon:'📦',color:'#44B8B8',session:'S2',badge:'Produkt definiert',
+  {id:'produkt',title:'Produkt',icon:'📦',color:'#2A7E7E',session:'S2',badge:'Produkt definiert',
    fields:[
     {id:'productName',label:'Produktname',type:'input',hint:'Klarer, wiedererkennbarer Name'},
     {id:'description',label:'Kurzbeschreibung',type:'textarea',rows:3,hint:'Was ist das Produkt, welches Problem löst es, was ist der Kernnutzen?'},
@@ -612,7 +612,7 @@ const MODULES = [
     {id:'validationStatus',label:'Validierungsstand',type:'textarea',rows:2,hint:'Welche Validierungen wurden durchgeführt?'},
     {id:'keyInsights',label:'Wichtigste Erkenntnisse',type:'textarea',rows:2,hint:'Was wurde durch Validierung gelernt?'},
   ]},
-  {id:'geschaeftsmodell',title:'Geschäftsmodell',icon:'🧩',color:'#E8A030',session:'S4',badge:'Geschäftsmodell entwickelt',
+  {id:'geschaeftsmodell',title:'Geschäftsmodell',icon:'🧩',color:'#C87C38',session:'S4',badge:'Geschäftsmodell entwickelt',
    fields:[
     {id:'valueProposition',label:'Value Proposition',type:'textarea',rows:3,hint:'Welchen konkreten Wert schafft das Venture?'},
     {id:'revenueModel',label:'Erlösmodell',type:'textarea',rows:3,hint:'Wie wird Geld verdient? Preislogik, Einheiten, Frequenz'},
@@ -917,9 +917,9 @@ function getNextMission() {
 }
 function getStatusMeta(status) {
   const map = {
-    locked: {color:'#8278A0',label:'Gesperrt',cls:'status-locked'},
+    locked: {color:'#7068A0',label:'Gesperrt',cls:'status-locked'},
     draft: {color:'#7A98B8',label:'Entwurf',cls:'status-draft'},
-    imported: {color:'#E8A030',label:'Importiert',cls:'status-imported'},
+    imported: {color:'#C87C38',label:'Importiert',cls:'status-imported'},
     revised: {color:'#818CF8',label:'Überarbeitet',cls:'status-revised'},
     validated: {color:'#34D399',label:'Validiert',cls:'status-validated'},
   };
@@ -930,7 +930,7 @@ function getStatusMeta(status) {
 //  UTILS
 // ═══════════════════════════════════════════════════════════
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function toast(msg,color='#E8A030',dur=2800){
+function toast(msg,color='#C87C38',dur=2800){
   const c=document.getElementById('toasts');const el=document.createElement('div');
   el.className='toast';el.style.borderLeftColor=color;el.textContent=msg;
   c.appendChild(el);setTimeout(()=>el.remove(),dur+300);}
@@ -1086,7 +1086,7 @@ function renderDashboard() {
 
   // Feedback log
   const fbItems=S.feedbackLog.length?S.feedbackLog.slice(0,4).map(f=>{
-    const statusColor=f.status==='integrated'?'#34D399':f.status==='partial'?'#E8A030':'#F87171';
+    const statusColor=f.status==='integrated'?'#34D399':f.status==='partial'?'#C87C38':'#F87171';
     const statusLabel=f.status==='integrated'?'✅ umgesetzt':f.status==='partial'?'⚠ teilweise':'❌ offen';
     return `<div class="fb-item">
       <div class="fb-dot" style="background:${statusColor}"></div>
@@ -1100,7 +1100,7 @@ function renderDashboard() {
 
   // Assumptions
   const asmItems=S.assumptions.length?S.assumptions.slice(0,4).map(a=>{
-    const sc=a.status==='confirmed'?'#34D399':a.status==='refuted'?'#F87171':'#E8A030';
+    const sc=a.status==='confirmed'?'#34D399':a.status==='refuted'?'#F87171':'#C87C38';
     const icon=a.status==='confirmed'?'✓':a.status==='refuted'?'✗':'?';
     return `<div class="assumption-item">
       <div class="asm-status" style="border-color:${sc};color:${sc}">${icon}</div>
@@ -1133,24 +1133,24 @@ function renderDashboard() {
     <!-- Analyse-Shortcuts -->
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px">
       <a href="#maturity" style="text-decoration:none">
-        <div style="background:#1E1B2A;border:1px solid rgba(68,184,184,.22);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
-          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">📊 Maturity Score</div>
-          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#44B8B8;line-height:1">${Math.min(4,Math.round(overallCompletion()/25))}/4</div>
-          <div style="font-size:10px;color:#8278A0;margin-top:6px">Reifegrad ansehen →</div>
+        <div style="background:#FFFFFF;border:1px solid rgba(42,126,126,.22);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">📊 Maturity Score</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#2A7E7E;line-height:1">${Math.min(4,Math.round(overallCompletion()/25))}/4</div>
+          <div style="font-size:10px;color:#7068A0;margin-top:6px">Reifegrad ansehen →</div>
         </div>
       </a>
       <a href="#consistency" style="text-decoration:none">
-        <div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
-          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#8278A0;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">✓ Konsistenz</div>
+        <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#7068A0;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">✓ Konsistenz</div>
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#34D399;line-height:1">${Object.entries(S.consistency).filter(([k,v])=>k.endsWith('_status')&&v==='ok').length}/${CC_PAIRS.length}</div>
-          <div style="font-size:10px;color:#8278A0;margin-top:6px">Konsistenzprüfung →</div>
+          <div style="font-size:10px;color:#7068A0;margin-top:6px">Konsistenzprüfung →</div>
         </div>
       </a>
       <a href="#reality" style="text-decoration:none">
-        <div style="background:#1E1B2A;border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+        <div style="background:#FFFFFF;border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
           <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#F87171;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">⚡ Reality Check</div>
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:${['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&(S.reality[k]||'').trim().length>10).length===5?'#34D399':'#F87171'};line-height:1">${['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&(S.reality[k]||'').trim().length>10).length}/5</div>
-          <div style="font-size:10px;color:#8278A0;margin-top:6px">Risiken ansehen →</div>
+          <div style="font-size:10px;color:#7068A0;margin-top:6px">Risiken ansehen →</div>
         </div>
       </a>
     </div>
@@ -1234,7 +1234,7 @@ function renderModule(mid) {
 
   const statusOpts=[
     {s:'draft',sc:'#7A98B8',label:'Entwurf',desc:'Erste Version, noch überarbeiten'},
-    {s:'imported',sc:'#E8A030',label:'Importiert',desc:'Direkt aus Session importiert'},
+    {s:'imported',sc:'#C87C38',label:'Importiert',desc:'Direkt aus Session importiert'},
     {s:'revised',sc:'#818CF8',label:'Überarbeitet',desc:'Nach Feedback angepasst'},
     {s:'validated',sc:'#34D399',label:'Validiert',desc:'Bestätigt und abgeschlossen'},
   ].map(o=>`<div class="status-opt${mstate.status===o.s?' selected':''}" data-mid="${mid}" data-status="${o.s}" style="--sc:${o.sc}">
@@ -1341,7 +1341,7 @@ function renderOutput(type) {
 
 function renderBusinessPlanOutput() {
   const sections = [
-    {title:'1. Zusammenfassung',mc:'#44B8B8',blocks:[
+    {title:'1. Zusammenfassung',mc:'#2A7E7E',blocks:[
       {mod:'produkt',fid:'productName',label:'Produktname'},
       {mod:'produkt',fid:'description',label:'Kurzbeschreibung'},
       {mod:'geschaeftsmodell',fid:'valueProposition',label:'Value Proposition'},
@@ -1352,7 +1352,7 @@ function renderBusinessPlanOutput() {
       {mod:'kunden',fid:'motivation',label:'Kaufmotivation'},
       {mod:'kunden',fid:'validationStatus',label:'Validierungsstand'},
     ]},
-    {title:'3. Produkt',mc:'#44B8B8',blocks:[
+    {title:'3. Produkt',mc:'#2A7E7E',blocks:[
       {mod:'produkt',fid:'description',label:'Produktbeschreibung'},
       {mod:'produkt',fid:'targetGroup',label:'Zielkund:in'},
       {mod:'produkt',fid:'priceModel',label:'Preislogik'},
@@ -1364,7 +1364,7 @@ function renderBusinessPlanOutput() {
       {mod:'markt',fid:'trends',label:'Trends & Technologie'},
       {mod:'markt',fid:'regulation',label:'Regulierung'},
     ]},
-    {title:'5. Geschäftsmodell',mc:'#E8A030',blocks:[
+    {title:'5. Geschäftsmodell',mc:'#C87C38',blocks:[
       {mod:'geschaeftsmodell',fid:'valueProposition',label:'Value Proposition'},
       {mod:'geschaeftsmodell',fid:'revenueModel',label:'Erlösmodell'},
       {mod:'geschaeftsmodell',fid:'keyActivities',label:'Kernaktivitäten'},
@@ -1423,8 +1423,8 @@ function renderPitchOutput() {
   const parts=[
     {label:'Problem',val:p.problemStatement||'',color:'#F472B6'},
     {label:'Zielgruppe',val:p.targetStatement||'',color:'#818CF8'},
-    {label:'Lösung',val:p.solutionStatement||prod.description||'',color:'#44B8B8'},
-    {label:'Geschäftsmodell',val:p.modelStatement||'',color:'#E8A030'},
+    {label:'Lösung',val:p.solutionStatement||prod.description||'',color:'#2A7E7E'},
+    {label:'Geschäftsmodell',val:p.modelStatement||'',color:'#C87C38'},
     {label:'Prozess',val:p.processStatement||'',color:'#34D399'},
     {label:'Finanzen',val:p.financeStatement||[fin.burnRate,fin.runway].filter(Boolean).join(' · ')||'',color:'#FBBF24'},
   ];
@@ -1611,7 +1611,7 @@ function confirmImport() {
 function openAssumptionModal(editId) {
   const existing = editId ? S.assumptions.find(a=>a.id===editId) : null;
   const modal=document.getElementById('import-modal-inner');
-  const chipStyle=(active,col)=>`padding:4px 10px;border-radius:20px;font-size:10.5px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid ${active?col+'88':col+'33'};color:${active?col:'#8278A0'};background:${active?col+'18':'transparent'};transition:all .15s`;
+  const chipStyle=(active,col)=>`padding:4px 10px;border-radius:20px;font-size:10.5px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid ${active?col+'88':col+'33'};color:${active?col:'#7068A0'};background:${active?col+'18':'transparent'};transition:all .15s`;
   modal.innerHTML=`
     <div class="modal-header">
       <div class="modal-title">❓ Kritische Annahme ${existing?'bearbeiten':'erfassen'}</div>
@@ -1641,14 +1641,14 @@ function openAssumptionModal(editId) {
       <div class="field-group">
         <div class="field-label" style="color:var(--gold);margin-bottom:8px">Evidenzstärke</div>
         <div style="display:flex;gap:7px" id="asm-ev-chips">
-          ${[{v:'stark',c:'#34D399',l:'Stark 🟢'},{v:'mittel',c:'#E8A030',l:'Mittel 🟡'},{v:'schwach',c:'#F87171',l:'Schwach 🔴'}].map(e=>`<button style="${chipStyle(existing?.evidenceStrength===e.v,e.c)}" data-ev="${e.v}" onclick="this.parentNode.querySelectorAll('[data-ev]').forEach(b=>b.dataset.ev!==this.dataset.ev?b.removeAttribute('data-sel'):b.setAttribute('data-sel','1'));document.getElementById('asm-ev').value=this.dataset.ev;">${e.l}</button>`).join('')}
+          ${[{v:'stark',c:'#34D399',l:'Stark 🟢'},{v:'mittel',c:'#C87C38',l:'Mittel 🟡'},{v:'schwach',c:'#F87171',l:'Schwach 🔴'}].map(e=>`<button style="${chipStyle(existing?.evidenceStrength===e.v,e.c)}" data-ev="${e.v}" onclick="this.parentNode.querySelectorAll('[data-ev]').forEach(b=>b.dataset.ev!==this.dataset.ev?b.removeAttribute('data-sel'):b.setAttribute('data-sel','1'));document.getElementById('asm-ev').value=this.dataset.ev;">${e.l}</button>`).join('')}
           <input type="hidden" id="asm-ev" value="${existing?.evidenceStrength||'schwach'}">
         </div>
       </div>
       <div class="field-group">
         <div class="field-label" style="color:var(--gold);margin-bottom:8px">Risikolevel</div>
         <div style="display:flex;gap:7px">
-          ${[{v:'hoch',c:'#F87171',l:'Hoch ⚠'},{v:'mittel',c:'#E8A030',l:'Mittel'},{v:'niedrig',c:'#34D399',l:'Niedrig'}].map(e=>`<button style="${chipStyle(existing?.riskLevel===e.v,e.c)}" data-rl="${e.v}" onclick="this.parentNode.querySelectorAll('[data-rl]').forEach(b=>b.style.background='transparent');this.style.background='${e.c}18';document.getElementById('asm-rl').value=this.dataset.rl;">${e.l}</button>`).join('')}
+          ${[{v:'hoch',c:'#F87171',l:'Hoch ⚠'},{v:'mittel',c:'#C87C38',l:'Mittel'},{v:'niedrig',c:'#34D399',l:'Niedrig'}].map(e=>`<button style="${chipStyle(existing?.riskLevel===e.v,e.c)}" data-rl="${e.v}" onclick="this.parentNode.querySelectorAll('[data-rl]').forEach(b=>b.style.background='transparent');this.style.background='${e.c}18';document.getElementById('asm-rl').value=this.dataset.rl;">${e.l}</button>`).join('')}
           <input type="hidden" id="asm-rl" value="${existing?.riskLevel||'hoch'}">
         </div>
       </div>
@@ -1690,7 +1690,7 @@ function downloadBusinessPlan() {
 <style>body{font-family:'Helvetica Neue',Arial,sans-serif;max-width:800px;margin:40px auto;padding:0 24px;color:#111;font-size:14px;line-height:1.7}
 h1{font-size:24px;margin-bottom:4px}h2{font-size:15px;color:#555;font-weight:400;margin:0 0 24px}
 .sec{margin-bottom:32px;page-break-inside:avoid}
-.sec-title{font-weight:800;font-size:16px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #44B8B8;color:#0a0a1a}
+.sec-title{font-weight:800;font-size:16px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #2A7E7E;color:#0a0a1a}
 .block{background:#f8fafc;border-radius:8px;padding:12px 16px;margin-bottom:10px}
 .blk-label{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0a8a8a;margin-bottom:5px}
 .blk-val{font-size:13.5px;white-space:pre-wrap}
@@ -1798,7 +1798,7 @@ window.addEventListener('beforeunload',()=>{save();});
 //  INTEGRATION MAP (Venture Logic Map)
 // ═══════════════════════════════════════════════════════════
 function renderIntegration() {
-  const statusColor = m => { const s=S.modules[m]?.status||'locked'; return {locked:'#2A2440',draft:'#E8A030',imported:'#44B8B8',revised:'#818CF8',validated:'#34D399'}[s]||'#2A2440'; };
+  const statusColor = m => { const s=S.modules[m]?.status||'locked'; return {locked:'#DDD8CC',draft:'#C87C38',imported:'#2A7E7E',revised:'#818CF8',validated:'#34D399'}[s]||'#DDD8CC'; };
   const completion = m => { const mod=MODULES.find(x=>x.id===m); const ms=S.modules[m]; if(!mod||!ms)return 0; const done=mod.fields.filter(f=>(ms.fields[f.id]||'').trim().length>10).length; return mod.fields.length?Math.round(done/mod.fields.length*100):0; };
   const opacity = m => { const c=completion(m); return Math.max(0.3, c/100); };
 
@@ -1837,8 +1837,8 @@ function renderIntegration() {
   const edgeSvg = edges.map(e => {
     const a=getNode(e.a), b=getNode(e.b);
     const mx=(a.x+b.x)/2, my=(a.y+b.y)/2;
-    return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="rgba(68,184,184,0.12)" stroke-width="1.5" stroke-dasharray="4,3"/>
-      <text x="${mx}" y="${my-4}" fill="rgba(68,184,184,0.4)" font-size="7.5" text-anchor="middle" font-family="DM Sans">${e.label}</text>`;
+    return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="rgba(42,126,126,0.12)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="${mx}" y="${my-4}" fill="rgba(42,126,126,0.4)" font-size="7.5" text-anchor="middle" font-family="DM Sans">${e.label}</text>`;
   }).join('');
 
   const nodeSvg = nodes.map(n => {
@@ -1855,8 +1855,8 @@ function renderIntegration() {
   }).join('');
 
   const legendItems = [
-    {color:'#2A2440',label:'Gesperrt'},{color:'#E8A030',label:'Entwurf'},
-    {color:'#44B8B8',label:'Importiert'},{color:'#818CF8',label:'Überarbeitet'},{color:'#34D399',label:'Validiert'},
+    {color:'#DDD8CC',label:'Gesperrt'},{color:'#C87C38',label:'Entwurf'},
+    {color:'#2A7E7E',label:'Importiert'},{color:'#818CF8',label:'Überarbeitet'},{color:'#34D399',label:'Validiert'},
   ].map(l=>`<div class="map-legend-item"><div class="map-legend-dot" style="background:${l.color}"></div>${l.label}</div>`).join('');
 
   // Consistency quick-check summary
@@ -1871,7 +1871,7 @@ function renderIntegration() {
     <div class="view-section" style="padding:18px">
       <div class="map-wrap">
         <svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
-          <defs><radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#1E1B2A"/><stop offset="100%" stop-color="#13111C"/></radialGradient></defs>
+          <defs><radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#F4F1EB"/></radialGradient></defs>
           <rect width="600" height="460" fill="url(#bg)"/>
           ${edgeSvg}
           ${nodeSvg}
@@ -1883,9 +1883,9 @@ function renderIntegration() {
       <div class="view-section-title">Konsistenz-Schnellübersicht</div>
       <div class="cc-summary">
         <div class="cc-summary-chip" style="background:rgba(52,211,153,.12);color:#34D399;border:1px solid rgba(52,211,153,.25)">✓ ${okCount} Konsistent</div>
-        <div class="cc-summary-chip" style="background:rgba(232,160,48,.12);color:#E8A030;border:1px solid rgba(232,160,48,.25)">⚠ ${warnCount} Spannung</div>
+        <div class="cc-summary-chip" style="background:rgba(200,124,56,.12);color:#C87C38;border:1px solid rgba(200,124,56,.25)">⚠ ${warnCount} Spannung</div>
         <div class="cc-summary-chip" style="background:rgba(248,113,113,.12);color:#F87171;border:1px solid rgba(248,113,113,.25)">✗ ${badCount} Widerspruch</div>
-        <a href="#consistency" style="margin-left:auto;font-size:11.5px;color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;text-decoration:none">→ Zur Konsistenzprüfung</a>
+        <a href="#consistency" style="margin-left:auto;font-size:11.5px;color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;text-decoration:none">→ Zur Konsistenzprüfung</a>
       </div>
     </div>
   </div>`;
@@ -1919,10 +1919,10 @@ function renderConsistency() {
   const getStatus = id => S.consistency[id+'_status'] || '';
   const statusMeta = s => ({
     ok:  {label:'Konsistent',cls:'ok', color:'#34D399',bg:'rgba(52,211,153,.08)'},
-    warn:{label:'Spannung',  cls:'warn',color:'#E8A030',bg:'rgba(232,160,48,.08)'},
+    warn:{label:'Spannung',  cls:'warn',color:'#C87C38',bg:'rgba(200,124,56,.08)'},
     bad: {label:'Widerspruch',cls:'bad',color:'#F87171',bg:'rgba(248,113,113,.08)'},
-    '': {label:'Offen',cls:'',color:'#8278A0',bg:'transparent'},
-  })[s]||{label:'Offen',cls:'',color:'#8278A0',bg:'transparent'};
+    '': {label:'Offen',cls:'',color:'#7068A0',bg:'transparent'},
+  })[s]||{label:'Offen',cls:'',color:'#7068A0',bg:'transparent'};
 
   const allStatuses = CC_PAIRS.map(p=>getStatus(p.id));
   const ok=allStatuses.filter(s=>s==='ok').length, warn=allStatuses.filter(s=>s==='warn').length, bad=allStatuses.filter(s=>s==='bad').length;
@@ -1946,12 +1946,12 @@ function renderConsistency() {
       </div>
       <div class="cc-body">
         <div class="cc-question">${p.q}</div>
-        <div style="font-size:11px;color:#3A3060;font-style:italic;margin-bottom:8px">${p.hint}</div>
+        <div style="font-size:11px;color:#D8D0C4;font-style:italic;margin-bottom:8px">${p.hint}</div>
         <textarea class="mod-textarea" data-cctext="${p.id}" rows="3"
           placeholder="Analyse: Passen diese Elemente zusammen? Wo gibt es Spannungen?"
-          style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.07);border-radius:6px;color:#C8D9EE;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
+          style="width:100%;background:rgba(25,20,50,.06);border:1px solid rgba(255,255,255,.07);border-radius:6px;color:#3A3460;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
           >${val}</textarea>
-        <div style="font-size:9.5px;color:#3A3060;text-align:right;margin-top:2px">${len}z</div>
+        <div style="font-size:9.5px;color:#D8D0C4;text-align:right;margin-top:2px">${len}z</div>
       </div>
     </div>`;
   }).join('');
@@ -1961,9 +1961,9 @@ function renderConsistency() {
     <div class="view-sub">Passen alle Teile des Ventures zusammen? Analysiere die Abhängigkeiten zwischen den Modulen kritisch.</div>
     <div class="cc-summary" style="margin-bottom:20px">
       <div class="cc-summary-chip" style="background:rgba(52,211,153,.1);color:#34D399;border:1px solid rgba(52,211,153,.25)">✓ ${ok} Konsistent</div>
-      <div class="cc-summary-chip" style="background:rgba(232,160,48,.1);color:#E8A030;border:1px solid rgba(232,160,48,.25)">⚠ ${warn} Spannung</div>
+      <div class="cc-summary-chip" style="background:rgba(200,124,56,.1);color:#C87C38;border:1px solid rgba(200,124,56,.25)">⚠ ${warn} Spannung</div>
       <div class="cc-summary-chip" style="background:rgba(248,113,113,.1);color:#F87171;border:1px solid rgba(248,113,113,.25)">✗ ${bad} Widerspruch</div>
-      <div class="cc-summary-chip" style="background:rgba(255,255,255,.05);color:#8278A0;border:1px solid rgba(255,255,255,.07)">${CC_PAIRS.length-ok-warn-bad} Offen</div>
+      <div class="cc-summary-chip" style="background:rgba(255,255,255,.05);color:#7068A0;border:1px solid rgba(255,255,255,.07)">${CC_PAIRS.length-ok-warn-bad} Offen</div>
     </div>
     <div class="cc-pairs">${pairs}</div>
   </div>`;
@@ -1989,15 +1989,15 @@ function renderReality() {
         <div class="reality-icon">${item.icon}</div>
         <div>
           <div class="reality-title">${item.title}</div>
-          ${filled?`<span style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#34D399">✓ Ausgefüllt</span>`:'<span style="font-size:9px;color:#8278A0;font-family:\'Syne\',sans-serif">Pflichtfeld</span>'}
+          ${filled?`<span style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#34D399">✓ Ausgefüllt</span>`:'<span style="font-size:9px;color:#7068A0;font-family:\'Syne\',sans-serif">Pflichtfeld</span>'}
         </div>
       </div>
       <div class="reality-hint">${item.hint}</div>
       <textarea class="mod-textarea" data-reality="${item.id}" rows="3"
         placeholder="${item.hint}"
-        style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(248,113,113,.15);border-radius:6px;color:#C8D9EE;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
+        style="width:100%;background:rgba(25,20,50,.06);border:1px solid rgba(248,113,113,.15);border-radius:6px;color:#3A3460;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
         >${val}</textarea>
-      <div style="font-size:9.5px;color:#8278A0;text-align:right;margin-top:2px">${len}z</div>
+      <div style="font-size:9.5px;color:#7068A0;text-align:right;margin-top:2px">${len}z</div>
     </div>`;
   }).join('');
 
@@ -2006,11 +2006,11 @@ function renderReality() {
   return `<div style="max-width:760px">
     <div class="view-title">⚡ Reality Check</div>
     <div class="view-sub">Wo könnte euer Venture scheitern? Diese Sektion erzwingt Reflexion über die tatsächlichen Risiken – kein Pitch-Optimismus.</div>
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;padding:14px 18px;background:#1E1B2A;border-radius:10px;border:1px solid rgba(255,255,255,.07)">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;padding:14px 18px;background:#FFFFFF;border-radius:10px;border:1px solid rgba(255,255,255,.07)">
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:36px;color:${filledCount===5?'#34D399':'#F87171'};line-height:1">${filledCount}/5</div>
       <div>
-        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#E2E8F0">Pflichtfelder ausgefüllt</div>
-        <div style="font-size:11.5px;color:#8278A0;margin-top:2px">${filledCount===5?'Reality Check vollständig.':'Alle 5 Felder müssen ausgefüllt werden.'}</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#FFFFFF">Pflichtfelder ausgefüllt</div>
+        <div style="font-size:11.5px;color:#7068A0;margin-top:2px">${filledCount===5?'Reality Check vollständig.':'Alle 5 Felder müssen ausgefüllt werden.'}</div>
       </div>
     </div>
     <div class="reality-grid">${fields}</div>
@@ -2037,8 +2037,8 @@ function computeMaturityDim(moduleIds) {
 function renderMaturity() {
   const dims = [
     {label:'Marktverständnis',   mods:['markt','kunden'],            color:'#818CF8'},
-    {label:'Produktreife',       mods:['produkt','pitch'],           color:'#44B8B8'},
-    {label:'Geschäftsmodell',    mods:['geschaeftsmodell','finanzen'],color:'#E8A030'},
+    {label:'Produktreife',       mods:['produkt','pitch'],           color:'#2A7E7E'},
+    {label:'Geschäftsmodell',    mods:['geschaeftsmodell','finanzen'],color:'#C87C38'},
     {label:'Operations',         mods:['operations','ethik'],        color:'#34D399'},
     {label:'Skalierungsfähigkeit',mods:['wachstum','kennzahlen'],    color:'#F87171'},
   ];
@@ -2068,7 +2068,7 @@ function renderMaturity() {
     <div class="maturity-bar-track">
       <div class="maturity-bar-fill" style="width:${scores[i]/4*100}%;background:${d.color}"></div>
     </div>
-    <div style="font-size:10px;color:#8278A0;margin-top:2px">${['Nicht gestartet','Entwurf','Importiert','Überarbeitet','Validiert'][scores[i]]}</div>
+    <div style="font-size:10px;color:#7068A0;margin-top:2px">${['Nicht gestartet','Entwurf','Importiert','Überarbeitet','Validiert'][scores[i]]}</div>
   </div>`).join('');
 
   return `<div style="max-width:860px">
@@ -2079,9 +2079,9 @@ function renderMaturity() {
         <div class="maturity-radar">
           <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
             ${gridLines}${axes}
-            <polygon points="${dataPoints}" fill="rgba(68,184,184,0.15)" stroke="#44B8B8" stroke-width="2"/>
+            <polygon points="${dataPoints}" fill="rgba(42,126,126,0.15)" stroke="#2A7E7E" stroke-width="2"/>
             ${dimLabels}
-            ${scores.map((s,i)=>{const[x,y]=point(i,s);return `<circle cx="${x}" cy="${y}" r="5" fill="#44B8B8" stroke="#13111C" stroke-width="2"/>`;}).join('')}
+            ${scores.map((s,i)=>{const[x,y]=point(i,s);return `<circle cx="${x}" cy="${y}" r="5" fill="#2A7E7E" stroke="#F4F1EB" stroke-width="2"/>`;}).join('')}
           </svg>
           <div class="maturity-score-total">${total}/4</div>
           <div class="maturity-score-label">${totalLabel}</div>
@@ -2093,10 +2093,10 @@ function renderMaturity() {
       <div class="view-section-title">Was bedeutet das?</div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px">
         ${[{v:0,l:'Nicht gestartet',d:'Modul gesperrt oder leer'},{v:1,l:'Entwurf',d:'Erste Inhalte, noch unvollständig'},{v:2,l:'Importiert',d:'Sessiondaten übertragen'},{v:3,l:'Überarbeitet',d:'Nach Feedback angepasst'},{v:4,l:'Validiert',d:'Abgeschlossen und belegt'}]
-          .map(s=>`<div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
-            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#44B8B8;line-height:1">${s.v}/4</div>
-            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;color:#E2E8F0;margin-top:4px">${s.l}</div>
-            <div style="font-size:10.5px;color:#8278A0;margin-top:2px">${s.d}</div>
+          .map(s=>`<div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#2A7E7E;line-height:1">${s.v}/4</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;color:#FFFFFF;margin-top:4px">${s.l}</div>
+            <div style="font-size:10.5px;color:#7068A0;margin-top:2px">${s.d}</div>
           </div>`).join('')}
       </div>
     </div>
@@ -2154,7 +2154,7 @@ function renderPitchMode() {
         <button class="pitch-nav-btn" id="pm-next">Weiter →</button>
       </div>
     </div>
-    <div style="margin-top:12px;font-size:11.5px;color:#8278A0;text-align:center">
+    <div style="margin-top:12px;font-size:11.5px;color:#7068A0;text-align:center">
       Tipp: Keyboard ← → für Navigation · Inhalte kommen direkt aus den Modulen
     </div>
   </div>`;
@@ -2174,13 +2174,13 @@ function renderFeedbackEvolution() {
     <div class="view-sub">Wie hat sich das Venture durch Feedback entwickelt?</div>
     <div class="view-section" style="text-align:center;padding:40px">
       <div style="font-size:32px;margin-bottom:12px">📭</div>
-      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#E2E8F0;margin-bottom:6px">Noch keine Evolution dokumentiert</div>
-      <div style="font-size:13px;color:#8278A0">Fülle in jedem Modul den Abschnitt „Feedback-Integration" aus um den Lernprozess sichtbar zu machen.</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#FFFFFF;margin-bottom:6px">Noch keine Evolution dokumentiert</div>
+      <div style="font-size:13px;color:#7068A0">Fülle in jedem Modul den Abschnitt „Feedback-Integration" aus um den Lernprozess sichtbar zu machen.</div>
     </div>
   </div>`;
 
-  const steps = [{key:'originalAssumption',label:'Ursprung',color:'#8278A0'},
-    {key:'receivedFeedback',label:'Feedback',color:'#E8A030'},
+  const steps = [{key:'originalAssumption',label:'Ursprung',color:'#7068A0'},
+    {key:'receivedFeedback',label:'Feedback',color:'#C87C38'},
     {key:'adaptation',label:'Anpassung',color:'#818CF8'},
     {key:'reasoning',label:'Entscheidung',color:'#34D399'}];
 
@@ -2195,7 +2195,7 @@ function renderFeedbackEvolution() {
       <div class="evo-card-head">
         <div class="evo-card-icon">${m.icon}</div>
         <div class="evo-card-title">${m.title}</div>
-        <div class="evo-card-status" style="background:${hasAll?'rgba(52,211,153,.1)':'rgba(232,160,48,.1)'};color:${hasAll?'#34D399':'#E8A030'};border:1px solid ${hasAll?'rgba(52,211,153,.25)':'rgba(232,160,48,.25)'}">
+        <div class="evo-card-status" style="background:${hasAll?'rgba(52,211,153,.1)':'rgba(200,124,56,.1)'};color:${hasAll?'#34D399':'#C87C38'};border:1px solid ${hasAll?'rgba(52,211,153,.25)':'rgba(200,124,56,.25)'}">
           ${hasAll?'Vollständig':'Teilweise'}
         </div>
       </div>
@@ -2209,13 +2209,13 @@ function renderFeedbackEvolution() {
     <div class="view-title">🔄 Feedback-Evolution</div>
     <div class="view-sub">Der Lernprozess des Ventures sichtbar gemacht. Ursprüngliche Annahmen → externes Feedback → Anpassung → Begründung.</div>
     <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
-      <div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
-        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#44B8B8">${modsWithFeedback.length}</div>
-        <div style="font-size:11px;color:#8278A0;font-family:'Syne',sans-serif">Module mit Evolution</div>
+      <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#2A7E7E">${modsWithFeedback.length}</div>
+        <div style="font-size:11px;color:#7068A0;font-family:'Syne',sans-serif">Module mit Evolution</div>
       </div>
-      <div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
+      <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
         <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#34D399">${full}</div>
-        <div style="font-size:11px;color:#8278A0;font-family:'Syne',sans-serif">Vollständig dokumentiert</div>
+        <div style="font-size:11px;color:#7068A0;font-family:'Syne',sans-serif">Vollständig dokumentiert</div>
       </div>
     </div>
     <div class="evo-list">${cards}</div>
@@ -2227,18 +2227,18 @@ function renderFeedbackEvolution() {
 //  ASSUMPTIONS VIEW
 // ═══════════════════════════════════════════════════════════
 function renderAssumptionsView() {
-  const evCol={stark:'#34D399',mittel:'#E8A030',schwach:'#F87171'};
-  const rlCol={hoch:'#F87171',mittel:'#E8A030',niedrig:'#34D399'};
-  const stCol={unvalidated:'#E8A030',confirmed:'#34D399',refuted:'#F87171'};
+  const evCol={stark:'#34D399',mittel:'#C87C38',schwach:'#F87171'};
+  const rlCol={hoch:'#F87171',mittel:'#C87C38',niedrig:'#34D399'};
+  const stCol={unvalidated:'#C87C38',confirmed:'#34D399',refuted:'#F87171'};
   const stLbl={unvalidated:'Offen',confirmed:'Bestätigt ✓',refuted:'Widerlegt ✗'};
   function chip(txt,col){return '<span class="assump-chip" style="background:'+col+'18;color:'+col+';border:1px solid '+col+'44">'+txt+'</span>';}
   const high=S.assumptions.filter(function(a){return a.riskLevel==='hoch'&&a.evidenceStrength==='schwach';});
   function buildCard(a){
     var cc='assump-card '+(a.riskLevel==='hoch'?'risk-high':a.riskLevel==='mittel'?'risk-med':'risk-low');
-    var meta=(a.evidenceStrength?chip({stark:'Evidenz: Stark',mittel:'Evidenz: Mittel',schwach:'Evidenz: Schwach'}[a.evidenceStrength]||a.evidenceStrength,evCol[a.evidenceStrength]||'#8278A0'):'')
-      +(a.riskLevel?chip({hoch:'Risiko: Hoch',mittel:'Risiko: Mittel',niedrig:'Risiko: Niedrig'}[a.riskLevel]||a.riskLevel,rlCol[a.riskLevel]||'#8278A0'):'')
-      +(a.category?chip(a.category,'#8278A0'):'')
-      +chip(stLbl[a.status]||a.status,stCol[a.status]||'#8278A0');
+    var meta=(a.evidenceStrength?chip({stark:'Evidenz: Stark',mittel:'Evidenz: Mittel',schwach:'Evidenz: Schwach'}[a.evidenceStrength]||a.evidenceStrength,evCol[a.evidenceStrength]||'#7068A0'):'')
+      +(a.riskLevel?chip({hoch:'Risiko: Hoch',mittel:'Risiko: Mittel',niedrig:'Risiko: Niedrig'}[a.riskLevel]||a.riskLevel,rlCol[a.riskLevel]||'#7068A0'):'')
+      +(a.category?chip(a.category,'#7068A0'):'')
+      +chip(stLbl[a.status]||a.status,stCol[a.status]||'#7068A0');
     return '<div class="'+cc+'" onclick="openAssumptionModal(\''+a.id+'\')" style="cursor:pointer">'
       +'<div class="assump-text">'+esc(a.text)+'</div>'
       +'<div class="assump-meta">'+meta+'</div>'
@@ -2247,21 +2247,21 @@ function renderAssumptionsView() {
   }
   var cards=!S.assumptions.length
     ?('<div style="text-align:center;padding:48px"><div style="font-size:36px;margin-bottom:12px">❓</div>'
-      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:15px;color:#E2E8F0;margin-bottom:8px">Noch keine Annahmen erfasst</div>'
-      +'<div style="font-size:13px;color:#8278A0">Kritische Annahmen dokumentieren und systematisch verfolgen.</div><br>'
+      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:15px;color:#FFFFFF;margin-bottom:8px">Noch keine Annahmen erfasst</div>'
+      +'<div style="font-size:13px;color:#7068A0">Kritische Annahmen dokumentieren und systematisch verfolgen.</div><br>'
       +'<button class="btn btn-gold btn-sm" onclick="openAssumptionModal()">+ Erste Annahme erfassen</button></div>')
     :('<div class="assump-grid">'+S.assumptions.map(buildCard).join('')+'</div>');
   var warn=high.length
     ?('<div style="background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.25);border-radius:10px;padding:12px 16px;margin-bottom:18px;display:flex;align-items:center;gap:12px">'
       +'<div style="font-size:22px">⚠</div><div>'
       +'<div style="font-family:Syne,sans-serif;font-weight:700;color:#F87171;font-size:13px">'+high.length+' Annahme'+(high.length>1?'n':'')+' mit hohem Risiko und schwacher Evidenz</div>'
-      +'<div style="font-size:11.5px;color:#8278A0;margin-top:2px">Diese Annahmen müssen prioritär validiert werden.</div></div></div>')
+      +'<div style="font-size:11.5px;color:#7068A0;margin-top:2px">Diese Annahmen müssen prioritär validiert werden.</div></div></div>')
     :'';
   var n=S.assumptions.length, nh=S.assumptions.filter(function(a){return a.riskLevel==='hoch';}).length;
   var nc=S.assumptions.filter(function(a){return a.status==='confirmed';}).length;
-  function sc(v,c,l){return '<div style="background:#1E1B2A;border:1px solid '+c+'33;border-radius:8px;padding:8px 14px;text-align:center">'
+  function sc(v,c,l){return '<div style="background:#FFFFFF;border:1px solid '+c+'33;border-radius:8px;padding:8px 14px;text-align:center">'
     +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:'+c+';line-height:1">'+v+'</div>'
-    +'<div style="font-size:9.5px;color:#8278A0;font-family:Syne,sans-serif">'+l+'</div></div>';}
+    +'<div style="font-size:9.5px;color:#7068A0;font-family:Syne,sans-serif">'+l+'</div></div>';}
   return '<div style="max-width:900px">'
     +'<div class="view-title">❓ Kritische Annahmen</div>'
     +'<div class="view-sub">Was muss wahr sein, damit das Venture funktioniert? Evidenzstärke und Risiko systematisch verfolgen.</div>'
@@ -2289,7 +2289,7 @@ function renderGuide() {
     
       <h2>Das System in einem Satz</h2>
       <p style="font-size:13px;color:#A098C0;margin-bottom:24px">
-        Ihr arbeitet auf den <strong style="color:#EDE9F6">Session-Seiten</strong> (Exploration), ladet dort eure Ergebnisse herunter und übertragt sie per JSON-Import in das <strong style="color:#EDE9F6">Venture Cockpit</strong> (Entscheidung &amp; Integration) – immer nach Feedback durch den Dozenten.
+        Ihr arbeitet auf den <strong style="color:#FFFFFF">Session-Seiten</strong> (Exploration), ladet dort eure Ergebnisse herunter und übertragt sie per JSON-Import in das <strong style="color:#FFFFFF">Venture Cockpit</strong> (Entscheidung &amp; Integration) – immer nach Feedback durch den Dozenten.
       </p>
     
       <h2>Pro Session: drei Schritte</h2>
@@ -2433,15 +2433,15 @@ function _showMentor(mentorApp, authed){
 
   if(!authed){
     area.innerHTML=`
-      <div style="max-width:340px;margin:80px auto;background:#1E1B2A;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
+      <div style="max-width:340px;margin:80px auto;background:#FFFFFF;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
         <div style="font-size:40px;margin-bottom:14px">🔐</div>
         <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:8px">Mentor-Zugang</div>
-        <div style="font-size:13px;color:#8278A0;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
+        <div style="font-size:13px;color:#7068A0;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
         <input id="mpw" type="password" placeholder="Passwort…"
-          style="width:100%;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.15);border-radius:6px;
+          style="width:100%;background:rgba(25,20,50,.08);border:1px solid rgba(255,255,255,.15);border-radius:6px;
           color:#fff;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
         <button id="mbtn"
-          style="width:100%;padding:11px;background:linear-gradient(135deg,#E8A030,#c07010);color:#111;
+          style="width:100%;padding:11px;background:linear-gradient(135deg,#C87C38,#c07010);color:#111;
           border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;cursor:pointer">
           Einloggen →
         </button>
@@ -2462,21 +2462,21 @@ function _showMentor(mentorApp, authed){
 
   // Render ventures
   function starHtml(n){if(!n&&n!==0)return '<span style="color:#333">—</span>';
-    let s='';for(let i=0;i<5;i++)s+='<span style="color:'+(i<n?'#E8A030':'#1E2D3F')+'">★</span>';return s;}
+    let s='';for(let i=0;i<5;i++)s+='<span style="color:'+(i<n?'#C87C38':'#1E2D3F')+'">★</span>';return s;}
 
   function sessionBlock(label, sd){
-    if(!sd) return `<div style="padding:10px;background:rgba(0,0,0,.2);border-radius:6px;font-size:11px;color:#8278A0;font-style:italic">Keine Einreichung für ${label}</div>`;
-    let html=`<div style="background:rgba(0,0,0,.18);border-radius:8px;padding:10px 12px;margin-bottom:8px">`;
+    if(!sd) return `<div style="padding:10px;background:rgba(25,20,50,.04);border-radius:6px;font-size:11px;color:#7068A0;font-style:italic">Keine Einreichung für ${label}</div>`;
+    let html=`<div style="background:rgba(25,20,50,.04);border-radius:8px;padding:10px 12px;margin-bottom:8px">`;
     html+=`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;color:#8278A0">${label}</span>
+      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;color:#7068A0">${label}</span>
       <span style="font-size:16px">${starHtml(sd.stars)}</span></div>`;
-    (sd.pos||[]).forEach(p=>{html+=`<div style="font-size:11.5px;color:#C8D9EE;padding:2px 0;display:flex;gap:7px"><span style="color:#34D399;flex-shrink:0">●</span>${p}</div>`;});
-    (sd.gaps||[]).forEach(g=>{html+=`<div style="font-size:11.5px;color:#C8D9EE;padding:2px 0;display:flex;gap:7px"><span style="color:#F87171;flex-shrink:0">●</span>${g}</div>`;});
+    (sd.pos||[]).forEach(p=>{html+=`<div style="font-size:11.5px;color:#3A3460;padding:2px 0;display:flex;gap:7px"><span style="color:#34D399;flex-shrink:0">●</span>${p}</div>`;});
+    (sd.gaps||[]).forEach(g=>{html+=`<div style="font-size:11.5px;color:#3A3460;padding:2px 0;display:flex;gap:7px"><span style="color:#F87171;flex-shrink:0">●</span>${g}</div>`;});
     if(sd.closed||sd.open){
-      html+=`<div style="margin-top:8px;padding:8px 10px;border-left:2px solid rgba(68,184,184,.35);background:rgba(68,184,184,.05)">
-        <div style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#44B8B8;letter-spacing:.1em;margin-bottom:5px">↳ FEEDBACK-INTEGRATION</div>`;
+      html+=`<div style="margin-top:8px;padding:8px 10px;border-left:2px solid rgba(42,126,126,.35);background:rgba(42,126,126,.05)">
+        <div style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#2A7E7E;letter-spacing:.1em;margin-bottom:5px">↳ FEEDBACK-INTEGRATION</div>`;
       (sd.closed||[]).forEach(c=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#34D399">✓</span>${c}</div>`;});
-      (sd.open||[]).forEach(o=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#E8A030">△</span>${o}</div>`;});
+      (sd.open||[]).forEach(o=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#C87C38">△</span>${o}</div>`;});
       html+=`</div>`;}
     html+=`</div>`;
     return html;
@@ -2485,23 +2485,23 @@ function _showMentor(mentorApp, authed){
   let html=`<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px">
     <div>
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff">Venture-Übersicht · ${VENTURES.length} Teams</div>
-      <div style="font-size:12px;color:#8278A0;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
+      <div style="font-size:12px;color:#7068A0;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
     </div>
-    <div style="display:flex;gap:14px;font-size:11px;color:#8278A0;flex-wrap:wrap">
+    <div style="display:flex;gap:14px;font-size:11px;color:#7068A0;flex-wrap:wrap">
       <span><span style="color:#34D399">●</span> Stärke</span>
       <span><span style="color:#F87171">●</span> Lücke</span>
       <span><span style="color:#34D399">✓</span> Geschlossen</span>
-      <span><span style="color:#E8A030">△</span> Offen</span>
+      <span><span style="color:#C87C38">△</span> Offen</span>
     </div>
   </div>`;
 
   VENTURES.forEach(v=>{
-    html+=`<div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;margin-bottom:14px">
+    html+=`<div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;margin-bottom:14px">
       <div style="display:grid;grid-template-columns:220px 1fr">
         <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)">
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:3px">${v.name}</div>
-          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:8px">${v.team}</div>
-          <div style="font-size:12px;color:#8278A0;line-height:1.55">${v.idea}</div>
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:8px">${v.team}</div>
+          <div style="font-size:12px;color:#7068A0;line-height:1.55">${v.idea}</div>
         </div>
         <div style="padding:14px 18px">
           ${sessionBlock('Session 2', v.s2)}
@@ -2532,7 +2532,7 @@ function _showMentor(mentorApp, authed){
   const SCORE_LEVELS = [
     {min:41,label:'Exzellent',desc:'Venture auf sehr hohem Niveau entwickelt',col:'#5ABF8C'},
     {min:36,label:'Sehr gut', desc:'überzeugendes und konsistentes Venture',col:'#7FC47A'},
-    {min:31,label:'Gut',      desc:'tragfähiges Konzept mit kleineren Schwächen',col:'#E8A030'},
+    {min:31,label:'Gut',      desc:'tragfähiges Konzept mit kleineren Schwächen',col:'#C87C38'},
     {min:26,label:'Befriedigend',desc:'Potenzial vorhanden, aber deutliche Lücken',col:'#CC8840'},
     {min:21,label:'Ausreichend',desc:'grundlegende Anforderungen erfüllt',col:'#D07060'},
     {min:0, label:'Verbesserungsbedürftig',desc:'',col:'#D05050'},
@@ -2541,6 +2541,73 @@ function _showMentor(mentorApp, authed){
   let _ratings = {};
   try { _ratings = JSON.parse(sessionStorage.getItem('ecl-mentor-ratings')||'{}'); } catch{}
   let _selTeam = VENTURES[0]?.team||'';
+
+  // ── BASELINE RATINGS aus bisherigem Feedback ──────────────────────────────
+  const BASELINE_RATINGS = {
+    'AshBuddy': {
+      pmf:5, biz:5, evid:4, clarity:5, conv:5, team:4, odoo:5, ops:5, real:5,
+      strength:'B2B/B2C-Duallogik vollständig durchgezogen, stärkster Pitch im Kurs, Finanzlogik überzeugend (1 B2B-Deal deckt Startkapital), detailliertster Odoo-Prozess.',
+      challenge:'Preisvalidierung bei 18–26 EUR steht noch aus – keine externe Marktbestätigung bisher.',
+      nextstep:'Strukturierter Testverkauf oder Preisbefragung bei echten Festivalbesuchern. Danach B2B-Pilotgespräch mit einem Veranstalter.',
+    },
+    'REMI': {
+      pmf:5, biz:4, evid:5, clarity:5, conv:4, team:5, odoo:4, ops:4, real:4,
+      strength:'Umfassendste regulatorische Analyse im Kurs (MDR Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen). Stärkste Ethik-Analyse. Chip-Hersteller konkret benannt.',
+      challenge:'MDR-Zertifizierung (18–36 Monate) vs. geplantem Runway (15–20 Monate) – kritisches Timing-Risiko. Stimmerkennung unter realen Alltagsbedingungen noch nicht nachgewiesen.',
+      nextstep:'Frühzeitiger Kontakt zu einer Benannten Stelle für Klasse-IIa-Einschätzung. Kleiner Pilottest der Stimmerkennung unter realen Bedingungen (Hintergrundlärm, Krankheitsfortschritt).',
+    },
+    'ANDONIS': {
+      pmf:4, biz:3, evid:4, clarity:4, conv:4, team:3, odoo:3, ops:3, real:3,
+      strength:'Beste Ethik-Analyse im Kurs: Dermatologen-Referral, Community-Guidelines, Daten-Transparenz. Health Hub und Gamification-Logik klar differenziert von Wettbewerbern.',
+      challenge:'Kostenstruktur im BMC ohne eine einzige Zahl. Runway von 3–4 Monaten ist sehr knapp. Revenue-based Financing nicht korrekt definiert.',
+      nextstep:'Kostenstruktur mit konkreten Zahlen füllen (Tech-Entwicklung, Content-Budget). Runway-Lücke durch EXIST-Förderung oder Investor-Gespräch schließen.',
+    },
+    'WasteLess': {
+      pmf:4, biz:4, evid:3, clarity:4, conv:4, team:4, odoo:5, ops:4, real:3,
+      strength:'Methodisch vollständigste Abgabe im Kurs. Detailliertster Odoo-Ablauf (Bestellung bis Nachbestellung). Selbstkritische Benennung der Technologie als Engpassressource.',
+      challenge:'Sensor-Machbarkeit bei Zielpreis (<20 EUR Produktionskosten) weiterhin unbeantwortet – diese Frage entscheidet über das gesamte Finanzmodell.',
+      nextstep:'Technologierecherche oder Prototyp: Welcher Sensor, welcher Hersteller, welche Kosten bei welcher Genauigkeit? Konkrete Aussage statt Konzept.',
+    },
+    'DOOOZE': {
+      pmf:3, biz:3, evid:3, clarity:4, conv:3, team:4, odoo:3, ops:3, real:3,
+      strength:'Professionellster Auftritt im Kurs, stärkstes Branding. Bewusste Positionierung als Lifestyle-Accessoire mit klarer Zielgruppe. Bootstrapping-Wahl konsequent begründet.',
+      challenge:'Akustische Kernfrage offen: Wie viel dB Reduktion leistet ein Stoff-Haarband tatsächlich? Ohne diesen Nachweis bleibt die Kernbehauptung unbelegt.',
+      nextstep:'Einfacher Vergleichstest: DOOOZE vs. Standard-Ohrstöpsel, dB-Messung per App. Ergebnis entscheidet Positionierung (Schlafhilfe vs. reines Lifestyle-Produkt).',
+    },
+    'StilMittel': {
+      pmf:4, biz:3, evid:2, clarity:3, conv:3, team:3, odoo:2, ops:2, real:3,
+      strength:'Gesellschaftlich relevanteste Idee im Kurs. Stigma als eigentliches Kernproblem erkannt – selten gemachte Einsicht. MDR korrekt eingeordnet nach Feedback.',
+      challenge:'BMC und Prozessdesign zeigen noch zu viele Platzhalter. Ethik-Analyse mit Einzeilern. Operative Abläufe nicht konkret beschreibbar.',
+      nextstep:'BMC mit konkreten Aktivitäten, Ressourcen und Personas hinterlegen. Prozessschritte so beschreiben, dass jemand anderes sie ausführen könnte.',
+    },
+    'VEIL': {
+      pmf:3, biz:2, evid:3, clarity:3, conv:3, team:3, odoo:3, ops:2, real:3,
+      strength:'Preise und Produktionskosten erstmals konkret hinterlegt. ModiBodi als technologisch überlegener Wettbewerber ehrlich anerkannt. Fashion-Brand-Instinkt erkennbar.',
+      challenge:'Massiver Finanzwiderspruch: 200.000 EUR vs. 20.000 EUR Startkapital im selben Dokument. Muss vor Demo Day aufgelöst werden.',
+      nextstep:'Finanzmodell auf eine konsistente Szenario-Basis bringen. Differenzierung zu ModiBodi über Branding hinaus inhaltlich belegen.',
+    },
+    'EasyWine': {
+      pmf:3, biz:2, evid:3, clarity:4, conv:2, team:4, odoo:2, ops:2, real:3,
+      strength:'Sauberste Dokumentationsqualität im Kurs. Bestes Peer-Feedback (konkret, kritisch, umsetzbar). Pain Points der Zielgruppe klar beobachtet.',
+      challenge:'Vivino (65 Mio. Nutzer, kostenlos) löst exakt dasselbe Problem – Differenzierung bisher nicht überzeugend beantwortet. Kein S4 eingereicht.',
+      nextstep:'Konkrete Differenzierungsantwort auf Vivino entwickeln. Was kann EasyWine, was Vivino nicht kann oder nicht will?',
+    },
+    'WorkFlowWerk': {
+      pmf:4, biz:4, evid:3, clarity:4, conv:4, team:3, odoo:3, ops:3, real:4,
+      strength:'Stärkste B2B-Analyse im Kurs. Konkrete Preispakete (S/M/L) mit Margenangaben. EXIST-Förderung als Runway-Brücke realistisch geplant. Anthropic als Bedrohung ehrlich erkannt.',
+      challenge:'Cold-Start-Problem (Hühnerei: Freelancer vs. Unternehmen) weiterhin vollständig unbeantwortet – war bereits in S2 offen. Autonomie-Ethik nicht durchdacht.',
+      nextstep:'Konkrete Antwort auf Cold-Start entwickeln: Wer wird zuerst gewonnen, wie, mit welchem Anreiz? Diese Frage entscheidet über Marktstart.',
+    },
+  };
+
+  // Pre-populate only if no ratings exist yet for a team
+  Object.keys(BASELINE_RATINGS).forEach(function(team){
+    if(!_ratings[team] || Object.keys(_ratings[team]).filter(function(k){return !isNaN(_ratings[team][k]);}).length === 0){
+      _ratings[team] = Object.assign({}, BASELINE_RATINGS[team]);
+    }
+  });
+  saveRatings();
+
 
   function saveRatings(){ try{sessionStorage.setItem('ecl-mentor-ratings',JSON.stringify(_ratings));}catch{} }
   function getRatings(team){ return _ratings[team] || {}; }
@@ -2567,18 +2634,18 @@ function _showMentor(mentorApp, authed){
       const secMax = sec.items.length * 5;
       return '<div style="margin-bottom:18px">'
         +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'
-        +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#EDE9F6">'+sec.section+'</div>'
-        +'<div style="font-size:10px;font-family:Syne,sans-serif;font-weight:700;color:#8278A0">Gewichtung '+sec.pct+'% &nbsp;·&nbsp; '+secScore+'/'+secMax+' Pkt.</div>'
+        +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#FFFFFF">'+sec.section+'</div>'
+        +'<div style="font-size:10px;font-family:Syne,sans-serif;font-weight:700;color:#7068A0">Gewichtung '+sec.pct+'% &nbsp;·&nbsp; '+secScore+'/'+secMax+' Pkt.</div>'
         +'</div>'
         +sec.items.map(it=>{
           const val = parseInt(r[it.id])||0;
           const stars = [1,2,3,4,5].map(n=>{
             const active = n<=val;
-            return '<button onclick="_mRate(\''+team+'\',\''+it.id+'\','+n+')" style="width:30px;height:30px;border-radius:6px;border:1.5px solid '+(active?'rgba(232,160,48,.7)':'rgba(200,180,255,.12)')+';background:'+(active?'rgba(232,160,48,.18)':'none')+';color:'+(active?'#E8A030':'#4A3A5A')+';font-family:Syne,sans-serif;font-weight:800;font-size:13px;cursor:pointer;transition:all .15s">'+n+'</button>';
+            return '<button onclick="_mRate(\''+team+'\',\''+it.id+'\','+n+')" style="width:30px;height:30px;border-radius:6px;border:1.5px solid '+(active?'rgba(200,124,56,.7)':'rgba(25,20,50,.12)')+';background:'+(active?'rgba(200,124,56,.18)':'none')+';color:'+(active?'#C87C38':'#4A3A5A')+';font-family:Syne,sans-serif;font-weight:800;font-size:13px;cursor:pointer;transition:all .15s">'+n+'</button>';
           }).join('');
-          return '<div style="background:rgba(0,0,0,.2);border-radius:9px;padding:12px 14px;margin-bottom:7px">'
+          return '<div style="background:rgba(25,20,50,.04);border-radius:9px;padding:12px 14px;margin-bottom:7px">'
             +'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">'
-            +'<div><div style="font-family:Syne,sans-serif;font-weight:700;font-size:12.5px;color:#EDE9F6;margin-bottom:3px">'+it.label+'</div>'
+            +'<div><div style="font-family:Syne,sans-serif;font-weight:700;font-size:12.5px;color:#FFFFFF;margin-bottom:3px">'+it.label+'</div>'
             +'<div style="font-size:11px;color:#6A6080;line-height:1.45">'+it.q+'</div></div>'
             +'<div style="display:flex;gap:4px;flex-shrink:0">'+stars+'</div>'
             +'</div></div>';
@@ -2591,29 +2658,29 @@ function _showMentor(mentorApp, authed){
       {key:'challenge',label:'Größte offene Herausforderung'},
       {key:'nextstep',label:'Nächster sinnvoller Entwicklungsschritt'},
     ].map(cf=>'<div style="margin-bottom:12px">'
-      +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8278A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:6px">'+cf.label+'</div>'
-      +'<textarea oninput="_mComment(\''+team+'\',\''+cf.key+'\',this.value)" rows="3" style="width:100%;background:rgba(0,0,0,.25);border:1px solid rgba(200,180,255,.12);border-radius:8px;color:#EDE9F6;font-family:DM Sans,sans-serif;font-size:13px;padding:9px 12px;outline:none;resize:vertical">'+((r[cf.key]||'').replace(/</g,'&lt;'))+'</textarea>'
+      +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#7068A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:6px">'+cf.label+'</div>'
+      +'<textarea oninput="_mComment(\''+team+'\',\''+cf.key+'\',this.value)" rows="3" style="width:100%;background:rgba(25,20,50,.05);border:1px solid rgba(25,20,50,.12);border-radius:8px;color:#FFFFFF;font-family:DM Sans,sans-serif;font-size:13px;padding:9px 12px;outline:none;resize:vertical">'+((r[cf.key]||'').replace(/</g,'&lt;'))+'</textarea>'
       +'</div>'
     ).join('');
 
-    return '<div style="background:#1E1B2A;border:1px solid rgba(200,180,255,.1);border-radius:14px;overflow:hidden">'
+    return '<div style="background:#FFFFFF;border:1px solid rgba(25,20,50,.1);border-radius:14px;overflow:hidden">'
       // Score bar
       +'<div style="background:'+level.col+'18;border-bottom:1px solid '+level.col+'33;padding:16px 22px;display:flex;align-items:center;gap:16px">'
       +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:36px;color:'+level.col+';line-height:1">'+totalScore+'<span style="font-size:16px;color:'+level.col+'88">/45</span></div>'
       +'<div><div style="font-family:Syne,sans-serif;font-weight:800;font-size:15px;color:'+level.col+'">'+level.label+'</div>'
-      +(level.desc?'<div style="font-size:12px;color:#8278A0;margin-top:2px">'+level.desc+'</div>':'')
+      +(level.desc?'<div style="font-size:12px;color:#7068A0;margin-top:2px">'+level.desc+'</div>':'')
       +(allFilled?'':'<div style="font-size:11px;color:#6A6080;margin-top:2px">Noch nicht alle Kriterien bewertet</div>')+'</div>'
-      +'<div style="margin-left:auto"><button onclick="_mExport(\''+team+'\')" style="background:rgba(200,180,255,.1);border:1px solid rgba(200,180,255,.18);color:#A098C0;padding:6px 14px;border-radius:6px;cursor:pointer;font-family:Syne,sans-serif;font-weight:700;font-size:10.5px">⬇ Exportieren</button></div>'
+      +'<div style="margin-left:auto"><button onclick="_mExport(\''+team+'\')" style="background:rgba(25,20,50,.1);border:1px solid rgba(25,20,50,.18);color:#A098C0;padding:6px 14px;border-radius:6px;cursor:pointer;font-family:Syne,sans-serif;font-weight:700;font-size:10.5px">⬇ Exportieren</button></div>'
       +'</div>'
       // Criteria
       +'<div style="padding:20px 22px">'+secHtml+'</div>'
       // Comments
       +'<div style="padding:0 22px 22px">'
-      +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#8278A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:14px;padding-top:4px;border-top:1px solid rgba(200,180,255,.08)">Kommentare</div>'
+      +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#7068A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:14px;padding-top:4px;border-top:1px solid rgba(25,20,50,.08)">Kommentare</div>'
       +commentFields+'</div>'
       // Jury note
-      +'<div style="margin:0 22px 22px;background:rgba(232,160,48,.06);border:1px solid rgba(232,160,48,.15);border-radius:8px;padding:11px 14px;font-size:11.5px;color:#7A6840;line-height:1.55">'
-      +'<strong style="color:#E8A030;font-family:Syne,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase">Hinweis</strong><br>'
+      +'<div style="margin:0 22px 22px;background:rgba(200,124,56,.06);border:1px solid rgba(200,124,56,.15);border-radius:8px;padding:11px 14px;font-size:11.5px;color:#7A6840;line-height:1.55">'
+      +'<strong style="color:#C87C38;font-family:Syne,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase">Hinweis</strong><br>'
       +'Bewertet nicht die „beste Idee", sondern das Team, das am überzeugendsten gezeigt hat, dass es ein reales Problem verstanden, daraus ein konsistentes Venture entwickelt und dieses strategisch wie operativ durchdacht hat.'
       +'</div></div>';
   }
@@ -2626,8 +2693,8 @@ function _showMentor(mentorApp, authed){
         const r = getRatings(v.team);
         const filled = CRITERIA.reduce((a,s)=>a+s.items.filter(it=>parseInt(r[it.id])>0).length,0);
         const total = CRITERIA.reduce((a,s)=>a+s.items.length,0);
-        return '<div style="background:#1A1728;border:1px solid rgba(200,180,255,.08);border-radius:10px;padding:12px 14px;cursor:pointer" onclick="document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\')?document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\').scrollIntoView({behavior:\'smooth\'}):null">'
-          +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#EDE9F6;margin-bottom:4px">'+v.name+'</div>'
+        return '<div style="background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:12px 14px;cursor:pointer" onclick="document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\')?document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\').scrollIntoView({behavior:\'smooth\'}):null">'
+          +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#FFFFFF;margin-bottom:4px">'+v.name+'</div>'
           +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:'+lv.col+';line-height:1">'+sc+'<span style="font-size:11px;color:'+lv.col+'55">/45</span></div>'
           +'<div style="font-size:10px;color:#6A6080;margin-top:3px">'+filled+'/'+total+' Kriterien bewertet</div>'
           +'</div>';
@@ -2635,13 +2702,13 @@ function _showMentor(mentorApp, authed){
       +'</div>';
   }
 
-  html += '<div style="margin-top:36px;border-top:1px solid rgba(200,180,255,.08);padding-top:28px">'
-    +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:20px;color:#EDE9F6;margin-bottom:6px">📊 Bewertungsbogen Demo Day</div>'
-    +'<div style="font-size:12.5px;color:#8278A0;margin-bottom:20px">1–5 Punkte pro Kriterium · max. 45 Punkte gesamt (3 gewichtete Bereiche)</div>'
+  html += '<div style="margin-top:36px;border-top:1px solid rgba(25,20,50,.08);padding-top:28px">'
+    +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:20px;color:#FFFFFF;margin-bottom:6px">📊 Bewertungsbogen Demo Day</div>'
+    +'<div style="font-size:12.5px;color:#7068A0;margin-bottom:20px">1–5 Punkte pro Kriterium · max. 45 Punkte gesamt (3 gewichtete Bereiche)</div>'
     + buildScoreTable()
     +'<div style="margin-top:24px;display:flex;flex-direction:column;gap:18px">'
     +VENTURES.map(v=>'<div id="mr-'+v.team.replace(/\W/g,'')+'">'
-      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:12px;color:#8278A0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">'+v.name+' &nbsp;·&nbsp; '+v.team+'</div>'
+      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:12px;color:#7068A0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">'+v.name+' &nbsp;·&nbsp; '+v.team+'</div>'
       +buildRatingForm(v.team)
       +'</div>'
     ).join('')
