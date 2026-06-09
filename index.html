@@ -11,12 +11,12 @@
 ═══════════════════════════════════════════ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#030810;--sb:#060E1C;--card:#091524;--card-hi:#0D1C30;
-  --border:rgba(255,255,255,0.065);--border-md:rgba(255,255,255,0.11);
-  --text:#C8D9EE;--dim:#4A6280;--muted:#1A2B40;
-  --gold:#F59E0B;--teal:#0DD6D6;--green:#34D399;--rose:#F87171;
-  --violet:#818CF8;--orange:#FB923C;
-  --r:12px;--r-sm:8px;--r-xs:5px;
+  --bg:#13111C;--sb:#18162A;--card:#1E1B2A;--card-hi:#272335;
+  --border:rgba(200,180,255,0.09);--border-md:rgba(200,180,255,0.16);
+  --text:#EDE9F6;--dim:#8278A0;--muted:#252134;
+  --gold:#E8A030;--teal:#44B8B8;--green:#5ABF8C;--rose:#D97090;
+  --violet:#8B78CC;--orange:#D4784C;
+  --r:13px;--r-sm:9px;--r-xs:6px;
   --sb-w:224px;
 }
 html{scroll-behavior:smooth}
@@ -50,7 +50,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .sb-prog-row{display:flex;justify-content:space-between;font-size:9.5px;
   color:var(--dim);font-family:'Syne',sans-serif;margin-bottom:4px}
 .sb-prog-track{height:3px;background:var(--muted);border-radius:2px;overflow:hidden}
-.sb-prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--teal));
+.sb-prog-fill{height:100%;background:linear-gradient(90deg,var(--orange),var(--violet));
   border-radius:2px;transition:width .5s}
 
 .sb-section{padding:10px 0}
@@ -61,7 +61,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
   cursor:pointer;transition:all .15s;text-decoration:none;border-left:2px solid transparent;
   font-size:13px;color:var(--dim);font-family:'Syne',sans-serif;font-weight:600}
 .sb-item:hover{background:rgba(255,255,255,.035);color:var(--text);border-left-color:var(--muted)}
-.sb-item.active{background:rgba(245,158,11,.07);color:var(--gold);border-left-color:var(--gold)}
+.sb-item.active{background:rgba(232,160,48,.07);color:var(--gold);border-left-color:var(--gold)}
 .sb-item .sb-icon{font-size:14px;width:20px;text-align:center;flex-shrink:0}
 .sb-item .sb-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-left:auto}
 .sb-divider{height:1px;background:var(--border);margin:6px 16px}
@@ -100,9 +100,9 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .status-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;
   border-radius:20px;font-family:'Syne',sans-serif;font-weight:700;
   font-size:9.5px;letter-spacing:.06em;text-transform:uppercase}
-.status-locked{background:rgba(74,98,128,.12);color:var(--dim);border:1px solid rgba(74,98,128,.18)}
-.status-draft{background:rgba(74,98,128,.16);color:#7A98B8;border:1px solid rgba(74,98,128,.25)}
-.status-imported{background:rgba(245,158,11,.1);color:var(--gold);border:1px solid rgba(245,158,11,.22)}
+.status-locked{background:rgba(130,120,160,.12);color:var(--dim);border:1px solid rgba(130,120,160,.18)}
+.status-draft{background:rgba(130,120,160,.16);color:#7A98B8;border:1px solid rgba(130,120,160,.25)}
+.status-imported{background:rgba(232,160,48,.1);color:var(--gold);border:1px solid rgba(232,160,48,.22)}
 .status-revised{background:rgba(129,140,248,.1);color:var(--violet);border:1px solid rgba(129,140,248,.22)}
 .status-validated{background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.22)}
 .status-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}
@@ -124,8 +124,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
   justify-content:center;font-size:10px;font-weight:700;position:relative;z-index:1;
   border:2px solid;transition:all .2s;cursor:default;flex-shrink:0}
 .tl-circle.tl-done{background:rgba(52,211,153,.12);border-color:var(--green);color:var(--green)}
-.tl-circle.tl-active{background:rgba(245,158,11,.12);border-color:var(--gold);color:var(--gold)}
-.tl-circle.tl-imported{background:rgba(13,214,214,.12);border-color:var(--teal);color:var(--teal)}
+.tl-circle.tl-active{background:rgba(232,160,48,.12);border-color:var(--gold);color:var(--gold)}
+.tl-circle.tl-imported{background:rgba(68,184,184,.12);border-color:var(--teal);color:var(--teal)}
 .tl-circle.tl-odoo{background:rgba(129,140,248,.12);border-color:var(--violet);color:var(--violet)}
 .tl-circle.tl-locked{background:rgba(26,43,64,.5);border-color:var(--muted);color:var(--muted)}
 .tl-label{font-size:8.5px;text-align:center;color:var(--dim);
@@ -236,7 +236,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 /* Import source badge */
 .import-source{display:flex;align-items:center;gap:7px;font-size:10.5px;color:var(--dim);
   font-family:'DM Mono',monospace;padding:6px 10px;
-  background:rgba(13,214,214,.05);border:1px solid rgba(13,214,214,.12);
+  background:rgba(68,184,184,.05);border:1px solid rgba(68,184,184,.12);
   border-radius:var(--r-xs);flex-wrap:wrap}
 .import-source strong{color:var(--teal)}
 
@@ -275,7 +275,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .drop-zone{border:2px dashed var(--muted);border-radius:var(--r);
   padding:38px 20px;text-align:center;cursor:pointer;transition:all .22s;
   background:rgba(0,0,0,.15)}
-.drop-zone:hover,.drop-zone.drag{border-color:var(--gold);background:rgba(245,158,11,.04)}
+.drop-zone:hover,.drop-zone.drag{border-color:var(--gold);background:rgba(232,160,48,.04)}
 .drop-icon{font-size:36px;margin-bottom:10px}
 .drop-title{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:4px}
 .drop-sub{font-size:12.5px;color:var(--dim)}
@@ -320,7 +320,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 /* Toast */
 #toasts{position:fixed;bottom:20px;right:18px;z-index:999;
   display:flex;flex-direction:column;gap:7px;pointer-events:none}
-.toast{background:rgba(9,21,36,.95);backdrop-filter:blur(16px);
+.toast{background:rgba(30,27,42,.95);backdrop-filter:blur(16px);
   border:1px solid var(--border-md);border-left-width:3px;
   padding:9px 14px;border-radius:var(--r-xs);font-size:12.5px;
   color:var(--text);max-width:280px;
@@ -351,37 +351,37 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 #autosave-ind.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 /* ── MENTOR MODE ─────────────────────────────────────── */
-#mentor-app{display:none;min-height:100vh;background:#04080F;color:#C8D9EE;font-family:'DM Sans',sans-serif}
-.mentor-header{background:rgba(4,8,15,.95);border-bottom:1px solid rgba(255,255,255,.07);
+#mentor-app{display:none;min-height:100vh;background:#13111C;color:#C8D9EE;font-family:'DM Sans',sans-serif}
+.mentor-header{background:rgba(19,17,28,.95);border-bottom:1px solid rgba(255,255,255,.07);
   padding:14px 28px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100}
 .mentor-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;
-  letter-spacing:.16em;color:#0DD6D6;text-transform:uppercase}
-.mentor-badge{background:rgba(245,158,11,.14);border:1px solid rgba(245,158,11,.3);
-  color:#F59E0B;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
+  letter-spacing:.16em;color:#44B8B8;text-transform:uppercase}
+.mentor-badge{background:rgba(232,160,48,.14);border:1px solid rgba(232,160,48,.3);
+  color:#E8A030;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
   padding:3px 9px;border-radius:20px;letter-spacing:.1em;text-transform:uppercase}
 .mentor-wrap{max-width:1100px;margin:0 auto;padding:32px 24px 80px}
-.mentor-gate{max-width:360px;margin:100px auto;background:#091524;
+.mentor-gate{max-width:360px;margin:100px auto;background:#1E1B2A;
   border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:36px}
 .mentor-gate h2{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:6px}
-.mentor-gate p{font-size:13px;color:#4A6280;margin-bottom:22px}
+.mentor-gate p{font-size:13px;color:#8278A0;margin-bottom:22px}
 .mentor-gate input{width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);
   border-radius:5px;color:#C8D9EE;font-size:14px;padding:10px 13px;outline:none;
   margin-bottom:10px;transition:border-color .18s}
-.mentor-gate input:focus{border-color:#F59E0B}
+.mentor-gate input:focus{border-color:#E8A030}
 .mentor-gate-err{font-size:11.5px;color:#F87171;min-height:18px;margin-top:3px}
 .mentor-grid{display:flex;flex-direction:column;gap:16px}
-.v-card{background:#091524;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+.v-card{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
 .v-card-head{display:grid;grid-template-columns:220px 1fr;align-items:start;gap:0}
 .v-name-col{padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)}
 .v-name{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:4px}
-.v-idea{font-size:12px;color:#4A6280;line-height:1.55}
+.v-idea{font-size:12px;color:#8278A0;line-height:1.55}
 .v-sessions-col{padding:14px 20px;display:flex;flex-direction:column;gap:10px}
 .v-session{display:grid;grid-template-columns:60px 80px 1fr;gap:12px;align-items:start;
   padding:10px 12px;background:rgba(0,0,0,.18);border-radius:8px;border:1px solid rgba(255,255,255,.05)}
 .v-s-label{font-family:'Syne',sans-serif;font-weight:800;font-size:10px;
-  letter-spacing:.12em;text-transform:uppercase;color:#4A6280;margin-top:1px}
+  letter-spacing:.12em;text-transform:uppercase;color:#8278A0;margin-top:1px}
 .v-stars{display:flex;gap:2px;font-size:14px;margin-top:4px}
-.star-on{color:#F59E0B}
+.star-on{color:#E8A030}
 .star-off{color:#1E2D3F}
 .v-bullets{display:flex;flex-direction:column;gap:4px}
 .v-bullet{font-size:11.5px;line-height:1.45;display:flex;gap:6px;align-items:baseline}
@@ -389,18 +389,169 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .v-bullet.pos::before{content:'●';color:#34D399}
 .v-bullet.gap::before{content:'●';color:#F87171}
 .v-bridge{margin:2px 0 2px 0;padding:7px 12px;
-  background:rgba(13,214,214,.05);border-left:2px solid rgba(13,214,214,.25);
-  border-radius:0 5px 5px 0;font-size:11px;color:#4A6280}
-.v-bridge strong{color:#0DD6D6;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
+  background:rgba(68,184,184,.05);border-left:2px solid rgba(68,184,184,.25);
+  border-radius:0 5px 5px 0;font-size:11px;color:#8278A0}
+.v-bridge strong{color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
   text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px}
 .v-bridge-item{display:flex;gap:5px;align-items:baseline;font-size:11px}
 .v-bridge-item.closed::before{content:'✓';color:#34D399;font-size:10px;flex-shrink:0}
-.v-bridge-item.open::before{content:'△';color:#F59E0B;font-size:10px;flex-shrink:0}
+.v-bridge-item.open::before{content:'△';color:#E8A030;font-size:10px;flex-shrink:0}
 .mentor-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
 .mentor-page-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff}
-.mentor-sub{font-size:12.5px;color:#4A6280;margin-top:2px}
-.mentor-legend{display:flex;gap:16px;font-size:10.5px;color:#4A6280;align-items:center;flex-wrap:wrap}
+.mentor-sub{font-size:12.5px;color:#8278A0;margin-top:2px}
+.mentor-legend{display:flex;gap:16px;font-size:10.5px;color:#8278A0;align-items:center;flex-wrap:wrap}
 .mentor-legend span{display:flex;align-items:center;gap:4px}
+
+/* ── ANALYSE VIEWS ──────────────────────────────────────────── */
+.view-title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:#E2E8F0;margin-bottom:6px}
+.view-sub{font-size:13px;color:#8278A0;margin-bottom:28px;line-height:1.5}
+.view-section{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 24px;margin-bottom:14px}
+.view-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8278A0;margin-bottom:16px}
+
+/* Integration Map */
+.map-wrap{position:relative;width:100%;background:#151220;border-radius:10px;overflow:hidden}
+.map-wrap svg{width:100%;display:block}
+.map-node{cursor:pointer;transition:all .2s}
+.map-node:hover circle{filter:brightness(1.3)}
+.map-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:#8278A0;margin-top:10px}
+.map-legend-item{display:flex;align-items:center;gap:5px}
+.map-legend-dot{width:8px;height:8px;border-radius:50%}
+
+/* Consistency Check */
+.cc-pairs{display:flex;flex-direction:column;gap:14px}
+.cc-pair{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.cc-pair.cc-ok{border-color:rgba(52,211,153,.3)}
+.cc-pair.cc-warn{border-color:rgba(232,160,48,.3)}
+.cc-pair.cc-bad{border-color:rgba(248,113,113,.3)}
+.cc-pair-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(0,0,0,.2)}
+.cc-bridge{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#E2E8F0;flex:1}
+.cc-bridge-sub{font-size:11px;color:#8278A0;margin-top:2px}
+.cc-status-btns{display:flex;gap:6px;flex-shrink:0}
+.cc-btn{padding:3px 10px;border-radius:20px;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,.1);color:#8278A0;background:none;transition:all .15s}
+.cc-btn.ok{border-color:rgba(52,211,153,.5);color:#34D399;background:rgba(52,211,153,.1)}
+.cc-btn.warn{border-color:rgba(232,160,48,.5);color:#E8A030;background:rgba(232,160,48,.1)}
+.cc-btn.bad{border-color:rgba(248,113,113,.5);color:#F87171;background:rgba(248,113,113,.1)}
+.cc-body{padding:14px 18px}
+.cc-question{font-size:12.5px;color:#8278A0;font-style:italic;margin-bottom:8px}
+.cc-summary{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.cc-summary-chip{padding:6px 14px;border-radius:20px;font-family:'Syne',sans-serif;font-weight:700;font-size:11px}
+
+/* Reality Check */
+.reality-grid{display:flex;flex-direction:column;gap:14px}
+.reality-item{background:rgba(248,113,113,.04);border:1px solid rgba(248,113,113,.15);border-radius:10px;padding:16px 18px}
+.reality-label{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.reality-icon{font-size:22px}
+.reality-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#E2E8F0}
+.reality-hint{font-size:11.5px;color:#8278A0;font-style:italic;margin-bottom:8px}
+
+/* Maturity Radar */
+.maturity-wrap{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
+.maturity-radar{flex:0 0 300px}
+.maturity-radar svg{width:300px;height:300px}
+.maturity-dims{flex:1;min-width:200px;display:flex;flex-direction:column;gap:10px}
+.maturity-dim{display:flex;flex-direction:column;gap:4px}
+.maturity-dim-head{display:flex;align-items:center;justify-content:space-between}
+.maturity-dim-label{font-size:12px;font-family:'Syne',sans-serif;font-weight:700;color:#E2E8F0}
+.maturity-dim-score{font-size:11px;font-family:'Syne',sans-serif;font-weight:700}
+.maturity-bar-track{height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
+.maturity-bar-fill{height:100%;border-radius:3px;transition:width .5s}
+.maturity-score-total{font-family:'Syne',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#44B8B8;text-align:center;margin-top:8px}
+.maturity-score-label{font-size:11px;color:#8278A0;text-align:center;font-family:'Syne',sans-serif}
+
+/* Pitch Mode */
+.pitch-mode-wrap{background:#13111C;border-radius:12px;overflow:hidden;min-height:500px}
+.pitch-slide{display:none;min-height:480px;padding:52px 56px;flex-direction:column;justify-content:center}
+.pitch-slide.active{display:flex}
+.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8278A0;margin-bottom:14px}
+.pitch-slide-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;color:#E2E8F0;margin-bottom:22px;line-height:1.15}
+.pitch-slide-body{font-size:15px;color:#8DA5B8;line-height:1.75;flex:1;white-space:pre-wrap}
+.pitch-slide-empty{font-size:13px;color:#2A2440;font-style:italic}
+.pitch-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(0,0,0,.3);border-top:1px solid rgba(255,255,255,.05)}
+.pitch-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#8278A0;padding:7px 16px;border-radius:6px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;transition:all .18s}
+.pitch-nav-btn:hover:not(:disabled){background:rgba(255,255,255,.1);color:#E2E8F0}
+.pitch-nav-btn:disabled{opacity:.3;cursor:default}
+.pitch-dots{display:flex;gap:6px;align-items:center}
+.pitch-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:all .18s}
+.pitch-dot.active{background:#44B8B8;width:18px;border-radius:3px}
+
+/* Feedback Evolution */
+.evo-list{display:flex;flex-direction:column;gap:16px}
+.evo-card{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+.evo-card-head{padding:12px 18px;background:rgba(0,0,0,.2);display:flex;align-items:center;gap:10px;cursor:pointer}
+.evo-card-icon{font-size:18px}
+.evo-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#E2E8F0;flex:1}
+.evo-card-status{font-size:10px;padding:3px 8px;border-radius:20px;font-family:'Syne',sans-serif;font-weight:700}
+.evo-steps{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0}
+.evo-step{padding:14px 16px;border-right:1px solid rgba(255,255,255,.05)}
+.evo-step:last-child{border-right:none}
+.evo-step-label{font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px}
+.evo-step-text{font-size:12px;color:#8DA5B8;line-height:1.55;white-space:pre-wrap}
+.evo-step-empty{font-size:11px;color:#2A2440;font-style:italic}
+
+/* Assumptions enhanced */
+.assump-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.assump-card{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;position:relative}
+.assump-card.risk-high{border-color:rgba(248,113,113,.25)}
+.assump-card.risk-med{border-color:rgba(232,160,48,.2)}
+.assump-card.risk-low{border-color:rgba(52,211,153,.15)}
+.assump-text{font-size:13px;color:#E2E8F0;margin-bottom:10px;line-height:1.5}
+.assump-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.assump-chip{font-size:9.5px;font-family:'Syne',sans-serif;font-weight:700;padding:3px 8px;border-radius:20px}
+.assump-next{font-size:11px;color:#8278A0;font-style:italic;line-height:1.45}
+.add-assump-form{background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px;margin-top:14px}
+
+
+/* ── GUIDE VIEW ───────────────────────────────────────── */
+.gl-page{max-width:760px;margin:0 auto}
+.gl-header{margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid rgba(200,180,255,.08)}
+.gl-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:9px;letter-spacing:.18em;
+  text-transform:uppercase;color:#44B8B8;margin-bottom:10px}
+h1{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#EDE9F6;line-height:1.2}
+.gl-sub{font-size:13px;color:#8278A0;margin-top:6px}
+.gl-leitmotiv{background:rgba(68,184,184,.07);border-left:3px solid #44B8B8;
+  padding:12px 16px;border-radius:0 8px 8px 0;margin:28px 0;
+  font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#44B8B8;font-style:italic}
+h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;
+  letter-spacing:.14em;color:#8278A0;margin:28px 0 12px}
+.gl-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.gl-step{display:flex;gap:14px;align-items:flex-start;background:#1E1B2A;
+  border:1px solid rgba(200,180,255,.08);border-radius:10px;padding:14px 16px}
+.gl-step-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;
+  color:#44B8B8;opacity:.4;line-height:1;flex-shrink:0;min-width:24px}
+.gl-step-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13.5px;
+  color:#EDE9F6;margin-bottom:3px}
+.gl-step-
+.gl-step-body code{background:rgba(68,184,184,.1);color:#44B8B8;padding:1px 6px;
+  border-radius:4px;font-size:11.5px;font-family:monospace}
+.gl-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+.gl-tool{background:#1E1B2A;border:1px solid rgba(200,180,255,.08);border-radius:10px;padding:14px 16px}
+.gl-tool-icon{font-size:18px;margin-bottom:6px}
+.gl-tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12.5px;color:#EDE9F6;margin-bottom:3px}
+.gl-tool-desc{font-size:11.5px;color:#9890B4;line-height:1.5}
+.gl-tips{background:#1E1B2A;border:1px solid rgba(200,180,255,.08);border-radius:10px;
+  padding:16px 18px;margin-bottom:24px}
+.gl-tip{display:flex;gap:10px;align-items:baseline;padding:5px 0;
+  border-bottom:1px solid rgba(200,180,255,.05)}
+.gl-tip:last-child{border-bottom:none}
+.gl-tip-q{font-size:12px;color:#EDE9F6;flex:1}
+.gl-tip-a{font-size:12px;color:#9890B4;flex:1.2}
+.gl-sessions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:24px}
+.gl-sess{background:#1E1B2A;border:1px solid rgba(200,180,255,.08);border-radius:8px;
+  padding:9px 11px;text-align:center}
+.gl-sess-num{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;
+  color:#44B8B8;opacity:.35;line-height:1}
+.gl-sess-label{font-size:9.5px;color:#8278A0;margin-top:3px;line-height:1.35}
+.gl-sess.importable .gl-sess-num{opacity:.9;color:#E8A030}
+.gl-sess.importable .gl-sess-label{color:#A098C0}
+.gl-badge{display:inline-block;background:rgba(232,160,48,.12);color:#E8A030;
+  border:1px solid rgba(232,160,48,.3);border-radius:20px;font-family:'Syne',sans-serif;
+  font-weight:700;font-size:8.5px;letter-spacing:.08em;padding:2px 7px;margin-top:5px}
+.gl-footer{margin-top:36px;padding-top:16px;border-top:1px solid rgba(200,180,255,.07);
+  font-size:10.5px;color:#2E2840;text-align:center}
+@media(max-width:560px){.gl-tools{grid-template-columns:1fr}.gl-sessions{grid-template-columns:repeat(2,1fr)}}
+
+  .gl-step-num,.gl-sess-num{color:#110E18}.gl-step-title,.gl-tool-name{color:#110E18}
+  .gl-step-body,.gl-tool-desc,.gl-tip-a,.gl-sess-label{color:#5A5070}}
 </style>
 </head>
 <body>
@@ -419,7 +570,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
     <div class="mentor-logo">ECL · Entrepreneurship Challenge Lab</div>
     <div class="mentor-badge">🔐 Mentor-Ansicht</div>
     <div style="flex:1"></div>
-    <button onclick="exitMentorMode()" style="background:none;border:1px solid rgba(255,255,255,.12);color:#4A6280;padding:5px 12px;border-radius:5px;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em">← Zurück</button>
+    <button onclick="exitMentorMode()" style="background:none;border:1px solid rgba(255,255,255,.12);color:#8278A0;padding:5px 12px;border-radius:5px;cursor:pointer;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.05em">← Zurück</button>
   </div>
   <div class="mentor-wrap" id="mentor-content"></div>
 </div>
@@ -431,7 +582,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 //  DATA: MODULES
 // ═══════════════════════════════════════════════════════════
 const MODULES = [
-  {id:'produkt',title:'Produkt',icon:'📦',color:'#0DD6D6',session:'S2',badge:'Produkt definiert',
+  {id:'produkt',title:'Produkt',icon:'📦',color:'#44B8B8',session:'S2',badge:'Produkt definiert',
    fields:[
     {id:'productName',label:'Produktname',type:'input',hint:'Klarer, wiedererkennbarer Name'},
     {id:'description',label:'Kurzbeschreibung',type:'textarea',rows:3,hint:'Was ist das Produkt, welches Problem löst es, was ist der Kernnutzen?'},
@@ -461,7 +612,7 @@ const MODULES = [
     {id:'validationStatus',label:'Validierungsstand',type:'textarea',rows:2,hint:'Welche Validierungen wurden durchgeführt?'},
     {id:'keyInsights',label:'Wichtigste Erkenntnisse',type:'textarea',rows:2,hint:'Was wurde durch Validierung gelernt?'},
   ]},
-  {id:'geschaeftsmodell',title:'Geschäftsmodell',icon:'🧩',color:'#F59E0B',session:'S4',badge:'Geschäftsmodell entwickelt',
+  {id:'geschaeftsmodell',title:'Geschäftsmodell',icon:'🧩',color:'#E8A030',session:'S4',badge:'Geschäftsmodell entwickelt',
    fields:[
     {id:'valueProposition',label:'Value Proposition',type:'textarea',rows:3,hint:'Welchen konkreten Wert schafft das Venture?'},
     {id:'revenueModel',label:'Erlösmodell',type:'textarea',rows:3,hint:'Wie wird Geld verdient? Preislogik, Einheiten, Frequenz'},
@@ -525,17 +676,17 @@ const MODULES = [
 ];
 
 const SESSIONS_META = [
-  {num:1,short:'S1',label:'Startup als System',type:'session'},
-  {num:2,short:'S2',label:'Von der Idee zum Produkt',type:'session',importable:true},
-  {num:3,short:'S3',label:'Odoo Lab I',type:'odoo'},
-  {num:4,short:'S4',label:'Product to Business',type:'session',importable:true},
-  {num:5,short:'S5',label:'Reality Check',type:'session'},
-  {num:6,short:'S6',label:'Go-to-Market',type:'session'},
-  {num:7,short:'S7',label:'Finanzen & Funding',type:'session'},
-  {num:8,short:'S8',label:'Odoo Lab II',type:'odoo'},
-  {num:9,short:'S9',label:'Team & Führung',type:'session'},
-  {num:10,short:'S10',label:'Pitch Rehearsal',type:'session'},
-  {num:11,short:'S11',label:'Final Pitch',type:'session'},
+  {num:1,short:'S1',label:'Intro · Startup als System',type:'session'},
+  {num:2,short:'S2',label:'Produkt & Analyse',type:'session',importable:true},
+  {num:3,short:'S3',label:'Odoo · Produktlogik',type:'odoo'},
+  {num:4,short:'S4',label:'Geschäftsmodell & Ethik',type:'session',importable:true},
+  {num:5,short:'S5',label:'Kundenvalidierung',type:'session',importable:true},
+  {num:6,short:'S6',label:'Manufacturing & Services',type:'odoo'},
+  {num:7,short:'S7',label:'Wachstum & Plattformlogik',type:'session',importable:true},
+  {num:8,short:'S8',label:'Funding & Institutionen',type:'session'},
+  {num:9,short:'S9',label:'Skalierung & Organisation',type:'session'},
+  {num:10,short:'S10',label:'Final Integration & Pitch',type:'session'},
+  {num:11,short:'S11',label:'Demo Day',type:'session'},
 ];
 
 // ═══════════════════════════════════════════════════════════
@@ -550,9 +701,57 @@ function detectAndMap(data) {
   if (data._type === 'ecl-s4-feedback') return { _isFeedback: true, _session: 4, data };
   // S4 format
   if (data.contextCanvas || data.businessModel || data.prozess) return mapS4(data);
+  // S5 format
+  if (data._type === 'ecl-s5-submission') return mapS5(data);
+  // S7 format
+  if (data._type === 'ecl-s7-submission') return mapS7(data);
+  // S5/S7 feedback
+  if (data._type === 'ecl-s5-feedback') return { _isFeedback: true, _session: 5, data };
+  if (data._type === 'ecl-s7-feedback') return { _isFeedback: true, _session: 7, data };
   // S2 new format (arbeitsauftraege)
   if (data.arbeitsauftraege) return mapS2New(data);
   return null;
+}
+
+function mapS5(d) {
+  const fields = {};
+  const f = d.fields || {};
+  if (f.wa3_functional) fields['kunden.painPoints'] = f.wa3_functional;
+  if (f.wa3_social) fields['kunden.motivation'] = f.wa3_social;
+  if (f.wa3_blind) fields['kunden.workarounds'] = f.wa3_blind;
+  if (f.wa0_assumptions) fields['kennzahlen.hypotheses'] = f.wa0_assumptions;
+  if (f.wa4_hypothesis) fields['kennzahlen.experiments'] = f.wa4_hypothesis;
+  if (f.wa5_decision) fields['kennzahlen.kpis'] = f.wa5_decision;
+  if (f.wa6_strongest) fields['kunden.keyInsights'] = f.wa6_strongest;
+  if (f.wa6_fragile) fields['kunden.validationStatus'] = f.wa6_fragile;
+  if (f.wa7_top3) fields['kennzahlen.learnings'] = f.wa7_top3;
+  if (f.wa7_pivot) fields['kennzahlen.nextSteps'] = f.wa7_pivot;
+  // Map evidence log to customer profiles
+  if (d.evidenceLog && d.evidenceLog.length) {
+    const evText = d.evidenceLog.map((e,i)=>'Gespräch '+(i+1)+' ('+(e.partner||'?')+'): '+(e.insight||e.reaction||'')).join('\n');
+    fields['kunden.customerProfiles'] = evText;
+  }
+  if (d.kpis && d.kpis.length) {
+    fields['kennzahlen.kpis'] = d.kpis.map(k=>k.name+(k.target?' → '+k.target:'')).join('\n');
+  }
+  return Object.keys(fields).length ? fields : null;
+}
+
+function mapS7(d) {
+  const fields = {};
+  const f = d.fields || {};
+  if (f.wa0_current) fields['wachstum.channels'] = f.wa0_current;
+  if (f.wa1_scale10x) fields['wachstum.scalingLogic'] = f.wa1_scale10x;
+  if (f.wa4_manual) fields['operations.odooConnection'] = f.wa4_manual;
+  if (f.wa4_bottleneck) fields['operations.step4'] = f.wa4_bottleneck;
+  if (f.wa5_risks) fields['ethik.risks'] = f.wa5_risks;
+  if (f.wa6_engine_why) fields['wachstum.marketingStrategy'] = f.wa6_engine_why;
+  if (f.wa6_assumptions) fields['kennzahlen.hypotheses'] = f.wa6_assumptions;
+  if (f.wa6_cockpit) fields['wachstum.growthPath'] = f.wa6_cockpit;
+  if (f.wa7_system) fields['wachstum.scalingLogic'] = f.wa7_system;
+  if (f.wa7_break) fields['operations.step3'] = f.wa7_break;
+  if (d.growthEngine) fields['wachstum.channels'] = (fields['wachstum.channels']||'')+(fields['wachstum.channels']?'\n':'')+'Growth Engine: '+d.growthEngine;
+  return Object.keys(fields).length ? fields : null;
 }
 
 function mapS2Old(d) {
@@ -681,6 +880,8 @@ function defaultState() {
     feedbackLog: [],
     nextMission: '',
     setupDone: false,
+    consistency: {},
+    reality: { engpass:'', unsicherheit:'', evidenz:'', regulierung:'', skalierung:'' },
   };
 }
 
@@ -716,9 +917,9 @@ function getNextMission() {
 }
 function getStatusMeta(status) {
   const map = {
-    locked: {color:'#4A6280',label:'Gesperrt',cls:'status-locked'},
+    locked: {color:'#8278A0',label:'Gesperrt',cls:'status-locked'},
     draft: {color:'#7A98B8',label:'Entwurf',cls:'status-draft'},
-    imported: {color:'#F59E0B',label:'Importiert',cls:'status-imported'},
+    imported: {color:'#E8A030',label:'Importiert',cls:'status-imported'},
     revised: {color:'#818CF8',label:'Überarbeitet',cls:'status-revised'},
     validated: {color:'#34D399',label:'Validiert',cls:'status-validated'},
   };
@@ -729,7 +930,7 @@ function getStatusMeta(status) {
 //  UTILS
 // ═══════════════════════════════════════════════════════════
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function toast(msg,color='#F59E0B',dur=2800){
+function toast(msg,color='#E8A030',dur=2800){
   const c=document.getElementById('toasts');const el=document.createElement('div');
   el.className='toast';el.style.borderLeftColor=color;el.textContent=msg;
   c.appendChild(el);setTimeout(()=>el.remove(),dur+300);}
@@ -759,6 +960,14 @@ function renderView() {
   else if(page==='modul')v.innerHTML=renderModule(parts[0]);
   else if(page==='output')v.innerHTML=renderOutput(parts[0]);
   else if(page==='setup')v.innerHTML=renderSetup();
+  else if(page==='integration')v.innerHTML=renderIntegration();
+  else if(page==='consistency')v.innerHTML=renderConsistency();
+  else if(page==='reality')v.innerHTML=renderReality();
+  else if(page==='maturity')v.innerHTML=renderMaturity();
+  else if(page==='pitch-mode')v.innerHTML=renderPitchMode();
+  else if(page==='evolution')v.innerHTML=renderFeedbackEvolution();
+  else if(page==='assumptions')v.innerHTML=renderAssumptionsView();
+  else if(page==='guide')v.innerHTML=renderGuide();
   else v.innerHTML=renderDashboard();
   attachViewEvents();
 }
@@ -807,6 +1016,34 @@ function renderSidebar() {
         <span class="sb-icon">🎯</span>Pitch-Generator
       </a>
     </div>
+    <div class="sb-divider"></div>
+    <div class="sb-section">
+      <div class="sb-section-label">Analyse</div>
+      <a class="sb-item${currentRoute==='integration'?' active':''}" href="#integration">
+        <span class="sb-icon">🗺</span>Logic Map
+      </a>
+      <a class="sb-item${currentRoute==='consistency'?' active':''}" href="#consistency">
+        <span class="sb-icon">✓</span>Konsistenz
+      </a>
+      <a class="sb-item${currentRoute==='reality'?' active':''}" href="#reality">
+        <span class="sb-icon">⚡</span>Reality Check
+      </a>
+      <a class="sb-item${currentRoute==='maturity'?' active':''}" href="#maturity">
+        <span class="sb-icon">📊</span>Maturity Score
+      </a>
+      <a class="sb-item${currentRoute==='pitch-mode'?' active':''}" href="#pitch-mode">
+        <span class="sb-icon">🎯</span>Pitch Mode
+      </a>
+      <a class="sb-item${currentRoute==='assumptions'?' active':''}" href="#assumptions">
+        <span class="sb-icon">❓</span>Annahmen
+      </a>
+      <a class="sb-item${currentRoute==='evolution'?' active':''}" href="#evolution">
+        <span class="sb-icon">🔄</span>Feedback-Evolution
+      </a>
+      <a class="sb-item${currentRoute==='guide'?' active':''}" href="#guide">
+        <span class="sb-icon">📖</span>Kurzanleitung
+      </a>
+    </div>
     <div style="flex:1"></div>
     <div class="sb-import-btn" id="sb-import">⬇ Session-Daten importieren</div>
     <div style="height:8px"></div>`;
@@ -849,7 +1086,7 @@ function renderDashboard() {
 
   // Feedback log
   const fbItems=S.feedbackLog.length?S.feedbackLog.slice(0,4).map(f=>{
-    const statusColor=f.status==='integrated'?'#34D399':f.status==='partial'?'#F59E0B':'#F87171';
+    const statusColor=f.status==='integrated'?'#34D399':f.status==='partial'?'#E8A030':'#F87171';
     const statusLabel=f.status==='integrated'?'✅ umgesetzt':f.status==='partial'?'⚠ teilweise':'❌ offen';
     return `<div class="fb-item">
       <div class="fb-dot" style="background:${statusColor}"></div>
@@ -863,7 +1100,7 @@ function renderDashboard() {
 
   // Assumptions
   const asmItems=S.assumptions.length?S.assumptions.slice(0,4).map(a=>{
-    const sc=a.status==='confirmed'?'#34D399':a.status==='refuted'?'#F87171':'#F59E0B';
+    const sc=a.status==='confirmed'?'#34D399':a.status==='refuted'?'#F87171':'#E8A030';
     const icon=a.status==='confirmed'?'✓':a.status==='refuted'?'✗':'?';
     return `<div class="assumption-item">
       <div class="asm-status" style="border-color:${sc};color:${sc}">${icon}</div>
@@ -891,6 +1128,31 @@ function renderDashboard() {
       <div class="stat-box"><div class="stat-v" style="color:var(--teal)">${imported}<span style="font-size:14px;color:var(--dim)"> / ${MODULES.length}</span></div><div class="stat-l">Module aktiv</div></div>
       <div class="stat-box"><div class="stat-v" style="color:var(--green)">${MODULES.filter(m=>S.modules[m.id].status==='validated').length}</div><div class="stat-l">Validiert</div></div>
       <div class="stat-box"><div class="stat-v">${S.assumptions.length}</div><div class="stat-l">Annahmen</div></div>
+    </div>
+
+    <!-- Analyse-Shortcuts -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px">
+      <a href="#maturity" style="text-decoration:none">
+        <div style="background:#1E1B2A;border:1px solid rgba(68,184,184,.22);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">📊 Maturity Score</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#44B8B8;line-height:1">${Math.min(4,Math.round(overallCompletion()/25))}/4</div>
+          <div style="font-size:10px;color:#8278A0;margin-top:6px">Reifegrad ansehen →</div>
+        </div>
+      </a>
+      <a href="#consistency" style="text-decoration:none">
+        <div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#8278A0;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">✓ Konsistenz</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#34D399;line-height:1">${Object.entries(S.consistency).filter(([k,v])=>k.endsWith('_status')&&v==='ok').length}/${CC_PAIRS.length}</div>
+          <div style="font-size:10px;color:#8278A0;margin-top:6px">Konsistenzprüfung →</div>
+        </div>
+      </a>
+      <a href="#reality" style="text-decoration:none">
+        <div style="background:#1E1B2A;border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#F87171;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">⚡ Reality Check</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:${['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&(S.reality[k]||'').trim().length>10).length===5?'#34D399':'#F87171'};line-height:1">${['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&(S.reality[k]||'').trim().length>10).length}/5</div>
+          <div style="font-size:10px;color:#8278A0;margin-top:6px">Risiken ansehen →</div>
+        </div>
+      </a>
     </div>
 
     <!-- Timeline -->
@@ -972,7 +1234,7 @@ function renderModule(mid) {
 
   const statusOpts=[
     {s:'draft',sc:'#7A98B8',label:'Entwurf',desc:'Erste Version, noch überarbeiten'},
-    {s:'imported',sc:'#F59E0B',label:'Importiert',desc:'Direkt aus Session importiert'},
+    {s:'imported',sc:'#E8A030',label:'Importiert',desc:'Direkt aus Session importiert'},
     {s:'revised',sc:'#818CF8',label:'Überarbeitet',desc:'Nach Feedback angepasst'},
     {s:'validated',sc:'#34D399',label:'Validiert',desc:'Bestätigt und abgeschlossen'},
   ].map(o=>`<div class="status-opt${mstate.status===o.s?' selected':''}" data-mid="${mid}" data-status="${o.s}" style="--sc:${o.sc}">
@@ -1079,7 +1341,7 @@ function renderOutput(type) {
 
 function renderBusinessPlanOutput() {
   const sections = [
-    {title:'1. Zusammenfassung',mc:'#0DD6D6',blocks:[
+    {title:'1. Zusammenfassung',mc:'#44B8B8',blocks:[
       {mod:'produkt',fid:'productName',label:'Produktname'},
       {mod:'produkt',fid:'description',label:'Kurzbeschreibung'},
       {mod:'geschaeftsmodell',fid:'valueProposition',label:'Value Proposition'},
@@ -1090,7 +1352,7 @@ function renderBusinessPlanOutput() {
       {mod:'kunden',fid:'motivation',label:'Kaufmotivation'},
       {mod:'kunden',fid:'validationStatus',label:'Validierungsstand'},
     ]},
-    {title:'3. Produkt',mc:'#0DD6D6',blocks:[
+    {title:'3. Produkt',mc:'#44B8B8',blocks:[
       {mod:'produkt',fid:'description',label:'Produktbeschreibung'},
       {mod:'produkt',fid:'targetGroup',label:'Zielkund:in'},
       {mod:'produkt',fid:'priceModel',label:'Preislogik'},
@@ -1102,7 +1364,7 @@ function renderBusinessPlanOutput() {
       {mod:'markt',fid:'trends',label:'Trends & Technologie'},
       {mod:'markt',fid:'regulation',label:'Regulierung'},
     ]},
-    {title:'5. Geschäftsmodell',mc:'#F59E0B',blocks:[
+    {title:'5. Geschäftsmodell',mc:'#E8A030',blocks:[
       {mod:'geschaeftsmodell',fid:'valueProposition',label:'Value Proposition'},
       {mod:'geschaeftsmodell',fid:'revenueModel',label:'Erlösmodell'},
       {mod:'geschaeftsmodell',fid:'keyActivities',label:'Kernaktivitäten'},
@@ -1161,8 +1423,8 @@ function renderPitchOutput() {
   const parts=[
     {label:'Problem',val:p.problemStatement||'',color:'#F472B6'},
     {label:'Zielgruppe',val:p.targetStatement||'',color:'#818CF8'},
-    {label:'Lösung',val:p.solutionStatement||prod.description||'',color:'#0DD6D6'},
-    {label:'Geschäftsmodell',val:p.modelStatement||'',color:'#F59E0B'},
+    {label:'Lösung',val:p.solutionStatement||prod.description||'',color:'#44B8B8'},
+    {label:'Geschäftsmodell',val:p.modelStatement||'',color:'#E8A030'},
     {label:'Prozess',val:p.processStatement||'',color:'#34D399'},
     {label:'Finanzen',val:p.financeStatement||[fin.burnRate,fin.runway].filter(Boolean).join(' · ')||'',color:'#FBBF24'},
   ];
@@ -1346,41 +1608,77 @@ function confirmImport() {
 // ═══════════════════════════════════════════════════════════
 //  ASSUMPTION MODAL
 // ═══════════════════════════════════════════════════════════
-function openAssumptionModal() {
+function openAssumptionModal(editId) {
+  const existing = editId ? S.assumptions.find(a=>a.id===editId) : null;
   const modal=document.getElementById('import-modal-inner');
+  const chipStyle=(active,col)=>`padding:4px 10px;border-radius:20px;font-size:10.5px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid ${active?col+'88':col+'33'};color:${active?col:'#8278A0'};background:${active?col+'18':'transparent'};transition:all .15s`;
   modal.innerHTML=`
     <div class="modal-header">
-      <div class="modal-title">❓ Kritische Annahme erfassen</div>
+      <div class="modal-title">❓ Kritische Annahme ${existing?'bearbeiten':'erfassen'}</div>
       <div class="modal-close" onclick="closeImportModal()">✕</div>
     </div>
-    <div class="modal-body">
+    <div class="modal-body" style="display:flex;flex-direction:column;gap:14px">
       <div class="field-group">
         <div class="field-label" style="color:var(--gold)">Annahme</div>
-        <textarea class="field-textarea" id="asm-text" rows="3" placeholder="Was muss wahr sein, damit das Venture funktioniert?"></textarea>
+        <textarea class="field-textarea" id="asm-text" rows="3" placeholder="Was muss wahr sein, damit das Venture funktioniert?">${esc(existing?.text||'')}</textarea>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="field-group">
+          <div class="field-label" style="color:var(--gold);margin-bottom:6px">Kategorie</div>
+          <select class="field-input" id="asm-cat" style="cursor:pointer">
+            ${['kunden','markt','technisch','finanziell','regulatorisch','allgemein'].map(v=>`<option value="${v}" ${existing?.category===v?'selected':''}>${v.charAt(0).toUpperCase()+v.slice(1)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="field-group">
+          <div class="field-label" style="color:var(--gold);margin-bottom:6px">Validierungsstatus</div>
+          <select class="field-input" id="asm-status" style="cursor:pointer">
+            <option value="unvalidated" ${(!existing||existing.status==='unvalidated')?'selected':''}>Offen</option>
+            <option value="confirmed" ${existing?.status==='confirmed'?'selected':''}>Bestätigt</option>
+            <option value="refuted" ${existing?.status==='refuted'?'selected':''}>Widerlegt</option>
+          </select>
+        </div>
       </div>
       <div class="field-group">
-        <div class="field-label" style="color:var(--gold)">Kategorie</div>
-        <select class="field-input" id="asm-cat" style="cursor:pointer">
-          <option value="kunden">Kunden</option>
-          <option value="markt">Markt</option>
-          <option value="technisch">Technisch</option>
-          <option value="finanziell">Finanziell</option>
-          <option value="allgemein">Allgemein</option>
-        </select>
+        <div class="field-label" style="color:var(--gold);margin-bottom:8px">Evidenzstärke</div>
+        <div style="display:flex;gap:7px" id="asm-ev-chips">
+          ${[{v:'stark',c:'#34D399',l:'Stark 🟢'},{v:'mittel',c:'#E8A030',l:'Mittel 🟡'},{v:'schwach',c:'#F87171',l:'Schwach 🔴'}].map(e=>`<button style="${chipStyle(existing?.evidenceStrength===e.v,e.c)}" data-ev="${e.v}" onclick="this.parentNode.querySelectorAll('[data-ev]').forEach(b=>b.dataset.ev!==this.dataset.ev?b.removeAttribute('data-sel'):b.setAttribute('data-sel','1'));document.getElementById('asm-ev').value=this.dataset.ev;">${e.l}</button>`).join('')}
+          <input type="hidden" id="asm-ev" value="${existing?.evidenceStrength||'schwach'}">
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="field-label" style="color:var(--gold);margin-bottom:8px">Risikolevel</div>
+        <div style="display:flex;gap:7px">
+          ${[{v:'hoch',c:'#F87171',l:'Hoch ⚠'},{v:'mittel',c:'#E8A030',l:'Mittel'},{v:'niedrig',c:'#34D399',l:'Niedrig'}].map(e=>`<button style="${chipStyle(existing?.riskLevel===e.v,e.c)}" data-rl="${e.v}" onclick="this.parentNode.querySelectorAll('[data-rl]').forEach(b=>b.style.background='transparent');this.style.background='${e.c}18';document.getElementById('asm-rl').value=this.dataset.rl;">${e.l}</button>`).join('')}
+          <input type="hidden" id="asm-rl" value="${existing?.riskLevel||'hoch'}">
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="field-label" style="color:var(--gold)">Nächster Validierungsschritt</div>
+        <textarea class="field-textarea" id="asm-next" rows="2" placeholder="Wie kann diese Annahme konkret getestet oder belegt werden?">${esc(existing?.nextStep||'')}</textarea>
       </div>
     </div>
     <div class="modal-footer">
       <button class="btn btn-ghost" onclick="closeImportModal()">Abbrechen</button>
-      <button class="btn btn-gold" onclick="saveAssumption()">Hinzufügen</button>
+      ${existing?`<button class="btn" style="color:#F87171;border:1px solid #F8717133;background:none" onclick="deleteAssumption('${existing.id}')">Löschen</button>`:''}
+      <button class="btn btn-gold" onclick="saveAssumption('${existing?.id||''}')">Speichern</button>
     </div>`;
   document.getElementById('import-modal').classList.add('open');
 }
-function saveAssumption() {
+function deleteAssumption(id){S.assumptions=S.assumptions.filter(a=>a.id!==id);save();closeImportModal();renderView();toast('Annahme gelöscht','#F87171');}
+function saveAssumption(editId) {
   const text=document.getElementById('asm-text')?.value?.trim();
   if(!text) return;
-  S.assumptions.push({id:uid(),text,category:document.getElementById('asm-cat')?.value||'allgemein',status:'unvalidated',date:now()});
+  const obj={id:editId||uid(),text,
+    category:document.getElementById('asm-cat')?.value||'allgemein',
+    status:document.getElementById('asm-status')?.value||'unvalidated',
+    evidenceStrength:document.getElementById('asm-ev')?.value||'schwach',
+    riskLevel:document.getElementById('asm-rl')?.value||'hoch',
+    nextStep:(document.getElementById('asm-next')?.value||'').trim(),
+    date:now()};
+  if(editId){const idx=S.assumptions.findIndex(a=>a.id===editId);if(idx>=0)S.assumptions[idx]=obj;else S.assumptions.push(obj);}
+  else S.assumptions.push(obj);
   save();closeImportModal();renderView();
-  toast('✅ Annahme erfasst','#34D399');
+  toast('✅ Annahme gespeichert','#34D399');
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1392,7 +1690,7 @@ function downloadBusinessPlan() {
 <style>body{font-family:'Helvetica Neue',Arial,sans-serif;max-width:800px;margin:40px auto;padding:0 24px;color:#111;font-size:14px;line-height:1.7}
 h1{font-size:24px;margin-bottom:4px}h2{font-size:15px;color:#555;font-weight:400;margin:0 0 24px}
 .sec{margin-bottom:32px;page-break-inside:avoid}
-.sec-title{font-weight:800;font-size:16px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #0DD6D6;color:#0a0a1a}
+.sec-title{font-weight:800;font-size:16px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #44B8B8;color:#0a0a1a}
 .block{background:#f8fafc;border-radius:8px;padding:12px 16px;margin-bottom:10px}
 .blk-label{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#0a8a8a;margin-bottom:5px}
 .blk-val{font-size:13.5px;white-space:pre-wrap}
@@ -1483,15 +1781,7 @@ window.openAssumptionModal=openAssumptionModal;
 window.saveAssumption=saveAssumption;
 window.navigate=navigate;
 
-(function init(){
-  if(window.location.search.includes('mentor')){initMentorMode();return;}
-  load();
-  renderSidebar();
-  handleHash();
-  window.addEventListener('hashchange',handleHash);
-  // Close modal on overlay click
-  document.getElementById('import-modal').addEventListener('click',e=>{if(e.target===document.getElementById('import-modal'))closeImportModal();});
-})();
+
 
 // ── AUTOSAVE ENHANCEMENTS ─────────────────────────
 window.addEventListener('beforeunload',()=>{save();});
@@ -1502,6 +1792,580 @@ function showSaved(){const el=document.getElementById('autosave-ind');if(!el)ret
   el.classList.add('show');clearTimeout(_siT);_siT=setTimeout(()=>el.classList.remove('show'),1800);}
 
 window.addEventListener('beforeunload',()=>{save();});
+
+
+// ═══════════════════════════════════════════════════════════
+//  INTEGRATION MAP (Venture Logic Map)
+// ═══════════════════════════════════════════════════════════
+function renderIntegration() {
+  const statusColor = m => { const s=S.modules[m]?.status||'locked'; return {locked:'#2A2440',draft:'#E8A030',imported:'#44B8B8',revised:'#818CF8',validated:'#34D399'}[s]||'#2A2440'; };
+  const completion = m => { const mod=MODULES.find(x=>x.id===m); const ms=S.modules[m]; if(!mod||!ms)return 0; const done=mod.fields.filter(f=>(ms.fields[f.id]||'').trim().length>10).length; return mod.fields.length?Math.round(done/mod.fields.length*100):0; };
+  const opacity = m => { const c=completion(m); return Math.max(0.3, c/100); };
+
+  // Node positions in 600x440 SVG
+  const nodes = [
+    {id:'produkt',   label:'Produkt',       x:300, y:70,  icon:'📦'},
+    {id:'markt',     label:'Markt',          x:130, y:155, icon:'🌍'},
+    {id:'kunden',    label:'Kunden',         x:470, y:155, icon:'👥'},
+    {id:'ethik',     label:'Ethik',          x:60,  y:270, icon:'⚖️'},
+    {id:'geschaeftsmodell',label:'Geschäfts\u00admodell',x:300,y:220,icon:'🧩'},
+    {id:'operations',label:'Operations',    x:540, y:270, icon:'⚙️'},
+    {id:'wachstum',  label:'Wachstum',       x:160, y:370, icon:'📈'},
+    {id:'finanzen',  label:'Finanzen',       x:440, y:370, icon:'💰'},
+    {id:'kennzahlen',label:'KPIs',           x:80,  y:420, icon:'📊'},
+    {id:'pitch',     label:'Pitch',          x:520, y:420, icon:'🎯'},
+  ];
+
+  // Connections with labels
+  const edges = [
+    {a:'produkt',b:'kunden',label:'löst Problem von'},
+    {a:'produkt',b:'geschaeftsmodell',label:'erzeugt Wert für'},
+    {a:'markt',b:'produkt',label:'gibt Kontext'},
+    {a:'kunden',b:'geschaeftsmodell',label:'zahlt für'},
+    {a:'geschaeftsmodell',b:'finanzen',label:'generiert'},
+    {a:'geschaeftsmodell',b:'operations',label:'braucht'},
+    {a:'geschaeftsmodell',b:'ethik',label:'muss verantwortet werden'},
+    {a:'operations',b:'wachstum',label:'muss skalieren'},
+    {a:'wachstum',b:'finanzen',label:'treibt an'},
+    {a:'kunden',b:'kennzahlen',label:'validiert'},
+    {a:'finanzen',b:'pitch',label:'belegt'},
+    {a:'produkt',b:'pitch',label:'kommuniziert'},
+  ];
+
+  const getNode = id => nodes.find(n=>n.id===id);
+
+  const edgeSvg = edges.map(e => {
+    const a=getNode(e.a), b=getNode(e.b);
+    const mx=(a.x+b.x)/2, my=(a.y+b.y)/2;
+    return `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="rgba(68,184,184,0.12)" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <text x="${mx}" y="${my-4}" fill="rgba(68,184,184,0.4)" font-size="7.5" text-anchor="middle" font-family="DM Sans">${e.label}</text>`;
+  }).join('');
+
+  const nodeSvg = nodes.map(n => {
+    const col = statusColor(n.id);
+    const op = opacity(n.id);
+    const pct = completion(n.id);
+    return `<g class="map-node" onclick="navigate('modul/${n.id}')" opacity="${op}" title="${n.label} · ${pct}%">
+      <circle cx="${n.x}" cy="${n.y}" r="30" fill="${col}" fill-opacity="0.18" stroke="${col}" stroke-width="1.5"/>
+      <circle cx="${n.x}" cy="${n.y}" r="28" fill="transparent" stroke="${col}" stroke-width="0.5" stroke-opacity="0.4"/>
+      <text x="${n.x}" y="${n.y-5}" text-anchor="middle" font-size="16" dominant-baseline="middle">${n.icon}</text>
+      <text x="${n.x}" y="${n.y+16}" text-anchor="middle" fill="${col}" font-size="8.5" font-family="Syne" font-weight="700">${n.label}</text>
+      <text x="${n.x}" y="${n.y+26}" text-anchor="middle" fill="${col}" font-size="7" font-family="DM Sans" opacity="0.6">${pct}%</text>
+    </g>`;
+  }).join('');
+
+  const legendItems = [
+    {color:'#2A2440',label:'Gesperrt'},{color:'#E8A030',label:'Entwurf'},
+    {color:'#44B8B8',label:'Importiert'},{color:'#818CF8',label:'Überarbeitet'},{color:'#34D399',label:'Validiert'},
+  ].map(l=>`<div class="map-legend-item"><div class="map-legend-dot" style="background:${l.color}"></div>${l.label}</div>`).join('');
+
+  // Consistency quick-check summary
+  const ccStates = ['produkt_kunden','gm_markt','ops_wachstum','fin_wachstum','ethik_gm','kpi_kunde'].map(k=>S.consistency[k+'_status']||'');
+  const okCount = ccStates.filter(s=>s==='ok').length;
+  const warnCount = ccStates.filter(s=>s==='warn').length;
+  const badCount = ccStates.filter(s=>s==='bad').length;
+
+  return `<div style="max-width:900px">
+    <div class="view-title">🗺 Venture Logic Map</div>
+    <div class="view-sub">Systemansicht aller Module und ihrer Abhängigkeiten. Klicke auf einen Knoten um das Modul zu öffnen. Knotengröße = Bearbeitungsstand.</div>
+    <div class="view-section" style="padding:18px">
+      <div class="map-wrap">
+        <svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
+          <defs><radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#1E1B2A"/><stop offset="100%" stop-color="#13111C"/></radialGradient></defs>
+          <rect width="600" height="460" fill="url(#bg)"/>
+          ${edgeSvg}
+          ${nodeSvg}
+        </svg>
+      </div>
+      <div class="map-legend">${legendItems}</div>
+    </div>
+    <div class="view-section">
+      <div class="view-section-title">Konsistenz-Schnellübersicht</div>
+      <div class="cc-summary">
+        <div class="cc-summary-chip" style="background:rgba(52,211,153,.12);color:#34D399;border:1px solid rgba(52,211,153,.25)">✓ ${okCount} Konsistent</div>
+        <div class="cc-summary-chip" style="background:rgba(232,160,48,.12);color:#E8A030;border:1px solid rgba(232,160,48,.25)">⚠ ${warnCount} Spannung</div>
+        <div class="cc-summary-chip" style="background:rgba(248,113,113,.12);color:#F87171;border:1px solid rgba(248,113,113,.25)">✗ ${badCount} Widerspruch</div>
+        <a href="#consistency" style="margin-left:auto;font-size:11.5px;color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;text-decoration:none">→ Zur Konsistenzprüfung</a>
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  CONSISTENCY CHECK
+// ═══════════════════════════════════════════════════════════
+var CC_PAIRS = [
+  {id:'produkt_kunden', a:'Produkt', b:'Kunden & Validierung', icon:'📦↔👥',
+   q:'Löst das Produkt tatsächlich das beobachtete und validierte Kundenproblem – nicht nur das vermutete?',
+   hint:'Stimmt die Preislogik mit der beobachteten Zahlungsbereitschaft überein?'},
+  {id:'gm_markt', a:'Geschäftsmodell', b:'Markt & Kontext', icon:'🧩↔🌍',
+   q:'Ist das Erlösmodell realistisch für den definierten Markt und die regulatorischen Rahmenbedingungen?',
+   hint:'Berücksichtigt die Erlöslogik Wettbewerb, Preisdruck und Marktstruktur?'},
+  {id:'ops_wachstum', a:'Operations', b:'Wachstum & Kanäle', icon:'⚙️↔📈',
+   q:'Können die aktuellen Prozesse und die Odoo-Struktur das geplante Wachstum operativ tragen?',
+   hint:'Was bricht beim 10-fachen Volumen zuerst in den aktuellen Prozessen?'},
+  {id:'fin_wachstum', a:'Finanzen', b:'Wachstumsstrategie', icon:'💰↔📈',
+   q:'Passt die Finanzierungsform und der Runway zur Wachstumslogik und zum geplanten Break-Even?',
+   hint:'Reicht das Kapital bis zur ersten positiven Cashflow-Phase bei realistischem Wachstum?'},
+  {id:'ethik_gm', a:'Ethik & Verantwortung', b:'Geschäftsmodell', icon:'⚖️↔🧩',
+   q:'Sind die identifizierten ethischen Risiken konkret im Geschäftsmodell adressiert – nicht nur benannt?',
+   hint:'Welche Gegenmaßnahmen verändern das Modell, und welche sind nur Rhetorik?'},
+  {id:'kpi_kunde', a:'Kennzahlen', b:'Kunden & Validierung', icon:'📊↔👥',
+   q:'Messen die definierten KPIs tatsächlich das, was für Kunden und das Geschäftsmodell relevant ist?',
+   hint:'Sind die KPIs leading indicators (verhalten) oder lagging (vergangenheit)? Können Teams damit lernen?'},
+];
+
+function renderConsistency() {
+  const getStatus = id => S.consistency[id+'_status'] || '';
+  const statusMeta = s => ({
+    ok:  {label:'Konsistent',cls:'ok', color:'#34D399',bg:'rgba(52,211,153,.08)'},
+    warn:{label:'Spannung',  cls:'warn',color:'#E8A030',bg:'rgba(232,160,48,.08)'},
+    bad: {label:'Widerspruch',cls:'bad',color:'#F87171',bg:'rgba(248,113,113,.08)'},
+    '': {label:'Offen',cls:'',color:'#8278A0',bg:'transparent'},
+  })[s]||{label:'Offen',cls:'',color:'#8278A0',bg:'transparent'};
+
+  const allStatuses = CC_PAIRS.map(p=>getStatus(p.id));
+  const ok=allStatuses.filter(s=>s==='ok').length, warn=allStatuses.filter(s=>s==='warn').length, bad=allStatuses.filter(s=>s==='bad').length;
+
+  const pairs = CC_PAIRS.map(p => {
+    const st = getStatus(p.id);
+    const sm = statusMeta(st);
+    const val = esc(S.consistency[p.id+'_text']||'');
+    const len = (S.consistency[p.id+'_text']||'').trim().length;
+    return `<div class="cc-pair ${st?'cc-'+st:''}" style="background:${sm.bg}">
+      <div class="cc-pair-head">
+        <div>
+          <div class="cc-bridge">${p.icon} &nbsp;${p.a} ↔ ${p.b}</div>
+          <div class="cc-bridge-sub">${p.q.substring(0,80)}…</div>
+        </div>
+        <div class="cc-status-btns">
+          <button class="cc-btn ${st==='ok'?'ok':''}" data-ccid="${p.id}" data-ccval="ok">✓</button>
+          <button class="cc-btn ${st==='warn'?'warn':''}" data-ccid="${p.id}" data-ccval="warn">⚠</button>
+          <button class="cc-btn ${st==='bad'?'bad':''}" data-ccid="${p.id}" data-ccval="bad">✗</button>
+        </div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-question">${p.q}</div>
+        <div style="font-size:11px;color:#3A3060;font-style:italic;margin-bottom:8px">${p.hint}</div>
+        <textarea class="mod-textarea" data-cctext="${p.id}" rows="3"
+          placeholder="Analyse: Passen diese Elemente zusammen? Wo gibt es Spannungen?"
+          style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.07);border-radius:6px;color:#C8D9EE;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
+          >${val}</textarea>
+        <div style="font-size:9.5px;color:#3A3060;text-align:right;margin-top:2px">${len}z</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  return `<div style="max-width:860px">
+    <div class="view-title">✓ Konsistenzprüfung</div>
+    <div class="view-sub">Passen alle Teile des Ventures zusammen? Analysiere die Abhängigkeiten zwischen den Modulen kritisch.</div>
+    <div class="cc-summary" style="margin-bottom:20px">
+      <div class="cc-summary-chip" style="background:rgba(52,211,153,.1);color:#34D399;border:1px solid rgba(52,211,153,.25)">✓ ${ok} Konsistent</div>
+      <div class="cc-summary-chip" style="background:rgba(232,160,48,.1);color:#E8A030;border:1px solid rgba(232,160,48,.25)">⚠ ${warn} Spannung</div>
+      <div class="cc-summary-chip" style="background:rgba(248,113,113,.1);color:#F87171;border:1px solid rgba(248,113,113,.25)">✗ ${bad} Widerspruch</div>
+      <div class="cc-summary-chip" style="background:rgba(255,255,255,.05);color:#8278A0;border:1px solid rgba(255,255,255,.07)">${CC_PAIRS.length-ok-warn-bad} Offen</div>
+    </div>
+    <div class="cc-pairs">${pairs}</div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  REALITY CHECK PANEL
+// ═══════════════════════════════════════════════════════════
+var REALITY_ITEMS = [
+  {id:'engpass',     icon:'🚧', title:'Kritischster Engpass',      hint:'Was würde beim 5-fachen Wachstum als erstes zusammenbrechen – konkret, nicht abstrakt?'},
+  {id:'unsicherheit',icon:'❓', title:'Größte Unsicherheit',        hint:'Welche Annahme ist am unsichersten und am schwersten zu validieren?'},
+  {id:'evidenz',     icon:'🔬', title:'Schwächste Evidenz',         hint:'Welche zentrale Behauptung hat die dünnste externe Bestätigung?'},
+  {id:'regulierung', icon:'⚖️', title:'Regulatorisches Risiko',     hint:'Welche Gesetze, Richtlinien oder regulatorische Entwicklungen könnten das Venture gefährden?'},
+  {id:'skalierung',  icon:'📈', title:'Skalierungsproblem',         hint:'Was am Geschäftsmodell funktioniert nicht oder wird teurer bei Skalierung?'},
+];
+function renderReality() {
+  const fields = REALITY_ITEMS.map(item => {
+    const val = esc(S.reality[item.id]||'');
+    const len = (S.reality[item.id]||'').trim().length;
+    const filled = len > 15;
+    return `<div class="reality-item" style="${filled?'border-color:rgba(248,113,113,.3);background:rgba(248,113,113,.05)':''}">
+      <div class="reality-label">
+        <div class="reality-icon">${item.icon}</div>
+        <div>
+          <div class="reality-title">${item.title}</div>
+          ${filled?`<span style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#34D399">✓ Ausgefüllt</span>`:'<span style="font-size:9px;color:#8278A0;font-family:\'Syne\',sans-serif">Pflichtfeld</span>'}
+        </div>
+      </div>
+      <div class="reality-hint">${item.hint}</div>
+      <textarea class="mod-textarea" data-reality="${item.id}" rows="3"
+        placeholder="${item.hint}"
+        style="width:100%;background:rgba(0,0,0,.3);border:1px solid rgba(248,113,113,.15);border-radius:6px;color:#C8D9EE;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
+        >${val}</textarea>
+      <div style="font-size:9.5px;color:#8278A0;text-align:right;margin-top:2px">${len}z</div>
+    </div>`;
+  }).join('');
+
+  const filledCount = REALITY_ITEMS.filter(item=>(S.reality[item.id]||'').trim().length>15).length;
+
+  return `<div style="max-width:760px">
+    <div class="view-title">⚡ Reality Check</div>
+    <div class="view-sub">Wo könnte euer Venture scheitern? Diese Sektion erzwingt Reflexion über die tatsächlichen Risiken – kein Pitch-Optimismus.</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;padding:14px 18px;background:#1E1B2A;border-radius:10px;border:1px solid rgba(255,255,255,.07)">
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:36px;color:${filledCount===5?'#34D399':'#F87171'};line-height:1">${filledCount}/5</div>
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#E2E8F0">Pflichtfelder ausgefüllt</div>
+        <div style="font-size:11.5px;color:#8278A0;margin-top:2px">${filledCount===5?'Reality Check vollständig.':'Alle 5 Felder müssen ausgefüllt werden.'}</div>
+      </div>
+    </div>
+    <div class="reality-grid">${fields}</div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  VENTURE MATURITY SCORE
+// ═══════════════════════════════════════════════════════════
+function computeMaturityDim(moduleIds) {
+  const statusScore = {locked:0,draft:1,imported:2,revised:3,validated:4};
+  const scores = moduleIds.map(mid => {
+    const ms = S.modules[mid];
+    const mod = MODULES.find(m=>m.id===mid);
+    if(!ms||!mod)return 0;
+    const stS = statusScore[ms.status]||0;
+    const done = mod.fields.filter(f=>(ms.fields[f.id]||'').trim().length>10).length;
+    const compS = mod.fields.length ? Math.round(done/mod.fields.length*4) : 0;
+    return Math.round((stS+compS)/2);
+  });
+  return Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
+}
+
+function renderMaturity() {
+  const dims = [
+    {label:'Marktverständnis',   mods:['markt','kunden'],            color:'#818CF8'},
+    {label:'Produktreife',       mods:['produkt','pitch'],           color:'#44B8B8'},
+    {label:'Geschäftsmodell',    mods:['geschaeftsmodell','finanzen'],color:'#E8A030'},
+    {label:'Operations',         mods:['operations','ethik'],        color:'#34D399'},
+    {label:'Skalierungsfähigkeit',mods:['wachstum','kennzahlen'],    color:'#F87171'},
+  ];
+  const scores = dims.map(d=>computeMaturityDim(d.mods));
+  const total = Math.round(scores.reduce((a,b)=>a+b,0)/scores.length);
+  const totalLabel = ['Nicht gestartet','Erste Schritte','In Entwicklung','Solide Basis','Bereit für Demo Day','Investor Ready'][Math.min(total,5)];
+  const maxS=4;
+
+  // Radar SVG (5 axes, pentagon, 300x300)
+  const cx=150,cy=150,r=100;
+  const angle = i => (Math.PI*2/5)*i - Math.PI/2;
+  const point = (i,v) => { const a=angle(i),rv=r*(v/maxS); return [cx+rv*Math.cos(a), cy+rv*Math.sin(a)]; };
+  const gridLines = [0.25,0.5,0.75,1].map(f=>{
+    const pts=Array.from({length:5},(_,i)=>point(i,maxS*f).join(',')).join(' ');
+    return `<polygon points="${pts}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>`;
+  }).join('');
+  const axes = Array.from({length:5},(_,i)=>{const [x,y]=point(i,maxS);return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(255,255,255,.07)" stroke-width="1"/>`;}).join('');
+  const dataPoints = scores.map((s,i)=>point(i,s).join(',')).join(' ');
+  const dimLabels = dims.map((d,i)=>{const a=angle(i),lx=cx+(r+22)*Math.cos(a),ly=cy+(r+22)*Math.sin(a);
+    return `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" fill="${d.color}" font-size="9" font-family="Syne" font-weight="700">${d.label}</text>`;}).join('');
+
+  const bars = dims.map((d,i)=>`<div class="maturity-dim">
+    <div class="maturity-dim-head">
+      <div class="maturity-dim-label">${d.label}</div>
+      <div class="maturity-dim-score" style="color:${d.color}">${scores[i]}/4</div>
+    </div>
+    <div class="maturity-bar-track">
+      <div class="maturity-bar-fill" style="width:${scores[i]/4*100}%;background:${d.color}"></div>
+    </div>
+    <div style="font-size:10px;color:#8278A0;margin-top:2px">${['Nicht gestartet','Entwurf','Importiert','Überarbeitet','Validiert'][scores[i]]}</div>
+  </div>`).join('');
+
+  return `<div style="max-width:860px">
+    <div class="view-title">📊 Venture Maturity Score</div>
+    <div class="view-sub">Kein Zeugnis – eine strategische Orientierung. Wo steht das Venture, und was braucht als nächstes Aufmerksamkeit?</div>
+    <div class="view-section">
+      <div class="maturity-wrap">
+        <div class="maturity-radar">
+          <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+            ${gridLines}${axes}
+            <polygon points="${dataPoints}" fill="rgba(68,184,184,0.15)" stroke="#44B8B8" stroke-width="2"/>
+            ${dimLabels}
+            ${scores.map((s,i)=>{const[x,y]=point(i,s);return `<circle cx="${x}" cy="${y}" r="5" fill="#44B8B8" stroke="#13111C" stroke-width="2"/>`;}).join('')}
+          </svg>
+          <div class="maturity-score-total">${total}/4</div>
+          <div class="maturity-score-label">${totalLabel}</div>
+        </div>
+        <div class="maturity-dims">${bars}</div>
+      </div>
+    </div>
+    <div class="view-section">
+      <div class="view-section-title">Was bedeutet das?</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px">
+        ${[{v:0,l:'Nicht gestartet',d:'Modul gesperrt oder leer'},{v:1,l:'Entwurf',d:'Erste Inhalte, noch unvollständig'},{v:2,l:'Importiert',d:'Sessiondaten übertragen'},{v:3,l:'Überarbeitet',d:'Nach Feedback angepasst'},{v:4,l:'Validiert',d:'Abgeschlossen und belegt'}]
+          .map(s=>`<div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#44B8B8;line-height:1">${s.v}/4</div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;color:#E2E8F0;margin-top:4px">${s.l}</div>
+            <div style="font-size:10.5px;color:#8278A0;margin-top:2px">${s.d}</div>
+          </div>`).join('')}
+      </div>
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  PITCH MODE
+// ═══════════════════════════════════════════════════════════
+var PITCH_SLIDES = [
+  {num:'01',title:'Das Problem',   key:'pitch.problemStatement', alt:'kunden.painPoints'},
+  {num:'02',title:'Die Zielgruppe',key:'pitch.targetStatement',  alt:'kunden.customerProfiles'},
+  {num:'03',title:'Das Produkt',   key:'pitch.solutionStatement',alt:'produkt.description'},
+  {num:'04',title:'Der Markt',     key:'markt.marketOverview',   alt:'markt.competition'},
+  {num:'05',title:'Geschäftsmodell',key:'pitch.modelStatement',  alt:'geschaeftsmodell.revenueModel'},
+  {num:'06',title:'Wachstum',      key:'wachstum.growthPath',    alt:'wachstum.channels'},
+  {num:'07',title:'Finanzierung',  key:'finanzen.financing',     alt:'finanzen.revenue'},
+  {num:'08',title:'Operations',    key:'pitch.processStatement', alt:'operations.step1'},
+  {num:'09',title:'Risiken',       key:null,                     alt:null, realityCheck:true},
+  {num:'10',title:'Vision',        key:'pitch.storyline',        alt:'produkt.differenzierung'},
+];
+
+let _pitchSlide = 0;
+
+function getField(key) {
+  if(!key)return '';
+  const [mid,fid]=key.split('.');
+  return (S.modules[mid]?.fields[fid]||'').trim();
+}
+
+function renderPitchMode() {
+  const venture = S.venture.name || 'Venture Name';
+  const slides = PITCH_SLIDES.map((s,i) => {
+    let body = s.realityCheck
+      ? [S.reality.engpass,S.reality.unsicherheit,S.reality.evidenz].filter(Boolean).map((r,j)=>`${['Engpass','Unsicherheit','Evidenz'][j]}: ${r}`).join('\n\n')
+      : (getField(s.key)||getField(s.alt));
+    const isEmpty = !body.trim();
+    return `<div class="pitch-slide${i===0?' active':''}" id="ps-${i}">
+      <div class="pitch-slide-num">Slide ${s.num} / 10 · ${venture}</div>
+      <div class="pitch-slide-title">${s.title}</div>
+      <div class="${isEmpty?'pitch-slide-empty':'pitch-slide-body'}">${isEmpty?'Noch kein Inhalt – Modul ausfüllen oder Daten importieren.':esc(body)}</div>
+    </div>`;
+  }).join('');
+
+  const dots = PITCH_SLIDES.map((_,i)=>`<div class="pitch-dot${i===0?' active':''}" data-pidx="${i}" id="pd-${i}"></div>`).join('');
+
+  return `<div style="max-width:900px">
+    <div class="view-title">🎯 Pitch Mode</div>
+    <div class="view-sub">Clean. Präsentationsfähig. Auto-generiert aus den Cockpit-Modulen. Fülle die Module aus um alle Slides zu befüllen.</div>
+    <div class="pitch-mode-wrap">
+      ${slides}
+      <div class="pitch-nav">
+        <button class="pitch-nav-btn" id="pm-prev">← Zurück</button>
+        <div class="pitch-dots">${dots}</div>
+        <button class="pitch-nav-btn" id="pm-next">Weiter →</button>
+      </div>
+    </div>
+    <div style="margin-top:12px;font-size:11.5px;color:#8278A0;text-align:center">
+      Tipp: Keyboard ← → für Navigation · Inhalte kommen direkt aus den Modulen
+    </div>
+  </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+//  FEEDBACK EVOLUTION VIEW
+// ═══════════════════════════════════════════════════════════
+function renderFeedbackEvolution() {
+  const modsWithFeedback = MODULES.filter(m => {
+    const fb = S.modules[m.id]?.feedback;
+    return fb && (fb.originalAssumption||fb.receivedFeedback||fb.adaptation||fb.reasoning);
+  });
+
+  if(!modsWithFeedback.length) return `<div style="max-width:860px">
+    <div class="view-title">🔄 Feedback-Evolution</div>
+    <div class="view-sub">Wie hat sich das Venture durch Feedback entwickelt?</div>
+    <div class="view-section" style="text-align:center;padding:40px">
+      <div style="font-size:32px;margin-bottom:12px">📭</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:#E2E8F0;margin-bottom:6px">Noch keine Evolution dokumentiert</div>
+      <div style="font-size:13px;color:#8278A0">Fülle in jedem Modul den Abschnitt „Feedback-Integration" aus um den Lernprozess sichtbar zu machen.</div>
+    </div>
+  </div>`;
+
+  const steps = [{key:'originalAssumption',label:'Ursprung',color:'#8278A0'},
+    {key:'receivedFeedback',label:'Feedback',color:'#E8A030'},
+    {key:'adaptation',label:'Anpassung',color:'#818CF8'},
+    {key:'reasoning',label:'Entscheidung',color:'#34D399'}];
+
+  const cards = modsWithFeedback.map(m => {
+    const fb = S.modules[m.id].feedback;
+    const hasAll = steps.every(s=>fb[s.key]?.trim());
+    const stepHtml = steps.map(s=>`<div class="evo-step">
+      <div class="evo-step-label" style="color:${s.color}">${s.label}</div>
+      ${fb[s.key]?.trim()?`<div class="evo-step-text">${esc(fb[s.key])}</div>`:`<div class="evo-step-empty">Noch nicht ausgefüllt</div>`}
+    </div>`).join('');
+    return `<div class="evo-card">
+      <div class="evo-card-head">
+        <div class="evo-card-icon">${m.icon}</div>
+        <div class="evo-card-title">${m.title}</div>
+        <div class="evo-card-status" style="background:${hasAll?'rgba(52,211,153,.1)':'rgba(232,160,48,.1)'};color:${hasAll?'#34D399':'#E8A030'};border:1px solid ${hasAll?'rgba(52,211,153,.25)':'rgba(232,160,48,.25)'}">
+          ${hasAll?'Vollständig':'Teilweise'}
+        </div>
+      </div>
+      <div class="evo-steps">${stepHtml}</div>
+    </div>`;
+  }).join('');
+
+  const full = modsWithFeedback.filter(m=>steps.every(s=>S.modules[m.id].feedback[s.key]?.trim())).length;
+
+  return `<div style="max-width:860px">
+    <div class="view-title">🔄 Feedback-Evolution</div>
+    <div class="view-sub">Der Lernprozess des Ventures sichtbar gemacht. Ursprüngliche Annahmen → externes Feedback → Anpassung → Begründung.</div>
+    <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
+      <div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#44B8B8">${modsWithFeedback.length}</div>
+        <div style="font-size:11px;color:#8278A0;font-family:'Syne',sans-serif">Module mit Evolution</div>
+      </div>
+      <div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#34D399">${full}</div>
+        <div style="font-size:11px;color:#8278A0;font-family:'Syne',sans-serif">Vollständig dokumentiert</div>
+      </div>
+    </div>
+    <div class="evo-list">${cards}</div>
+  </div>`;
+}
+
+
+// ═══════════════════════════════════════════════════════════
+//  ASSUMPTIONS VIEW
+// ═══════════════════════════════════════════════════════════
+function renderAssumptionsView() {
+  const evCol={stark:'#34D399',mittel:'#E8A030',schwach:'#F87171'};
+  const rlCol={hoch:'#F87171',mittel:'#E8A030',niedrig:'#34D399'};
+  const stCol={unvalidated:'#E8A030',confirmed:'#34D399',refuted:'#F87171'};
+  const stLbl={unvalidated:'Offen',confirmed:'Bestätigt ✓',refuted:'Widerlegt ✗'};
+  function chip(txt,col){return '<span class="assump-chip" style="background:'+col+'18;color:'+col+';border:1px solid '+col+'44">'+txt+'</span>';}
+  const high=S.assumptions.filter(function(a){return a.riskLevel==='hoch'&&a.evidenceStrength==='schwach';});
+  function buildCard(a){
+    var cc='assump-card '+(a.riskLevel==='hoch'?'risk-high':a.riskLevel==='mittel'?'risk-med':'risk-low');
+    var meta=(a.evidenceStrength?chip({stark:'Evidenz: Stark',mittel:'Evidenz: Mittel',schwach:'Evidenz: Schwach'}[a.evidenceStrength]||a.evidenceStrength,evCol[a.evidenceStrength]||'#8278A0'):'')
+      +(a.riskLevel?chip({hoch:'Risiko: Hoch',mittel:'Risiko: Mittel',niedrig:'Risiko: Niedrig'}[a.riskLevel]||a.riskLevel,rlCol[a.riskLevel]||'#8278A0'):'')
+      +(a.category?chip(a.category,'#8278A0'):'')
+      +chip(stLbl[a.status]||a.status,stCol[a.status]||'#8278A0');
+    return '<div class="'+cc+'" onclick="openAssumptionModal(\''+a.id+'\')" style="cursor:pointer">'
+      +'<div class="assump-text">'+esc(a.text)+'</div>'
+      +'<div class="assump-meta">'+meta+'</div>'
+      +(a.nextStep?'<div class="assump-next">→ '+esc(a.nextStep)+'</div>':'')
+      +'</div>';
+  }
+  var cards=!S.assumptions.length
+    ?('<div style="text-align:center;padding:48px"><div style="font-size:36px;margin-bottom:12px">❓</div>'
+      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:15px;color:#E2E8F0;margin-bottom:8px">Noch keine Annahmen erfasst</div>'
+      +'<div style="font-size:13px;color:#8278A0">Kritische Annahmen dokumentieren und systematisch verfolgen.</div><br>'
+      +'<button class="btn btn-gold btn-sm" onclick="openAssumptionModal()">+ Erste Annahme erfassen</button></div>')
+    :('<div class="assump-grid">'+S.assumptions.map(buildCard).join('')+'</div>');
+  var warn=high.length
+    ?('<div style="background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.25);border-radius:10px;padding:12px 16px;margin-bottom:18px;display:flex;align-items:center;gap:12px">'
+      +'<div style="font-size:22px">⚠</div><div>'
+      +'<div style="font-family:Syne,sans-serif;font-weight:700;color:#F87171;font-size:13px">'+high.length+' Annahme'+(high.length>1?'n':'')+' mit hohem Risiko und schwacher Evidenz</div>'
+      +'<div style="font-size:11.5px;color:#8278A0;margin-top:2px">Diese Annahmen müssen prioritär validiert werden.</div></div></div>')
+    :'';
+  var n=S.assumptions.length, nh=S.assumptions.filter(function(a){return a.riskLevel==='hoch';}).length;
+  var nc=S.assumptions.filter(function(a){return a.status==='confirmed';}).length;
+  function sc(v,c,l){return '<div style="background:#1E1B2A;border:1px solid '+c+'33;border-radius:8px;padding:8px 14px;text-align:center">'
+    +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:'+c+';line-height:1">'+v+'</div>'
+    +'<div style="font-size:9.5px;color:#8278A0;font-family:Syne,sans-serif">'+l+'</div></div>';}
+  return '<div style="max-width:900px">'
+    +'<div class="view-title">❓ Kritische Annahmen</div>'
+    +'<div class="view-sub">Was muss wahr sein, damit das Venture funktioniert? Evidenzstärke und Risiko systematisch verfolgen.</div>'
+    +warn
+    +'<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px">'
+    +'<div style="display:flex;gap:10px;flex-wrap:wrap">'+sc(n,'rgba(255,255,255,.5)','Gesamt')+sc(nh,'#F87171','Hohes Risiko')+sc(nc,'#34D399','Bestätigt')+'</div>'
+    +'<button class="btn btn-gold btn-sm" onclick="openAssumptionModal()">+ Annahme hinzufügen</button></div>'
+    +'<div class="view-section">'+cards+'</div></div>';
+}
+
+
+
+// ═══════════════════════════════════════════════════════════
+//  GUIDE VIEW (Kurzanleitung)
+// ═══════════════════════════════════════════════════════════
+function renderGuide() {
+  return `<div style="max-width:760px">
+    <div class="gl-header">
+        <div class="gl-logo">Entrepreneurship Challenge Lab · Media University</div>
+        <h1>Kurzanleitung für Teams</h1>
+        <div class="gl-sub">Venture Cockpit &amp; Session-Seiten · Stand: Sommersemester 2026</div>
+      </div>
+    
+      <div class="gl-leitmotiv">„Ein Venture wird erst dann real, wenn alle Teile zusammenpassen."</div>
+    
+      <h2>Das System in einem Satz</h2>
+      <p style="font-size:13px;color:#A098C0;margin-bottom:24px">
+        Ihr arbeitet auf den <strong style="color:#EDE9F6">Session-Seiten</strong> (Exploration), ladet dort eure Ergebnisse herunter und übertragt sie per JSON-Import in das <strong style="color:#EDE9F6">Venture Cockpit</strong> (Entscheidung &amp; Integration) – immer nach Feedback durch den Dozenten.
+      </p>
+    
+      <h2>Pro Session: drei Schritte</h2>
+      <div class="gl-steps">
+        <div class="gl-step">
+          <div class="gl-step-num">1</div>
+          <div>
+            <div class="gl-step-title">Session-Seite öffnen &amp; ausfüllen</div>
+            <div class="gl-step-body">Checklisten abhaken, Arbeitsaufträge ausfüllen. Der Fortschritt wird <strong>automatisch im Browser gespeichert</strong> – auch nach dem Schließen des Tabs. Zwischenstand jederzeit per <code>📂 Stand laden</code> auf einem anderen Gerät fortführen.</div>
+          </div>
+        </div>
+        <div class="gl-step">
+          <div class="gl-step-num">2</div>
+          <div>
+            <div class="gl-step-title">Abgabe herunterladen</div>
+            <div class="gl-step-body">Button <code>⬇ Abgabe</code> → JSON-Datei speichern → an den Dozenten einreichen. Ihr erhaltet eine <code>FEEDBACK.json</code> zurück, die ihr per <code>📬 Feedback laden</code> direkt in die Session-Seite ladet.</div>
+          </div>
+        </div>
+        <div class="gl-step">
+          <div class="gl-step-num">3</div>
+          <div>
+            <div class="gl-step-title">Ins Venture Cockpit importieren</div>
+            <div class="gl-step-body">Nach dem Dozenten-Feedback: Cockpit öffnen → <code>⬇ Session-Daten importieren</code> → eure JSON-Datei wählen. Das System erkennt das Format automatisch. Danach Inhalte im Cockpit <strong>überarbeiten und ergänzen</strong> – nicht nur importieren.</div>
+          </div>
+        </div>
+      </div>
+    
+      <h2>Session-Übersicht</h2>
+      <div class="gl-sessions">
+        <div class="gl-sess"><div class="gl-sess-num">S1</div><div class="gl-sess-label">Intro · Startup als System</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S2</div><div class="gl-sess-label">Produkt &amp; Analyse</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S3</div><div class="gl-sess-label">Odoo · Produktlogik</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S4</div><div class="gl-sess-label">Geschäftsmodell &amp; Ethik</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S5</div><div class="gl-sess-label">Kundenvalidierung</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S6</div><div class="gl-sess-label">Manufacturing &amp; Services</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S7</div><div class="gl-sess-label">Wachstum &amp; Plattformlogik</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S8–11</div><div class="gl-sess-label">Funding · Skalierung · Pitch · Demo Day</div></div>
+      </div>
+    
+      <h2>Venture Cockpit · Analyse-Bereiche</h2>
+      <div class="gl-tools">
+        <div class="gl-tool"><div class="gl-tool-icon">🗺</div><div class="gl-tool-name">Logic Map</div><div class="gl-tool-desc">Systemansicht aller Module und ihrer Abhängigkeiten. Zeigt, was noch fehlt.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">✓</div><div class="gl-tool-name">Konsistenzprüfung</div><div class="gl-tool-desc">6 Modulpaar-Fragen: Passen Produkt, Markt, Modell und Finanzen wirklich zusammen?</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">⚡</div><div class="gl-tool-name">Reality Check</div><div class="gl-tool-desc">5 Pflichtfelder: Wo könnte das Venture scheitern? Ehrlich ausfüllen – nicht beschönigen.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">📊</div><div class="gl-tool-name">Maturity Score</div><div class="gl-tool-desc">Reifegrad des Ventures in 5 Dimensionen – als strategische Orientierung, nicht als Note.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">🎯</div><div class="gl-tool-name">Pitch Mode</div><div class="gl-tool-desc">10 Slides, automatisch aus den Modulen befüllt. Navigation mit ← →.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">❓</div><div class="gl-tool-name">Kritische Annahmen</div><div class="gl-tool-desc">Annahmen mit Evidenzstärke und Risiko erfassen. Hochrisiko-Felder werden rot markiert.</div></div>
+      </div>
+    
+      <h2>Häufige Fragen</h2>
+      <div class="gl-tips">
+        <div class="gl-tip">
+          <div class="gl-tip-q">Meine Eingaben sind weg.</div>
+          <div class="gl-tip-a">Daten werden automatisch im Browser gespeichert. Beim Gerätewechsel: <code>📂 Stand laden</code> und die zuletzt heruntergeladene JSON-Datei wählen.</div>
+        </div>
+        <div class="gl-tip">
+          <div class="gl-tip-q">Import schlägt fehl.</div>
+          <div class="gl-tip-a">Nur eigene Abgabe-JSONs verwenden, keine Feedback-JSONs. Das Cockpit erkennt S2-, S4-, S5- und S7-Formate automatisch.</div>
+        </div>
+        <div class="gl-tip">
+          <div class="gl-tip-q">Wann soll ins Cockpit importiert werden?</div>
+          <div class="gl-tip-a">Erst nach Erhalt des Dozenten-Feedbacks. Cockpit-Inhalte sind reflektierte Entscheidungen – keine Rohentwürfe.</div>
+        </div>
+        <div class="gl-tip">
+          <div class="gl-tip-q">Modul-Status ändert sich nicht.</div>
+          <div class="gl-tip-a">Status manuell setzen: im Modul oben rechts auf den Status klicken (Entwurf → Importiert → Überarbeitet → Validiert).</div>
+        </div>
+      </div>
+    
+      <div class="gl-footer">
+        Designed by Prof. Thomas Petzold Ph.D. and Claude · 2026 &nbsp;·&nbsp;
+        Venture Cockpit: leproftp.github.io/venturecockpit &nbsp;·&nbsp;
+        Bei Fragen: direkt an den Dozenten
+      </div>
+  </div>`;
+}
 
 // ════════════════════════════════════════════════════
 // MENTOR MODE — clean rewrite
@@ -1569,15 +2433,15 @@ function _showMentor(mentorApp, authed){
 
   if(!authed){
     area.innerHTML=`
-      <div style="max-width:340px;margin:80px auto;background:#091524;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
+      <div style="max-width:340px;margin:80px auto;background:#1E1B2A;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
         <div style="font-size:40px;margin-bottom:14px">🔐</div>
         <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:8px">Mentor-Zugang</div>
-        <div style="font-size:13px;color:#4A6280;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
+        <div style="font-size:13px;color:#8278A0;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
         <input id="mpw" type="password" placeholder="Passwort…"
           style="width:100%;background:rgba(0,0,0,.4);border:1px solid rgba(255,255,255,.15);border-radius:6px;
           color:#fff;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
         <button id="mbtn"
-          style="width:100%;padding:11px;background:linear-gradient(135deg,#F59E0B,#c07010);color:#111;
+          style="width:100%;padding:11px;background:linear-gradient(135deg,#E8A030,#c07010);color:#111;
           border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;cursor:pointer">
           Einloggen →
         </button>
@@ -1598,21 +2462,21 @@ function _showMentor(mentorApp, authed){
 
   // Render ventures
   function starHtml(n){if(!n&&n!==0)return '<span style="color:#333">—</span>';
-    let s='';for(let i=0;i<5;i++)s+='<span style="color:'+(i<n?'#F59E0B':'#1E2D3F')+'">★</span>';return s;}
+    let s='';for(let i=0;i<5;i++)s+='<span style="color:'+(i<n?'#E8A030':'#1E2D3F')+'">★</span>';return s;}
 
   function sessionBlock(label, sd){
-    if(!sd) return `<div style="padding:10px;background:rgba(0,0,0,.2);border-radius:6px;font-size:11px;color:#4A6280;font-style:italic">Keine Einreichung für ${label}</div>`;
+    if(!sd) return `<div style="padding:10px;background:rgba(0,0,0,.2);border-radius:6px;font-size:11px;color:#8278A0;font-style:italic">Keine Einreichung für ${label}</div>`;
     let html=`<div style="background:rgba(0,0,0,.18);border-radius:8px;padding:10px 12px;margin-bottom:8px">`;
     html+=`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;color:#4A6280">${label}</span>
+      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;color:#8278A0">${label}</span>
       <span style="font-size:16px">${starHtml(sd.stars)}</span></div>`;
     (sd.pos||[]).forEach(p=>{html+=`<div style="font-size:11.5px;color:#C8D9EE;padding:2px 0;display:flex;gap:7px"><span style="color:#34D399;flex-shrink:0">●</span>${p}</div>`;});
     (sd.gaps||[]).forEach(g=>{html+=`<div style="font-size:11.5px;color:#C8D9EE;padding:2px 0;display:flex;gap:7px"><span style="color:#F87171;flex-shrink:0">●</span>${g}</div>`;});
     if(sd.closed||sd.open){
-      html+=`<div style="margin-top:8px;padding:8px 10px;border-left:2px solid rgba(13,214,214,.35);background:rgba(13,214,214,.05)">
-        <div style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#0DD6D6;letter-spacing:.1em;margin-bottom:5px">↳ FEEDBACK-INTEGRATION</div>`;
+      html+=`<div style="margin-top:8px;padding:8px 10px;border-left:2px solid rgba(68,184,184,.35);background:rgba(68,184,184,.05)">
+        <div style="font-size:9px;font-family:'Syne',sans-serif;font-weight:700;color:#44B8B8;letter-spacing:.1em;margin-bottom:5px">↳ FEEDBACK-INTEGRATION</div>`;
       (sd.closed||[]).forEach(c=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#34D399">✓</span>${c}</div>`;});
-      (sd.open||[]).forEach(o=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#F59E0B">△</span>${o}</div>`;});
+      (sd.open||[]).forEach(o=>{html+=`<div style="font-size:11px;color:#9B7DA8;padding:1px 0;display:flex;gap:6px"><span style="color:#E8A030">△</span>${o}</div>`;});
       html+=`</div>`;}
     html+=`</div>`;
     return html;
@@ -1621,23 +2485,23 @@ function _showMentor(mentorApp, authed){
   let html=`<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px">
     <div>
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff">Venture-Übersicht · ${VENTURES.length} Teams</div>
-      <div style="font-size:12px;color:#4A6280;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
+      <div style="font-size:12px;color:#8278A0;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
     </div>
-    <div style="display:flex;gap:14px;font-size:11px;color:#4A6280;flex-wrap:wrap">
+    <div style="display:flex;gap:14px;font-size:11px;color:#8278A0;flex-wrap:wrap">
       <span><span style="color:#34D399">●</span> Stärke</span>
       <span><span style="color:#F87171">●</span> Lücke</span>
       <span><span style="color:#34D399">✓</span> Geschlossen</span>
-      <span><span style="color:#F59E0B">△</span> Offen</span>
+      <span><span style="color:#E8A030">△</span> Offen</span>
     </div>
   </div>`;
 
   VENTURES.forEach(v=>{
-    html+=`<div style="background:#091524;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;margin-bottom:14px">
+    html+=`<div style="background:#1E1B2A;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;margin-bottom:14px">
       <div style="display:grid;grid-template-columns:220px 1fr">
         <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)">
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:3px">${v.name}</div>
-          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#0DD6D6;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:8px">${v.team}</div>
-          <div style="font-size:12px;color:#4A6280;line-height:1.55">${v.idea}</div>
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#44B8B8;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:8px">${v.team}</div>
+          <div style="font-size:12px;color:#8278A0;line-height:1.55">${v.idea}</div>
         </div>
         <div style="padding:14px 18px">
           ${sessionBlock('Session 2', v.s2)}
@@ -1647,12 +2511,180 @@ function _showMentor(mentorApp, authed){
     </div>`;
   });
 
-  area.innerHTML=html;
+  // ── BEWERTUNGSBOGEN ──────────────────────────────────────────────────────
+  const CRITERIA = [
+    {section:'Geschäftsplan',pct:40,weight:.4,items:[
+      {id:'pmf',   label:'Problem-Markt-Fit',              q:'Wurde ein relevantes Problem identifiziert und ein plausibler Markt adressiert?'},
+      {id:'biz',   label:'Geschäftslogik & Wirtschaftlichkeit',q:'Ist das Geschäftsmodell nachvollziehbar, konsistent und grundsätzlich tragfähig?'},
+      {id:'evid',  label:'Evidenz & Reflexion',             q:'Wurden Kundenfeedback, Validierung und kritische Reflexion überzeugend integriert?'},
+    ]},
+    {section:'Pitch',pct:30,weight:.3,items:[
+      {id:'clarity',label:'Klarheit & Struktur',            q:'Ist die Präsentation logisch aufgebaut und leicht verständlich?'},
+      {id:'conv',   label:'Überzeugungskraft',              q:'Wird überzeugend vermittelt, warum das Venture Potenzial hat?'},
+      {id:'team',   label:'Team & Professionalität',        q:'Wirkt das Team vorbereitet, reflektiert und kompetent?'},
+    ]},
+    {section:'Operative Umsetzung',pct:30,weight:.3,items:[
+      {id:'odoo',  label:'Umsetzung in Odoo',               q:'Wurden Produkte, Prozesse und Unternehmenslogiken sinnvoll abgebildet?'},
+      {id:'ops',   label:'Operative Konsistenz',            q:'Passen Prozesse, Organisation und Geschäftsmodell zusammen?'},
+      {id:'real',  label:'Realitätsnähe',                   q:'Wirkt das Venture operativ umsetzbar und anschlussfähig an reale Unternehmenspraxis?'},
+    ]},
+  ];
+  const SCORE_LEVELS = [
+    {min:41,label:'Exzellent',desc:'Venture auf sehr hohem Niveau entwickelt',col:'#5ABF8C'},
+    {min:36,label:'Sehr gut', desc:'überzeugendes und konsistentes Venture',col:'#7FC47A'},
+    {min:31,label:'Gut',      desc:'tragfähiges Konzept mit kleineren Schwächen',col:'#E8A030'},
+    {min:26,label:'Befriedigend',desc:'Potenzial vorhanden, aber deutliche Lücken',col:'#CC8840'},
+    {min:21,label:'Ausreichend',desc:'grundlegende Anforderungen erfüllt',col:'#D07060'},
+    {min:0, label:'Verbesserungsbedürftig',desc:'',col:'#D05050'},
+  ];
+
+  let _ratings = {};
+  try { _ratings = JSON.parse(sessionStorage.getItem('ecl-mentor-ratings')||'{}'); } catch{}
+  let _selTeam = VENTURES[0]?.team||'';
+
+  function saveRatings(){ try{sessionStorage.setItem('ecl-mentor-ratings',JSON.stringify(_ratings));}catch{} }
+  function getRatings(team){ return _ratings[team] || {}; }
+
+  function calcScore(team){
+    const r = getRatings(team);
+    let total = 0;
+    CRITERIA.forEach(sec => {
+      const secMax = sec.items.length * 5;
+      const secGot = sec.items.reduce((a,it) => a + (parseInt(r[it.id])||0), 0);
+      total += (secGot / secMax) * sec.pct;
+    });
+    return Math.round(total * 45 / 100 * 10) / 10; // scale to 45 pt
+  }
+
+  function buildRatingForm(team){
+    const r = getRatings(team);
+    const totalScore = calcScore(team);
+    const level = SCORE_LEVELS.find(l=>totalScore>=l.min) || SCORE_LEVELS[SCORE_LEVELS.length-1];
+    const allFilled = CRITERIA.every(sec=>sec.items.every(it=>parseInt(r[it.id])>0));
+
+    const secHtml = CRITERIA.map(sec=>{
+      const secScore = sec.items.reduce((a,it)=>a+(parseInt(r[it.id])||0),0);
+      const secMax = sec.items.length * 5;
+      return '<div style="margin-bottom:18px">'
+        +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">'
+        +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#EDE9F6">'+sec.section+'</div>'
+        +'<div style="font-size:10px;font-family:Syne,sans-serif;font-weight:700;color:#8278A0">Gewichtung '+sec.pct+'% &nbsp;·&nbsp; '+secScore+'/'+secMax+' Pkt.</div>'
+        +'</div>'
+        +sec.items.map(it=>{
+          const val = parseInt(r[it.id])||0;
+          const stars = [1,2,3,4,5].map(n=>{
+            const active = n<=val;
+            return '<button onclick="_mRate(\''+team+'\',\''+it.id+'\','+n+')" style="width:30px;height:30px;border-radius:6px;border:1.5px solid '+(active?'rgba(232,160,48,.7)':'rgba(200,180,255,.12)')+';background:'+(active?'rgba(232,160,48,.18)':'none')+';color:'+(active?'#E8A030':'#4A3A5A')+';font-family:Syne,sans-serif;font-weight:800;font-size:13px;cursor:pointer;transition:all .15s">'+n+'</button>';
+          }).join('');
+          return '<div style="background:rgba(0,0,0,.2);border-radius:9px;padding:12px 14px;margin-bottom:7px">'
+            +'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">'
+            +'<div><div style="font-family:Syne,sans-serif;font-weight:700;font-size:12.5px;color:#EDE9F6;margin-bottom:3px">'+it.label+'</div>'
+            +'<div style="font-size:11px;color:#6A6080;line-height:1.45">'+it.q+'</div></div>'
+            +'<div style="display:flex;gap:4px;flex-shrink:0">'+stars+'</div>'
+            +'</div></div>';
+        }).join('')
+        +'</div>';
+    }).join('');
+
+    const commentFields = [
+      {key:'strength',label:'Größte Stärke des Ventures'},
+      {key:'challenge',label:'Größte offene Herausforderung'},
+      {key:'nextstep',label:'Nächster sinnvoller Entwicklungsschritt'},
+    ].map(cf=>'<div style="margin-bottom:12px">'
+      +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:#8278A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:6px">'+cf.label+'</div>'
+      +'<textarea oninput="_mComment(\''+team+'\',\''+cf.key+'\',this.value)" rows="3" style="width:100%;background:rgba(0,0,0,.25);border:1px solid rgba(200,180,255,.12);border-radius:8px;color:#EDE9F6;font-family:DM Sans,sans-serif;font-size:13px;padding:9px 12px;outline:none;resize:vertical">'+((r[cf.key]||'').replace(/</g,'&lt;'))+'</textarea>'
+      +'</div>'
+    ).join('');
+
+    return '<div style="background:#1E1B2A;border:1px solid rgba(200,180,255,.1);border-radius:14px;overflow:hidden">'
+      // Score bar
+      +'<div style="background:'+level.col+'18;border-bottom:1px solid '+level.col+'33;padding:16px 22px;display:flex;align-items:center;gap:16px">'
+      +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:36px;color:'+level.col+';line-height:1">'+totalScore+'<span style="font-size:16px;color:'+level.col+'88">/45</span></div>'
+      +'<div><div style="font-family:Syne,sans-serif;font-weight:800;font-size:15px;color:'+level.col+'">'+level.label+'</div>'
+      +(level.desc?'<div style="font-size:12px;color:#8278A0;margin-top:2px">'+level.desc+'</div>':'')
+      +(allFilled?'':'<div style="font-size:11px;color:#6A6080;margin-top:2px">Noch nicht alle Kriterien bewertet</div>')+'</div>'
+      +'<div style="margin-left:auto"><button onclick="_mExport(\''+team+'\')" style="background:rgba(200,180,255,.1);border:1px solid rgba(200,180,255,.18);color:#A098C0;padding:6px 14px;border-radius:6px;cursor:pointer;font-family:Syne,sans-serif;font-weight:700;font-size:10.5px">⬇ Exportieren</button></div>'
+      +'</div>'
+      // Criteria
+      +'<div style="padding:20px 22px">'+secHtml+'</div>'
+      // Comments
+      +'<div style="padding:0 22px 22px">'
+      +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#8278A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:14px;padding-top:4px;border-top:1px solid rgba(200,180,255,.08)">Kommentare</div>'
+      +commentFields+'</div>'
+      // Jury note
+      +'<div style="margin:0 22px 22px;background:rgba(232,160,48,.06);border:1px solid rgba(232,160,48,.15);border-radius:8px;padding:11px 14px;font-size:11.5px;color:#7A6840;line-height:1.55">'
+      +'<strong style="color:#E8A030;font-family:Syne,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase">Hinweis</strong><br>'
+      +'Bewertet nicht die „beste Idee", sondern das Team, das am überzeugendsten gezeigt hat, dass es ein reales Problem verstanden, daraus ein konsistentes Venture entwickelt und dieses strategisch wie operativ durchdacht hat.'
+      +'</div></div>';
+  }
+
+  function buildScoreTable(){
+    return '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px">'
+      +VENTURES.map(v=>{
+        const sc = calcScore(v.team);
+        const lv = SCORE_LEVELS.find(l=>sc>=l.min)||SCORE_LEVELS[SCORE_LEVELS.length-1];
+        const r = getRatings(v.team);
+        const filled = CRITERIA.reduce((a,s)=>a+s.items.filter(it=>parseInt(r[it.id])>0).length,0);
+        const total = CRITERIA.reduce((a,s)=>a+s.items.length,0);
+        return '<div style="background:#1A1728;border:1px solid rgba(200,180,255,.08);border-radius:10px;padding:12px 14px;cursor:pointer" onclick="document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\')?document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\').scrollIntoView({behavior:\'smooth\'}):null">'
+          +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#EDE9F6;margin-bottom:4px">'+v.name+'</div>'
+          +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:'+lv.col+';line-height:1">'+sc+'<span style="font-size:11px;color:'+lv.col+'55">/45</span></div>'
+          +'<div style="font-size:10px;color:#6A6080;margin-top:3px">'+filled+'/'+total+' Kriterien bewertet</div>'
+          +'</div>';
+      }).join('')
+      +'</div>';
+  }
+
+  html += '<div style="margin-top:36px;border-top:1px solid rgba(200,180,255,.08);padding-top:28px">'
+    +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:20px;color:#EDE9F6;margin-bottom:6px">📊 Bewertungsbogen Demo Day</div>'
+    +'<div style="font-size:12.5px;color:#8278A0;margin-bottom:20px">1–5 Punkte pro Kriterium · max. 45 Punkte gesamt (3 gewichtete Bereiche)</div>'
+    + buildScoreTable()
+    +'<div style="margin-top:24px;display:flex;flex-direction:column;gap:18px">'
+    +VENTURES.map(v=>'<div id="mr-'+v.team.replace(/\W/g,'')+'">'
+      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:12px;color:#8278A0;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px">'+v.name+' &nbsp;·&nbsp; '+v.team+'</div>'
+      +buildRatingForm(v.team)
+      +'</div>'
+    ).join('')
+    +'</div></div>';
+
+  area.innerHTML = html;
+
+  // attach global helpers
+  window._mRate = function(team, crit, val){
+    if(!_ratings[team]) _ratings[team]={};
+    _ratings[team][crit] = _ratings[team][crit]===val ? 0 : val;
+    saveRatings(); _showMentor(mentorApp, true);
+  };
+  window._mComment = function(team, key, val){
+    if(!_ratings[team]) _ratings[team]={};
+    _ratings[team][key] = val; saveRatings();
+  };
+  window._mExport = function(team){
+    const r = getRatings(team);
+    const sc = calcScore(team);
+    const lv = SCORE_LEVELS.find(l=>sc>=l.min)||SCORE_LEVELS[SCORE_LEVELS.length-1];
+    const data = {team, score:sc, level:lv.label, ratings:r,
+      exportedAt:new Date().toISOString(), reviewer:'Mentor:in'};
+    const b=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+    const u=URL.createObjectURL(b),a=document.createElement('a');
+    a.href=u;a.download='Bewertung_'+team+'_DemoDay.json';
+    document.body.appendChild(a);a.click();document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(u),3000);
+  };
 }
 
 function exitMentorMode(){window.location.href=window.location.pathname;}
 window.exitMentorMode=exitMentorMode;
 
+(function init(){
+  if(window.location.search.includes('mentor')){initMentorMode();return;}
+  load();
+  renderSidebar();
+  handleHash();
+  window.addEventListener('hashchange',handleHash);
+  // Close modal on overlay click
+  document.getElementById('import-modal').addEventListener('click',e=>{if(e.target===document.getElementById('import-modal'))closeImportModal();});
+})();
 </script>
 </body>
 </html>
