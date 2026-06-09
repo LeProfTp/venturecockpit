@@ -11,9 +11,9 @@
 ═══════════════════════════════════════════ */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#F4F1EB;--sb:#1A1830;--card:#FFFFFF;--card-hi:#F9F7F2;
-  --border:rgba(25,20,50,0.09);--border-md:rgba(25,20,50,0.15);
-  --text:#FFFFFF;--dim:#7068A0;--muted:#E6E0D4;
+  --bg:#0F0D15;--sb:#13111C;--card:#1A1728;--card-hi:#221F30;
+  --border:rgba(180,160,220,.1);--border-md:rgba(180,160,220,.18);
+  --text:#FFFFFF;--dim:#7868A8;--muted:#1E1B2A;
   --gold:#C87C38;--teal:#2A7E7E;--green:#2E7A52;--rose:#B85070;
   --violet:#6858B8;--orange:#BC5C36;
   --r:13px;--r-sm:9px;--r-xs:6px;
@@ -54,7 +54,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
   border-radius:2px;transition:width .5s}
 
 .sb-section{padding:10px 0}
-.sb-section-label{color:#7068A0;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
+.sb-section-label{color:#8A80C0;color:#5A5280;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--dim);font-family:'Syne',sans-serif;font-weight:700;
   padding:4px 16px 6px}
 .sb-item{display:flex;align-items:center;gap:9px;padding:7px 16px;
@@ -84,7 +84,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 /* ═══════════════════════════════════════════
    CARDS
 ═══════════════════════════════════════════ */
-.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:0 1px 6px rgba(0,0,0,.35);overflow:hidden}
 .card-header{display:flex;align-items:center;gap:10px;padding:14px 18px;
   border-bottom:1px solid var(--border)}
 .card-icon{font-size:17px;width:22px;text-align:center;flex-shrink:0}
@@ -115,8 +115,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .timeline{display:flex;align-items:flex-start;gap:0;overflow-x:auto;
   padding:16px 18px;scrollbar-width:none}
 .timeline::-webkit-scrollbar{display:none}
-.tl-item{display:flex;flex-direction:column;align-items:center;gap:6px;
-  min-width:70px;position:relative;flex:1}
+.tl-item{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:86px;position:relative;flex:1}
 .tl-item:not(:last-child)::after{content:'';position:absolute;
   top:13px;left:calc(50% + 12px);right:calc(-50% + 12px);
   height:1px;background:var(--border-md)}
@@ -127,9 +126,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
 .tl-circle.tl-active{background:rgba(200,124,56,.12);border-color:var(--gold);color:var(--gold)}
 .tl-circle.tl-imported{background:rgba(42,126,126,.12);border-color:var(--teal);color:var(--teal)}
 .tl-circle.tl-odoo{background:rgba(129,140,248,.12);border-color:var(--violet);color:var(--violet)}
-.tl-circle.tl-locked{background:rgba(26,43,64,.5);border-color:var(--muted);color:var(--muted)}
-.tl-label{font-size:8.5px;text-align:center;color:var(--dim);
-  font-family:'Syne',sans-serif;font-weight:600;line-height:1.3;max-width:60px}
+.tl-circle.tl-locked{background:rgba(255,255,255,.04);border-color:rgba(180,160,220,.2);color:rgba(180,160,220,.35)}
+.tl-label{font-size:9.5px;text-align:center;color:#C8C0E8;line-height:1.35;font-family:'Syne',sans-serif;font-weight:600;max-width:80px;overflow-wrap:break-word;hyphens:auto}
 
 /* ═══════════════════════════════════════════
    DASHBOARD GRID
@@ -363,7 +361,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .mentor-gate{max-width:360px;margin:100px auto;background:#FFFFFF;
   border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:36px}
 .mentor-gate h2{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:6px}
-.mentor-gate p{font-size:13px;color:#7068A0;margin-bottom:22px}
+.mentor-gate p{font-size:13px;color:#5A5280;margin-bottom:22px}
 .mentor-gate input{width:100%;background:rgba(25,20,50,.06);border:1px solid rgba(255,255,255,.1);
   border-radius:5px;color:#3A3460;font-size:14px;padding:10px 13px;outline:none;
   margin-bottom:10px;transition:border-color .18s}
@@ -374,12 +372,12 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .v-card-head{display:grid;grid-template-columns:220px 1fr;align-items:start;gap:0}
 .v-name-col{padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)}
 .v-name{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:4px}
-.v-idea{font-size:12px;color:#7068A0;line-height:1.55}
+.v-idea{font-size:12px;color:#5A5280;line-height:1.55}
 .v-sessions-col{padding:14px 20px;display:flex;flex-direction:column;gap:10px}
 .v-session{display:grid;grid-template-columns:60px 80px 1fr;gap:12px;align-items:start;
   padding:10px 12px;background:rgba(25,20,50,.04);border-radius:8px;border:1px solid rgba(255,255,255,.05)}
 .v-s-label{font-family:'Syne',sans-serif;font-weight:800;font-size:10px;
-  letter-spacing:.12em;text-transform:uppercase;color:#7068A0;margin-top:1px}
+  letter-spacing:.12em;text-transform:uppercase;color:#5A5280;margin-top:1px}
 .v-stars{display:flex;gap:2px;font-size:14px;margin-top:4px}
 .star-on{color:#C87C38}
 .star-off{color:#1E2D3F}
@@ -390,7 +388,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .v-bullet.gap::before{content:'●';color:#F87171}
 .v-bridge{margin:2px 0 2px 0;padding:7px 12px;
   background:rgba(42,126,126,.05);border-left:2px solid rgba(42,126,126,.25);
-  border-radius:0 5px 5px 0;font-size:11px;color:#7068A0}
+  border-radius:0 5px 5px 0;font-size:11px;color:#5A5280}
 .v-bridge strong{color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;font-size:9px;
   text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px}
 .v-bridge-item{display:flex;gap:5px;align-items:baseline;font-size:11px}
@@ -398,22 +396,22 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .v-bridge-item.open::before{content:'△';color:#C87C38;font-size:10px;flex-shrink:0}
 .mentor-title-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
 .mentor-page-title{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff}
-.mentor-sub{font-size:12.5px;color:#7068A0;margin-top:2px}
-.mentor-legend{display:flex;gap:16px;font-size:10.5px;color:#7068A0;align-items:center;flex-wrap:wrap}
+.mentor-sub{font-size:12.5px;color:#5A5280;margin-top:2px}
+.mentor-legend{display:flex;gap:16px;font-size:10.5px;color:#5A5280;align-items:center;flex-wrap:wrap}
 .mentor-legend span{display:flex;align-items:center;gap:4px}
 
 /* ── ANALYSE VIEWS ──────────────────────────────────────────── */
 .view-title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:#FFFFFF;margin-bottom:6px}
-.view-sub{font-size:13px;color:#7068A0;margin-bottom:28px;line-height:1.5}
+.view-sub{font-size:13px;color:#5A5280;margin-bottom:28px;line-height:1.5}
 .view-section{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 24px;margin-bottom:14px}
-.view-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#7068A0;margin-bottom:16px}
+.view-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#5A5280;margin-bottom:16px}
 
 /* Integration Map */
 .map-wrap{position:relative;width:100%;background:#EAE6DE;border-radius:10px;overflow:hidden}
 .map-wrap svg{width:100%;display:block}
 .map-node{cursor:pointer;transition:all .2s}
 .map-node:hover circle{filter:brightness(1.3)}
-.map-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:#7068A0;margin-top:10px}
+.map-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:#5A5280;margin-top:10px}
 .map-legend-item{display:flex;align-items:center;gap:5px}
 .map-legend-dot{width:8px;height:8px;border-radius:50%}
 
@@ -425,14 +423,14 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .cc-pair.cc-bad{border-color:rgba(248,113,113,.3)}
 .cc-pair-head{display:flex;align-items:center;gap:12px;padding:14px 18px;background:rgba(25,20,50,.04)}
 .cc-bridge{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#FFFFFF;flex:1}
-.cc-bridge-sub{font-size:11px;color:#7068A0;margin-top:2px}
+.cc-bridge-sub{font-size:11px;color:#5A5280;margin-top:2px}
 .cc-status-btns{display:flex;gap:6px;flex-shrink:0}
-.cc-btn{padding:3px 10px;border-radius:20px;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,.1);color:#7068A0;background:none;transition:all .15s}
+.cc-btn{padding:3px 10px;border-radius:20px;font-size:10px;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;border:1px solid rgba(255,255,255,.1);color:#5A5280;background:none;transition:all .15s}
 .cc-btn.ok{border-color:rgba(52,211,153,.5);color:#34D399;background:rgba(52,211,153,.1)}
 .cc-btn.warn{border-color:rgba(200,124,56,.5);color:#C87C38;background:rgba(200,124,56,.1)}
 .cc-btn.bad{border-color:rgba(248,113,113,.5);color:#F87171;background:rgba(248,113,113,.1)}
 .cc-body{padding:14px 18px}
-.cc-question{font-size:12.5px;color:#7068A0;font-style:italic;margin-bottom:8px}
+.cc-question{font-size:12.5px;color:#5A5280;font-style:italic;margin-bottom:8px}
 .cc-summary{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
 .cc-summary-chip{padding:6px 14px;border-radius:20px;font-family:'Syne',sans-serif;font-weight:700;font-size:11px}
 
@@ -442,7 +440,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .reality-label{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .reality-icon{font-size:22px}
 .reality-title{font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#FFFFFF}
-.reality-hint{font-size:11.5px;color:#7068A0;font-style:italic;margin-bottom:8px}
+.reality-hint{font-size:11.5px;color:#5A5280;font-style:italic;margin-bottom:8px}
 
 /* Maturity Radar */
 .maturity-wrap{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap}
@@ -456,18 +454,18 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .maturity-bar-track{height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
 .maturity-bar-fill{height:100%;border-radius:3px;transition:width .5s}
 .maturity-score-total{font-family:'Syne',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#2A7E7E;text-align:center;margin-top:8px}
-.maturity-score-label{font-size:11px;color:#7068A0;text-align:center;font-family:'Syne',sans-serif}
+.maturity-score-label{font-size:11px;color:#5A5280;text-align:center;font-family:'Syne',sans-serif}
 
 /* Pitch Mode */
 .pitch-mode-wrap{background:#F4F1EB;border-radius:12px;overflow:hidden;min-height:500px}
 .pitch-slide{display:none;min-height:480px;padding:52px 56px;flex-direction:column;justify-content:center}
 .pitch-slide.active{display:flex}
-.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7068A0;margin-bottom:14px}
+.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#5A5280;margin-bottom:14px}
 .pitch-slide-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;color:#FFFFFF;margin-bottom:22px;line-height:1.15}
 .pitch-slide-body{font-size:15px;color:#8DA5B8;line-height:1.75;flex:1;white-space:pre-wrap}
 .pitch-slide-empty{font-size:13px;color:#DDD8CC;font-style:italic}
 .pitch-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(25,20,50,.06);border-top:1px solid rgba(255,255,255,.05)}
-.pitch-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#7068A0;padding:7px 16px;border-radius:6px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;transition:all .18s}
+.pitch-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#5A5280;padding:7px 16px;border-radius:6px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;transition:all .18s}
 .pitch-nav-btn:hover:not(:disabled){background:rgba(255,255,255,.1);color:#FFFFFF}
 .pitch-nav-btn:disabled{opacity:.3;cursor:default}
 .pitch-dots{display:flex;gap:6px;align-items:center}
@@ -497,7 +495,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .assump-text{font-size:13px;color:#FFFFFF;margin-bottom:10px;line-height:1.5}
 .assump-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
 .assump-chip{font-size:9.5px;font-family:'Syne',sans-serif;font-weight:700;padding:3px 8px;border-radius:20px}
-.assump-next{font-size:11px;color:#7068A0;font-style:italic;line-height:1.45}
+.assump-next{font-size:11px;color:#5A5280;font-style:italic;line-height:1.45}
 .add-assump-form{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px;margin-top:14px}
 
 
@@ -507,12 +505,12 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .gl-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:9px;letter-spacing:.18em;
   text-transform:uppercase;color:#2A7E7E;margin-bottom:10px}
 h1{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#FFFFFF;line-height:1.2}
-.gl-sub{font-size:13px;color:#7068A0;margin-top:6px}
+.gl-sub{font-size:13px;color:#5A5280;margin-top:6px}
 .gl-leitmotiv{background:rgba(42,126,126,.07);border-left:3px solid #2A7E7E;
   padding:12px 16px;border-radius:0 8px 8px 0;margin:28px 0;
   font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#2A7E7E;font-style:italic}
 h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;
-  letter-spacing:.14em;color:#7068A0;margin:28px 0 12px}
+  letter-spacing:.14em;color:#5A5280;margin:28px 0 12px}
 .gl-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
 .gl-step{display:flex;gap:14px;align-items:flex-start;background:#FFFFFF;
   border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
@@ -540,7 +538,7 @@ h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:u
   padding:9px 11px;text-align:center}
 .gl-sess-num{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;
   color:#2A7E7E;opacity:.35;line-height:1}
-.gl-sess-label{font-size:9.5px;color:#7068A0;margin-top:3px;line-height:1.35}
+.gl-sess-label{font-size:9.5px;color:#5A5280;margin-top:3px;line-height:1.35}
 .gl-sess.importable .gl-sess-num{opacity:.9;color:#C87C38}
 .gl-sess.importable .gl-sess-label{color:#A098C0}
 .gl-badge{display:inline-block;background:rgba(200,124,56,.12);color:#C87C38;
@@ -628,8 +626,9 @@ const MODULES = [
     {id:'step3',label:'03 · Angebot',type:'textarea',rows:3,hint:'Wie wird die Lösung geliefert und erlebt?'},
     {id:'step4',label:'04 · Umsatz',type:'textarea',rows:3,hint:'Wann und wie fließt Geld?'},
     {id:'odooConnection',label:'Odoo-Verknüpfung',type:'textarea',rows:2,hint:'Wie ist der Prozess in Odoo abgebildet?'},
+    {id:'odooDemo',label:'Odoo-Demo (Pitch)',type:'textarea',rows:3,hint:'Was wird live gezeigt? Produktanlage / Prozessfluss / Kundenprozess – konkreter Klickpfad für den Pitch'},
   ]},
-  {id:'wachstum',title:'Wachstum & Kanäle',icon:'📈',color:'#FB923C',session:'S4+',badge:'Wachstum geplant',
+  {id:'wachstum',title:'Wachstum & Kanäle',icon:'📈',color:'#FB923C',session:'S6',badge:'Wachstum geplant',
    fields:[
     {id:'channels',label:'Vertriebskanäle',type:'textarea',rows:3,hint:'Wie werden Kunden erreicht und bedient?'},
     {id:'marketingStrategy',label:'Marketingstrategie',type:'textarea',rows:3,hint:'Wie wird Aufmerksamkeit erzeugt und Vertrauen aufgebaut?'},
@@ -652,6 +651,7 @@ const MODULES = [
     {id:'costs',label:'Kostenstruktur',type:'textarea',rows:3,hint:'Größte Kostentreiber, fix vs. variabel'},
     {id:'burnRate',label:'Burn Rate (EUR/Monat)',type:'input',hint:'Monatlicher Netto-Verlust'},
     {id:'runway',label:'Runway (Monate)',type:'input',hint:'Wie viele Monate Kapital?'},
+    {id:'financing',label:'Funding-Strategie',type:'textarea',rows:3,hint:'Bootstrapping / EXIST / Crowdfunding / Angel / VC – welche Option und warum passend für dieses Venture?'},
     {id:'financing',label:'Finanzierungsform',type:'input',hint:'Bootstrapping / VC / Revenue-based'},
     {id:'breakEven',label:'Break-Even-Ziel',type:'input',hint:'Bis wann muss das Modell tragen?'},
   ]},
@@ -663,30 +663,34 @@ const MODULES = [
     {id:'learnings',label:'Wichtigste Erkenntnisse',type:'textarea',rows:3,hint:'Was wurde bisher gelernt?'},
     {id:'nextSteps',label:'Nächste Experimente',type:'textarea',rows:2,hint:'Was kommt als nächstes?'},
   ]},
-  {id:'pitch',title:'Pitch',icon:'🎯',color:'#F87171',session:'S2+S4',badge:'Pitch bereit',
+  {id:'pitch',title:'Pitch',icon:'🎯',color:'#F87171',session:'S2–S10',badge:'Demo Day',
    fields:[
-    {id:'problemStatement',label:'Problem',type:'textarea',rows:3,hint:'Das zentrale Problem präzise formuliert'},
-    {id:'targetStatement',label:'Zielgruppe',type:'textarea',rows:2,hint:'Für wen und warum genau diese Gruppe?'},
-    {id:'solutionStatement',label:'Produkt / Lösung',type:'textarea',rows:3,hint:'Was ist die Lösung und worin liegt der Kernnutzen?'},
-    {id:'modelStatement',label:'Geschäftsmodell',type:'textarea',rows:2,hint:'Wer zahlt, warum, wofür, wie oft?'},
-    {id:'processStatement',label:'Prozess',type:'textarea',rows:2,hint:'Von Problem zu Umsatz in 4 Schritten'},
-    {id:'financeStatement',label:'Finanzen',type:'textarea',rows:2,hint:'Burn Rate, Runway, Break-Even'},
-    {id:'storyline',label:'Vollständiger Pitch-Text',type:'textarea',rows:6,hint:'Die komplette Pitch-Storyline'},
+    {id:'executiveSummary',label:'Executive Summary',type:'textarea',rows:3,hint:'Venture-Name · One-Sentence-Pitch · Zielgruppe · Kernnutzen (1 Minute)'},
+    {id:'problemStatement',label:'Problem & Opportunity',type:'textarea',rows:3,hint:'Welches Problem? Für wen? Wie groß die Chance?'},
+    {id:'validationInsights',label:'Customer Reality & Validation',type:'textarea',rows:3,hint:'Wen befragt? Welche Erkenntnisse? Welche Annahmen mussten verändert werden?'},
+    {id:'solutionStatement',label:'Produkt & Wertversprechen',type:'textarea',rows:3,hint:'Was ist das Produkt? Welchen Nutzen erzeugt es? Warum sollten Kunden es nutzen?'},
+    {id:'demoDescription',label:'Produktdemo / Prototyp',type:'textarea',rows:3,hint:'Was habt ihr konkret gebaut? Landing Page / Mockup / MVP / Prozessdemo – Link oder Beschreibung'},
+    {id:'modelStatement',label:'Geschäftsmodell',type:'textarea',rows:2,hint:'Einnahmelogik · Preisstrategie · Kostenstruktur · Skalierungslogik'},
+    {id:'processStatement',label:'Operative Umsetzung (Odoo)',type:'textarea',rows:3,hint:'Was habt ihr in Odoo aufgebaut? Prozesse, Produktanlage, Kundenprozesse – Leitfrage: Kann das Unternehmen tatsächlich operieren?'},
+    {id:'fundingRationale',label:'Wachstum & Funding',type:'textarea',rows:2,hint:'Wachstumskanäle · Skalierungsstrategie · Gewählte Finanzierungsform und warum sie passt'},
+    {id:'financeStatement',label:'Finanzen (Kennzahlen)',type:'textarea',rows:2,hint:'Burn Rate · Runway · Break-Even · wichtigste KPIs'},
+    {id:'vision6m',label:'Vision 6 Monate',type:'textarea',rows:2,hint:'Wo steht das Venture in 6 Monaten? Konkret, nicht abstrakt.'},
+    {id:'vision2y',label:'Vision 2 Jahre',type:'textarea',rows:2,hint:'Plausibler Entwicklungspfad in 2 Jahren – Vision ≠ Fantasie'},
+    {id:'storyline',label:'Vollständiger Pitch-Text',type:'textarea',rows:6,hint:'Die komplette Pitch-Storyline für 20 Minuten'},
   ]},
 ];
 
 const SESSIONS_META = [
-  {num:1,short:'S1',label:'Intro · Startup als System',type:'session'},
-  {num:2,short:'S2',label:'Produkt & Analyse',type:'session',importable:true},
-  {num:3,short:'S3',label:'Odoo · Produktlogik',type:'odoo'},
-  {num:4,short:'S4',label:'Geschäftsmodell & Ethik',type:'session',importable:true},
-  {num:5,short:'S5',label:'Kundenvalidierung',type:'session',importable:true},
-  {num:6,short:'S6',label:'Manufacturing & Services',type:'odoo'},
-  {num:7,short:'S7',label:'Wachstum & Plattformlogik',type:'session',importable:true},
-  {num:8,short:'S8',label:'Funding & Institutionen',type:'session'},
-  {num:9,short:'S9',label:'Skalierung & Organisation',type:'session'},
-  {num:10,short:'S10',label:'Final Integration & Pitch',type:'session'},
-  {num:11,short:'S11',label:'Demo Day',type:'session'},
+  {num:1, short:'S1', label:'Intro & Odoo-Einführung',       type:'session'},
+  {num:2, short:'S2', label:'Produkt, Markt & AI-Ideation',  type:'session', importable:true},
+  {num:3, short:'S3', label:'Odoo Lab: Produkt & ERP',       type:'odoo'},
+  {num:4, short:'S4', label:'Geschäftsmodell, Ethik & Finanzen', type:'session', importable:true},
+  {num:5, short:'S5', label:'Kundenvalidierung & Evidenz',   type:'session', importable:true},
+  {num:6, short:'S6', label:'Wachstum & Netzwerkeffekte',    type:'session', importable:true},
+  {num:7, short:'S7', label:'Odoo Lab: Fertigung & Prozesse',type:'odoo'},
+  {num:9, short:'S9', label:'Odoo Lab: Team, Buchhaltung & App', type:'odoo', optional:true},
+  {num:10,short:'S10',label:'Venture Integration, Funding & Pitch Prep', type:'session'},
+  {num:11,short:'S11',label:'Demo Day',                      type:'session'},
 ];
 
 // ═══════════════════════════════════════════════════════════
@@ -1065,12 +1069,15 @@ function renderDashboard() {
     const imp=S.sessions[s.num]==='imported';
     const active=s.num===activeS+1&&!imp;
     const done=S.sessions[s.num]==='done'||imp;
-    const isOdoo=s.type==='odoo';
-    const cls=done?'tl-imported':active?'tl-active':isOdoo?'tl-odoo':'tl-locked';
+    const isOdoo=s.type==='odoo'; const isOptional=!!s.optional;
+    const cls=done?'tl-imported':active?'tl-active':isOptional?'tl-optional':isOdoo?'tl-odoo':'tl-locked';
     const icon=done?'✓':isOdoo?'⚙':active?'▶':'○';
+    const HYPH={'Geschäftsmodell':'Geschäfts­modell','Kundenvalidierung':'Kundenvali­dierung','Netzwerkeffekte':'Netzwerk­effekte','Plattformlogik':'Plattform­logik','Organisationsstrukturen':'Organisations­strukturen','Venture Integration':'Venture Inte­gration'};
+    const rawLabel=s.label.replace(/:/g,'').split(/[,&]/)[0].trim();
+    const cleanLabel=rawLabel.split(' ').map(w=>HYPH[w]||w).join(' ');
     return `<div class="tl-item">
       <div class="tl-circle ${cls}">${icon}</div>
-      <div class="tl-label">${s.short}<br><span style="font-size:7px">${s.label.split(' ').slice(0,2).join(' ')}</span></div>
+      <div class="tl-label"><strong>${s.short}</strong><br>${cleanLabel}</div>
     </div>`;}).join('');
 
   // Module grid
@@ -1155,6 +1162,22 @@ function renderDashboard() {
       </a>
     </div>
 
+
+      <!-- Demo Day Readiness -->
+      <div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:13px;padding:16px 18px;margin-bottom:14px">
+        <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#7068A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:12px">🎯 Demo Day Readiness</div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
+          ${['Executive Summary','Validation','Demo/Prototyp','Wachstum & Funding','Vision'].map((label,i)=>{
+            const keys=[['pitch.executiveSummary'],['pitch.validationInsights'],['pitch.demoDescription'],['pitch.fundingRationale'],['pitch.vision6m','pitch.vision2y']];
+            const done=keys[i].some(k=>{const[m,f]=k.split('.');return(S.modules[m]?.fields[f]||'').trim().length>20;});
+            return '<div style="background:'+(done?'rgba(46,122,82,.1)':'rgba(25,20,50,.04)')+';border:1px solid '+(done?'rgba(46,122,82,.25)':'rgba(25,20,50,.09)')+';border-radius:8px;padding:8px 6px;text-align:center">'
+              +'<div style="font-size:11px;margin-bottom:3px">'+(done?'\u2713':'\u00b7')+'</div>'
+              +'<div style="font-size:9px;color:'+(done?'#2E7A52':'#7068A0')+';line-height:1.3;font-family:Syne,sans-serif;font-weight:700">'+label+'</div>'
+              +'</div>';
+          }).join('')}
+        </div>
+        ${(()=>{const rc=['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&S.reality[k].trim().length>15).length;const col=rc===5?'#2E7A52':'#BC5C36';return '<div style="margin-top:10px;font-size:11px;color:#7068A0">Reality Check: <a href="#reality" style="color:'+col+';font-weight:700;text-decoration:none">'+rc+'/5 ausgef\u00fcllt</a>&nbsp;\u00b7&nbsp;<a href="#pitch-mode" style="color:#C87C38;text-decoration:none;font-family:Syne,sans-serif;font-weight:700">\u2192 Pitch Mode</a></div>';})()}
+      </div>
     <!-- Timeline -->
     <div class="card" style="margin-bottom:14px">
       <div class="card-header"><div class="card-icon">⏱</div><div class="card-title">Session-Zeitstrahl</div></div>
@@ -2107,16 +2130,16 @@ function renderMaturity() {
 //  PITCH MODE
 // ═══════════════════════════════════════════════════════════
 var PITCH_SLIDES = [
-  {num:'01',title:'Das Problem',   key:'pitch.problemStatement', alt:'kunden.painPoints'},
-  {num:'02',title:'Die Zielgruppe',key:'pitch.targetStatement',  alt:'kunden.customerProfiles'},
-  {num:'03',title:'Das Produkt',   key:'pitch.solutionStatement',alt:'produkt.description'},
-  {num:'04',title:'Der Markt',     key:'markt.marketOverview',   alt:'markt.competition'},
-  {num:'05',title:'Geschäftsmodell',key:'pitch.modelStatement',  alt:'geschaeftsmodell.revenueModel'},
-  {num:'06',title:'Wachstum',      key:'wachstum.growthPath',    alt:'wachstum.channels'},
-  {num:'07',title:'Finanzierung',  key:'finanzen.financing',     alt:'finanzen.revenue'},
-  {num:'08',title:'Operations',    key:'pitch.processStatement', alt:'operations.step1'},
-  {num:'09',title:'Risiken',       key:null,                     alt:null, realityCheck:true},
-  {num:'10',title:'Vision',        key:'pitch.storyline',        alt:'produkt.differenzierung'},
+  {num:'01',title:'Executive Summary',    key:'pitch.executiveSummary',    alt:'pitch.problemStatement'},
+  {num:'02',title:'Problem & Opportunity',key:'pitch.problemStatement',    alt:'markt.marketOverview'},
+  {num:'03',title:'Customer Reality',     key:'pitch.validationInsights',  alt:'kunden.keyInsights'},
+  {num:'04',title:'Produkt & Wertversprechen',key:'pitch.solutionStatement',alt:'produkt.description'},
+  {num:'05',title:'Demo / Prototyp',      key:'pitch.demoDescription',     alt:null},
+  {num:'06',title:'Geschäftsmodell',      key:'pitch.modelStatement',      alt:'geschaeftsmodell.revenueModel'},
+  {num:'07',title:'Operative Umsetzung (Odoo)',key:'pitch.processStatement',alt:'operations.odooDemo'},
+  {num:'08',title:'Wachstum & Funding',   key:'pitch.fundingRationale',    alt:'finanzen.financing'},
+  {num:'09',title:'Reality Check',        key:null, alt:null, realityCheck:true},
+  {num:'10',title:'Vision & Next Steps',  key:'pitch.vision6m',            alt:'pitch.vision2y', twoField:true},
 ];
 
 let _pitchSlide = 0;
@@ -2131,7 +2154,9 @@ function renderPitchMode() {
   const venture = S.venture.name || 'Venture Name';
   const slides = PITCH_SLIDES.map((s,i) => {
     let body = s.realityCheck
-      ? [S.reality.engpass,S.reality.unsicherheit,S.reality.evidenz].filter(Boolean).map((r,j)=>`${['Engpass','Unsicherheit','Evidenz'][j]}: ${r}`).join('\n\n')
+      ? [S.reality.engpass,S.reality.unsicherheit,S.reality.evidenz].filter(Boolean).map((r,j)=>['Engpass: ','Unsicherheit: ','Schwächste Evidenz: '][j]+r).join('\n\n')
+      : s.twoField
+      ? [getField(s.key),getField(s.alt)].filter(Boolean).join('\n\n')
       : (getField(s.key)||getField(s.alt));
     const isEmpty = !body.trim();
     return `<div class="pitch-slide${i===0?' active':''}" id="ps-${i}">
@@ -2376,11 +2401,14 @@ const VENTURES = [
   {name:'AshBuddy / ASHley', team:'AshBuddy',
    idea:'Premium-Taschenaschenbecher aus Edelstahl für mobile Raucher; dualer B2C/B2B-Kanal (Endkunden & Veranstalter-Bulk)',
    s2:{stars:5, pos:['Stärkste strategische Klarheit im Kurs','Convenience > Eco als Kaufmotiv erkannt','B2B-Festivalkanal als Skalierungspfad identifiziert','B2C/B2B-Preislogik klar unterschieden'], gaps:['Preisvalidierung (18–26 EUR) unbelegt','Drei Varianten = kaum echte Ideation-Breite']},
-   s4:{stars:5, pos:['B2B/B2C-Duallogik in alle BMC-Felder integriert','Detailliertster Odoo-Prozess (inkl. Deckungsbeitrag-Steuerung)','Ethik: Brandrisiko & Greenwashing produktspezifisch','Finanzlogik: 1 B2B-Deal deckt Startkapital'], gaps:['Preisvalidierung bleibt einzige offene Kernfrage'], closed:['B2B-Strategie vollständig ausgearbeitet','Finanzierung (Bootstrapping) klar begründet'], open:['Zahlungsbereitschaft 18–26 EUR: kein Markttest']}},
+   s4:{stars:5, pos:['B2B/B2C-Duallogik in alle BMC-Felder integriert','Detailliertster Odoo-Prozess (inkl. Deckungsbeitrag-Steuerung)','Ethik: Brandrisiko & Greenwashing produktspezifisch','Finanzlogik: 1 B2B-Deal deckt Startkapital'], gaps:['Preisvalidierung bleibt einzige offene Kernfrage'], closed:['B2B-Strategie vollständig ausgearbeitet','Finanzierung (Bootstrapping) klar begründet'], open:['Zahlungsbereitschaft 18–26 EUR: kein Markttest']},
+      5:{stars:3, pos:['Analytisch stärkste S5-Einreichung: JTBD, Experiment-Design vorbildlich','Kaufsimulation als Methode korrekt gewählt'], gaps:['Keine einzige Kundenbefragung durchgeführt – Praxisphase leer'], open:['Zahlungsbereitschaft 18–26 EUR bleibt einzige offene Kernfrage']}},
   {name:'REMI', team:'REMI',
    idea:'KI-Wearable für Alzheimer: erkennt Stimmen vertrauter Personen per Edge-AI und flüstert Namen diskret ins Ohr',
    s2:{stars:3, pos:['Originellstes Konzept im Kurs','Gesellschaftliche Relevanz klar'], gaps:['EU MDR vollständig ignoriert','Marktzahlen ohne Quellenangaben','Kein Odoo-Abschnitt','Stimmerkennung technisch unbeantwortet']},
-   s4:{stars:5, pos:['EU MDR vollständig: Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen','Chip-Hersteller konkret benannt (Syntiant, Knowles)','Post-Market Surveillance im BMC','Stärkste Ethik-Analyse: Voice-Cloning-Schutz, Auslaufkriterien','Odoo Subscription-Modul explizit'], gaps:['MDR-Zertifizierung (18–36 Mo.) vs. Runway (15–20 Mo.): Timing-Risiko','CAC nicht modelliert'], closed:['MDR detailliert adressiert','Marktquellen belegt','Odoo integriert','Technologie mit echten Komponenten'], open:['Stimmerkennung unter realen Bedingungen: kein Nachweis']}},
+   s4:{stars:5, pos:['EU MDR vollständig: Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen','Chip-Hersteller konkret benannt (Syntiant, Knowles)','Post-Market Surveillance im BMC','Stärkste Ethik-Analyse: Voice-Cloning-Schutz, Auslaufkriterien','Odoo Subscription-Modul explizit'], gaps:['MDR-Zertifizierung (18–36 Mo.) vs. Runway (15–20 Mo.): Timing-Risiko','CAC nicht modelliert'], closed:['MDR detailliert adressiert','Marktquellen belegt','Odoo integriert','Technologie mit echten Komponenten'], open:['Stimmerkennung unter realen Bedingungen: kein Nachweis']},
+      5:{stars:5, pos:['Vollständigste Annahmen-Analyse (11 Punkte)','Tiefste soziale Einbettung im Kurs','Pivot: Sicherheitssystem > reine Namenserkennung'], gaps:['Nur 3 statt 5 geplante Interviews','Patientenakzeptanz ungeklärt'], open:['Tragebereitschaft der erkrankten Person offen']},
+      7:{stars:5, pos:['Sticky Engine korrekt gewählt und tief begründet','Netzwerkeffekte präzisest analysiert','500–1.000 Kunden als konkreter Onboarding-Schwellwert'], gaps:[], open:['MDR-Timing vs. Runway bleibt strukturelles Risiko']}},
   {name:'ANDONIS', team:'Andrian',
    idea:'Grooming-System mit Health Hub und Gamification für Männer 18–25; Low-Entry-Bundle, Retention über digitale Plattform',
    s2:{stars:2, pos:['Transformationsansatz als Differenzierungskern erkannt','Selbstkritische Marktanalyse'], gaps:['Zwei von drei Produktideen fehlend','Kein Preis definiert','Kein Odoo-Abschnitt']},
@@ -2392,15 +2420,20 @@ const VENTURES = [
   {name:'DOOOZE', team:'DOOOZE',
    idea:'Weiches Haarband als externe Ohrenlösung für besseren Schlaf durch Lärmreduktion ohne Ohrstöpsel',
    s2:{stars:4, pos:['Professionellster Auftritt im Kurs','Vollständigste S2-Abgabe inkl. Odoo','Workarounds präzise identifiziert'], gaps:['Akustische Kernfrage offen: dB-Leistung von Stoff außen am Ohr?']},
-   s4:{stars:3, pos:['Bootstrapping richtig gewählt','Ethik: Risiko überhöhter Erwartungen direkt adressiert','Klare Kommunikationsstrategie: Reduktion ≠ Isolation'], gaps:['Akustische Funktion weiterhin unbewiesen','Runway 2,5 Mo. sehr knapp'], closed:['Risikokommunikation explizit formuliert','Finanzierung begründet'], open:['dB-Nachweis fehlt – einfacher Vergleichstest würde klären']}},
+   s4:{stars:3, pos:['Bootstrapping richtig gewählt','Ethik: Risiko überhöhter Erwartungen direkt adressiert','Klare Kommunikationsstrategie: Reduktion ≠ Isolation'], gaps:['Akustische Funktion weiterhin unbewiesen','Runway 2,5 Mo. sehr knapp'], closed:['Risikokommunikation explizit formuliert','Finanzierung begründet'], open:['dB-Nachweis fehlt – einfacher Vergleichstest würde klären']},
+      5:{stars:2, pos:['Kritischste Erkenntnis im Kurs: Nutzer wollen maximale Isolation'], gaps:['9 Checks fehlen','Konsequenz des Pivots nicht durchdacht'], open:['Produktkategorie: Lifestyle vs. Schlafhelfer – Entscheidung fehlt']},
+      7:{stars:3, pos:['Paid Engine ehrlich und korrekt','Odoo-Vorbereitung vollständigste Liste im Kurs'], gaps:['Positionierungsfrage offen'], open:['Was ist DOOOZE? Entscheidung vor Demo Day nötig']}},
   {name:'StilMittel', team:'StilMittel',
    idea:'Design-Aufwertung und Entstigmatisierung von Gehhilfen für Senioren; Produkte, Zubehör und Beratung',
    s2:{stars:2, pos:['Gründlichste Wettbewerbsanalyse im Kurs','Stigma als eigentliches Kernproblem erkannt','Zwei Personas sauber getrennt'], gaps:['EU MDR vollständig ignoriert','Portfolio-Breite nicht managebar','Kein Pitch, kein Odoo']},
-   s4:{stars:3, pos:['MDR korrekt eingeordnet','Burn-Rate konkret (10.316 → 6.600 EUR)','Wachstumsannahme mit Prozentzahl transparent'], gaps:['BMC-Felder teils Platzhalter','Prozessdesign Schritt 2 = ein Satz','Ethik mit Einzeilern'], closed:['MDR anerkannt','Finanzstruktur hinterlegt'], open:['BMC-Konkretisierung ausstehend','5%-Conversion-Annahme unvalidiert']}},
+   s4:{stars:3, pos:['MDR korrekt eingeordnet','Burn-Rate konkret (10.316 → 6.600 EUR)','Wachstumsannahme mit Prozentzahl transparent'], gaps:['BMC-Felder teils Platzhalter','Prozessdesign Schritt 2 = ein Satz','Ethik mit Einzeilern'], closed:['MDR anerkannt','Finanzstruktur hinterlegt'], open:['BMC-Konkretisierung ausstehend','5%-Conversion-Annahme unvalidiert']},
+      5:{stars:5, pos:['Beste Evidenzarbeit: 7 Interviews inkl. 2 negative Seniorinnen','Pivot: 20–65 (Unfall/Krankheit) statt 65+'], gaps:['Pivot erfordert BMC-Neuaufbau'], open:['BMC für neue Zielgruppe noch nicht erstellt']},
+      7:{stars:3, pos:['Supply-Chain-Engpass korrekt','Odoo-Liste konkret'], gaps:['Viral Engine fragwürdig für Dienstleistungsmodell','4 Netzwerkeffekte zu optimistisch'], open:['Growth Engine-Wahl überprüfen: Sticky/Paid plausibler']}},
   {name:'VEIL', team:'VEIL / Selin',
    idea:'Fashion-first Perioden-Bikini mit unsichtbarem Schutz; Style-Brand, kein Medizinprodukt',
    s2:{stars:2, pos:['Echter und wachsender Markt','Fashion-Brand-Instinkt als Differenzierungshebel'], gaps:['Kundenbefund = ein Satz','Kein Preis, kein Odoo','MDR offen']},
-   s4:{stars:3, pos:['Preise definiert (Top 25, Bottom 35, Set 60 EUR)','Produktionspartner konkret benannt','ModiBodi ehrlich als überlegen anerkannt'], gaps:['Finanzwiderspruch: 200K vs. 20K Startkapital im selben Dokument','MDR nicht beantwortet'], closed:['Preise hinterlegt','Odoo beschrieben'], open:['Finanzwiderspruch muss aufgelöst werden','Differenzierung zu ModiBodi offen']}},
+   s4:{stars:3, pos:['Preise definiert (Top 25, Bottom 35, Set 60 EUR)','Produktionspartner konkret benannt','ModiBodi ehrlich als überlegen anerkannt'], gaps:['Finanzwiderspruch: 200K vs. 20K Startkapital im selben Dokument','MDR nicht beantwortet'], closed:['Preise hinterlegt','Odoo beschrieben'], open:['Finanzwiderspruch muss aufgelöst werden','Differenzierung zu ModiBodi offen']},
+      7:{stars:5, pos:['Stärkste Viral-Engine-Begründung im Kurs','Ehrlichste Netzwerkeffekt-Analyse'], gaps:['K-Faktor bei Tabuthema ungetestet'], open:['Zweiten Produzenten aufbauen – dringendste Priorität']}},
   {name:'EasyWine', team:'EasyWine',
    idea:'Online-Weinshop für Einsteiger: kuratierte Auswahl, einfache Sprache, kein Fachwissen nötig',
    s2:{stars:3, pos:['Sauberste Dokumentation im Kurs','Bestes Peer-Feedback','Pain Points gut beobachtet'], gaps:['Vivino: 65 Mio. Nutzer, löst exakt dasselbe gratis','Kein Wettbewerber mit Namen','Händler vs. eigene Marke ungeklärt']},
@@ -2545,13 +2578,13 @@ function _showMentor(mentorApp, authed){
   // ── BASELINE RATINGS aus bisherigem Feedback ──────────────────────────────
   const BASELINE_RATINGS = {
     'AshBuddy': {
-      pmf:5, biz:5, evid:4, clarity:5, conv:5, team:4, odoo:5, ops:5, real:5,
+      pmf:5, biz:5, evid:3, clarity:5, conv:5, team:4, odoo:5, ops:5, real:5,
       strength:'B2B/B2C-Duallogik vollständig durchgezogen, stärkster Pitch im Kurs, Finanzlogik überzeugend (1 B2B-Deal deckt Startkapital), detailliertster Odoo-Prozess.',
       challenge:'Preisvalidierung bei 18–26 EUR steht noch aus – keine externe Marktbestätigung bisher.',
       nextstep:'Strukturierter Testverkauf oder Preisbefragung bei echten Festivalbesuchern. Danach B2B-Pilotgespräch mit einem Veranstalter.',
     },
     'REMI': {
-      pmf:5, biz:4, evid:5, clarity:5, conv:4, team:5, odoo:4, ops:4, real:4,
+      pmf:5, biz:4, evid:5, clarity:5, conv:4, team:5, odoo:4, ops:5, real:5,
       strength:'Umfassendste regulatorische Analyse im Kurs (MDR Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen). Stärkste Ethik-Analyse. Chip-Hersteller konkret benannt.',
       challenge:'MDR-Zertifizierung (18–36 Monate) vs. geplantem Runway (15–20 Monate) – kritisches Timing-Risiko. Stimmerkennung unter realen Alltagsbedingungen noch nicht nachgewiesen.',
       nextstep:'Frühzeitiger Kontakt zu einer Benannten Stelle für Klasse-IIa-Einschätzung. Kleiner Pilottest der Stimmerkennung unter realen Bedingungen (Hintergrundlärm, Krankheitsfortschritt).',
@@ -2569,19 +2602,19 @@ function _showMentor(mentorApp, authed){
       nextstep:'Technologierecherche oder Prototyp: Welcher Sensor, welcher Hersteller, welche Kosten bei welcher Genauigkeit? Konkrete Aussage statt Konzept.',
     },
     'DOOOZE': {
-      pmf:3, biz:3, evid:3, clarity:4, conv:3, team:4, odoo:3, ops:3, real:3,
+      pmf:3, biz:2, evid:3, clarity:4, conv:3, team:4, odoo:3, ops:3, real:2,
       strength:'Professionellster Auftritt im Kurs, stärkstes Branding. Bewusste Positionierung als Lifestyle-Accessoire mit klarer Zielgruppe. Bootstrapping-Wahl konsequent begründet.',
       challenge:'Akustische Kernfrage offen: Wie viel dB Reduktion leistet ein Stoff-Haarband tatsächlich? Ohne diesen Nachweis bleibt die Kernbehauptung unbelegt.',
       nextstep:'Einfacher Vergleichstest: DOOOZE vs. Standard-Ohrstöpsel, dB-Messung per App. Ergebnis entscheidet Positionierung (Schlafhilfe vs. reines Lifestyle-Produkt).',
     },
     'StilMittel': {
-      pmf:4, biz:3, evid:2, clarity:3, conv:3, team:3, odoo:2, ops:2, real:3,
+      pmf:4, biz:3, evid:5, clarity:3, conv:3, team:3, odoo:2, ops:3, real:3,
       strength:'Gesellschaftlich relevanteste Idee im Kurs. Stigma als eigentliches Kernproblem erkannt – selten gemachte Einsicht. MDR korrekt eingeordnet nach Feedback.',
       challenge:'BMC und Prozessdesign zeigen noch zu viele Platzhalter. Ethik-Analyse mit Einzeilern. Operative Abläufe nicht konkret beschreibbar.',
       nextstep:'BMC mit konkreten Aktivitäten, Ressourcen und Personas hinterlegen. Prozessschritte so beschreiben, dass jemand anderes sie ausführen könnte.',
     },
     'VEIL': {
-      pmf:3, biz:2, evid:3, clarity:3, conv:3, team:3, odoo:3, ops:2, real:3,
+      pmf:3, biz:2, evid:3, clarity:3, conv:3, team:3, odoo:3, ops:4, real:4,
       strength:'Preise und Produktionskosten erstmals konkret hinterlegt. ModiBodi als technologisch überlegener Wettbewerber ehrlich anerkannt. Fashion-Brand-Instinkt erkennbar.',
       challenge:'Massiver Finanzwiderspruch: 200.000 EUR vs. 20.000 EUR Startkapital im selben Dokument. Muss vor Demo Day aufgelöst werden.',
       nextstep:'Finanzmodell auf eine konsistente Szenario-Basis bringen. Differenzierung zu ModiBodi über Branding hinaus inhaltlich belegen.',
