@@ -2438,10 +2438,13 @@ const VENTURES = [
    idea:'Fashion-first Perioden-Bikini mit unsichtbarem Schutz; Style-Brand, kein Medizinprodukt',
    s2:{stars:2, pos:['Echter und wachsender Markt','Fashion-Brand-Instinkt als Differenzierungshebel'], gaps:['Kundenbefund = ein Satz','Kein Preis, kein Odoo','MDR offen']},
    s4:{stars:3, pos:['Preise definiert (Top 25, Bottom 35, Set 60 EUR)','Produktionspartner konkret benannt','ModiBodi ehrlich als überlegen anerkannt'], gaps:['Finanzwiderspruch: 200K vs. 20K Startkapital im selben Dokument','MDR nicht beantwortet'], closed:['Preise hinterlegt','Odoo beschrieben'], open:['Finanzwiderspruch muss aufgelöst werden','Differenzierung zu ModiBodi offen']},
+      5:{stars:0, pos:[], gaps:['S5 nicht eingereicht – keine Kundenvalidierung durchgeführt'], open:['Finanzwiderspruch 200K vs. 20K aus S4 weiterhin offen','Differenzierung zu ModiBodi noch nicht inhaltlich belegt']},
       7:{stars:5, pos:['Stärkste Viral-Engine-Begründung im Kurs','Ehrlichste Netzwerkeffekt-Analyse'], gaps:['K-Faktor bei Tabuthema ungetestet'], open:['Zweiten Produzenten aufbauen – dringendste Priorität']}},
   {name:'EasyWine', team:'EasyWine',
    idea:'Online-Weinshop für Einsteiger: kuratierte Auswahl, einfache Sprache, kein Fachwissen nötig',
    s2:{stars:3, pos:['Sauberste Dokumentation im Kurs','Bestes Peer-Feedback','Pain Points gut beobachtet'], gaps:['Vivino: 65 Mio. Nutzer, löst exakt dasselbe gratis','Kein Wettbewerber mit Namen','Händler vs. eigene Marke ungeklärt']},
+      4:{stars:0, pos:[], gaps:['S4 nicht eingereicht – kein Geschäftsmodell, keine Prozesse, keine Ethikanalyse'], open:['Vivino-Differenzierung (65 Mio. Nutzer, kostenlos) unbeantwortet']},
+      5:{stars:0, pos:[], gaps:['S5 nicht eingereicht – keine Interviews, keine Kundenvalidierung'], open:['Keine Evidenz für Zahlungsbereitschaft vorhanden']},
       6:{stars:0, pos:[], gaps:['Nicht eingereicht. Kein S4, S5 oder S6 vorhanden.'], open:['Session nicht eingereicht']},
    s4:null},
   {name:'WorkFlowWerk', team:'WorkFlowWerk',
@@ -2474,13 +2477,13 @@ function _showMentor(mentorApp, authed){
 
   if(!authed){
     area.innerHTML=`
-      <div style="max-width:340px;margin:80px auto;background:#FFFFFF;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
+      <div style="max-width:340px;margin:80px auto;background:#1A1728;border:1px solid rgba(180,160,220,.15);border-radius:12px;padding:36px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.5)">
         <div style="font-size:40px;margin-bottom:14px">🔐</div>
-        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:8px">Mentor-Zugang</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#E8E4F0;margin-bottom:8px">Mentor-Zugang</div>
         <div style="font-size:13px;color:#8878B8;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
         <input id="mpw" type="password" placeholder="Passwort…"
-          style="width:100%;background:rgba(25,20,50,.08);border:1px solid rgba(255,255,255,.15);border-radius:6px;
-          color:#fff;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
+          style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(180,160,220,.25)5);border-radius:6px;
+          color:#E8E4F0;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
         <button id="mbtn"
           style="width:100%;padding:11px;background:linear-gradient(135deg,#C87C38,#D4924A);color:#111;
           border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;cursor:pointer">
