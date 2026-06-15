@@ -1875,6 +1875,16 @@ function attachViewEvents() {
   document.querySelectorAll('.mod-card').forEach(el=>{
     el.addEventListener('click',e=>{e.preventDefault();navigate(el.getAttribute('href').slice(1));});
   });
+  // Pitch Mode navigation
+  document.getElementById('pm-prev')?.addEventListener('click',()=>{
+    if(_pitchSlide>0){_pitchSlide--;renderView();}
+  });
+  document.getElementById('pm-next')?.addEventListener('click',()=>{
+    if(_pitchSlide<PITCH_SLIDES.length-1){_pitchSlide++;renderView();}
+  });
+  document.querySelectorAll('.pitch-dot[data-pidx]').forEach(el=>{
+    el.addEventListener('click',()=>{_pitchSlide=+el.dataset.pidx;renderView();});
+  });
   // Prototype: photo upload (downscaled to keep localStorage small)
   document.getElementById('photo-upload-input')?.addEventListener('change',e=>{
     const mstate=S.modules.prototype; mstate.photos=mstate.photos||[];
@@ -2306,14 +2316,14 @@ function renderPitchMode() {
       ? [getField(s.key),getField(s.alt)].filter(Boolean).join('\n\n')
       : (getField(s.key)||getField(s.alt));
     const isEmpty = !body.trim();
-    return `<div class="pitch-slide${i===0?' active':''}" id="ps-${i}">
+    return `<div class="pitch-slide${i===_pitchSlide?' active':''}" id="ps-${i}">
       <div class="pitch-slide-num">Slide ${s.num} / 10 · ${venture}</div>
       <div class="pitch-slide-title">${s.title}</div>
       <div class="${isEmpty?'pitch-slide-empty':'pitch-slide-body'}">${isEmpty?'Noch kein Inhalt – Modul ausfüllen oder Daten importieren.':esc(body)}</div>
     </div>`;
   }).join('');
 
-  const dots = PITCH_SLIDES.map((_,i)=>`<div class="pitch-dot${i===0?' active':''}" data-pidx="${i}" id="pd-${i}"></div>`).join('');
+  const dots = PITCH_SLIDES.map((_,i)=>`<div class="pitch-dot${i===_pitchSlide?' active':''}" data-pidx="${i}" id="pd-${i}"></div>`).join('');
 
   return `<div style="max-width:900px">
     <div class="view-title">🎯 Pitch Mode</div>
@@ -2321,9 +2331,9 @@ function renderPitchMode() {
     <div class="pitch-mode-wrap">
       ${slides}
       <div class="pitch-nav">
-        <button class="pitch-nav-btn" id="pm-prev">← Zurück</button>
+        <button class="pitch-nav-btn" id="pm-prev"${_pitchSlide===0?' disabled':''}>← Zurück</button>
         <div class="pitch-dots">${dots}</div>
-        <button class="pitch-nav-btn" id="pm-next">Weiter →</button>
+        <button class="pitch-nav-btn" id="pm-next"${_pitchSlide===PITCH_SLIDES.length-1?' disabled':''}>Weiter →</button>
       </div>
     </div>
     <div style="margin-top:12px;font-size:11.5px;color:#7068A0;text-align:center">
@@ -3086,6 +3096,12 @@ function _showMentor(mentorApp, authed){
 
 function exitMentorMode(){window.location.href=window.location.pathname;}
 window.exitMentorMode=exitMentorMode;
+
+document.addEventListener('keydown',e=>{
+  if(currentRoute!=='pitch-mode')return;
+  if(e.key==='ArrowRight'&&_pitchSlide<PITCH_SLIDES.length-1){_pitchSlide++;renderView();}
+  else if(e.key==='ArrowLeft'&&_pitchSlide>0){_pitchSlide--;renderView();}
+});
 
 (function init(){
   if(window.location.search.includes('mentor')){initMentorMode();return;}
