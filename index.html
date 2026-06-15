@@ -1582,8 +1582,8 @@ function attachImportEvents() {
   dz.addEventListener('click',()=>fi.click());
   dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag');});
   dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
-  dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');readImportFile(e.dataTransfer.files[0]);});
-  fi.addEventListener('change',e=>{readImportFile(e.target.files[0]);fi.value='';});
+  dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');readImportFiles(e.dataTransfer.files);});
+  fi.addEventListener('change',e=>{readImportFiles(e.target.files);fi.value='';});
   document.getElementById('btn-confirm-import')?.addEventListener('click',confirmImport);
 }
 
@@ -1602,7 +1602,35 @@ function readImportFile(file) {
   r.readAsText(file);
 }
 
-function handleFeedbackImport(imp) {
+function readImportFiles(fileList){
+  const files=[...fileList];
+  if(files.length<=1){ readImportFile(files[0]); return; }
+  // Multiple files: skip preview, parse & apply all directly
+  let pending=files.length, fieldCount=0, fbCount=0, sessions=new Set(), errors=0;
+  files.forEach(file=>{
+    const r=new FileReader();
+    r.onload=ev=>{
+      try {
+        const data=JSON.parse(ev.target.result);
+        const preview=detectAndMap(data);
+        if(!preview){errors++;}
+        else if(preview._isFeedback){handleFeedbackImportSilent(preview);fbCount++;sessions.add(preview._session);}
+        else {fieldCount+=applyImportData(preview);sessions.add(preview._session);}
+      } catch { errors++; }
+      if(--pending===0){
+        save();closeImportModal();renderSidebar();renderView();
+        const sList=[...sessions].sort().join(', ');
+        let msg=`✅ ${files.length} Dateien verarbeitet (Sessions ${sList})`;
+        if(fieldCount) msg=`✅ ${fieldCount} Felder + ${fbCount} Feedback aus Sessions ${sList}`;
+        if(errors) msg+=` · ${errors} Fehler`;
+        toast(msg,errors?'#E8C24A':'#34D399',4000);
+      }
+    };
+    r.readAsText(file);
+  });
+}
+
+function handleFeedbackImportSilent(imp) {
   const fb=imp.data.feedback||{};const overall=imp.data.overallFeedback||'';
   S.feedbackLog.unshift({
     id:uid(),session:imp._session,date:now(),
@@ -1610,6 +1638,9 @@ function handleFeedbackImport(imp) {
     preview:(overall||Object.values(fb)[0]||'').slice(0,80)+'…',
     status:'pending',rawFeedback:fb,overallFeedback:overall,
   });
+}
+function handleFeedbackImport(imp) {
+  handleFeedbackImportSilent(imp);
   save();closeImportModal();renderSidebar();renderView();
   toast(`📬 Feedback aus Session ${imp._session} importiert`,'#34D399');
 }
@@ -1635,9 +1666,8 @@ function showImportPreview(preview) {
   if(btn){btn.disabled=false;btn.style.opacity='1';}
 }
 
-function confirmImport() {
-  if(!importPreview) return;
-  const {_session,teamName,productName,fields}=importPreview;
+function applyImportData(preview){
+  const {_session,teamName,productName,fields}=preview;
   let count=0;
   Object.entries(fields).forEach(([key,val])=>{
     const [mid,fid]=key.split('.');
@@ -1653,6 +1683,12 @@ function confirmImport() {
   if(productName&&!S.venture.name) S.venture.name=productName;
   if(!S.sessions[_session]) S.sessions[_session]='imported';
   S.setupDone=true;
+  return count;
+}
+function confirmImport() {
+  if(!importPreview) return;
+  const _session=importPreview._session;
+  const count=applyImportData(importPreview);
   save();closeImportModal();renderSidebar();renderView();
   toast(`✅ ${count} Felder aus Session ${_session} importiert`,'#34D399',3500);
 }
