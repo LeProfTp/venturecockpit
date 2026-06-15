@@ -368,7 +368,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .mentor-gate input:focus{border-color:#C87C38}
 .mentor-gate-err{font-size:11.5px;color:#F87171;min-height:18px;margin-top:3px}
 .mentor-grid{display:flex;flex-direction:column;gap:16px}
-.v-card{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+.v-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
 .v-card-head{display:grid;grid-template-columns:220px 1fr;align-items:start;gap:0}
 .v-name-col{padding:18px 20px;border-right:1px solid rgba(255,255,255,.07)}
 .v-name{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:4px}
@@ -403,7 +403,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 /* ── ANALYSE VIEWS ──────────────────────────────────────────── */
 .view-title{font-family:'Syne',sans-serif;font-weight:800;font-size:24px;color:#FFFFFF;margin-bottom:6px}
 .view-sub{font-size:13px;color:#5A5280;margin-bottom:28px;line-height:1.5}
-.view-section{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 24px;margin-bottom:14px}
+.view-section{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:22px 24px;margin-bottom:14px}
 .view-section-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#5A5280;margin-bottom:16px}
 
 /* Integration Map */
@@ -417,7 +417,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 
 /* Consistency Check */
 .cc-pairs{display:flex;flex-direction:column;gap:14px}
-.cc-pair{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;transition:border-color .2s}
+.cc-pair{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden;transition:border-color .2s}
 .cc-pair.cc-ok{border-color:rgba(52,211,153,.3)}
 .cc-pair.cc-warn{border-color:rgba(200,124,56,.3)}
 .cc-pair.cc-bad{border-color:rgba(248,113,113,.3)}
@@ -474,7 +474,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 
 /* Feedback Evolution */
 .evo-list{display:flex;flex-direction:column;gap:16px}
-.evo-card{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
+.evo-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:10px;overflow:hidden}
 .evo-card-head{padding:12px 18px;background:rgba(25,20,50,.04);display:flex;align-items:center;gap:10px;cursor:pointer}
 .evo-card-icon{font-size:18px}
 .evo-card-title{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#FFFFFF;flex:1}
@@ -488,7 +488,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 
 /* Assumptions enhanced */
 .assump-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
-.assump-card{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;position:relative}
+.assump-card{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:16px;position:relative}
 .assump-card.risk-high{border-color:rgba(248,113,113,.25)}
 .assump-card.risk-med{border-color:rgba(200,124,56,.2)}
 .assump-card.risk-low{border-color:rgba(52,211,153,.15)}
@@ -496,7 +496,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .assump-meta{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
 .assump-chip{font-size:9.5px;font-family:'Syne',sans-serif;font-weight:700;padding:3px 8px;border-radius:20px}
 .assump-next{font-size:11px;color:#5A5280;font-style:italic;line-height:1.45}
-.add-assump-form{background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px;margin-top:14px}
+.add-assump-form{background:var(--card);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:18px;margin-top:14px}
 
 
 /* ── GUIDE VIEW ───────────────────────────────────────── */
@@ -512,7 +512,7 @@ h1{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#FFFFFF;li
 h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;
   letter-spacing:.14em;color:#5A5280;margin:28px 0 12px}
 .gl-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
-.gl-step{display:flex;gap:14px;align-items:flex-start;background:#FFFFFF;
+.gl-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);
   border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
 .gl-step-num{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;
   color:#2A7E7E;opacity:.4;line-height:1;flex-shrink:0;min-width:24px}
@@ -522,11 +522,11 @@ h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:u
 .gl-step-body code{background:rgba(42,126,126,.1);color:#2A7E7E;padding:1px 6px;
   border-radius:4px;font-size:11.5px;font-family:monospace}
 .gl-tools{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
-.gl-tool{background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
+.gl-tool{background:var(--card);border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
 .gl-tool-icon{font-size:18px;margin-bottom:6px}
 .gl-tool-name{font-family:'Syne',sans-serif;font-weight:700;font-size:12.5px;color:#FFFFFF;margin-bottom:3px}
 .gl-tool-desc{font-size:11.5px;color:#9890B4;line-height:1.5}
-.gl-tips{background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:10px;
+.gl-tips{background:var(--card);border:1px solid rgba(25,20,50,.08);border-radius:10px;
   padding:16px 18px;margin-bottom:24px}
 .gl-tip{display:flex;gap:10px;align-items:baseline;padding:5px 0;
   border-bottom:1px solid rgba(200,180,255,.05)}
@@ -534,7 +534,7 @@ h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:u
 .gl-tip-q{font-size:12px;color:#FFFFFF;flex:1}
 .gl-tip-a{font-size:12px;color:#9890B4;flex:1.2}
 .gl-sessions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:24px}
-.gl-sess{background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:8px;
+.gl-sess{background:var(--card);border:1px solid rgba(25,20,50,.08);border-radius:8px;
   padding:9px 11px;text-align:center}
 .gl-sess-num{font-family:'Syne',sans-serif;font-weight:800;font-size:16px;
   color:#2A7E7E;opacity:.35;line-height:1}
@@ -580,7 +580,7 @@ h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:u
 //  DATA: MODULES
 // ═══════════════════════════════════════════════════════════
 const MODULES = [
-  {id:'produkt',title:'Produkt',icon:'📦',color:'#2A7E7E',session:'S2',badge:'Produkt definiert',
+  {id:'produkt',title:'Produkt',icon:'📦',color:'#2A7E7E',session:'S2',group:'Solution',badge:'Produkt definiert',
    fields:[
     {id:'productName',label:'Produktname',type:'input',hint:'Klarer, wiedererkennbarer Name'},
     {id:'description',label:'Kurzbeschreibung',type:'textarea',rows:3,hint:'Was ist das Produkt, welches Problem löst es, was ist der Kernnutzen?'},
@@ -588,7 +588,7 @@ const MODULES = [
     {id:'priceModel',label:'Preislogik',type:'textarea',rows:2,hint:'Preis, Einheit, Erlöslogik'},
     {id:'differenzierung',label:'Differenzierung',type:'textarea',rows:3,hint:'Was macht das Produkt einzigartig gegenüber Alternativen?'},
   ]},
-  {id:'markt',title:'Markt & Kontext',icon:'🌍',color:'#818CF8',session:'S2+S4',badge:'Markt verstanden',
+  {id:'markt',title:'Markt & Kontext',icon:'🌍',color:'#818CF8',session:'S2+S4',group:'Opportunity',badge:'Markt verstanden',
    fields:[
     {id:'marketOverview',label:'Marktübersicht',type:'textarea',rows:4,hint:'Größe, Dynamik, Wachstum, Attraktivität'},
     {id:'competition',label:'Wettbewerb',type:'textarea',rows:4,hint:'Wer löst das Problem heute? Stärken, Schwächen, Differenzierung'},
@@ -599,7 +599,7 @@ const MODULES = [
     {id:'uncertainty',label:'Unsicherheiten',type:'textarea',rows:2,hint:'Was könnte die Annahmen kippen?'},
     {id:'transferInsights',label:'Transfer-Insights',type:'textarea',rows:2,hint:'Was wurde bestätigt / verworfen / geschärft?'},
   ]},
-  {id:'kunden',title:'Kunden & Validierung',icon:'👥',color:'#F472B6',session:'S2',badge:'Kunden validiert',
+  {id:'kunden',title:'Kunden & Validierung',icon:'👥',color:'#F472B6',session:'S2',group:'Opportunity',badge:'Kunden validiert',
    fields:[
     {id:'customerProfiles',label:'Kundenprofile',type:'textarea',rows:4,hint:'Wer sind die konkreten Nutzer:innen?'},
     {id:'segments',label:'Kundensegmente',type:'textarea',rows:2,hint:'Primäre und sekundäre Segmente'},
@@ -610,7 +610,7 @@ const MODULES = [
     {id:'validationStatus',label:'Validierungsstand',type:'textarea',rows:2,hint:'Welche Validierungen wurden durchgeführt?'},
     {id:'keyInsights',label:'Wichtigste Erkenntnisse',type:'textarea',rows:2,hint:'Was wurde durch Validierung gelernt?'},
   ]},
-  {id:'geschaeftsmodell',title:'Geschäftsmodell',icon:'🧩',color:'#C87C38',session:'S4',badge:'Geschäftsmodell entwickelt',
+  {id:'geschaeftsmodell',title:'Geschäftsmodell',icon:'🧩',color:'#C87C38',session:'S4',group:'Business',badge:'Geschäftsmodell entwickelt',
    fields:[
     {id:'valueProposition',label:'Value Proposition',type:'textarea',rows:3,hint:'Welchen konkreten Wert schafft das Venture?'},
     {id:'revenueModel',label:'Erlösmodell',type:'textarea',rows:3,hint:'Wie wird Geld verdient? Preislogik, Einheiten, Frequenz'},
@@ -619,7 +619,7 @@ const MODULES = [
     {id:'keyPartners',label:'Schlüsselpartner',type:'textarea',rows:2,hint:'Wer sind die wichtigsten Partner und Lieferanten?'},
     {id:'costStructure',label:'Kostenstruktur',type:'textarea',rows:2,hint:'Größte Kostentreiber des Geschäftsmodells'},
   ]},
-  {id:'operations',title:'Operations',icon:'⚙️',color:'#34D399',session:'S4',badge:'Prozesse aufgebaut',
+  {id:'operations',title:'Operations',icon:'⚙️',color:'#34D399',session:'S4',group:'Operations',badge:'Prozesse aufgebaut',
    fields:[
     {id:'step1',label:'01 · Kunde & Problem',type:'textarea',rows:3,hint:'Wer kommt mit welchem konkreten Bedürfnis?'},
     {id:'step2',label:'02 · Transformation',type:'textarea',rows:3,hint:'Wie entsteht die Lösung aus dem Input?'},
@@ -627,15 +627,26 @@ const MODULES = [
     {id:'step4',label:'04 · Umsatz',type:'textarea',rows:3,hint:'Wann und wie fließt Geld?'},
     {id:'odooConnection',label:'Odoo-Verknüpfung',type:'textarea',rows:2,hint:'Wie ist der Prozess in Odoo abgebildet?'},
     {id:'odooDemo',label:'Odoo-Demo (Pitch)',type:'textarea',rows:3,hint:'Was wird live gezeigt? Produktanlage / Prozessfluss / Kundenprozess – konkreter Klickpfad für den Pitch'},
+    {id:'odooLink',label:'Link zur Odoo-Instanz / Nachweis',type:'input',hint:'URL oder Hinweis auf Screenshots/Dokumentation'},
+    {id:'orgAccounting',label:'Organisation & Buchhaltung',type:'textarea',rows:2,hint:'Teamstruktur, Rollen, Buchhaltungs-Setup in Odoo'},
+    {id:'appBuild',label:'App-Erstellung',type:'textarea',rows:2,hint:'Wurde eine eigene Odoo-App/-Erweiterung erstellt? Was leistet sie?'},
+    {id:'opsReflection',label:'Reflexion: Was wurde gelernt?',type:'textarea',rows:2,hint:'Was hat die operative Umsetzung in Odoo über das Venture gelehrt?'},
   ]},
-  {id:'wachstum',title:'Wachstum & Kanäle',icon:'📈',color:'#FB923C',session:'S6',badge:'Wachstum geplant',
+  {id:'prototype',title:'Prototype & Produkterlebnis',icon:'🧪',color:'#22D3EE',session:'S10',group:'Operations',badge:'Demo-ready',
+   fields:[
+    {id:'prototypeType',label:'Art des Prototyps',type:'input',hint:'Landing Page / MVP / Figma-Prototyp / Video / PDF / Offline-Demo'},
+    {id:'prototypeLink',label:'Demo-Link',type:'input',hint:'URL zum Prototyp – oder Hinweis, wo die Datei hochgeladen ist'},
+    {id:'prototypeDescription',label:'Beschreibung',type:'textarea',rows:3,hint:'Was zeigt der Prototyp? Welcher Teil des Produkterlebnisses ist abgedeckt?'},
+    {id:'pitchDemo',label:'Demo im Pitch',type:'textarea',rows:2,hint:'Wie genau wird der Prototyp im Pitch live gezeigt? Klickpfad / Ablauf'},
+  ]},
+  {id:'wachstum',title:'Wachstum & Kanäle',icon:'📈',color:'#FB923C',session:'S6',group:'Business',badge:'Wachstum geplant',
    fields:[
     {id:'channels',label:'Vertriebskanäle',type:'textarea',rows:3,hint:'Wie werden Kunden erreicht und bedient?'},
     {id:'marketingStrategy',label:'Marketingstrategie',type:'textarea',rows:3,hint:'Wie wird Aufmerksamkeit erzeugt und Vertrauen aufgebaut?'},
     {id:'growthPath',label:'Wachstumspfad',type:'textarea',rows:3,hint:'Wie skaliert das Modell? Wann Break-Even?'},
     {id:'scalingLogic',label:'Skalierungslogik',type:'textarea',rows:2,hint:'Was muss passieren für den nächsten Wachstumsschritt?'},
   ]},
-  {id:'ethik',title:'Ethik & Verantwortung',icon:'⚖️',color:'#A78BFA',session:'S4',badge:'Ethik geprüft',
+  {id:'ethik',title:'Ethik & Verantwortung',icon:'⚖️',color:'#A78BFA',session:'S4',group:'Reflection',badge:'Ethik geprüft',
    fields:[
     {id:'wohltun',label:'Wohltun',type:'textarea',rows:2,hint:'Fördert die Lösung aktiv menschliches Wohlergehen?'},
     {id:'nichtschaden',label:'Nichtschaden',type:'textarea',rows:2,hint:'Werden Risiken und negative Folgen minimiert?'},
@@ -645,17 +656,23 @@ const MODULES = [
     {id:'risks',label:'Identifizierte Risiken',type:'textarea',rows:3,hint:'Welche ethischen Reibungspunkte und Risiken wurden gefunden?'},
     {id:'countermeasures',label:'Gegenmaßnahmen',type:'textarea',rows:3,hint:'Konkrete Schritte zur Risikominimierung'},
   ]},
-  {id:'finanzen',title:'Finanzen',icon:'💰',color:'#FBBF24',session:'S4',badge:'Finanzen strukturiert',
+  {id:'finanzen',title:'Finanzen & Funding',icon:'💰',color:'#FBBF24',session:'S4+S10',group:'Business',badge:'Funding-ready',
    fields:[
     {id:'revenue',label:'Einnahmen',type:'textarea',rows:3,hint:'Woher kommt das erste Geld?'},
     {id:'costs',label:'Kostenstruktur',type:'textarea',rows:3,hint:'Größte Kostentreiber, fix vs. variabel'},
     {id:'burnRate',label:'Burn Rate (EUR/Monat)',type:'input',hint:'Monatlicher Netto-Verlust'},
     {id:'runway',label:'Runway (Monate)',type:'input',hint:'Wie viele Monate Kapital?'},
     {id:'financing',label:'Funding-Strategie',type:'textarea',rows:3,hint:'Bootstrapping / EXIST / Crowdfunding / Angel / VC – welche Option und warum passend für dieses Venture?'},
+    {id:'fundingNeed',label:'Finanzierungsbedarf (EUR)',type:'input',hint:'Wie viel Kapital wird konkret benötigt?'},
+    {id:'whatToFund',label:'Was wird finanziert?',type:'textarea',rows:2,hint:'Wofür konkret wird das Kapital eingesetzt?'},
+    {id:'fundingTimeline',label:'Zeithorizont',type:'input',hint:'Bis wann wird das Funding benötigt?'},
+    {id:'applicationStatus',label:'Bewerbungsstatus',type:'input',hint:'z.B. EXIST-Antrag in Vorbereitung / eingereicht / Zusage'},
+    {id:'fundingNextStep',label:'Nächster Schritt',type:'textarea',rows:2,hint:'Was ist konkret als Nächstes zu tun?'},
+    {id:'applicationLink',label:'Link zur Bewerbung / Programm',type:'input',hint:'URL zum Förderprogramm oder Antragsportal (optional)'},
     {id:'financing',label:'Finanzierungsform',type:'input',hint:'Bootstrapping / VC / Revenue-based'},
     {id:'breakEven',label:'Break-Even-Ziel',type:'input',hint:'Bis wann muss das Modell tragen?'},
   ]},
-  {id:'kennzahlen',title:'Kennzahlen & Lernen',icon:'📊',color:'#6EE7B7',session:'S5+',badge:'KPIs definiert',
+  {id:'kennzahlen',title:'Kennzahlen & Lernen',icon:'📊',color:'#6EE7B7',session:'S5+',group:'Reflection',badge:'KPIs definiert',
    fields:[
     {id:'kpis',label:'Wichtigste KPIs',type:'textarea',rows:3,hint:'Welche Kennzahlen entscheiden über Erfolg?'},
     {id:'hypotheses',label:'Kritische Hypothesen',type:'textarea',rows:3,hint:'Was muss wahr sein, damit das Venture funktioniert?'},
@@ -663,7 +680,7 @@ const MODULES = [
     {id:'learnings',label:'Wichtigste Erkenntnisse',type:'textarea',rows:3,hint:'Was wurde bisher gelernt?'},
     {id:'nextSteps',label:'Nächste Experimente',type:'textarea',rows:2,hint:'Was kommt als nächstes?'},
   ]},
-  {id:'pitch',title:'Pitch',icon:'🎯',color:'#F87171',session:'S2–S10',badge:'Demo Day',
+  {id:'pitch',title:'Pitch',icon:'🎯',color:'#F87171',session:'S2–S10',group:'Pitch Center',badge:'Demo Day',
    fields:[
     {id:'executiveSummary',label:'Executive Summary',type:'textarea',rows:3,hint:'Venture-Name · One-Sentence-Pitch · Zielgruppe · Kernnutzen (1 Minute)'},
     {id:'problemStatement',label:'Problem & Opportunity',type:'textarea',rows:3,hint:'Welches Problem? Für wen? Wie groß die Chance?'},
@@ -886,6 +903,8 @@ function defaultState() {
     setupDone: false,
     consistency: {},
     reality: { engpass:'', unsicherheit:'', evidenz:'', regulierung:'', skalierung:'' },
+    health: {},
+    demoday: {},
   };
 }
 
@@ -921,11 +940,11 @@ function getNextMission() {
 }
 function getStatusMeta(status) {
   const map = {
-    locked: {color:'#7068A0',label:'Gesperrt',cls:'status-locked'},
-    draft: {color:'#7A98B8',label:'Entwurf',cls:'status-draft'},
-    imported: {color:'#C87C38',label:'Importiert',cls:'status-imported'},
-    revised: {color:'#818CF8',label:'Überarbeitet',cls:'status-revised'},
-    validated: {color:'#34D399',label:'Validiert',cls:'status-validated'},
+    locked:    {color:'#6A6080',label:'Noch nicht bearbeitet',icon:'\u26AA',cls:'status-locked'},
+    draft:     {color:'#6A6080',label:'Noch nicht bearbeitet',icon:'\u26AA',cls:'status-draft'},
+    imported:  {color:'#E8C24A',label:'In Bearbeitung',icon:'\u{1F7E1}',cls:'status-imported'},
+    revised:   {color:'#E8C24A',label:'In Bearbeitung',icon:'\u{1F7E1}',cls:'status-revised'},
+    validated: {color:'#5ABF8C',label:'Vollst\u00e4ndig',icon:'\u{1F7E2}',cls:'status-validated'},
   };
   return map[status]||map.locked;
 }
@@ -971,6 +990,8 @@ function renderView() {
   else if(page==='pitch-mode')v.innerHTML=renderPitchMode();
   else if(page==='evolution')v.innerHTML=renderFeedbackEvolution();
   else if(page==='assumptions')v.innerHTML=renderAssumptionsView();
+  else if(page==='health')v.innerHTML=renderHealthCheck();
+  else if(page==='demoday')v.innerHTML=renderDemoDayReadiness();
   else if(page==='guide')v.innerHTML=renderGuide();
   else v.innerHTML=renderDashboard();
   attachViewEvents();
@@ -982,18 +1003,20 @@ function renderView() {
 function renderSidebar() {
   const oc = overallCompletion();
   const vname = S.venture.name||'Kein Name';
-  let modItems = MODULES.map(m=>{
+  const modLink=m=>{
     const sm=getStatusMeta(S.modules[m.id].status);
     const isActive=currentRoute===`modul/${m.id}`;
     return `<a class="sb-item${isActive?' active':''}" href="#modul/${m.id}" style="--mc:${m.color}">
       <span class="sb-icon">${m.icon}</span>
       <span style="flex:1">${m.title}</span>
-      <span class="sb-dot" style="background:${sm.color}"></span>
-    </a>`;}).join('');
+      <span style="font-size:11px">${sm.icon}</span>
+    </a>`;
+  };
+  const grp=g=>MODULES.filter(m=>m.group===g).map(modLink).join('');
 
   document.getElementById('sidebar').innerHTML=`
     <div class="sb-venture">
-      <div class="sb-label">Venture</div>
+      <div class="sb-label">Venture OS</div>
       <div class="sb-name">${esc(vname)}</div>
       ${S.venture.tagline?`<div class="sb-tag">${esc(S.venture.tagline)}</div>`:''}
       <div class="sb-progress">
@@ -1003,54 +1026,80 @@ function renderSidebar() {
     </div>
     <div class="sb-section">
       <a class="sb-item${currentRoute==='dashboard'?' active':''}" href="#dashboard">
-        <span class="sb-icon">🏠</span>Dashboard
-      </a>
-    </div>
-    <div class="sb-section">
-      <div class="sb-section-label">Module</div>
-      ${modItems}
-    </div>
-    <div class="sb-divider"></div>
-    <div class="sb-section">
-      <div class="sb-section-label">Outputs</div>
-      <a class="sb-item${currentRoute==='output/businessplan'?' active':''}" href="#output/businessplan">
-        <span class="sb-icon">📄</span>Businessplan
-      </a>
-      <a class="sb-item${currentRoute==='output/pitch'?' active':''}" href="#output/pitch">
-        <span class="sb-icon">🎯</span>Pitch-Generator
+        <span class="sb-icon">🏠</span>Venture Overview
       </a>
     </div>
     <div class="sb-divider"></div>
     <div class="sb-section">
-      <div class="sb-section-label">Analyse</div>
+      <div class="sb-section-label">Opportunity</div>
+      ${grp('Opportunity')}
+    </div>
+    <div class="sb-section">
+      <div class="sb-section-label">Solution</div>
+      ${grp('Solution')}
+    </div>
+    <div class="sb-section">
+      <div class="sb-section-label">Business</div>
+      ${grp('Business')}
+    </div>
+    <div class="sb-section">
+      <div class="sb-section-label">Operations</div>
+      ${grp('Operations')}
+    </div>
+    <div class="sb-section">
+      <div class="sb-section-label">Reflection</div>
+      ${grp('Reflection')}
+      <a class="sb-item${currentRoute==='reality'?' active':''}" href="#reality">
+        <span class="sb-icon">⚡</span>Reality Check
+      </a>
+      <a class="sb-item${currentRoute==='assumptions'?' active':''}" href="#assumptions">
+        <span class="sb-icon">❓</span>Annahmen
+      </a>
+    </div>
+    <div class="sb-divider"></div>
+    <div class="sb-section">
+      <div class="sb-section-label">Integration & Health Check</div>
       <a class="sb-item${currentRoute==='integration'?' active':''}" href="#integration">
         <span class="sb-icon">🗺</span>Logic Map
       </a>
       <a class="sb-item${currentRoute==='consistency'?' active':''}" href="#consistency">
         <span class="sb-icon">✓</span>Konsistenz
       </a>
-      <a class="sb-item${currentRoute==='reality'?' active':''}" href="#reality">
-        <span class="sb-icon">⚡</span>Reality Check
+      <a class="sb-item${currentRoute==='health'?' active':''}" href="#health">
+        <span class="sb-icon">🚦</span>Venture Health Check
       </a>
       <a class="sb-item${currentRoute==='maturity'?' active':''}" href="#maturity">
         <span class="sb-icon">📊</span>Maturity Score
       </a>
-      <a class="sb-item${currentRoute==='pitch-mode'?' active':''}" href="#pitch-mode">
-        <span class="sb-icon">🎯</span>Pitch Mode
-      </a>
-      <a class="sb-item${currentRoute==='assumptions'?' active':''}" href="#assumptions">
-        <span class="sb-icon">❓</span>Annahmen
-      </a>
       <a class="sb-item${currentRoute==='evolution'?' active':''}" href="#evolution">
         <span class="sb-icon">🔄</span>Feedback-Evolution
       </a>
-      <a class="sb-item${currentRoute==='guide'?' active':''}" href="#guide">
-        <span class="sb-icon">📖</span>Kurzanleitung
+    </div>
+    <div class="sb-divider"></div>
+    <div class="sb-section">
+      <div class="sb-section-label">Pitch Center</div>
+      ${grp('Pitch Center')}
+      <a class="sb-item${currentRoute==='pitch-mode'?' active':''}" href="#pitch-mode">
+        <span class="sb-icon">🎬</span>Pitch Outline
+      </a>
+      <a class="sb-item${currentRoute==='output/businessplan'?' active':''}" href="#output/businessplan">
+        <span class="sb-icon">📄</span>Businessplan-Export
       </a>
     </div>
-    <div style="flex:1"></div>
-    <div class="sb-import-btn" id="sb-import">⬇ Session-Daten importieren</div>
-    <div style="height:8px"></div>`;
+    <div class="sb-section">
+      <div class="sb-section-label">Demo Day</div>
+      <a class="sb-item${currentRoute==='demoday'?' active':''}" href="#demoday">
+        <span class="sb-icon">🚀</span>Demo Day Readiness
+      </a>
+    </div>
+    <div class="sb-divider"></div>
+    <div class="sb-section">
+      <a class="sb-item${currentRoute==='guide'?' active':''}" href="#guide">
+        <span class="sb-icon">📖</span>Anleitung
+      </a>
+      <div class="sb-import-btn" id="sb-import">⬇ Session-Daten importieren</div>
+    </div>
+  `;
 
   document.getElementById('sb-import')?.addEventListener('click',openImportModal);
 }
@@ -1120,7 +1169,7 @@ function renderDashboard() {
     <div class="breadcrumb">Venture Cockpit</div>
     <div class="page-header">
       <div>
-        <div class="page-title">Mission Control</div>
+        <div class="page-title">Venture Overview</div>
         <div class="page-sub">${S.venture.teamMembers?`Team: ${esc(S.venture.teamMembers)} · `:''}<span style="color:var(--gold)">Session ${activeS||'—'} aktiv</span></div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -1140,21 +1189,21 @@ function renderDashboard() {
     <!-- Analyse-Shortcuts -->
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px">
       <a href="#maturity" style="text-decoration:none">
-        <div style="background:#FFFFFF;border:1px solid rgba(42,126,126,.22);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+        <div style="background:var(--card);border:1px solid rgba(42,126,126,.22);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
           <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">📊 Maturity Score</div>
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#2A7E7E;line-height:1">${Math.min(4,Math.round(overallCompletion()/25))}/4</div>
           <div style="font-size:10px;color:#7068A0;margin-top:6px">Reifegrad ansehen →</div>
         </div>
       </a>
       <a href="#consistency" style="text-decoration:none">
-        <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+        <div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
           <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#7068A0;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">✓ Konsistenz</div>
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#34D399;line-height:1">${Object.entries(S.consistency).filter(([k,v])=>k.endsWith('_status')&&v==='ok').length}/${CC_PAIRS.length}</div>
           <div style="font-size:10px;color:#7068A0;margin-top:6px">Konsistenzprüfung →</div>
         </div>
       </a>
       <a href="#reality" style="text-decoration:none">
-        <div style="background:#FFFFFF;border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
+        <div style="background:var(--card);border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:15px 18px;cursor:pointer;transition:border-color .2s">
           <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#F87171;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px">⚡ Reality Check</div>
           <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:${['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&(S.reality[k]||'').trim().length>10).length===5?'#34D399':'#F87171'};line-height:1">${['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&(S.reality[k]||'').trim().length>10).length}/5</div>
           <div style="font-size:10px;color:#7068A0;margin-top:6px">Risiken ansehen →</div>
@@ -1163,20 +1212,22 @@ function renderDashboard() {
     </div>
 
 
-      <!-- Demo Day Readiness -->
-      <div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:13px;padding:16px 18px;margin-bottom:14px">
-        <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#7068A0;font-family:Syne,sans-serif;font-weight:700;margin-bottom:12px">🎯 Demo Day Readiness</div>
-        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
-          ${['Executive Summary','Validation','Demo/Prototyp','Wachstum & Funding','Vision'].map((label,i)=>{
-            const keys=[['pitch.executiveSummary'],['pitch.validationInsights'],['pitch.demoDescription'],['pitch.fundingRationale'],['pitch.vision6m','pitch.vision2y']];
-            const done=keys[i].some(k=>{const[m,f]=k.split('.');return(S.modules[m]?.fields[f]||'').trim().length>20;});
-            return '<div style="background:'+(done?'rgba(46,122,82,.1)':'rgba(25,20,50,.04)')+';border:1px solid '+(done?'rgba(46,122,82,.25)':'rgba(25,20,50,.09)')+';border-radius:8px;padding:8px 6px;text-align:center">'
-              +'<div style="font-size:11px;margin-bottom:3px">'+(done?'\u2713':'\u00b7')+'</div>'
-              +'<div style="font-size:9px;color:'+(done?'#2E7A52':'#7068A0')+';line-height:1.3;font-family:Syne,sans-serif;font-weight:700">'+label+'</div>'
-              +'</div>';
-          }).join('')}
-        </div>
-        ${(()=>{const rc=['engpass','unsicherheit','evidenz','regulierung','skalierung'].filter(k=>(S.reality||{})[k]&&S.reality[k].trim().length>15).length;const col=rc===5?'#2E7A52':'#BC5C36';return '<div style="margin-top:10px;font-size:11px;color:#7068A0">Reality Check: <a href="#reality" style="color:'+col+';font-weight:700;text-decoration:none">'+rc+'/5 ausgef\u00fcllt</a>&nbsp;\u00b7&nbsp;<a href="#pitch-mode" style="color:#C87C38;text-decoration:none;font-family:Syne,sans-serif;font-weight:700">\u2192 Pitch Mode</a></div>';})()}
+      <!-- Health Check & Demo Day CTAs -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+        <a href="#health" style="text-decoration:none">
+          <div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:13px;padding:15px 18px">
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--dim);font-family:Syne,sans-serif;font-weight:700;margin-bottom:6px">🚦 Venture Health Check</div>
+            <div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#5ABF8C;line-height:1">${HEALTH_QUESTIONS.filter(q=>(S.health||{})[q.id+'_status']==='green').length}/${HEALTH_QUESTIONS.length}</div>
+            <div style="font-size:10px;color:var(--dim);margin-top:6px">Fragen passen →</div>
+          </div>
+        </a>
+        <a href="#demoday" style="text-decoration:none">
+          <div style="background:var(--card);border:1px solid rgba(200,124,56,.25);border-radius:13px;padding:15px 18px">
+            <div style="font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);font-family:Syne,sans-serif;font-weight:700;margin-bottom:6px">🚀 Demo Day Readiness</div>
+            <div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:var(--gold);line-height:1">${DEMODAY_SECTIONS.filter(sec=>sec.items.every((_,i)=>(S.demoday||{})[sec.id+'_'+i])).length}/${DEMODAY_SECTIONS.length}</div>
+            <div style="font-size:10px;color:var(--dim);margin-top:6px">Bereiche vollständig →</div>
+          </div>
+        </a>
       </div>
     <!-- Timeline -->
     <div class="card" style="margin-bottom:14px">
@@ -1256,10 +1307,10 @@ function renderModule(mid) {
     </div>`;}).join('');
 
   const statusOpts=[
-    {s:'draft',sc:'#7A98B8',label:'Entwurf',desc:'Erste Version, noch überarbeiten'},
-    {s:'imported',sc:'#C87C38',label:'Importiert',desc:'Direkt aus Session importiert'},
-    {s:'revised',sc:'#818CF8',label:'Überarbeitet',desc:'Nach Feedback angepasst'},
-    {s:'validated',sc:'#34D399',label:'Validiert',desc:'Bestätigt und abgeschlossen'},
+    {s:'draft',sc:'#6A6080',label:'\u26AA Nicht bearbeitet',desc:'Noch keine finale Version'},
+    {s:'imported',sc:'#E8C24A',label:'\u{1F7E1} In Bearbeitung',desc:'Entwurf vorhanden, wird noch verfeinert'},
+    {s:'revised',sc:'#E8C24A',label:'\u{1F7E1} In Bearbeitung',desc:'Nach Feedback überarbeitet'},
+    {s:'validated',sc:'#5ABF8C',label:'\u{1F7E2} Vollständig',desc:'Final – bereit für Pitch & Integration'},
   ].map(o=>`<div class="status-opt${mstate.status===o.s?' selected':''}" data-mid="${mid}" data-status="${o.s}" style="--sc:${o.sc}">
     <div class="so-dot"></div>
     <div><div class="so-label">${o.label}</div><div class="so-desc">${o.desc}</div></div>
@@ -1793,6 +1844,27 @@ function attachViewEvents() {
   document.querySelectorAll('.mod-card').forEach(el=>{
     el.addEventListener('click',e=>{e.preventDefault();navigate(el.getAttribute('href').slice(1));});
   });
+  // Health Check: status dots + reasoning
+  document.querySelectorAll('[data-health]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      const id=el.dataset.health, st=el.dataset.hstatus;
+      S.health[id+'_status']=(S.health[id+'_status']===st)?'':st;
+      save();renderView();
+    });
+  });
+  document.querySelectorAll('[data-health-reason]').forEach(el=>{
+    el.addEventListener('input',e=>{
+      S.health[e.target.dataset.healthReason+'_reason']=e.target.value;
+      debouncedSave();
+    });
+  });
+  // Demo Day Readiness checklist
+  document.querySelectorAll('[data-demoday]').forEach(el=>{
+    el.addEventListener('change',e=>{
+      S.demoday[e.target.dataset.demoday]=e.target.checked;
+      save();renderView();
+    });
+  });
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1972,7 +2044,7 @@ function renderConsistency() {
         <div style="font-size:11px;color:#D8D0C4;font-style:italic;margin-bottom:8px">${p.hint}</div>
         <textarea class="mod-textarea" data-cctext="${p.id}" rows="3"
           placeholder="Analyse: Passen diese Elemente zusammen? Wo gibt es Spannungen?"
-          style="width:100%;background:rgba(25,20,50,.06);border:1px solid rgba(255,255,255,.07);border-radius:6px;color:#3A3460;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
+          style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(180,160,220,.1);border-radius:6px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
           >${val}</textarea>
         <div style="font-size:9.5px;color:#D8D0C4;text-align:right;margin-top:2px">${len}z</div>
       </div>
@@ -1986,7 +2058,7 @@ function renderConsistency() {
       <div class="cc-summary-chip" style="background:rgba(52,211,153,.1);color:#34D399;border:1px solid rgba(52,211,153,.25)">✓ ${ok} Konsistent</div>
       <div class="cc-summary-chip" style="background:rgba(200,124,56,.1);color:#C87C38;border:1px solid rgba(200,124,56,.25)">⚠ ${warn} Spannung</div>
       <div class="cc-summary-chip" style="background:rgba(248,113,113,.1);color:#F87171;border:1px solid rgba(248,113,113,.25)">✗ ${bad} Widerspruch</div>
-      <div class="cc-summary-chip" style="background:rgba(255,255,255,.05);color:#7068A0;border:1px solid rgba(255,255,255,.07)">${CC_PAIRS.length-ok-warn-bad} Offen</div>
+      <div class="cc-summary-chip" style="background:rgba(255,255,255,.05);color:#7068A0;border:1px solid rgba(180,160,220,.1)">${CC_PAIRS.length-ok-warn-bad} Offen</div>
     </div>
     <div class="cc-pairs">${pairs}</div>
   </div>`;
@@ -2018,7 +2090,7 @@ function renderReality() {
       <div class="reality-hint">${item.hint}</div>
       <textarea class="mod-textarea" data-reality="${item.id}" rows="3"
         placeholder="${item.hint}"
-        style="width:100%;background:rgba(25,20,50,.06);border:1px solid rgba(248,113,113,.15);border-radius:6px;color:#3A3460;font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
+        style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(248,113,113,.15);border-radius:6px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;padding:8px 11px;outline:none;resize:vertical"
         >${val}</textarea>
       <div style="font-size:9.5px;color:#7068A0;text-align:right;margin-top:2px">${len}z</div>
     </div>`;
@@ -2029,7 +2101,7 @@ function renderReality() {
   return `<div style="max-width:760px">
     <div class="view-title">⚡ Reality Check</div>
     <div class="view-sub">Wo könnte euer Venture scheitern? Diese Sektion erzwingt Reflexion über die tatsächlichen Risiken – kein Pitch-Optimismus.</div>
-    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;padding:14px 18px;background:#FFFFFF;border-radius:10px;border:1px solid rgba(255,255,255,.07)">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;padding:14px 18px;background:var(--card);border-radius:10px;border:1px solid rgba(180,160,220,.1)">
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:36px;color:${filledCount===5?'#34D399':'#F87171'};line-height:1">${filledCount}/5</div>
       <div>
         <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:#FFFFFF">Pflichtfelder ausgefüllt</div>
@@ -2078,7 +2150,7 @@ function renderMaturity() {
     const pts=Array.from({length:5},(_,i)=>point(i,maxS*f).join(',')).join(' ');
     return `<polygon points="${pts}" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>`;
   }).join('');
-  const axes = Array.from({length:5},(_,i)=>{const [x,y]=point(i,maxS);return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(255,255,255,.07)" stroke-width="1"/>`;}).join('');
+  const axes = Array.from({length:5},(_,i)=>{const [x,y]=point(i,maxS);return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="rgba(180,160,220,.1)" stroke-width="1"/>`;}).join('');
   const dataPoints = scores.map((s,i)=>point(i,s).join(',')).join(' ');
   const dimLabels = dims.map((d,i)=>{const a=angle(i),lx=cx+(r+22)*Math.cos(a),ly=cy+(r+22)*Math.sin(a);
     return `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="middle" fill="${d.color}" font-size="9" font-family="Syne" font-weight="700">${d.label}</text>`;}).join('');
@@ -2116,7 +2188,7 @@ function renderMaturity() {
       <div class="view-section-title">Was bedeutet das?</div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px">
         ${[{v:0,l:'Nicht gestartet',d:'Modul gesperrt oder leer'},{v:1,l:'Entwurf',d:'Erste Inhalte, noch unvollständig'},{v:2,l:'Importiert',d:'Sessiondaten übertragen'},{v:3,l:'Überarbeitet',d:'Nach Feedback angepasst'},{v:4,l:'Validiert',d:'Abgeschlossen und belegt'}]
-          .map(s=>`<div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:10px 12px">
+          .map(s=>`<div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:8px;padding:10px 12px">
             <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#2A7E7E;line-height:1">${s.v}/4</div>
             <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:11px;color:#FFFFFF;margin-top:4px">${s.l}</div>
             <div style="font-size:10.5px;color:#7068A0;margin-top:2px">${s.d}</div>
@@ -2234,11 +2306,11 @@ function renderFeedbackEvolution() {
     <div class="view-title">🔄 Feedback-Evolution</div>
     <div class="view-sub">Der Lernprozess des Ventures sichtbar gemacht. Ursprüngliche Annahmen → externes Feedback → Anpassung → Begründung.</div>
     <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
-      <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
+      <div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:14px 20px;text-align:center">
         <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#2A7E7E">${modsWithFeedback.length}</div>
         <div style="font-size:11px;color:#7068A0;font-family:'Syne',sans-serif">Module mit Evolution</div>
       </div>
-      <div style="background:#FFFFFF;border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 20px;text-align:center">
+      <div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:14px 20px;text-align:center">
         <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:#34D399">${full}</div>
         <div style="font-size:11px;color:#7068A0;font-family:'Syne',sans-serif">Vollständig dokumentiert</div>
       </div>
@@ -2247,6 +2319,130 @@ function renderFeedbackEvolution() {
   </div>`;
 }
 
+
+
+
+// ═══════════════════════════════════════════════════════════
+//  DEMO DAY READINESS CENTER
+// ═══════════════════════════════════════════════════════════
+var DEMODAY_SECTIONS = [
+  {id:'geschaeftsplan', title:'Gesch\u00e4ftsplan', items:[
+    'Executive Summary vorhanden','Problem und Zielgruppe klar definiert',
+    'Markt und Wettbewerb nachvollziehbar analysiert','Kundenvalidierung dokumentiert',
+    'Gesch\u00e4ftsmodell finalisiert','Wachstums- und Funding-Logik formuliert']},
+  {id:'produkt', title:'Produkt & Prototype', items:[
+    'Produkt klar beschrieben','Value Proposition final',
+    'Prototype, Landing Page oder Demo vorhanden','Demo-Link oder Upload hinterlegt',
+    'Produktdemo f\u00fcr den Pitch vorbereitet']},
+  {id:'odoo', title:'Operative Umsetzung / Odoo', items:[
+    'Odoo-Link oder Nachweis hinterlegt','Produkte in Odoo angelegt',
+    'Relevante Prozesse dokumentiert','Services, Projekte, Fertigung oder Qualit\u00e4tskontrolle sichtbar',
+    'Screenshots oder kurze Odoo-Dokumentation vorhanden','Operative Umsetzung im Pitch demonstrierbar']},
+  {id:'pitch', title:'Pitch', items:[
+    'Pitch-Struktur vollst\u00e4ndig','Storyline klar','Rollen im Team verteilt',
+    'Zeit auf ca. 20 Minuten getestet','Folien finalisiert','Produktdemo und Odoo-Demo eingebunden']},
+  {id:'reflexion', title:'Reflexion & Reality Check', items:[
+    'Gr\u00f6\u00dfte Unsicherheit benannt','Kritischste Annahme dokumentiert',
+    'Wichtigste Risiken reflektiert','N\u00e4chster Lernschritt definiert','Feedback sichtbar eingearbeitet']},
+];
+
+function renderDemoDayReadiness() {
+  var DD = S.demoday || (S.demoday={});
+  function statusOf(secId, n){
+    var checked=0;
+    for(var i=0;i<n;i++) if(DD[secId+'_'+i]) checked++;
+    var ratio=checked/n;
+    if(ratio===1) return {c:'#5ABF8C',l:'green',label:'Demo-Day-ready'};
+    if(ratio>=0.5) return {c:'#E8C24A',l:'yellow',label:'Fast bereit'};
+    return {c:'#E07070',l:'red',label:'Nicht bereit'};
+  }
+  var sections = DEMODAY_SECTIONS.map(function(sec){
+    var st=statusOf(sec.id, sec.items.length);
+    var rows=sec.items.map(function(item,i){
+      var key=sec.id+'_'+i, on=!!DD[key];
+      return '<label style="display:flex;align-items:flex-start;gap:10px;padding:6px 0;cursor:pointer;font-size:12.5px;color:'+(on?'var(--text)':'var(--dim)')+'">'
+        +'<input type="checkbox" data-demoday="'+key+'" '+(on?'checked':'')+' style="margin-top:2px;width:15px;height:15px;accent-color:'+st.c+'">'
+        +'<span style="'+(on?'text-decoration:line-through;opacity:.7':'')+'">'+item+'</span></label>';
+    }).join('');
+    return '<div style="background:var(--card);border:1px solid '+st.c+'33;border-radius:10px;padding:14px 16px;margin-bottom:12px">'
+      +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">'
+      +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:14px;color:var(--text)">'+sec.title+'</div>'
+      +'<div style="font-family:Syne,sans-serif;font-weight:700;font-size:10.5px;padding:3px 10px;border-radius:20px;background:'+st.c+'20;color:'+st.c+'">'+(st.l==='green'?'\u{1F7E2}':st.l==='yellow'?'\u{1F7E1}':'\u{1F534}')+' '+st.label+'</div>'
+      +'</div>'+rows+'</div>';
+  }).join('');
+
+  var allStatuses = DEMODAY_SECTIONS.map(function(sec){return statusOf(sec.id, sec.items.length).l;});
+  var greenCount=allStatuses.filter(function(s){return s==='green';}).length;
+  var overall = greenCount===DEMODAY_SECTIONS.length?{c:'#5ABF8C',label:'\u{1F7E2} Demo-Day-ready',l:'green'}
+    : allStatuses.indexOf('red')<0 ? {c:'#E8C24A',label:'\u{1F7E1} Fast bereit',l:'yellow'}
+    : {c:'#E07070',label:'\u{1F534} Noch nicht bereit',l:'red'};
+
+  return '<div style="max-width:780px">'
+    +'<div class="view-title">\u{1F680} Demo Day Readiness</div>'
+    +'<div class="view-sub">Checkt vor dem Demo Day, ob alle f\u00fcnf Bereiche vollst\u00e4ndig vorbereitet sind.</div>'
+    +'<div style="background:var(--card);border:2px solid '+overall.c+';border-radius:12px;padding:16px 20px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between">'
+    +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:18px;color:'+overall.c+'">'+overall.label+'</div>'
+    +'<div style="font-size:12px;color:var(--dim)">'+greenCount+' / '+DEMODAY_SECTIONS.length+' Bereiche vollst\u00e4ndig</div>'
+    +'</div>'
+    +sections
+    +'</div>';
+}
+
+// ═══════════════════════════════════════════════════════════
+//  VENTURE HEALTH CHECK
+// ═══════════════════════════════════════════════════════════
+var HEALTH_QUESTIONS = [
+  {id:'fit',     q:'Passt das Produkt wirklich zur Zielgruppe?',            hint:'Produkt ↔ Kunden & Validierung'},
+  {id:'market',  q:'Passt das Geschäftsmodell zur Marktlogik?',             hint:'Geschäftsmodell ↔ Markt & Kontext'},
+  {id:'price',   q:'Passt die Preislogik zur Zahlungsbereitschaft?',        hint:'Finanzen ↔ Kundenvalidierung'},
+  {id:'funding', q:'Passt die Funding-Strategie zur Wachstumslogik?',       hint:'Finanzen & Funding ↔ Wachstum & Kanäle'},
+  {id:'odoo',    q:'Passt die Odoo-Umsetzung zur Geschäftslogik?',          hint:'Operations ↔ Geschäftsmodell'},
+  {id:'scale',   q:'Sind die Prozesse skalierbar?',                         hint:'Operations · Wachstum & Kanäle'},
+  {id:'risk',    q:'Sind die wichtigsten Risiken benannt?',                 hint:'Reality Check · Annahmen'},
+  {id:'story',   q:'Ist die Pitch-Story konsistent?',                       hint:'Pitch Center · alle Module'},
+];
+
+function renderHealthCheck() {
+  var H = S.health || (S.health={});
+  var LV = {green:{c:'#5ABF8C',l:'Passt'},yellow:{c:'#E8C24A',l:'Teilweise'},red:{c:'#E07070',l:'Nicht gelöst'},'':{c:'#4A4070',l:'Offen'}};
+  function row(item){
+    var st=H[item.id+'_status']||'';
+    var reason=esc(H[item.id+'_reason']||'');
+    var dots=['green','yellow','red'].map(function(k){
+      var on=st===k, lv=LV[k];
+      return '<button data-health="'+item.id+'" data-hstatus="'+k+'" style="width:30px;height:30px;border-radius:50%;border:2px solid '+(on?lv.c:'rgba(180,160,220,.15)')+';background:'+(on?lv.c+'30':'transparent')+';cursor:pointer;font-size:13px">'+(on?'\u25CF':'')+'</button>';
+    }).join('');
+    return '<div style="background:var(--card);border:1px solid '+(LV[st]?LV[st].c+'33':'rgba(180,160,220,.1)')+';border-radius:10px;padding:14px 16px;margin-bottom:10px">'
+      +'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:8px">'
+      +'<div><div style="font-family:Syne,sans-serif;font-weight:700;font-size:13.5px;color:var(--text)">'+item.q+'</div>'
+      +'<div style="font-size:11px;color:var(--dim);margin-top:2px">'+item.hint+'</div></div>'
+      +'<div style="display:flex;gap:6px;flex-shrink:0">'+dots+'</div></div>'
+      +'<textarea data-health-reason="'+item.id+'" rows="2" placeholder="Kurze Begründung..." style="width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(180,160,220,.14);border-radius:6px;color:var(--text);font-family:DM Sans,sans-serif;font-size:12.5px;padding:7px 10px;outline:none;resize:vertical">'+reason+'</textarea>'
+      +'</div>';
+  }
+  var statuses = HEALTH_QUESTIONS.map(function(it){return H[it.id+'_status']||'';});
+  var green=statuses.filter(function(s){return s==='green';}).length;
+  var yellow=statuses.filter(function(s){return s==='yellow';}).length;
+  var red=statuses.filter(function(s){return s==='red';}).length;
+  var open=statuses.filter(function(s){return !s;}).length;
+  var score=Math.round(green/HEALTH_QUESTIONS.length*100);
+  var todos=HEALTH_QUESTIONS.filter(function(it){return (H[it.id+'_status']||'')!=='green';})
+    .map(function(it){return '<div style="font-size:12px;color:var(--text);padding:5px 0;border-bottom:1px solid rgba(180,160,220,.06)"><span style="color:'+(LV[H[it.id+'_status']||'']?LV[H[it.id+'_status']||''].c:'#4A4070')+'">\u25CF</span>&nbsp; '+it.q+'</div>';}).join('');
+
+  return '<div style="max-width:780px">'
+    +'<div class="view-title">\u{1F6A6} Venture Health Check</div>'
+    +'<div class="view-sub">8 Kernfragen, die entscheiden, ob das Venture als Ganzes konsistent ist. Ampelstatus + kurze Begründung pro Frage.</div>'
+    +'<div style="display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap">'
+    +'<div style="background:var(--card);border:1px solid rgba(90,191,140,.25);border-radius:10px;padding:12px 16px;text-align:center;min-width:90px"><div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#5ABF8C">'+score+'%</div><div style="font-size:9.5px;color:var(--dim);font-family:Syne,sans-serif;font-weight:700;text-transform:uppercase">Readiness Score</div></div>'
+    +'<div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:12px 16px;text-align:center;min-width:90px"><div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#5ABF8C">'+green+'</div><div style="font-size:9.5px;color:var(--dim);font-family:Syne,sans-serif;font-weight:700;text-transform:uppercase">Passt</div></div>'
+    +'<div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:12px 16px;text-align:center;min-width:90px"><div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#E8C24A">'+yellow+'</div><div style="font-size:9.5px;color:var(--dim);font-family:Syne,sans-serif;font-weight:700;text-transform:uppercase">Teilweise</div></div>'
+    +'<div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:12px 16px;text-align:center;min-width:90px"><div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:#E07070">'+red+'</div><div style="font-size:9.5px;color:var(--dim);font-family:Syne,sans-serif;font-weight:700;text-transform:uppercase">Ungelöst</div></div>'
+    +'<div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:12px 16px;text-align:center;min-width:90px"><div style="font-family:Syne,sans-serif;font-weight:800;font-size:24px;color:var(--dim)">'+open+'</div><div style="font-size:9.5px;color:var(--dim);font-family:Syne,sans-serif;font-weight:700;text-transform:uppercase">Offen</div></div>'
+    +'</div>'
+    +HEALTH_QUESTIONS.map(row).join('')
+    +(todos?'<div style="margin-top:20px;background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:10px;padding:14px 16px"><div style="font-family:Syne,sans-serif;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--dim);margin-bottom:8px">Offene To-dos vor dem Pitch</div>'+todos+'</div>':'')
+    +'</div>';
+}
 
 // ═══════════════════════════════════════════════════════════
 //  ASSUMPTIONS VIEW
@@ -2284,7 +2480,7 @@ function renderAssumptionsView() {
     :'';
   var n=S.assumptions.length, nh=S.assumptions.filter(function(a){return a.riskLevel==='hoch';}).length;
   var nc=S.assumptions.filter(function(a){return a.status==='confirmed';}).length;
-  function sc(v,c,l){return '<div style="background:#FFFFFF;border:1px solid '+c+'33;border-radius:8px;padding:8px 14px;text-align:center">'
+  function sc(v,c,l){return '<div style="background:var(--card);border:1px solid '+c+'33;border-radius:8px;padding:8px 14px;text-align:center">'
     +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:'+c+';line-height:1">'+v+'</div>'
     +'<div style="font-size:9.5px;color:#7068A0;font-family:Syne,sans-serif">'+l+'</div></div>';}
   return '<div style="max-width:900px">'
@@ -2306,64 +2502,93 @@ function renderGuide() {
   return `<div style="max-width:760px">
     <div class="gl-header">
         <div class="gl-logo">Entrepreneurship Challenge Lab · Media University</div>
-        <h1>Kurzanleitung für Teams</h1>
-        <div class="gl-sub">Venture Cockpit &amp; Session-Seiten · Stand: Sommersemester 2026</div>
+        <h1>Venture OS — Anleitung</h1>
+        <div class="gl-sub">Euer Operating System fürs Venture · Stand: Sommersemester 2026</div>
       </div>
-    
+
       <div class="gl-leitmotiv">„Ein Venture wird erst dann real, wenn alle Teile zusammenpassen."</div>
-    
-      <h2>Das System in einem Satz</h2>
+
+      <h2>Was das Venture OS ist – und was nicht</h2>
       <p style="font-size:13px;color:#A098C0;margin-bottom:24px">
-        Ihr arbeitet auf den <strong style="color:#FFFFFF">Session-Seiten</strong> (Exploration), ladet dort eure Ergebnisse herunter und übertragt sie per JSON-Import in das <strong style="color:#FFFFFF">Venture Cockpit</strong> (Entscheidung &amp; Integration) – immer nach Feedback durch den Dozenten.
+        Das Venture OS ist <strong style="color:#FFFFFF">nicht eure Sammlung</strong>. Es ist der Ort, an dem aus Einzelteilen ein überzeugendes Venture wird – euer Entscheidungs-, Integrations- und Reflexionsraum für die letzten Sessions, Odoo-Ergebnisse, Prototypen und den finalen Pitch.
       </p>
-    
-      <h2>Pro Session: drei Schritte</h2>
+      <p style="font-size:13px;color:#A098C0;margin-bottom:24px">
+        <strong style="color:#FFFFFF">Alle Bereiche sind jederzeit offen.</strong> Es gibt keine gesperrten Module und keine Reihenfolge – ihr springt zwischen Markt, Produkt, Geschäftsmodell, Operations, Funding und Pitch, genau wie es eure Integrationsarbeit erfordert. Jeder Bereich zeigt seinen Status:
+        ⚪ Noch nicht bearbeitet · 🟡 In Bearbeitung · 🟢 Vollständig.
+      </p>
+
+      <h2>Vom Semester zum Venture OS – die 10 Schritte</h2>
       <div class="gl-steps">
         <div class="gl-step">
-          <div class="gl-step-num">1</div>
+          <div class="gl-step-num">1–3</div>
           <div>
-            <div class="gl-step-title">Session-Seite öffnen &amp; ausfüllen</div>
-            <div class="gl-step-body">Checklisten abhaken, Arbeitsaufträge ausfüllen. Der Fortschritt wird <strong>automatisch im Browser gespeichert</strong> – auch nach dem Schließen des Tabs. Zwischenstand jederzeit per <code>📂 Stand laden</code> auf einem anderen Gerät fortführen.</div>
+            <div class="gl-step-title">Session-Seiten nutzen, Ergebnisse einreichen, Feedback einarbeiten</div>
+            <div class="gl-step-body">Wie bisher: Session-Seite ausfüllen → <code>⬇ Abgabe</code> einreichen → <code>📬 Feedback laden</code> und Anpassungen vornehmen.</div>
           </div>
         </div>
         <div class="gl-step">
-          <div class="gl-step-num">2</div>
+          <div class="gl-step-num">4</div>
           <div>
-            <div class="gl-step-title">Abgabe herunterladen</div>
-            <div class="gl-step-body">Button <code>⬇ Abgabe</code> → JSON-Datei speichern → an den Dozenten einreichen. Ihr erhaltet eine <code>FEEDBACK.json</code> zurück, die ihr per <code>📬 Feedback laden</code> direkt in die Session-Seite ladet.</div>
+            <div class="gl-step-title">Finale Version ins Venture OS übertragen</div>
+            <div class="gl-step-body"><code>⬇ Session-Daten importieren</code> – nur die finale, gefeedbackte Version, keine Rohentwürfe. Danach im jeweiligen Modul überarbeiten und ergänzen.</div>
           </div>
         </div>
         <div class="gl-step">
-          <div class="gl-step-num">3</div>
+          <div class="gl-step-num">5–6</div>
           <div>
-            <div class="gl-step-title">Ins Venture Cockpit importieren</div>
-            <div class="gl-step-body">Nach dem Dozenten-Feedback: Cockpit öffnen → <code>⬇ Session-Daten importieren</code> → eure JSON-Datei wählen. Das System erkennt das Format automatisch. Danach Inhalte im Cockpit <strong>überarbeiten und ergänzen</strong> – nicht nur importieren.</div>
+            <div class="gl-step-title">Odoo-Ergebnisse &amp; Prototypen ergänzen</div>
+            <div class="gl-step-body">Im Bereich <strong>Operations</strong>: Odoo-Link/Screenshots, Prozesse, Organisation, Buchhaltung, App-Erstellung dokumentieren. Im Bereich <strong>Prototype &amp; Produkterlebnis</strong>: Landing Page, MVP, Figma, Video o.ä. verlinken und beschreiben, wie es im Pitch gezeigt wird.</div>
+          </div>
+        </div>
+        <div class="gl-step">
+          <div class="gl-step-num">7</div>
+          <div>
+            <div class="gl-step-title">Venture Health Check durchführen</div>
+            <div class="gl-step-body">8 Kernfragen mit Ampelstatus (Passt / Teilweise / Nicht gelöst) + kurzer Begründung. Zeigt euren Readiness Score und die offenen To-dos vor dem Pitch.</div>
+          </div>
+        </div>
+        <div class="gl-step">
+          <div class="gl-step-num">8–9</div>
+          <div>
+            <div class="gl-step-title">Pitch Center nutzen, offene Lücken schließen</div>
+            <div class="gl-step-body">Die 10-Slide-Pitch-Outline wird automatisch aus euren Modulen befüllt. Fehlende Inhalte werden markiert – dort ansetzen.</div>
+          </div>
+        </div>
+        <div class="gl-step">
+          <div class="gl-step-num">10</div>
+          <div>
+            <div class="gl-step-title">Demo Day vorbereiten</div>
+            <div class="gl-step-body">Die <strong>Demo Day Readiness</strong> prüft alle 5 Bewertungsbereiche (Geschäftsplan, Produkt &amp; Prototype, Odoo, Pitch, Reflexion) mit Ampelstatus 🔴🟡🟢.</div>
           </div>
         </div>
       </div>
-    
+
       <h2>Session-Übersicht</h2>
       <div class="gl-sessions">
-        <div class="gl-sess"><div class="gl-sess-num">S1</div><div class="gl-sess-label">Intro · Startup als System</div></div>
-        <div class="gl-sess importable"><div class="gl-sess-num">S2</div><div class="gl-sess-label">Produkt &amp; Analyse</div><div class="gl-badge">importierbar</div></div>
-        <div class="gl-sess"><div class="gl-sess-num">S3</div><div class="gl-sess-label">Odoo · Produktlogik</div></div>
-        <div class="gl-sess importable"><div class="gl-sess-num">S4</div><div class="gl-sess-label">Geschäftsmodell &amp; Ethik</div><div class="gl-badge">importierbar</div></div>
-        <div class="gl-sess importable"><div class="gl-sess-num">S5</div><div class="gl-sess-label">Kundenvalidierung</div><div class="gl-badge">importierbar</div></div>
-        <div class="gl-sess"><div class="gl-sess-num">S6</div><div class="gl-sess-label">Manufacturing &amp; Services</div></div>
-        <div class="gl-sess importable"><div class="gl-sess-num">S7</div><div class="gl-sess-label">Wachstum &amp; Plattformlogik</div><div class="gl-badge">importierbar</div></div>
-        <div class="gl-sess"><div class="gl-sess-num">S8–11</div><div class="gl-sess-label">Funding · Skalierung · Pitch · Demo Day</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S1</div><div class="gl-sess-label">Intro &amp; Odoo-Einführung</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S2</div><div class="gl-sess-label">Produkt, Markt &amp; AI-Ideation</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S3</div><div class="gl-sess-label">Odoo Lab: Produkt &amp; ERP</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S4</div><div class="gl-sess-label">Geschäftsmodell, Ethik &amp; Finanzen</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S5</div><div class="gl-sess-label">Kundenvalidierung &amp; Evidenz</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess importable"><div class="gl-sess-num">S6</div><div class="gl-sess-label">Wachstum &amp; Netzwerkeffekte</div><div class="gl-badge">importierbar</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S7</div><div class="gl-sess-label">Odoo Lab: Fertigung &amp; Prozesse</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S9</div><div class="gl-sess-label">Odoo Lab: Team, Buchhaltung &amp; App</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S10</div><div class="gl-sess-label">Venture Integration, Funding &amp; Pitch Prep</div></div>
+        <div class="gl-sess"><div class="gl-sess-num">S11</div><div class="gl-sess-label">Demo Day</div></div>
       </div>
-    
-      <h2>Venture Cockpit · Analyse-Bereiche</h2>
+
+      <h2>Venture OS · Integration &amp; Health Check</h2>
       <div class="gl-tools">
         <div class="gl-tool"><div class="gl-tool-icon">🗺</div><div class="gl-tool-name">Logic Map</div><div class="gl-tool-desc">Systemansicht aller Module und ihrer Abhängigkeiten. Zeigt, was noch fehlt.</div></div>
         <div class="gl-tool"><div class="gl-tool-icon">✓</div><div class="gl-tool-name">Konsistenzprüfung</div><div class="gl-tool-desc">6 Modulpaar-Fragen: Passen Produkt, Markt, Modell und Finanzen wirklich zusammen?</div></div>
-        <div class="gl-tool"><div class="gl-tool-icon">⚡</div><div class="gl-tool-name">Reality Check</div><div class="gl-tool-desc">5 Pflichtfelder: Wo könnte das Venture scheitern? Ehrlich ausfüllen – nicht beschönigen.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">🚦</div><div class="gl-tool-name">Venture Health Check</div><div class="gl-tool-desc">8 Kernfragen mit Ampelstatus + Begründung. Liefert euren Readiness Score.</div></div>
         <div class="gl-tool"><div class="gl-tool-icon">📊</div><div class="gl-tool-name">Maturity Score</div><div class="gl-tool-desc">Reifegrad des Ventures in 5 Dimensionen – als strategische Orientierung, nicht als Note.</div></div>
-        <div class="gl-tool"><div class="gl-tool-icon">🎯</div><div class="gl-tool-name">Pitch Mode</div><div class="gl-tool-desc">10 Slides, automatisch aus den Modulen befüllt. Navigation mit ← →.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">🎬</div><div class="gl-tool-name">Pitch Center</div><div class="gl-tool-desc">10-Slide-Outline, automatisch aus den Modulen befüllt. Navigation mit ← →.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">🚀</div><div class="gl-tool-name">Demo Day Readiness</div><div class="gl-tool-desc">5 Bewertungsbereiche mit Checklisten und Ampelstatus 🔴🟡🟢.</div></div>
+        <div class="gl-tool"><div class="gl-tool-icon">⚡</div><div class="gl-tool-name">Reality Check</div><div class="gl-tool-desc">5 Pflichtfelder: Wo könnte das Venture scheitern? Ehrlich ausfüllen – nicht beschönigen.</div></div>
         <div class="gl-tool"><div class="gl-tool-icon">❓</div><div class="gl-tool-name">Kritische Annahmen</div><div class="gl-tool-desc">Annahmen mit Evidenzstärke und Risiko erfassen. Hochrisiko-Felder werden rot markiert.</div></div>
       </div>
-    
+
       <h2>Häufige Fragen</h2>
       <div class="gl-tips">
         <div class="gl-tip">
@@ -2372,25 +2597,26 @@ function renderGuide() {
         </div>
         <div class="gl-tip">
           <div class="gl-tip-q">Import schlägt fehl.</div>
-          <div class="gl-tip-a">Nur eigene Abgabe-JSONs verwenden, keine Feedback-JSONs. Das Cockpit erkennt S2-, S4-, S5- und S7-Formate automatisch.</div>
+          <div class="gl-tip-a">Nur eigene Abgabe-JSONs verwenden, keine Feedback-JSONs. Das Venture OS erkennt S2-, S4-, S5- und S6-Formate automatisch.</div>
         </div>
         <div class="gl-tip">
-          <div class="gl-tip-q">Wann soll ins Cockpit importiert werden?</div>
-          <div class="gl-tip-a">Erst nach Erhalt des Dozenten-Feedbacks. Cockpit-Inhalte sind reflektierte Entscheidungen – keine Rohentwürfe.</div>
+          <div class="gl-tip-q">Wann soll ins Venture OS importiert werden?</div>
+          <div class="gl-tip-a">Erst nach Erhalt des Dozenten-Feedbacks. Inhalte im Venture OS sind reflektierte, finale Entscheidungen – keine Rohentwürfe.</div>
         </div>
         <div class="gl-tip">
-          <div class="gl-tip-q">Modul-Status ändert sich nicht.</div>
-          <div class="gl-tip-a">Status manuell setzen: im Modul oben rechts auf den Status klicken (Entwurf → Importiert → Überarbeitet → Validiert).</div>
+          <div class="gl-tip-q">Was bedeuten die Status-Symbole?</div>
+          <div class="gl-tip-a">⚪ Noch nicht bearbeitet · 🟡 In Bearbeitung · 🟢 Vollständig. Status manuell setzen: im Modul oben rechts klicken. Es gibt keine Sperren – Status zeigt nur euren Fortschritt.</div>
         </div>
       </div>
-    
+
       <div class="gl-footer">
         Designed by Prof. Thomas Petzold Ph.D. and Claude · 2026 &nbsp;·&nbsp;
-        Venture Cockpit: leproftp.github.io/venturecockpit &nbsp;·&nbsp;
+        Venture OS: leproftp.github.io/venturecockpit &nbsp;·&nbsp;
         Bei Fragen: direkt an den Dozenten
       </div>
   </div>`;
 }
+
 
 // ════════════════════════════════════════════════════
 // MENTOR MODE — clean rewrite
@@ -2402,57 +2628,54 @@ const VENTURES = [
    idea:'Premium-Taschenaschenbecher aus Edelstahl für mobile Raucher; dualer B2C/B2B-Kanal (Endkunden & Veranstalter-Bulk)',
    s2:{stars:5, pos:['Stärkste strategische Klarheit im Kurs','Convenience > Eco als Kaufmotiv erkannt','B2B-Festivalkanal als Skalierungspfad identifiziert','B2C/B2B-Preislogik klar unterschieden'], gaps:['Preisvalidierung (18–26 EUR) unbelegt','Drei Varianten = kaum echte Ideation-Breite']},
    s4:{stars:5, pos:['B2B/B2C-Duallogik in alle BMC-Felder integriert','Detailliertster Odoo-Prozess (inkl. Deckungsbeitrag-Steuerung)','Ethik: Brandrisiko & Greenwashing produktspezifisch','Finanzlogik: 1 B2B-Deal deckt Startkapital'], gaps:['Preisvalidierung bleibt einzige offene Kernfrage'], closed:['B2B-Strategie vollständig ausgearbeitet','Finanzierung (Bootstrapping) klar begründet'], open:['Zahlungsbereitschaft 18–26 EUR: kein Markttest']},
-      5:{stars:3, pos:['Analytisch stärkste S5-Einreichung: JTBD, Experiment-Design vorbildlich','Kaufsimulation als Methode korrekt gewählt'], gaps:['Keine einzige Kundenbefragung durchgeführt – Praxisphase leer'], open:['Zahlungsbereitschaft 18–26 EUR bleibt einzige offene Kernfrage']},
-      6:{stars:0, pos:[], gaps:['Wachstumslogik und Netzwerkeffekte nicht eingereicht. Für ein B2B/B2C-Modell mit physischem Produkt wäre Paid Growth die plausibelste Engine; virale Effekte durch sichtbares Nutzen an Festivals möglich, aber strukturell schwach.'], open:['Session nicht eingereicht']}},
+      s5:{stars:3, pos:['Analytisch stärkste S5-Einreichung: JTBD, Experiment-Design vorbildlich','Kaufsimulation als Methode korrekt gewählt'], gaps:['Keine einzige Kundenbefragung durchgeführt – Praxisphase leer'], open:['Zahlungsbereitschaft 18–26 EUR bleibt einzige offene Kernfrage']},
+      s6:{stars:0, pos:[], gaps:['Wachstumslogik und Netzwerkeffekte nicht eingereicht. Für ein B2B/B2C-Modell mit physischem Produkt wäre Paid Growth die plausibelste Engine; virale Effekte durch sichtbares Nutzen an Festivals möglich, aber strukturell schwach.'], open:['Session nicht eingereicht']}},
   {name:'REMI', team:'REMI',
    idea:'KI-Wearable für Alzheimer: erkennt Stimmen vertrauter Personen per Edge-AI und flüstert Namen diskret ins Ohr',
    s2:{stars:3, pos:['Originellstes Konzept im Kurs','Gesellschaftliche Relevanz klar'], gaps:['EU MDR vollständig ignoriert','Marktzahlen ohne Quellenangaben','Kein Odoo-Abschnitt','Stimmerkennung technisch unbeantwortet']},
    s4:{stars:5, pos:['EU MDR vollständig: Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen','Chip-Hersteller konkret benannt (Syntiant, Knowles)','Post-Market Surveillance im BMC','Stärkste Ethik-Analyse: Voice-Cloning-Schutz, Auslaufkriterien','Odoo Subscription-Modul explizit'], gaps:['MDR-Zertifizierung (18–36 Mo.) vs. Runway (15–20 Mo.): Timing-Risiko','CAC nicht modelliert'], closed:['MDR detailliert adressiert','Marktquellen belegt','Odoo integriert','Technologie mit echten Komponenten'], open:['Stimmerkennung unter realen Bedingungen: kein Nachweis']},
-      5:{stars:5, pos:['Vollständigste Annahmen-Analyse (11 Punkte)','Tiefste soziale Einbettung im Kurs','Pivot: Sicherheitssystem > reine Namenserkennung'], gaps:['Nur 3 statt 5 geplante Interviews','Patientenakzeptanz ungeklärt'], open:['Tragebereitschaft der erkrankten Person offen']},
-      7:{stars:5, pos:['Sticky Engine korrekt gewählt und tief begründet','Netzwerkeffekte präzisest analysiert','500–1.000 Kunden als konkreter Onboarding-Schwellwert'], gaps:[], open:['MDR-Timing vs. Runway bleibt strukturelles Risiko']}},
+      s5:{stars:5, pos:['Vollständigste Annahmen-Analyse (11 Punkte)','Tiefste soziale Einbettung im Kurs','Pivot: Sicherheitssystem > reine Namenserkennung'], gaps:['Nur 3 statt 5 geplante Interviews','Patientenakzeptanz ungeklärt'], open:['Tragebereitschaft der erkrankten Person offen']},
+      s7:{stars:5, pos:['Sticky Engine korrekt gewählt und tief begründet','Netzwerkeffekte präzisest analysiert','500–1.000 Kunden als konkreter Onboarding-Schwellwert'], gaps:[], open:['MDR-Timing vs. Runway bleibt strukturelles Risiko']}},
   {name:'ANDONIS', team:'Andrian',
    idea:'Grooming-System mit Health Hub und Gamification für Männer 18–25; Low-Entry-Bundle, Retention über digitale Plattform',
    s2:{stars:2, pos:['Transformationsansatz als Differenzierungskern erkannt','Selbstkritische Marktanalyse'], gaps:['Zwei von drei Produktideen fehlend','Kein Preis definiert','Kein Odoo-Abschnitt']},
    s4:{stars:4, pos:['Preis definiert (29,50 EUR Starter Bundle)','Beste Ethik-Analyse: Dermatologen-Referral, Community-Guidelines','Odoo im Prozess explizit','Health Hub und Quiz-Logik konkret'], gaps:['Kostenstruktur ohne Zahlen','Runway 3–4 Monate sehr knapp'], closed:['Preis definiert','KI-Konzept konkretisiert','Odoo eingebunden'], open:['Kostenstruktur ohne Zahlen','Runway zu knapp']},
-      5:{stars:3, pos:['Preislücke empirisch bestätigt: Zahlungsbereitschaft 12–25 EUR vs. Ziel 29–35 EUR','3 Interviews mit Männern, nicht die eigene Zielgruppe','"Social Proof ist der eigentliche Kauftrigger" – echte Erkenntnis'], gaps:['Preislücke strukturell ungelöst','Community-Retention weiterhin ungetestet','Free-Trial-Strategie erhöht Runway-Druck'], open:['Zahlungsbereitschaft vor Demo Day ungelöst']},
-      6:{stars:0, pos:[], gaps:['Nicht eingereicht. Wachstums- und Plattformlogik für eine Skin-App wäre am ehesten Paid Growth (Social Ads, Influencer) kombiniert mit Sticky-Mechanismen (Tracking, Streaks). Netzwerkeffekte minimal.'], open:['Session nicht eingereicht']}},
+      s5:{stars:3, pos:['Preislücke empirisch bestätigt: Zahlungsbereitschaft 12–25 EUR vs. Ziel 29–35 EUR','3 Interviews mit Männern, nicht die eigene Zielgruppe','"Social Proof ist der eigentliche Kauftrigger" – echte Erkenntnis'], gaps:['Preislücke strukturell ungelöst','Community-Retention weiterhin ungetestet','Free-Trial-Strategie erhöht Runway-Druck'], open:['Zahlungsbereitschaft vor Demo Day ungelöst']},
+      s6:{stars:0, pos:[], gaps:['Nicht eingereicht. Wachstums- und Plattformlogik für eine Skin-App wäre am ehesten Paid Growth (Social Ads, Influencer) kombiniert mit Sticky-Mechanismen (Tracking, Streaks). Netzwerkeffekte minimal.'], open:['Session nicht eingereicht']}},
   {name:'WasteLess', team:'WasteLess',
    idea:'Smarter Lebensmittelbehälter mit Sensor-Deckel: misst Frischeprozesse chemisch und zeigt Genießbarkeit visuell',
    s2:{stars:2, pos:['Gesellschaftliche Relevanz (10,8 Mio. t Food Waste/Jahr DE)','Starke Pitch-Statistiken'], gaps:['Sensor bei 14,90 EUR nicht realisierbar','Kein Odoo','Technologiemachbarkeit offen']},
    s4:{stars:4, pos:['Preis auf 39,90 EUR Set angehoben','Vollständigste Abgabe im Kurs','Detailliertster Odoo-Ablauf','Selbstkritisch: Technologie als Engpassressource benannt'], gaps:['Sensor-Machbarkeit bei Zielpreis offen – Make-or-Break'], closed:['Preis realistisch angehoben','Odoo vollständig','Canvas substanziell'], open:['Sensor <20 EUR Produktionskosten: Validierung fehlt']},
-      5:{stars:3, pos:['Experten-Interview: Technologie prinzipiell verfügbar (LLM-Training der Sensorik)','Kein Silicon im Behälter als konkreter Materialhinweis','Leihmodell als neue Erlöslogik-Option erstmals erwähnt'], gaps:['Nur 1 Interview – kein einziges Kundengespräch','50 EUR Schmerzgrenze vom Experten bestätigt: zu nah am Zielpreis','Kundenseitige Zahlungsbereitschaft bleibt vollständig ungetestet'], open:['Kundenbefragung dringend nachzuholen vor Demo Day']},
-      6:{stars:0, pos:[], gaps:['Nicht eingereicht. Wachstum hängt fundamental vom Technologievalidierungsproblem ab – ohne gelöste Sensorik keine Skalierungslogik. Paid Growth über D2C naheliegend.'], open:['Session nicht eingereicht']}},
+      s5:{stars:3, pos:['Experten-Interview: Technologie prinzipiell verfügbar (LLM-Training der Sensorik)','Kein Silicon im Behälter als konkreter Materialhinweis','Leihmodell als neue Erlöslogik-Option erstmals erwähnt'], gaps:['Nur 1 Interview – kein einziges Kundengespräch','50 EUR Schmerzgrenze vom Experten bestätigt: zu nah am Zielpreis','Kundenseitige Zahlungsbereitschaft bleibt vollständig ungetestet'], open:['Kundenbefragung dringend nachzuholen vor Demo Day']},
+      s6:{stars:0, pos:[], gaps:['Nicht eingereicht. Wachstum hängt fundamental vom Technologievalidierungsproblem ab – ohne gelöste Sensorik keine Skalierungslogik. Paid Growth über D2C naheliegend.'], open:['Session nicht eingereicht']}},
   {name:'DOOOZE', team:'DOOOZE',
    idea:'Weiches Haarband als externe Ohrenlösung für besseren Schlaf durch Lärmreduktion ohne Ohrstöpsel',
    s2:{stars:4, pos:['Professionellster Auftritt im Kurs','Vollständigste S2-Abgabe inkl. Odoo','Workarounds präzise identifiziert'], gaps:['Akustische Kernfrage offen: dB-Leistung von Stoff außen am Ohr?']},
    s4:{stars:3, pos:['Bootstrapping richtig gewählt','Ethik: Risiko überhöhter Erwartungen direkt adressiert','Klare Kommunikationsstrategie: Reduktion ≠ Isolation'], gaps:['Akustische Funktion weiterhin unbewiesen','Runway 2,5 Mo. sehr knapp'], closed:['Risikokommunikation explizit formuliert','Finanzierung begründet'], open:['dB-Nachweis fehlt – einfacher Vergleichstest würde klären']},
-      5:{stars:2, pos:['Kritischste Erkenntnis im Kurs: Nutzer wollen maximale Isolation'], gaps:['9 Checks fehlen','Konsequenz des Pivots nicht durchdacht'], open:['Produktkategorie: Lifestyle vs. Schlafhelfer – Entscheidung fehlt']},
-      7:{stars:3, pos:['Paid Engine ehrlich und korrekt','Odoo-Vorbereitung vollständigste Liste im Kurs'], gaps:['Positionierungsfrage offen'], open:['Was ist DOOOZE? Entscheidung vor Demo Day nötig']}},
+      s5:{stars:2, pos:['Kritischste Erkenntnis im Kurs: Nutzer wollen maximale Isolation'], gaps:['9 Checks fehlen','Konsequenz des Pivots nicht durchdacht'], open:['Produktkategorie: Lifestyle vs. Schlafhelfer – Entscheidung fehlt']},
+      s7:{stars:3, pos:['Paid Engine ehrlich und korrekt','Odoo-Vorbereitung vollständigste Liste im Kurs'], gaps:['Positionierungsfrage offen'], open:['Was ist DOOOZE? Entscheidung vor Demo Day nötig']}},
   {name:'StilMittel', team:'StilMittel',
    idea:'Design-Aufwertung und Entstigmatisierung von Gehhilfen für Senioren; Produkte, Zubehör und Beratung',
    s2:{stars:2, pos:['Gründlichste Wettbewerbsanalyse im Kurs','Stigma als eigentliches Kernproblem erkannt','Zwei Personas sauber getrennt'], gaps:['EU MDR vollständig ignoriert','Portfolio-Breite nicht managebar','Kein Pitch, kein Odoo']},
    s4:{stars:3, pos:['MDR korrekt eingeordnet','Burn-Rate konkret (10.316 → 6.600 EUR)','Wachstumsannahme mit Prozentzahl transparent'], gaps:['BMC-Felder teils Platzhalter','Prozessdesign Schritt 2 = ein Satz','Ethik mit Einzeilern'], closed:['MDR anerkannt','Finanzstruktur hinterlegt'], open:['BMC-Konkretisierung ausstehend','5%-Conversion-Annahme unvalidiert']},
-      5:{stars:5, pos:['Beste Evidenzarbeit: 7 Interviews inkl. 2 negative Seniorinnen','Pivot: 20–65 (Unfall/Krankheit) statt 65+'], gaps:['Pivot erfordert BMC-Neuaufbau'], open:['BMC für neue Zielgruppe noch nicht erstellt']},
-      7:{stars:3, pos:['Supply-Chain-Engpass korrekt','Odoo-Liste konkret'], gaps:['Viral Engine fragwürdig für Dienstleistungsmodell','4 Netzwerkeffekte zu optimistisch'], open:['Growth Engine-Wahl überprüfen: Sticky/Paid plausibler']}},
+      s5:{stars:5, pos:['Beste Evidenzarbeit: 7 Interviews inkl. 2 negative Seniorinnen','Pivot: 20–65 (Unfall/Krankheit) statt 65+'], gaps:['Pivot erfordert BMC-Neuaufbau'], open:['BMC für neue Zielgruppe noch nicht erstellt']},
+      s7:{stars:3, pos:['Supply-Chain-Engpass korrekt','Odoo-Liste konkret'], gaps:['Viral Engine fragwürdig für Dienstleistungsmodell','4 Netzwerkeffekte zu optimistisch'], open:['Growth Engine-Wahl überprüfen: Sticky/Paid plausibler']}},
   {name:'VEIL', team:'VEIL / Selin',
    idea:'Fashion-first Perioden-Bikini mit unsichtbarem Schutz; Style-Brand, kein Medizinprodukt',
    s2:{stars:2, pos:['Echter und wachsender Markt','Fashion-Brand-Instinkt als Differenzierungshebel'], gaps:['Kundenbefund = ein Satz','Kein Preis, kein Odoo','MDR offen']},
    s4:{stars:3, pos:['Preise definiert (Top 25, Bottom 35, Set 60 EUR)','Produktionspartner konkret benannt','ModiBodi ehrlich als überlegen anerkannt'], gaps:['Finanzwiderspruch: 200K vs. 20K Startkapital im selben Dokument','MDR nicht beantwortet'], closed:['Preise hinterlegt','Odoo beschrieben'], open:['Finanzwiderspruch muss aufgelöst werden','Differenzierung zu ModiBodi offen']},
-      5:{stars:0, pos:[], gaps:['S5 nicht eingereicht – keine Kundenvalidierung durchgeführt'], open:['Finanzwiderspruch 200K vs. 20K aus S4 weiterhin offen','Differenzierung zu ModiBodi noch nicht inhaltlich belegt']},
-      7:{stars:5, pos:['Stärkste Viral-Engine-Begründung im Kurs','Ehrlichste Netzwerkeffekt-Analyse'], gaps:['K-Faktor bei Tabuthema ungetestet'], open:['Zweiten Produzenten aufbauen – dringendste Priorität']}},
+      s7:{stars:5, pos:['Stärkste Viral-Engine-Begründung im Kurs','Ehrlichste Netzwerkeffekt-Analyse'], gaps:['K-Faktor bei Tabuthema ungetestet'], open:['Zweiten Produzenten aufbauen – dringendste Priorität']}},
   {name:'EasyWine', team:'EasyWine',
    idea:'Online-Weinshop für Einsteiger: kuratierte Auswahl, einfache Sprache, kein Fachwissen nötig',
    s2:{stars:3, pos:['Sauberste Dokumentation im Kurs','Bestes Peer-Feedback','Pain Points gut beobachtet'], gaps:['Vivino: 65 Mio. Nutzer, löst exakt dasselbe gratis','Kein Wettbewerber mit Namen','Händler vs. eigene Marke ungeklärt']},
-      4:{stars:0, pos:[], gaps:['S4 nicht eingereicht – kein Geschäftsmodell, keine Prozesse, keine Ethikanalyse'], open:['Vivino-Differenzierung (65 Mio. Nutzer, kostenlos) unbeantwortet']},
-      5:{stars:0, pos:[], gaps:['S5 nicht eingereicht – keine Interviews, keine Kundenvalidierung'], open:['Keine Evidenz für Zahlungsbereitschaft vorhanden']},
-      6:{stars:0, pos:[], gaps:['Nicht eingereicht. Kein S4, S5 oder S6 vorhanden.'], open:['Session nicht eingereicht']},
+      s6:{stars:0, pos:[], gaps:['Nicht eingereicht. Kein S4, S5 oder S6 vorhanden.'], open:['Session nicht eingereicht']},
    s4:null},
   {name:'WorkFlowWerk', team:'WorkFlowWerk',
    idea:'Plattform-Agentur-Hybrid für KI-Automation-Freelancer im DACH-Raum; S/M/L-Pakete, DSGVO, EXIST-Förderung',
    s2:{stars:4, pos:['Stärkste B2B-Analyse im Kurs','Porter korrekt angewendet','AutoAudit DACH als Lead-Generator erkannt'], gaps:['Cold-Start-Problem ungelöst','Odoo fast leer','Preis/Einheit identisch (copy-paste)']},
    s4:{stars:4, pos:['S/M/L-Preispakete mit Margenangaben – Einheitenökonomik klar','Freelancer-Netzwerk konkret (Polen, 70 EUR/h)','QA mit synthetischen Testdaten – innovativ','EXIST-Förderung als Runway-Brücke','Anthropic als existenzielle Bedrohung ehrlich erkannt'], gaps:['Cold-Start-Problem weiterhin vollständig offen','Channels: nur zwei Wörter','Autonomie-Ethik: "Ich verstehe die Frage nicht"'], closed:['Preislogik ausgearbeitet','EXIST als Finanzierungsstrategie','Odoo integriert'], open:['Cold-Start: Wer ist zuerst da – Freelancer oder Unternehmen?']},
-      5:{stars:0, pos:[], gaps:['Kein S5 eingereicht – keine Kundenvalidierung durchgeführt','Cold-Start-Problem (Hühnerei Freelancer vs. Unternehmen) weiterhin ungelöst'], open:['Validierung fehlt vollständig']},
-      6:{stars:0, pos:[], gaps:['Nicht eingereicht. Cold-Start-Problem für eine B2B-Plattform bleibt das zentrale Wachstumshemmnis – ohne gelösten Kaltstart keine Skalierungslogik.'], open:['Session nicht eingereicht']}},
+      s5:{stars:0, pos:[], gaps:['Kein S5 eingereicht – keine Kundenvalidierung durchgeführt','Cold-Start-Problem (Hühnerei Freelancer vs. Unternehmen) weiterhin ungelöst'], open:['Validierung fehlt vollständig']},
+      s6:{stars:0, pos:[], gaps:['Nicht eingereicht. Cold-Start-Problem für eine B2B-Plattform bleibt das zentrale Wachstumshemmnis – ohne gelösten Kaltstart keine Skalierungslogik.'], open:['Session nicht eingereicht']}},
 ];
 
 function initMentorMode(){
@@ -2477,13 +2700,13 @@ function _showMentor(mentorApp, authed){
 
   if(!authed){
     area.innerHTML=`
-      <div style="max-width:340px;margin:80px auto;background:#1A1728;border:1px solid rgba(180,160,220,.15);border-radius:12px;padding:36px;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.5)">
+      <div style="max-width:340px;margin:80px auto;background:var(--card);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:36px;text-align:center">
         <div style="font-size:40px;margin-bottom:14px">🔐</div>
-        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#E8E4F0;margin-bottom:8px">Mentor-Zugang</div>
+        <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;color:#fff;margin-bottom:8px">Mentor-Zugang</div>
         <div style="font-size:13px;color:#8878B8;margin-bottom:22px">Passwort eingeben um alle Ventures zu sehen</div>
         <input id="mpw" type="password" placeholder="Passwort…"
-          style="width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(180,160,220,.25)5);border-radius:6px;
-          color:#E8E4F0;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
+          style="width:100%;background:rgba(25,20,50,.08);border:1px solid rgba(255,255,255,.15);border-radius:6px;
+          color:#fff;font-size:15px;padding:10px 13px;outline:none;margin-bottom:12px;box-sizing:border-box">
         <button id="mbtn"
           style="width:100%;padding:11px;background:linear-gradient(135deg,#C87C38,#D4924A);color:#111;
           border:none;border-radius:6px;font-family:'Syne',sans-serif;font-weight:800;font-size:14px;cursor:pointer">
@@ -2509,8 +2732,7 @@ function _showMentor(mentorApp, authed){
     let s='';for(let i=0;i<5;i++)s+='<span style="color:'+(i<n?'#C87C38':'#221F30')+'">★</span>';return s;}
 
   function sessionBlock(label, sd){
-    if(!sd||sd.stars===undefined) return `<div style="padding:10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:11px;color:#8878B8;font-style:italic">Keine Daten für ${label}</div>`;
-    if(sd.stars===0&&!(sd.pos&&sd.pos.length)&&!(sd.closed&&sd.closed.length)) return `<div style="padding:10px 12px;background:rgba(200,120,56,.07);border:1px solid rgba(200,120,56,.2);border-radius:6px;margin-bottom:8px"><div style="font-size:10px;font-family:'Syne',sans-serif;font-weight:700;color:#C87C38;margin-bottom:4px">${label}</div>${(sd.gaps||[]).map(g=>'<div style="font-size:11px;color:#A090C0;padding:1px 0">⚠ '+g+'</div>').join('')}${(sd.open||[]).map(o=>'<div style="font-size:11px;color:#8878B8;padding:1px 0">△ '+o+'</div>').join('')}</div>`;
+    if(!sd) return `<div style="padding:10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:11px;color:#8878B8;font-style:italic">Keine Einreichung für ${label}</div>`;
     let html=`<div style="background:rgba(255,255,255,.05);border-radius:8px;padding:10px 12px;margin-bottom:8px">`;
     html+=`<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
       <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:10px;letter-spacing:.1em;color:#8878B8">${label}</span>
@@ -2529,8 +2751,8 @@ function _showMentor(mentorApp, authed){
 
   let html=`<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px">
     <div>
-      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#E8E4F0">Venture-Übersicht · ${VENTURES.length} Teams</div>
-      <div style="font-size:12px;color:#8878B8;margin-top:3px">S2 · S4 · S5 · S6 · Feedbackstand Juni 2026</div>
+      <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff">Venture-Übersicht · ${VENTURES.length} Teams</div>
+      <div style="font-size:12px;color:#8878B8;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
     </div>
     <div style="display:flex;gap:14px;font-size:11px;color:#8878B8;flex-wrap:wrap">
       <span><span style="color:#34D399">●</span> Stärke</span>
@@ -2541,10 +2763,10 @@ function _showMentor(mentorApp, authed){
   </div>`;
 
   VENTURES.forEach(v=>{
-    html+=`<div style="background:#1A1728;border:1px solid rgba(180,160,220,.12);border-radius:12px;overflow:hidden;margin-bottom:14px">
+    html+=`<div style="background:var(--card);border:1px solid rgba(180,160,220,.1);border-radius:12px;overflow:hidden;margin-bottom:14px">
       <div style="display:grid;grid-template-columns:220px 1fr">
         <div style="padding:18px 20px;border-right:1px solid rgba(180,160,220,.1)">
-          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#E8E4F0;margin-bottom:3px">${v.name}</div>
+          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:16px;color:#fff;margin-bottom:3px">${v.name}</div>
           <div style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#2A7E7E;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:8px">${v.team}</div>
           <div style="font-size:12px;color:#8878B8;line-height:1.55">${v.idea}</div>
         </div>
@@ -2690,7 +2912,7 @@ function _showMentor(mentorApp, authed){
             const active = n<=val;
             return '<button onclick="_mRate(\''+team+'\',\''+it.id+'\','+n+')" style="width:30px;height:30px;border-radius:6px;border:1.5px solid '+(active?'rgba(200,124,56,.7)':'rgba(25,20,50,.12)')+';background:'+(active?'rgba(200,124,56,.18)':'none')+';color:'+(active?'#C87C38':'#4A3A5A')+';font-family:Syne,sans-serif;font-weight:800;font-size:13px;cursor:pointer;transition:all .15s">'+n+'</button>';
           }).join('');
-          return '<div style="background:rgba(25,20,50,.04);border-radius:9px;padding:12px 14px;margin-bottom:7px">'
+          return '<div style="background:rgba(255,255,255,.04);border-radius:9px;padding:12px 14px;margin-bottom:7px">'
             +'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">'
             +'<div><div style="font-family:Syne,sans-serif;font-weight:700;font-size:12.5px;color:#FFFFFF;margin-bottom:3px">'+it.label+'</div>'
             +'<div style="font-size:11px;color:#6A6080;line-height:1.45">'+it.q+'</div></div>'
@@ -2710,7 +2932,7 @@ function _showMentor(mentorApp, authed){
       +'</div>'
     ).join('');
 
-    return '<div style="background:#FFFFFF;border:1px solid rgba(25,20,50,.1);border-radius:14px;overflow:hidden">'
+    return '<div style="background:var(--card);border:1px solid rgba(25,20,50,.1);border-radius:14px;overflow:hidden">'
       // Score bar
       +'<div style="background:'+level.col+'18;border-bottom:1px solid '+level.col+'33;padding:16px 22px;display:flex;align-items:center;gap:16px">'
       +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:36px;color:'+level.col+';line-height:1">'+totalScore+'<span style="font-size:16px;color:'+level.col+'88">/45</span></div>'
@@ -2740,7 +2962,7 @@ function _showMentor(mentorApp, authed){
         const r = getRatings(v.team);
         const filled = CRITERIA.reduce((a,s)=>a+s.items.filter(it=>parseInt(r[it.id])>0).length,0);
         const total = CRITERIA.reduce((a,s)=>a+s.items.length,0);
-        return '<div style="background:#FFFFFF;border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:12px 14px;cursor:pointer" onclick="document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\')?document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\').scrollIntoView({behavior:\'smooth\'}):null">'
+        return '<div style="background:var(--card);border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:12px 14px;cursor:pointer" onclick="document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\')?document.getElementById(\'mr-'+v.team.replace(/\W/g,'')+'\').scrollIntoView({behavior:\'smooth\'}):null">'
           +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:13px;color:#FFFFFF;margin-bottom:4px">'+v.name+'</div>'
           +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:22px;color:'+lv.col+';line-height:1">'+sc+'<span style="font-size:11px;color:'+lv.col+'55">/45</span></div>'
           +'<div style="font-size:10px;color:#6A6080;margin-top:3px">'+filled+'/'+total+' Kriterien bewertet</div>'
