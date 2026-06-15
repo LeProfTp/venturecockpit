@@ -1121,7 +1121,11 @@ function renderSidebar() {
 function resetVentureOS(){
   if(!confirm('Venture OS wirklich zurücksetzen?\n\nAlle Module, Annahmen, Health Check, Demo Day Status und Fotos werden unwiderruflich gelöscht. Tipp: vorher unter "Businessplan" als JSON exportieren.')) return;
   try{ localStorage.removeItem(STORE); }catch{}
-  location.hash=''; location.reload();
+  try{ sessionStorage.removeItem('ecl-mentor-auth'); sessionStorage.removeItem('ecl-mentor-ratings'); }catch{}
+  S = defaultState();
+  importPreview = null;
+  navigate('dashboard');
+  toast('🗑 Venture OS zurückgesetzt','#5ABF8C');
 }
 
 // ═══════════════════════════════════════════════════════════
