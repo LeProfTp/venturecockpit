@@ -45,6 +45,10 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;
   color:var(--dim);font-family:'Syne',sans-serif;font-weight:700;margin-bottom:4px}
 .sb-name{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;
   color:var(--text);line-height:1.2;word-break:break-word}
+.sb-name-input{font-family:'Syne',sans-serif;font-weight:800;font-size:15px;
+  color:var(--text);line-height:1.2;background:transparent;border:none;border-bottom:1px dashed rgba(180,160,220,.25);
+  width:100%;padding:0 0 2px;outline:none}
+.sb-name-input:focus{border-bottom-color:var(--gold)}
 .sb-tag{font-size:11px;color:var(--dim);margin-top:2px}
 .sb-progress{margin-top:10px}
 .sb-prog-row{display:flex;justify-content:space-between;font-size:9.5px;
@@ -318,7 +322,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 /* Toast */
 #toasts{position:fixed;bottom:20px;right:18px;z-index:999;
   display:flex;flex-direction:column;gap:7px;pointer-events:none}
-.toast{background:rgba(255,255,255,.95);backdrop-filter:blur(16px);
+.toast{background:rgba(26,23,40,.96);backdrop-filter:blur(16px);
   border:1px solid var(--border-md);border-left-width:3px;
   padding:9px 14px;border-radius:var(--r-xs);font-size:12.5px;
   color:var(--text);max-width:280px;
@@ -457,13 +461,13 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .maturity-score-label{font-size:11px;color:#5A5280;text-align:center;font-family:'Syne',sans-serif}
 
 /* Pitch Mode */
-.pitch-mode-wrap{background:#F4F1EB;border-radius:12px;overflow:hidden;min-height:500px}
+.pitch-mode-wrap{background:#13111C;border:1px solid rgba(180,160,220,.1);border-radius:12px;overflow:hidden;min-height:500px}
 .pitch-slide{display:none;min-height:480px;padding:52px 56px;flex-direction:column;justify-content:center}
 .pitch-slide.active{display:flex}
-.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#5A5280;margin-bottom:14px}
+.pitch-slide-num{font-family:'Syne',sans-serif;font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .pitch-slide-title{font-family:'Syne',sans-serif;font-weight:800;font-size:32px;color:#FFFFFF;margin-bottom:22px;line-height:1.15}
-.pitch-slide-body{font-size:15px;color:#8DA5B8;line-height:1.75;flex:1;white-space:pre-wrap}
-.pitch-slide-empty{font-size:13px;color:#DDD8CC;font-style:italic}
+.pitch-slide-body{font-size:15px;color:var(--text);line-height:1.75;flex:1;white-space:pre-wrap}
+.pitch-slide-empty{font-size:13px;color:var(--dim);font-style:italic}
 .pitch-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:rgba(25,20,50,.06);border-top:1px solid rgba(255,255,255,.05)}
 .pitch-nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#5A5280;padding:7px 16px;border-radius:6px;cursor:pointer;font-family:'Syne',sans-serif;font-weight:700;font-size:11px;transition:all .18s}
 .pitch-nav-btn:hover:not(:disabled){background:rgba(255,255,255,.1);color:#FFFFFF}
@@ -484,7 +488,7 @@ textarea,input{background:none;color:var(--text);font-family:inherit}
 .evo-step:last-child{border-right:none}
 .evo-step-label{font-size:9px;text-transform:uppercase;letter-spacing:.12em;font-family:'Syne',sans-serif;font-weight:700;margin-bottom:6px}
 .evo-step-text{font-size:12px;color:#8DA5B8;line-height:1.55;white-space:pre-wrap}
-.evo-step-empty{font-size:11px;color:#DDD8CC;font-style:italic}
+.evo-step-empty{font-size:11px;color:var(--dim);font-style:italic}
 
 /* Assumptions enhanced */
 .assump-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
@@ -509,8 +513,8 @@ h1{font-family:'Syne',sans-serif;font-weight:800;font-size:26px;color:#FFFFFF;li
 .gl-leitmotiv{background:rgba(42,126,126,.07);border-left:3px solid #2A7E7E;
   padding:12px 16px;border-radius:0 8px 8px 0;margin:28px 0;
   font-family:'Syne',sans-serif;font-weight:700;font-size:14px;color:#2A7E7E;font-style:italic}
-h2{font-family:'Syne',sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;
-  letter-spacing:.14em;color:#5A5280;margin:28px 0 12px}
+.gl-header~h2{font-family:'Syne',sans-serif;font-weight:800;font-size:14px;text-transform:uppercase;
+  letter-spacing:.14em;color:#E8E4F0;margin:28px 0 12px;border-bottom:1px solid rgba(180,160,220,.15);padding-bottom:8px}
 .gl-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
 .gl-step{display:flex;gap:14px;align-items:flex-start;background:var(--card);
   border:1px solid rgba(25,20,50,.08);border-radius:10px;padding:14px 16px}
@@ -1017,7 +1021,7 @@ function renderSidebar() {
   document.getElementById('sidebar').innerHTML=`
     <div class="sb-venture">
       <div class="sb-label">Venture OS</div>
-      <div class="sb-name">${esc(vname)}</div>
+      <input class="sb-name-input" id="sb-name-input" value="${esc(vname)}" placeholder="Venture-Name eintragen…">
       ${S.venture.tagline?`<div class="sb-tag">${esc(S.venture.tagline)}</div>`:''}
       <div class="sb-progress">
         <div class="sb-prog-row"><span>Fortschritt</span><span>${oc}%</span></div>
@@ -1083,7 +1087,7 @@ function renderSidebar() {
         <span class="sb-icon">🎬</span>Pitch Outline
       </a>
       <a class="sb-item${currentRoute==='output/businessplan'?' active':''}" href="#output/businessplan">
-        <span class="sb-icon">📄</span>Businessplan-Export
+        <span class="sb-icon">📄</span>Businessplan
       </a>
     </div>
     <div class="sb-section">
@@ -1102,6 +1106,9 @@ function renderSidebar() {
   `;
 
   document.getElementById('sb-import')?.addEventListener('click',openImportModal);
+  document.getElementById('sb-name-input')?.addEventListener('input',e=>{
+    S.venture.name=e.target.value; S.setupDone=true; debouncedSave();
+  });
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -1283,6 +1290,22 @@ function renderDashboard() {
 // ═══════════════════════════════════════════════════════════
 //  MODULE VIEW
 // ═══════════════════════════════════════════════════════════
+
+function renderPhotoUpload(mstate){
+  const photos = mstate.photos||[];
+  const thumbs = photos.map((p,i)=>'<div style="position:relative;width:84px;height:84px;border-radius:8px;overflow:hidden;border:1px solid rgba(180,160,220,.15)">'
+    +'<img src="'+p+'" style="width:100%;height:100%;object-fit:cover;display:block">'
+    +'<button data-photo-del="'+i+'" style="position:absolute;top:3px;right:3px;width:20px;height:20px;border-radius:50%;border:none;background:rgba(0,0,0,.55);color:#fff;cursor:pointer;font-size:11px;line-height:1">✕</button>'
+    +'</div>').join('');
+  return '<div class="card" style="margin-top:14px">'
+    +'<div class="card-header"><div class="card-icon">📷</div><div class="card-title">Fotos / Screenshots</div></div>'
+    +'<div class="card-body" style="display:flex;flex-direction:column;gap:12px">'
+    +'<div class="field-hint">Ein oder mehrere Fotos des Prototyps/Produkts hochladen (z.B. für den Pitch). Bilder werden lokal im Browser gespeichert.</div>'
+    +(thumbs?'<div style="display:flex;gap:10px;flex-wrap:wrap">'+thumbs+'</div>':'')
+    +'<label class="btn btn-ghost btn-sm" style="cursor:pointer;width:fit-content">+ Foto(s) hochladen<input type="file" id="photo-upload-input" accept="image/*" multiple style="display:none"></label>'
+    +'</div></div>';
+}
+
 function renderModule(mid) {
   const mod=MODULES.find(m=>m.id===mid);
   if(!mod) return `<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-text">Modul nicht gefunden</div></div>`;
@@ -1349,6 +1372,7 @@ function renderModule(mid) {
           <div class="card-header"><div class="card-icon">📝</div><div class="card-title">Aktuelle Version</div></div>
           <div class="card-body" style="display:flex;flex-direction:column;gap:14px">${fields}</div>
         </div>
+        ${mid==='prototype'?renderPhotoUpload(mstate):''}
       </div>
       <div class="mod-right">
         <!-- Feedback Integration -->
@@ -1414,81 +1438,35 @@ function renderOutput(type) {
 }
 
 function renderBusinessPlanOutput() {
-  const sections = [
-    {title:'1. Zusammenfassung',mc:'#2A7E7E',blocks:[
-      {mod:'produkt',fid:'productName',label:'Produktname'},
-      {mod:'produkt',fid:'description',label:'Kurzbeschreibung'},
-      {mod:'geschaeftsmodell',fid:'valueProposition',label:'Value Proposition'},
-    ]},
-    {title:'2. Problem & Kunde',mc:'#F472B6',blocks:[
-      {mod:'kunden',fid:'customerProfiles',label:'Kundenprofile'},
-      {mod:'kunden',fid:'painPoints',label:'Pain Points'},
-      {mod:'kunden',fid:'motivation',label:'Kaufmotivation'},
-      {mod:'kunden',fid:'validationStatus',label:'Validierungsstand'},
-    ]},
-    {title:'3. Produkt',mc:'#2A7E7E',blocks:[
-      {mod:'produkt',fid:'description',label:'Produktbeschreibung'},
-      {mod:'produkt',fid:'targetGroup',label:'Zielkund:in'},
-      {mod:'produkt',fid:'priceModel',label:'Preislogik'},
-      {mod:'produkt',fid:'differenzierung',label:'Differenzierung'},
-    ]},
-    {title:'4. Markt & Kontext',mc:'#818CF8',blocks:[
-      {mod:'markt',fid:'marketOverview',label:'Marktübersicht'},
-      {mod:'markt',fid:'competition',label:'Wettbewerb'},
-      {mod:'markt',fid:'trends',label:'Trends & Technologie'},
-      {mod:'markt',fid:'regulation',label:'Regulierung'},
-    ]},
-    {title:'5. Geschäftsmodell',mc:'#C87C38',blocks:[
-      {mod:'geschaeftsmodell',fid:'valueProposition',label:'Value Proposition'},
-      {mod:'geschaeftsmodell',fid:'revenueModel',label:'Erlösmodell'},
-      {mod:'geschaeftsmodell',fid:'keyActivities',label:'Kernaktivitäten'},
-      {mod:'geschaeftsmodell',fid:'keyPartners',label:'Schlüsselpartner'},
-      {mod:'geschaeftsmodell',fid:'costStructure',label:'Kostenstruktur'},
-    ]},
-    {title:'6. Operations',mc:'#34D399',blocks:[
-      {mod:'operations',fid:'step1',label:'Kunde & Problem'},
-      {mod:'operations',fid:'step2',label:'Transformation'},
-      {mod:'operations',fid:'step3',label:'Angebot'},
-      {mod:'operations',fid:'step4',label:'Umsatz'},
-    ]},
-    {title:'7. Ethik & Verantwortung',mc:'#A78BFA',blocks:[
-      {mod:'ethik',fid:'risks',label:'Identifizierte Risiken'},
-      {mod:'ethik',fid:'countermeasures',label:'Gegenmaßnahmen'},
-    ]},
-    {title:'8. Finanzen',mc:'#FBBF24',blocks:[
-      {mod:'finanzen',fid:'revenue',label:'Einnahmen'},
-      {mod:'finanzen',fid:'costs',label:'Kosten'},
-      {mod:'finanzen',fid:'burnRate',label:'Burn Rate'},
-      {mod:'finanzen',fid:'runway',label:'Runway'},
-      {mod:'finanzen',fid:'financing',label:'Finanzierung'},
-    ]},
-    {title:'9. Wachstum',mc:'#FB923C',blocks:[
-      {mod:'wachstum',fid:'channels',label:'Vertriebskanäle'},
-      {mod:'wachstum',fid:'growthPath',label:'Wachstumspfad'},
-    ]},
-  ];
-
-  const sectionsHtml=sections.map(sec=>{
-    const blocks=sec.blocks.map(b=>{
-      const val=(S.modules[b.mod]?.fields[b.fid]||'').trim();
-      return `<div class="output-block" style="--mc:${sec.mc}">
-        <div class="output-label">${b.label}</div>
-        ${val?`<div class="output-text">${esc(val)}</div>`:`<div class="output-empty">Noch nicht ausgefüllt → <a href="#modul/${b.mod}" style="color:var(--gold)">Modul öffnen</a></div>`}
-      </div>`;}).join('');
-    return `<div class="output-section" style="--mc:${sec.mc}">
-      <div class="output-section-title" style="color:${sec.mc}">${sec.title}</div>
-      ${blocks}
-    </div>`;}).join('');
-
   return `
     <div class="breadcrumb"><a href="#dashboard" style="color:var(--dim);text-decoration:none">Dashboard</a> / Businessplan</div>
     <div class="page-header">
       <div><div class="page-title">📄 Businessplan</div>
-        <div class="page-sub">Automatisch generiert aus allen Modulen · ${now()}</div></div>
-      <button class="btn btn-gold" onclick="downloadBusinessPlan()">⬇ Als HTML herunterladen</button>
+        <div class="page-sub">Individuell erstellt durch den Dozenten</div></div>
     </div>
-    <div style="max-width:720px">${sectionsHtml}</div>`;
+    <div class="card" style="max-width:620px">
+      <div class="card-body" style="display:flex;flex-direction:column;gap:14px">
+        <div style="font-size:13.5px;color:var(--text);line-height:1.7">
+          Aus euren Venture-OS-Daten wird <strong>kein automatischer Businessplan</strong> generiert. Stattdessen erstellt der Dozent gemeinsam mit Claude einen <strong>narrativ ausgearbeiteten Businessplan</strong> – mit Stempeln von Media University und Odoo als Qualitätssignal.
+        </div>
+        <div style="font-size:13px;color:var(--dim);line-height:1.6">
+          Exportiert eure vollständigen Venture-OS-Daten als JSON und schickt die Datei an den Dozenten. Daraus wird euer individueller Businessplan erstellt und euch zur Verfügung gestellt.
+        </div>
+        <button class="btn btn-gold" onclick="exportVentureJSON()" style="width:fit-content">⬇ Venture-Daten exportieren (JSON)</button>
+      </div>
+    </div>`;
 }
+
+function exportVentureJSON(){
+  const vname=(S.venture.name||'Venture').replace(/[^a-z0-9]+/gi,'_');
+  const blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url; a.download='VentureOS_'+vname+'_'+now().slice(0,10)+'.json';
+  document.body.appendChild(a);a.click();document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url),3000);
+  toast('⬇ Export gestartet','#5ABF8C');
+}
+
 
 function renderPitchOutput() {
   const p=S.modules.pitch?.fields||{};
@@ -1715,14 +1693,14 @@ function openAssumptionModal(editId) {
       <div class="field-group">
         <div class="field-label" style="color:var(--gold);margin-bottom:8px">Evidenzstärke</div>
         <div style="display:flex;gap:7px" id="asm-ev-chips">
-          ${[{v:'stark',c:'#34D399',l:'Stark 🟢'},{v:'mittel',c:'#C87C38',l:'Mittel 🟡'},{v:'schwach',c:'#F87171',l:'Schwach 🔴'}].map(e=>`<button style="${chipStyle(existing?.evidenceStrength===e.v,e.c)}" data-ev="${e.v}" onclick="this.parentNode.querySelectorAll('[data-ev]').forEach(b=>b.dataset.ev!==this.dataset.ev?b.removeAttribute('data-sel'):b.setAttribute('data-sel','1'));document.getElementById('asm-ev').value=this.dataset.ev;">${e.l}</button>`).join('')}
+          ${[{v:'stark',c:'#34D399',l:'Stark 🟢'},{v:'mittel',c:'#C87C38',l:'Mittel 🟡'},{v:'schwach',c:'#F87171',l:'Schwach 🔴'}].map(e=>`<button style="${chipStyle(existing?.evidenceStrength===e.v,e.c)}" data-ev="${e.v}" data-col="${e.c}" onclick="this.parentNode.querySelectorAll('[data-ev]').forEach(b=>{const c=b.dataset.col,on=b===this;b.style.border='1px solid '+c+(on?'88':'33');b.style.color=on?c:'#7068A0';b.style.background=on?c+'18':'transparent';});document.getElementById('asm-ev').value=this.dataset.ev;">${e.l}</button>`).join('')}
           <input type="hidden" id="asm-ev" value="${existing?.evidenceStrength||'schwach'}">
         </div>
       </div>
       <div class="field-group">
         <div class="field-label" style="color:var(--gold);margin-bottom:8px">Risikolevel</div>
         <div style="display:flex;gap:7px">
-          ${[{v:'hoch',c:'#F87171',l:'Hoch ⚠'},{v:'mittel',c:'#C87C38',l:'Mittel'},{v:'niedrig',c:'#34D399',l:'Niedrig'}].map(e=>`<button style="${chipStyle(existing?.riskLevel===e.v,e.c)}" data-rl="${e.v}" onclick="this.parentNode.querySelectorAll('[data-rl]').forEach(b=>b.style.background='transparent');this.style.background='${e.c}18';document.getElementById('asm-rl').value=this.dataset.rl;">${e.l}</button>`).join('')}
+          ${[{v:'hoch',c:'#F87171',l:'Hoch ⚠'},{v:'mittel',c:'#C87C38',l:'Mittel'},{v:'niedrig',c:'#34D399',l:'Niedrig'}].map(e=>`<button style="${chipStyle(existing?.riskLevel===e.v,e.c)}" data-rl="${e.v}" data-col="${e.c}" onclick="this.parentNode.querySelectorAll('[data-rl]').forEach(b=>{const c=b.dataset.col,on=b===this;b.style.border='1px solid '+c+(on?'88':'33');b.style.color=on?c:'#7068A0';b.style.background=on?c+'18':'transparent';});document.getElementById('asm-rl').value=this.dataset.rl;">${e.l}</button>`).join('')}
           <input type="hidden" id="asm-rl" value="${existing?.riskLevel||'hoch'}">
         </div>
       </div>
@@ -1844,6 +1822,49 @@ function attachViewEvents() {
   document.querySelectorAll('.mod-card').forEach(el=>{
     el.addEventListener('click',e=>{e.preventDefault();navigate(el.getAttribute('href').slice(1));});
   });
+  // Prototype: photo upload (downscaled to keep localStorage small)
+  document.getElementById('photo-upload-input')?.addEventListener('change',e=>{
+    const mstate=S.modules.prototype; mstate.photos=mstate.photos||[];
+    [...e.target.files].forEach(file=>{
+      const img=new Image(); const reader=new FileReader();
+      reader.onload=ev=>{ img.onload=()=>{
+        const max=900; let w=img.width,h=img.height;
+        if(w>max||h>max){ const r=Math.min(max/w,max/h); w=Math.round(w*r); h=Math.round(h*r); }
+        const canvas=document.createElement('canvas'); canvas.width=w; canvas.height=h;
+        canvas.getContext('2d').drawImage(img,0,0,w,h);
+        mstate.photos.push(canvas.toDataURL('image/jpeg',0.75));
+        save();renderView();toast('📷 Foto hinzugefügt','#5ABF8C');
+      }; img.src=ev.target.result; };
+      reader.readAsDataURL(file);
+    });
+  });
+  document.querySelectorAll('[data-photo-del]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      S.modules.prototype.photos.splice(+el.dataset.photoDel,1);
+      save();renderView();
+    });
+  });
+  // Reality Check textareas
+  document.querySelectorAll('[data-reality]').forEach(el=>{
+    el.addEventListener('input',e=>{
+      S.reality[e.target.dataset.reality]=e.target.value;
+      debouncedSave();
+    });
+  });
+  // Consistency Check: status buttons + reasoning textareas
+  document.querySelectorAll('[data-ccid]').forEach(el=>{
+    el.addEventListener('click',()=>{
+      const id=el.dataset.ccid, val=el.dataset.ccval;
+      S.consistency[id+'_status']=(S.consistency[id+'_status']===val)?'':val;
+      save();renderView();
+    });
+  });
+  document.querySelectorAll('[data-cctext]').forEach(el=>{
+    el.addEventListener('input',e=>{
+      S.consistency[e.target.dataset.cctext+'_text']=e.target.value;
+      debouncedSave();
+    });
+  });
   // Health Check: status dots + reasoning
   document.querySelectorAll('[data-health]').forEach(el=>{
     el.addEventListener('click',()=>{
@@ -1875,6 +1896,7 @@ window.closeImportModal=closeImportModal;
 window.openAssumptionModal=openAssumptionModal;
 window.saveAssumption=saveAssumption;
 window.navigate=navigate;
+window.exportVentureJSON=exportVentureJSON;
 
 
 
@@ -1966,7 +1988,7 @@ function renderIntegration() {
     <div class="view-section" style="padding:18px">
       <div class="map-wrap">
         <svg viewBox="0 0 600 460" xmlns="http://www.w3.org/2000/svg">
-          <defs><radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#F4F1EB"/></radialGradient></defs>
+          <defs><radialGradient id="bg" cx="50%" cy="50%" r="70%"><stop offset="0%" stop-color="#221F30"/><stop offset="100%" stop-color="#0F0D15"/></radialGradient></defs>
           <rect width="600" height="460" fill="url(#bg)"/>
           ${edgeSvg}
           ${nodeSvg}
