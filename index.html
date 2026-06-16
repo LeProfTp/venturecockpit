@@ -749,7 +749,24 @@ function detectAndMap(data) {
 
 function mapS5(d) {
   const fields = {};
+  // Support both export formats: d.fields (new) and d.arbeitsauftraege (legacy)
   const f = d.fields || {};
+  const aa = d.arbeitsauftraege || {};
+  const jtbd = aa['Jobs-to-be-Done Analyse'] || {};
+  const synth = aa['Synthese der Praxisphase'] || {};
+  const refl = aa['Finale Reflexion & Übergang'] || {};
+  const exp = aa['Experiment-Design'] || {};
+  const annahmen = aa['Nicht-validierte Annahmen dokumentieren'] || {};
+  // Map arbeitsauftraege fields if present
+  if (jtbd['Funktionaler Job']) fields['kunden.painPoints'] = jtbd['Funktionaler Job'];
+  if (jtbd['Sozialer Job']) fields['kunden.motivation'] = jtbd['Sozialer Job'];
+  if (jtbd['Bisher übersehene Lebensrealität']) fields['kunden.workarounds'] = jtbd['Bisher übersehene Lebensrealität'];
+  if (annahmen['Unsere wichtigsten unvalidierten Annahmen']) fields['kennzahlen.hypotheses'] = annahmen['Unsere wichtigsten unvalidierten Annahmen'];
+  if (exp['Unsere wichtigste zu testende Hypothese']) fields['kennzahlen.experiments'] = exp['Unsere wichtigste zu testende Hypothese'];
+  if (synth['Stärkste Evidenz aus allen Gesprächen']) fields['kunden.keyInsights'] = synth['Stärkste Evidenz aus allen Gesprächen'];
+  if (synth['Fragilste Annahme nach der Praxisphase']) fields['kunden.validationStatus'] = synth['Fragilste Annahme nach der Praxisphase'];
+  if (refl['Die 3 wichtigsten Erkenntnisse dieser Session']) fields['kennzahlen.learnings'] = refl['Die 3 wichtigsten Erkenntnisse dieser Session'];
+  if (refl['Anpassungen oder Pivots, die daraus folgen']) fields['kennzahlen.nextSteps'] = refl['Anpassungen oder Pivots, die daraus folgen'];
   if (f.wa3_functional) fields['kunden.painPoints'] = f.wa3_functional;
   if (f.wa3_social) fields['kunden.motivation'] = f.wa3_social;
   if (f.wa3_blind) fields['kunden.workarounds'] = f.wa3_blind;
@@ -768,7 +785,7 @@ function mapS5(d) {
   if (d.kpis && d.kpis.length) {
     fields['kennzahlen.kpis'] = d.kpis.map(k=>k.name+(k.target?' → '+k.target:'')).join('\n');
   }
-  return Object.keys(fields).length ? fields : null;
+  return Object.keys(fields).length ? { _session: 5, teamName: d.teamName, productName: d.productName||'', fields } : null;
 }
 
 function mapS7(d) {
@@ -785,7 +802,7 @@ function mapS7(d) {
   if (f.wa7_system) fields['wachstum.scalingLogic'] = f.wa7_system;
   if (f.wa7_break) fields['operations.step3'] = f.wa7_break;
   if (d.growthEngine) fields['wachstum.channels'] = (fields['wachstum.channels']||'')+(fields['wachstum.channels']?'\n':'')+'Growth Engine: '+d.growthEngine;
-  return Object.keys(fields).length ? fields : null;
+  return Object.keys(fields).length ? { _session: 7, teamName: d.teamName, productName: d.productName||'', fields } : null;
 }
 
 function mapS2Old(d) {
