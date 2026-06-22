@@ -2792,6 +2792,7 @@ const VENTURES = [
    idea:'Fashion-first Perioden-Bikini mit unsichtbarem Schutz; Style-Brand, kein Medizinprodukt',
    s2:{stars:2, pos:['Echter und wachsender Markt','Fashion-Brand-Instinkt als Differenzierungshebel'], gaps:['Kundenbefund = ein Satz','Kein Preis, kein Odoo','MDR offen']},
    s4:{stars:3, pos:['Preise definiert (Top 25, Bottom 35, Set 60 EUR)','Produktionspartner konkret benannt','ModiBodi ehrlich als überlegen anerkannt'], gaps:['Finanzwiderspruch: 200K vs. 20K Startkapital im selben Dokument','MDR nicht beantwortet'], closed:['Preise hinterlegt','Odoo beschrieben'], open:['Finanzwiderspruch muss aufgelöst werden','Differenzierung zu ModiBodi offen']},
+      s5:{stars:5, pos:['6 Interviews mit gezielt gesuchtem Gegenbeweis (Person F)','Zielgruppen-Pivot: Schwimmhäufigkeit statt Alter als Kaufprädiktor','Schärfste KPI-Unterscheidung: geäußertes Interesse vs. echtes Commitment (Anzahlung)','Landingpage mit Pre-Order als konkreter nächster Schritt geplant'], gaps:['Zahlungsbereitschaft nur geäußert, noch nicht durch Geld belegt','Materialtest deckt nur Wasserdichtigkeit, nicht Verhalten unter Körperdruck'], open:['Preis 60 EUR bleibt ungetestete Annahme – Pre-Order-Test muss folgen']},
       s7:{stars:5, pos:['Stärkste Viral-Engine-Begründung im Kurs','Ehrlichste Netzwerkeffekt-Analyse'], gaps:['K-Faktor bei Tabuthema ungetestet'], open:['Zweiten Produzenten aufbauen – dringendste Priorität']}},
   {name:'EasyWine', team:'EasyWine',
    idea:'Online-Weinshop für Einsteiger: kuratierte Auswahl, einfache Sprache, kein Fachwissen nötig',
@@ -2880,7 +2881,7 @@ function _showMentor(mentorApp, authed){
   let html=`<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px">
     <div>
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff">Venture-Übersicht · ${VENTURES.length} Teams</div>
-      <div style="font-size:12px;color:#8878B8;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Mai 2026</div>
+      <div style="font-size:12px;color:#8878B8;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Juni 2026</div>
     </div>
     <div style="display:flex;gap:14px;font-size:11px;color:#8878B8;flex-wrap:wrap">
       <span><span style="color:#34D399">●</span> Stärke</span>
@@ -2942,54 +2943,63 @@ function _showMentor(mentorApp, authed){
   // ── BASELINE RATINGS aus bisherigem Feedback ──────────────────────────────
   const BASELINE_RATINGS = {
     'AshBuddy': {
+      centralQuestion:"Wie viel zahlt ein Festival-Veranstalter konkret – und hat das Team dieses Gespräch geführt?",
       pmf:5, biz:5, evid:5, clarity:5, conv:5, team:4, odoo:5, ops:5, real:4,
       strength:'B2B/B2C-Duallogik vollständig durchgezogen, stärkster Pitch im Kurs, Finanzlogik überzeugend (1 B2B-Deal deckt Startkapital), detailliertster Odoo-Prozess.',
       challenge:'Preisvalidierung bei 18–26 EUR steht noch aus – keine externe Marktbestätigung bisher.',
       nextstep:'Strukturierter Testverkauf oder Preisbefragung bei echten Festivalbesuchern. Danach B2B-Pilotgespräch mit einem Veranstalter.',
     },
     'REMI': {
+      centralQuestion:"Hält die MDR-Zertifizierung (18–36 Mo.) innerhalb des geplanten Runways (15–20 Mo.)?",
       pmf:5, biz:4, evid:5, clarity:5, conv:4, team:5, odoo:4, ops:5, real:5,
       strength:'Umfassendste regulatorische Analyse im Kurs (MDR Klasse IIa, ISO 13485, AI Act, Erstattungsparagraphen). Stärkste Ethik-Analyse. Chip-Hersteller konkret benannt.',
       challenge:'MDR-Zertifizierung (18–36 Monate) vs. geplantem Runway (15–20 Monate) – kritisches Timing-Risiko. Stimmerkennung unter realen Alltagsbedingungen noch nicht nachgewiesen.',
       nextstep:'Frühzeitiger Kontakt zu einer Benannten Stelle für Klasse-IIa-Einschätzung. Kleiner Pilottest der Stimmerkennung unter realen Bedingungen (Hintergrundlärm, Krankheitsfortschritt).',
     },
     'ANDONIS': {
+      centralQuestion:"Wie wird die Preislücke (12–25 EUR vs. Ziel 29–35 EUR) durch Kommunikation oder Produktanpassung geschlossen?",
       pmf:4, biz:3, evid:3, clarity:4, conv:4, team:3, odoo:3, ops:2, real:3,
       strength:'Beste Ethik-Analyse im Kurs: Dermatologen-Referral, Community-Guidelines, Daten-Transparenz. Health Hub und Gamification-Logik klar differenziert von Wettbewerbern.',
       challenge:'Kostenstruktur im BMC ohne eine einzige Zahl. Runway von 3–4 Monaten ist sehr knapp. Revenue-based Financing nicht korrekt definiert.',
       nextstep:'Kostenstruktur mit konkreten Zahlen füllen (Tech-Entwicklung, Content-Budget). Runway-Lücke durch EXIST-Förderung oder Investor-Gespräch schließen.',
     },
     'WasteLess': {
+      centralQuestion:"Kann der Sensor unter 20 EUR Produktionskosten realisiert werden – belegt durch ein echtes Herstellerangebot?",
       pmf:4, biz:4, evid:2, clarity:4, conv:4, team:4, odoo:5, ops:4, real:2,
       strength:'Methodisch vollständigste Abgabe im Kurs. Detailliertster Odoo-Ablauf (Bestellung bis Nachbestellung). Selbstkritische Benennung der Technologie als Engpassressource.',
       challenge:'Sensor-Machbarkeit bei Zielpreis (<20 EUR Produktionskosten) weiterhin unbeantwortet – diese Frage entscheidet über das gesamte Finanzmodell.',
       nextstep:'Technologierecherche oder Prototyp: Welcher Sensor, welcher Hersteller, welche Kosten bei welcher Genauigkeit? Konkrete Aussage statt Konzept.',
     },
     'DOOOZE': {
+      centralQuestion:"Ist DOOOZE ein Lifestyle-Accessoire oder ein akustischer Schlafhelfer – und was folgt daraus für Produkt, Preis und Wettbewerb?",
       pmf:3, biz:2, evid:3, clarity:4, conv:3, team:4, odoo:3, ops:3, real:2,
       strength:'Professionellster Auftritt im Kurs, stärkstes Branding. Bewusste Positionierung als Lifestyle-Accessoire mit klarer Zielgruppe. Bootstrapping-Wahl konsequent begründet.',
       challenge:'Akustische Kernfrage offen: Wie viel dB Reduktion leistet ein Stoff-Haarband tatsächlich? Ohne diesen Nachweis bleibt die Kernbehauptung unbelegt.',
       nextstep:'Einfacher Vergleichstest: DOOOZE vs. Standard-Ohrstöpsel, dB-Messung per App. Ergebnis entscheidet Positionierung (Schlafhilfe vs. reines Lifestyle-Produkt).',
     },
     'StilMittel': {
+      centralQuestion:"Gibt es ein überarbeitetes BMC für die neue Zielgruppe 20–65 (Unfall/Krankheit) – und ist der Hausbesuch neu kalkuliert?",
       pmf:4, biz:3, evid:5, clarity:3, conv:3, team:3, odoo:2, ops:3, real:3,
       strength:'Gesellschaftlich relevanteste Idee im Kurs. Stigma als eigentliches Kernproblem erkannt – selten gemachte Einsicht. MDR korrekt eingeordnet nach Feedback.',
       challenge:'BMC und Prozessdesign zeigen noch zu viele Platzhalter. Ethik-Analyse mit Einzeilern. Operative Abläufe nicht konkret beschreibbar.',
       nextstep:'BMC mit konkreten Aktivitäten, Ressourcen und Personas hinterlegen. Prozessschritte so beschreiben, dass jemand anderes sie ausführen könnte.',
     },
     'VEIL': {
-      pmf:3, biz:2, evid:3, clarity:3, conv:3, team:3, odoo:3, ops:4, real:4,
+      centralQuestion:"Zahlen Kundinnen wirklich 60 EUR – und gibt es einen zweiten Produzenten für den Skalierungsfall?",
+      pmf:3, biz:2, evid:5, clarity:3, conv:3, team:3, odoo:3, ops:4, real:4,
       strength:'Preise und Produktionskosten erstmals konkret hinterlegt. ModiBodi als technologisch überlegener Wettbewerber ehrlich anerkannt. Fashion-Brand-Instinkt erkennbar.',
       challenge:'Massiver Finanzwiderspruch: 200.000 EUR vs. 20.000 EUR Startkapital im selben Dokument. Muss vor Demo Day aufgelöst werden.',
       nextstep:'Finanzmodell auf eine konsistente Szenario-Basis bringen. Differenzierung zu ModiBodi über Branding hinaus inhaltlich belegen.',
     },
     'EasyWine': {
+      centralQuestion:"Was kann EasyWine, was Vivino (65 Mio. Nutzer, kostenlos) nicht kann oder nicht will?",
       pmf:2, biz:1, evid:1, clarity:4, conv:2, team:4, odoo:1, ops:1, real:2,
       strength:'Sauberste Dokumentationsqualität im Kurs. Bestes Peer-Feedback (konkret, kritisch, umsetzbar). Pain Points der Zielgruppe klar beobachtet.',
       challenge:'Vivino (65 Mio. Nutzer, kostenlos) löst exakt dasselbe Problem – Differenzierung bisher nicht überzeugend beantwortet. Kein S4 eingereicht.',
       nextstep:'Konkrete Differenzierungsantwort auf Vivino entwickeln. Was kann EasyWine, was Vivino nicht kann oder nicht will?',
     },
     'WorkFlowWerk': {
+      centralQuestion:"Wer ist zuerst auf der Plattform – Freelancer oder Unternehmen – und mit welchem konkreten Anreiz?",
       pmf:4, biz:4, evid:3, clarity:4, conv:4, team:3, odoo:3, ops:2, real:3,
       strength:'Stärkste B2B-Analyse im Kurs. Konkrete Preispakete (S/M/L) mit Margenangaben. EXIST-Förderung als Runway-Brücke realistisch geplant. Anthropic als Bedrohung ehrlich erkannt.',
       challenge:'Cold-Start-Problem (Hühnerei: Freelancer vs. Unternehmen) weiterhin vollständig unbeantwortet – war bereits in S2 offen. Autonomie-Ethik nicht durchdacht.',
@@ -3076,10 +3086,18 @@ function _showMentor(mentorApp, authed){
       +'<div style="font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#8878B8;font-family:Syne,sans-serif;font-weight:700;margin-bottom:14px;padding-top:4px;border-top:1px solid rgba(25,20,50,.08)">Kommentare</div>'
       +commentFields+'</div>'
       // Jury note
-      +'<div style="margin:0 22px 22px;background:rgba(200,124,56,.06);border:1px solid rgba(200,124,56,.15);border-radius:8px;padding:11px 14px;font-size:11.5px;color:#7A6840;line-height:1.55">'
+      +'<div style="margin:0 22px 14px;background:rgba(200,124,56,.06);border:1px solid rgba(200,124,56,.15);border-radius:8px;padding:11px 14px;font-size:11.5px;color:#7A6840;line-height:1.55">'
       +'<strong style="color:#C87C38;font-family:Syne,sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase">Hinweis</strong><br>'
       +'Bewertet nicht die „beste Idee", sondern das Team, das am überzeugendsten gezeigt hat, dass es ein reales Problem verstanden, daraus ein konsistentes Venture entwickelt und dieses strategisch wie operativ durchdacht hat.'
-      +'</div></div>';
+      +'</div>'
+      +'<div style="margin:0 22px 22px;background:'+level.col+'18;border:2px solid '+level.col+'55;border-radius:12px;padding:20px 22px">'
+      +'<div style="font-family:Syne,sans-serif;font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:'+level.col+';margin-bottom:14px">Gesamtbewertung</div>'
+      +'<div style="display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap">'
+      +'<div><div style="font-family:Syne,sans-serif;font-weight:800;font-size:54px;color:'+level.col+';line-height:1">'+Math.round(totalScore/45*1000)/10+'<span style="font-size:18px;color:'+level.col+'88">/100</span></div>'
+      +'<div style="font-size:12px;color:#8878B8;margin-top:4px">'+totalScore+'/45 Pkt · '+level.label+'</div></div>'
+      +'<div style="flex:1;min-width:160px;font-size:11px;line-height:1.7">'  
+      +[{t:'91–100',l:'Exzellent',c:'#5ABF8C'},{t:'80–90',l:'Sehr gut',c:'#7FC47A'},{t:'69–79',l:'Gut',c:'#E8A030'},{t:'58–68',l:'Befriedigend',c:'#CC8840'},{t:'47–57',l:'Ausreichend',c:'#D07060'},{t:'0–46',l:'Verbesserungsbedürftig',c:'#D05050'}].map(function(s){const v=Math.round(totalScore/45*1000)/10,lo=parseFloat(s.t),on=lo===0?v<47:(v>=lo&&v<lo+11||lo===91&&v>=91);return '<span style="color:'+(on?s.c:'#4A4070')+';font-weight:'+(on?'800':'400')+'">'+(on?'▶ ':'')+s.t+' '+s.l+'</span><br>';}).join('')
+      +'</div></div></div></div>';
   }
 
   function buildScoreTable(){
