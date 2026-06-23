@@ -2881,7 +2881,7 @@ function _showMentor(mentorApp, authed){
   let html=`<div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px">
     <div>
       <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:22px;color:#fff">Venture-Übersicht · ${VENTURES.length} Teams</div>
-      <div style="font-size:12px;color:#8878B8;margin-top:3px">Sessions 2 & 4 · Ersteinreichung + Feedback-Integration · Stand: Juni 2026</div>
+      <div style="font-size:12px;color:#8878B8;margin-top:3px">Alle Sessions · Einreichungen + Feedback-Integration · Stand: Juni 2026</div>
     </div>
     <div style="display:flex;gap:14px;font-size:11px;color:#8878B8;flex-wrap:wrap">
       <span><span style="color:#34D399">●</span> Stärke</span>
@@ -2944,63 +2944,63 @@ function _showMentor(mentorApp, authed){
   const BASELINE_RATINGS = {
     'AshBuddy': {
       centralQuestion:"Wie viel zahlt ein Festival-Veranstalter konkret – und hat das Team dieses Gespräch geführt?",
-      pmf:5,biz:5,evid:4,clarity:5,conv:5,team:5,odoo:5,ops:5,real:4,
+      pmf:5,biz:5,evid:4,clarity:1,conv:1,team:1,odoo:5,ops:5,real:4,
       strength:'S2–S7 konsistent: B2B/B2C-Duallogik vollständig durchgezogen, Odoo-Prozess detailliert (Gravur-Fertigungsauftrag, automatische Rechnungsstellung), Viral Engine begründet. S5: Preissimulation, 3 Interviews, Überzeugungskauf bestätigt.',
       challenge:'B2B-Zahlungsbereitschaft ungetestet – kein Gespräch mit einem Veranstalter. Zweiter Fertigungspartner nur als Anforderung, nicht konkret identifiziert.',
       nextstep:'B2B-Pilotgespräch führen, Angebot einholen. Zweiten Fertigungspartner recherchieren.',
     },
     'REMI': {
       centralQuestion:"Hält die MDR-Zertifizierung (18–36 Mo.) innerhalb des geplanten Runways (15–20 Mo.)?",
-      pmf:5,biz:4,evid:5,clarity:5,conv:4,team:5,odoo:4,ops:4,real:4,
+      pmf:5,biz:4,evid:5,clarity:1,conv:1,team:1,odoo:4,ops:4,real:4,
       strength:'S4+S5+S7: Vollständigste regulatorische Analyse (MDR Klasse IIa, ISO 13485, AI Act), Pivot zu Sicherheits-/Monitoringsystem empirisch begründet (3 Interviews), Sticky Engine korrekt, Onboarding-Schwellwert (500–1.000 Kunden) konkret benannt.',
       challenge:'MDR-Zertifizierung (18–36 Mo.) vs. Runway (15–20 Mo.) ist strukturelles Timing-Risiko. Tragebereitschaft der erkrankten Person ungeklärt.',
       nextstep:'Kontakt zu Benannter Stelle für Klasse-IIa-Einschätzung. Pilottest der Stimmerkennung unter realen Bedingungen.',
     },
     'Andrian': {
       centralQuestion:"Wie wird die Preislücke (12–25 EUR vs. Ziel 29–35 EUR) durch Kommunikation oder Produktanpassung geschlossen?",
-      pmf:4,biz:3,evid:3,clarity:4,conv:4,team:3,odoo:3,ops:3,real:3,
+      pmf:4,biz:3,evid:3,clarity:1,conv:1,team:1,odoo:3,ops:3,real:3,
       strength:'S4: Health Hub und Gamification konkret, Preis 29,50 EUR definiert, Ethik durchdacht. S5: Preislücke empirisch bestätigt (3 Interviews, 12–25 EUR), Social Proof als Kauftrigger identifiziert.',
       challenge:'Preislücke strukturell ungelöst. Kostenstruktur ohne konkrete Zahlen. Runway 3–4 Monate knapp. Kein S6 eingereicht.',
       nextstep:'Preiskommunikation umstellen: Features erklären bevor Preis genannt wird. Kostenstruktur mit Zahlen hinterlegen. Runway sichern.',
     },
     'WasteLess': {
       centralQuestion:"Kann der Sensor unter 20 EUR Produktionskosten realisiert werden – belegt durch ein echtes Herstellerangebot?",
-      pmf:4,biz:4,evid:2,clarity:4,conv:4,team:4,odoo:5,ops:4,real:2,
+      pmf:4,biz:4,evid:2,clarity:1,conv:1,team:1,odoo:5,ops:4,real:2,
       strength:'S4: Detailliertster Odoo-Ablauf (Bestellung bis Nachbestellung). S5: Experten-Interview bestätigt Technologie grundlegend verfügbar (LLM-Training der Sensorik), Glascontainer als Materialhinweis konkret.',
       challenge:'Nur 1 Experten-Interview, keine Kundenbefragung. 50 EUR Schmerzgrenze bestätigt – zu nah am Zielpreis. Sensor-Machbarkeit unter 20 EUR unbelegt. Kein S6 eingereicht.',
       nextstep:'Mindestens 3 Kundengeräspreche führen. Herstellerangebot für Sensor einholen. Leihmodell-Idee durchkalkulieren.',
     },
     'DOOOZE': {
       centralQuestion:"Ist DOOOZE ein Lifestyle-Accessoire oder ein akustischer Schlafhelfer – was folgt für Produkt, Preis, Wettbewerb?",
-      pmf:3,biz:2,evid:3,clarity:4,conv:3,team:4,odoo:3,ops:3,real:2,
+      pmf:3,biz:2,evid:3,clarity:1,conv:1,team:1,odoo:3,ops:3,real:2,
       strength:'S2: Stärkstes Branding. S5: Nutzer wollen maximale Isolation, nicht Teilreduktion – ehrlich dokumentiert. S7: Paid Engine korrekt gewählt, Lieferketten-Engpass konkret.',
       challenge:'Produktkategorie ungeklärt: Lifestyle vs. Schlafhelfer sind verschiedene Produkte mit verschiedenen Wettbewerbern und Preispunkten. Akustische Kernleistung (dB) nicht empirisch belegt.',
       nextstep:'Grundsatzentscheidung: Welche Kategorie, welcher Wettbewerb? Dann dB-Vergleichstest. Paid-Engine-Budget kalkulieren.',
     },
     'StilMittel': {
       centralQuestion:"Gibt es ein überarbeitetes BMC für die neue Zielgruppe 20–65 (Unfall/Krankheit) – und ist der Hausbesuchspreis neu kalkuliert?",
-      pmf:4,biz:3,evid:5,clarity:4,conv:4,team:4,odoo:3,ops:3,real:3,
+      pmf:4,biz:3,evid:5,clarity:1,conv:1,team:1,odoo:3,ops:3,real:3,
       strength:'S5: 7 Interviews inkl. negativer Evidenz, Pivot 65+ auf 20–65 (Unfall/Krankheit) empirisch begründet. S6: Supply-Chain-Engpass korrekt, Odoo-Liste konkret.',
       challenge:'BMC für neue Zielgruppe noch nicht erstellt. Hausbesuchspreis (66 EUR) in allen Interviews als zu hoch bestätigt. Viral Engine für dienstleistungsintensives Modell fragwürdig.',
       nextstep:'BMC für 20–65 ausarbeiten. Hausbesuchspreis neu kalkulieren. Growth Engine überprüfen.',
     },
     'VEIL / Selin': {
       centralQuestion:"Zahlen Kundinnen wirklich 60 EUR – und gibt es einen zweiten Produzenten für den Skalierungsfall?",
-      pmf:4,biz:3,evid:5,clarity:4,conv:4,team:4,odoo:3,ops:4,real:4,
+      pmf:4,biz:3,evid:5,clarity:1,conv:1,team:1,odoo:3,ops:4,real:4,
       strength:'S5: 6 Interviews mit gezielt gesuchtem Gegenbeweis, Pivot (Schwimmhäufigkeit statt Alter) konsistent. S7: Viral Engine durch Tabuthema-Logik begründet, einziger Produzent als Engpass präzise.',
       challenge:'Zahlungsbereitschaft 60 EUR nur geäußert, nicht durch Geld belegt. Einziger Produzent ist Skalierungsrisiko. Materialtest nur Wasserdichtigkeit, nicht Körperdruck.',
       nextstep:'Landingpage mit Pre-Order aufsetzen. Zweiten Produzenten identifizieren. Materialtest unter realen Bedingungen.',
     },
     'EasyWine': {
       centralQuestion:"Was kann EasyWine, was Vivino (65 Mio. Nutzer, kostenlos) nicht kann oder nicht will?",
-      pmf:2,biz:1,evid:1,clarity:4,conv:2,team:4,odoo:1,ops:1,real:2,
+      pmf:2,biz:1,evid:1,clarity:1,conv:1,team:1,odoo:1,ops:1,real:2,
       strength:'S2: Sauberste Dokumentation, Pain Points klar beobachtet, starkes Peer-Feedback.',
       challenge:'Kein S4, S5 oder S6 eingereicht. Vivino löst dasselbe Problem. Kein Geschäftsmodell, keine Odoo-Umsetzung, keine Validierung.',
       nextstep:'Kernfrage beantworten: Was kann EasyWine, was Vivino nicht kann? Dann S4 und S5 nachholen.',
     },
     'WorkFlowWerk': {
       centralQuestion:"Wer ist zuerst auf der Plattform – Freelancer oder Unternehmen – und mit welchem konkreten Anreiz?",
-      pmf:4,biz:4,evid:3,clarity:4,conv:4,team:3,odoo:3,ops:3,real:3,
+      pmf:4,biz:4,evid:3,clarity:1,conv:1,team:1,odoo:3,ops:3,real:3,
       strength:'S2+S4: Konkrete Preispakete (S/M/L), EXIST als Runway-Brücke. S5: 3 Interviews (Energie-Unternehmer: Bauantrags-Automatisierung), Sandbox-Idee zur Qualitätssicherung, Odoo-Prozessfluss konkret.',
       challenge:'Cold-Start-Problem seit S2 offen – Sandbox-Idee verschiebt das Problem, löst es nicht. Preissensitivität kleinerer Branchen (Fahrschule) relativiert Positionierung. Kein S6 eingereicht.',
       nextstep:'Konkrete Cold-Start-Antwort: Wer wird zuerst gewonnen, wie, mit welchem Anreiz?',
